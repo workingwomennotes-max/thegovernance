@@ -100,6 +100,18 @@
   .tool-btn.dark { background: var(--white); color: var(--ink); border: none; }
   .tool-btn.dark:hover { background: var(--bordo); color: var(--white); }
 
+  /* CAMPAIGN BANNER */
+  .campaign-banner { background: var(--bordo); padding: 14px 60px; display: flex; align-items: center; justify-content: center; gap: 16px; }
+  .campaign-banner-text { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.9); text-align: center; }
+  .campaign-banner-text strong { color: var(--white); }
+  .campaign-badge { background: var(--white); color: var(--bordo); font-family: 'DM Mono', monospace; font-size: 7.5px; letter-spacing: .15em; text-transform: uppercase; padding: 3px 10px; font-weight: 700; white-space: nowrap; }
+
+  /* FREE CARD STYLES */
+  .tool-card.free-now { border-color: var(--bordo); }
+  .tool-card.free-now::after { content: 'LANSMAN · ÜCRETSİZ'; position: absolute; top: 14px; right: 14px; font-family: 'DM Mono', monospace; font-size: 7px; letter-spacing: .15em; background: var(--bordo); color: var(--white); padding: 3px 8px; }
+  .price-strike { text-decoration: line-through; color: var(--light); font-size: 18px; margin-right: 6px; }
+  .price-free { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 700; color: var(--bordo); }
+
   /* FREE BANNER */
   .free-banner { background: var(--cream); border: 1px solid var(--rule); border-left: 4px solid var(--bordo); padding: 24px 28px; margin-top: 40px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
   .free-banner-text h4 { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 700; margin-bottom: 4px; }
@@ -126,6 +138,7 @@
 
   @media (max-width: 1024px) {
     nav { padding: 14px 28px; }
+    .campaign-banner { padding: 12px 28px; flex-direction: column; gap: 8px; }
     .page-header { padding: 120px 28px 60px; }
     .filter-bar { padding: 32px 28px 0; }
     .tools-section { padding: 40px 28px 80px; }
@@ -151,11 +164,16 @@
   </ul>
 </nav>
 
+<div class="campaign-banner">
+  <span class="campaign-badge">🎉 1 Aylık Lansman</span>
+  <p class="campaign-banner-text"><strong>Tüm standart araçlar ücretsiz!</strong> · Bu fırsat yalnızca ilk 1 ay geçerlidir · PRO araçlar normal fiyatıyla devam eder</p>
+</div>
+
 <div class="page-header">
   <div class="page-header-inner">
     <span class="page-eyebrow">Araç Kütüphanesi</span>
     <h1 class="page-h1">Hemen kullanılabilir<br><em>kurumsal araçlar.</em></h1>
-    <p class="page-desc">Excel şablonları, PDF rehberler ve kontrol listeleri — kurumsal risk ve uyum süreçlerinizi hızlandırmak için tasarlandı.</p>
+    <p class="page-desc">Excel şablonları, PDF rehberler ve kontrol listeleri — kurumsal risk ve uyum süreçlerinizi hızlandırmak için tasarlandı. <strong style="color:rgba(255,255,255,.75)">Lansman ayında standart araçlar ücretsiz.</strong></p>
   </div>
 </div>
 
@@ -178,28 +196,28 @@
 
     <div class="tools-grid">
 
-      <div class="tool-card">
+      <div class="tool-card free-now">
         <div class="tool-tag">KVKK · Uyum</div>
         <div class="tool-icon">📋</div>
         <h3 class="tool-title">KVKK Uyum Kontrol Listesi</h3>
         <p class="tool-desc">33 kontrol maddesi, otomatik uyum skoru ve aksiyon planı. Veri işleme envanterinden teknik/idari tedbirlere kadar tüm KVKK yükümlülüklerini tek dosyada yönetin.</p>
         <div class="tool-meta">
           <span class="tool-format">Excel · PDF</span>
-          <span><span class="tool-price">$29</span><span class="tool-price-label">Tek seferlik</span></span>
+          <span><span class="price-strike">$29</span><span class="price-free">Ücretsiz</span></span>
         </div>
-        <a href="mailto:ecem@thegovernance.com.tr?subject=KVKK Kontrol Listesi" class="tool-btn filled">Satın Al →</a>
+        <a href="/dosyalar/kvkk-uyum-kontrol-listesi.xlsx" download class="tool-btn filled">Ücretsiz İndir →</a>
       </div>
 
-      <div class="tool-card">
+      <div class="tool-card free-now">
         <div class="tool-tag">Risk · Tedarik Zinciri</div>
         <div class="tool-icon">⚠️</div>
         <h3 class="tool-title">Tedarikçi Risk Değerlendirme Matrisi</h3>
         <p class="tool-desc">6 risk kategorisi, ağırlıklı puanlama ve otomatik risk seviyesi. Tüm tedarikçi portföyünüzün risk haritasını tek dosyada çıkarın.</p>
         <div class="tool-meta">
           <span class="tool-format">Excel</span>
-          <span><span class="tool-price">$35</span><span class="tool-price-label">Tek seferlik</span></span>
+          <span><span class="price-strike">$35</span><span class="price-free">Ücretsiz</span></span>
         </div>
-        <a href="mailto:ecem@thegovernance.com.tr?subject=Tedarikçi Risk Matrisi" class="tool-btn filled">Satın Al →</a>
+        <a href="/dosyalar/tedarikci-risk-matrisi.xlsx" download class="tool-btn filled">Ücretsiz İndir →</a>
       </div>
 
       <div class="tool-card pro-only">
@@ -230,10 +248,10 @@
 
     <div class="free-banner">
       <div class="free-banner-text">
-        <h4>Ücretsiz başlangıç hediyesi</h4>
-        <p>Bültene ücretsiz abone olun, KVKK Hızlı Kontrol Listesi'ni anında indirin.</p>
+        <h4>Lansman kampanyası — 1 ay ücretsiz!</h4>
+        <p>Standart araçlarımızı lansman ayı boyunca ücretsiz sunuyoruz. PRO araçlara erişim için abone olun.</p>
       </div>
-      <a href="/uyelik.html" class="free-banner-btn">Ücretsiz Al →</a>
+      <a href="/uyelik.html" class="free-banner-btn">PRO'ya Geç →</a>
     </div>
 
   </div>
