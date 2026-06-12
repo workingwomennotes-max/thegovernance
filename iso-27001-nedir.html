@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ISO 27001:2022 Nedir? Bir Baş Denetçinin Gözünden Kapsamlı Rehber</title>
+<meta name="description" content="ISO 27001 nedir, BGYS nasıl kurulur, sertifika süreci ve maliyeti nasıl işler? 15 yıllık baş denetçi deneyimiyle, denetimde gerçekten neye bakıldığını anlatan bağımsız Türkçe rehber.">
+<link rel="canonical" href="https://www.thegovernance.com.tr/iso-27001-nedir.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="The Governance">
+<meta property="og:title" content="ISO 27001 Nedir? Bir Baş Denetçinin Gözünden Kapsamlı Rehber (2026)">
+<meta property="og:description" content="ISO 27001 nedir, BGYS nasıl kurulur, sertifika süreci ve maliyeti nasıl işler? Denetimde gerçekten neye bakıldığını anlatan bağımsız Türkçe rehber.">
+<meta property="og:url" content="https://www.thegovernance.com.tr/iso-27001-nedir.html">
+<meta property="og:image" content="https://www.thegovernance.com.tr/ecem.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ISO 27001 Nedir? Bir Baş Denetçinin Gözünden Kapsamlı Rehber">
+<meta name="twitter:description" content="Denetimde gerçekten neye bakıldığını anlatan bağımsız Türkçe ISO 27001 rehberi.">
+<meta name="twitter:image" content="https://www.thegovernance.com.tr/ecem.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Mono:wght@300;400&family=Instrument+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ISO 27001 Nedir? Bir Baş Denetçinin Gözünden Kapsamlı Rehber (2026)",
+  "description": "ISO 27001 nedir, BGYS nasıl kurulur, sertifika süreci ve maliyeti nasıl işler? Denetimde gerçekten neye bakıldığını anlatan bağımsız Türkçe rehber.",
+  "author": {"@type": "Person", "name": "Ecem Aksut", "url": "https://www.thegovernance.com.tr/hakkimizda.html", "jobTitle": "ISO 27001 Lead Auditor, CRISC"},
+  "publisher": {"@type": "Organization", "name": "The Governance", "logo": {"@type": "ImageObject", "url": "https://www.thegovernance.com.tr/ecem.jpg"}},
+  "url": "https://www.thegovernance.com.tr/iso-27001-nedir.html",
+  "inLanguage": "tr-TR",
+  "datePublished": "2026-06-15",
+  "dateModified": "2026-06-15",
+  "isAccessibleForFree": true,
+  "about": ["ISO 27001", "Bilgi Güvenliği Yönetim Sistemi", "BGYS"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "ISO 27001 nedir?", "acceptedAnswer": {"@type": "Answer", "text": "ISO 27001, bir kurumun bilgi güvenliğini sistematik biçimde yönetmesi için uluslararası kabul görmüş standarttır. Tek bir teknik önlem değil, riske dayalı bir yönetim sistemi (BGYS) kurmayı şart koşar."}},
+    {"@type": "Question", "name": "ISO 27001 sertifikası ne kadar sürede alınır?", "acceptedAnswer": {"@type": "Answer", "text": "Kurum büyüklüğüne ve mevcut olgunluğa göre değişir; tipik olarak hazırlık, iç denetim ve belgelendirme denetimi dahil 4 ila 9 ay arasında tamamlanır."}},
+    {"@type": "Question", "name": "ISO 27001 sertifika maliyeti neye bağlıdır?", "acceptedAnswer": {"@type": "Answer", "text": "Maliyet; kapsam genişliği, çalışan sayısı, lokasyon sayısı, danışmanlık ihtiyacı ve seçilen belgelendirme kuruluşunun ücretine göre belirlenir. Belgelendirme ücreti toplam maliyetin yalnızca bir kalemidir."}},
+    {"@type": "Question", "name": "ISO 27001 ile KVKK aynı şey mi?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. ISO 27001 gönüllü bir yönetim sistemi standardıdır; KVKK ise Türkiye'de zorunlu bir kişisel veri koruma kanunudur. ISO 27001:2022'nin kurduğu kontroller KVKK uyumunu büyük ölçüde destekler ama hukuki yükümlülükler ayrıca ele alınmalıdır."}},
+    {"@type": "Question", "name": "ISO 27001:2022 önceki sürümden ne değiştirdi?", "acceptedAnswer": {"@type": "Answer", "text": "Annex A kontrolleri 114'ten 93'e indirildi ve 14 alan dört temaya toplandı. Tehdit istihbaratı, bulut güvenliği, veri maskeleme, veri sızıntısı önleme ve bilgi silme gibi 11 yeni kontrol eklendi. Bu yeni kontrollerin bir kısmı kişisel veri korumasını doğrudan ilgilendirir."}}
+  ]
+}
+</script>
+<style>
+  :root {
+    --bordo:   #8C1F0D;
+    --bordo-m: #B5341A;
+    --ink:     #111009;
+    --paper:   #F5F2EC;
+    --cream:   #EAE5DB;
+    --rule:    #C8C2B6;
+    --mid:     #3D3A34;
+    --light:   #6E6A62;
+    --white:   #FFFFFF;
+    --gold:    #9A7B3A;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 28px 100px;
+  }
+  a { color: var(--bordo); }
+
+  .topbar {
+    border-top: 4px solid var(--ink);
+    border-bottom: 1px solid var(--rule);
+    padding: 16px 0;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--mid);
+  }
+  .topbar a.brand { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: var(--ink); text-decoration: none; letter-spacing: -.3px; text-transform: none; }
+  .topbar a.brand em { font-style: normal; color: var(--bordo); }
+  .topbar nav a { color: var(--mid); text-decoration: none; margin-left: 20px; }
+  .topbar nav a:hover { color: var(--bordo); }
+
+  .kicker { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--bordo); margin-bottom: 18px; }
+  h1 { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 40px; line-height: 1.12; letter-spacing: -.5px; color: var(--ink); margin-bottom: 22px; }
+  .standfirst { font-size: 19px; line-height: 1.6; color: var(--mid); font-weight: 300; margin-bottom: 26px; }
+
+  .byline { display: flex; align-items: center; gap: 12px; padding: 16px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); margin-bottom: 40px; font-size: 13px; color: var(--light); }
+  .byline img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .byline strong { color: var(--ink); font-weight: 500; }
+
+  .toc { background: var(--cream); border-left: 3px solid var(--bordo); padding: 22px 26px; margin-bottom: 48px; }
+  .toc-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--bordo); margin-bottom: 14px; }
+  .toc ol { list-style: none; counter-reset: toc; }
+  .toc ol li { counter-increment: toc; margin-bottom: 9px; font-size: 15px; }
+  .toc ol li::before { content: counter(toc, decimal-leading-zero) "  "; font-family: 'DM Mono', monospace; color: var(--gold); font-size: 12px; }
+  .toc ol li a { color: var(--ink); text-decoration: none; }
+  .toc ol li a:hover { color: var(--bordo); }
+
+  h2 { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 30px; line-height: 1.2; color: var(--ink); margin: 52px 0 18px; padding-top: 8px; }
+  h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 22px; color: var(--ink); margin: 32px 0 12px; }
+  p { margin-bottom: 18px; }
+  ul, ol { margin: 0 0 18px 22px; }
+  li { margin-bottom: 8px; }
+  strong { font-weight: 600; color: var(--ink); }
+
+  blockquote { border-left: 3px solid var(--gold); padding: 4px 0 4px 22px; margin: 28px 0; font-family: 'Cormorant Garamond', serif; font-size: 23px; line-height: 1.4; font-style: italic; color: var(--mid); }
+
+  table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 14px; }
+  th { background: var(--ink); color: var(--paper); text-align: left; padding: 11px 14px; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; font-weight: 400; }
+  td { padding: 11px 14px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  tr:nth-child(even) td { background: var(--cream); }
+
+  .auditor { background: var(--ink); color: var(--paper); padding: 28px 30px; margin: 40px 0; }
+  .auditor .label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: #E07060; margin-bottom: 12px; }
+  .auditor p { color: rgba(255,255,255,.86); margin-bottom: 0; font-size: 15px; }
+  .auditor p + p { margin-top: 14px; }
+
+  .cta { border: 1px solid var(--bordo); background: var(--white); padding: 26px 30px; margin: 44px 0; }
+  .cta .label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--bordo); margin-bottom: 12px; }
+  .cta h4 { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 21px; color: var(--ink); margin-bottom: 10px; line-height: 1.25; }
+  .cta p { font-size: 15px; color: var(--mid); margin-bottom: 18px; }
+  .cta a.btn { display: inline-block; background: var(--bordo); color: var(--white); text-decoration: none; padding: 11px 26px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
+  .cta a.btn:hover { background: var(--bordo-m); }
+  .cta.soft { border-color: var(--rule); background: var(--cream); }
+  .cta.soft .label, .cta.soft a.btn { color: var(--white); }
+  .cta.soft a.btn { background: var(--ink); }
+
+  .faq { margin: 48px 0; }
+  .faq h2 { margin-bottom: 8px; }
+  details { border-bottom: 1px solid var(--rule); padding: 16px 0; }
+  summary { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 19px; color: var(--ink); cursor: pointer; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  summary::before { content: "+ "; color: var(--bordo); font-family: 'DM Mono', monospace; }
+  details[open] summary::before { content: "– "; }
+  details p { margin-top: 12px; margin-bottom: 0; font-size: 15px; color: var(--mid); }
+
+  .pagefoot { margin-top: 70px; padding-top: 26px; border-top: 4px solid var(--ink); font-size: 12px; color: var(--light); font-family: 'DM Mono', monospace; letter-spacing: .04em; }
+  .pagefoot a { color: var(--bordo); text-decoration: none; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 30px; }
+    h2 { font-size: 24px; }
+    body { font-size: 15px; }
+    .topbar nav a { margin-left: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="https://www.thegovernance.com.tr/">The<em>.</em>Governance</a>
+  <nav>
+    <a href="https://www.thegovernance.com.tr/">Bülten</a>
+    <a href="https://www.thegovernance.com.tr/arac-kutuphanesi.html">Araçlar</a>
+    <a href="https://www.thegovernance.com.tr/hakkimizda.html">Hakkımızda</a>
+  </nav>
+</header>
+
+<p class="kicker">Rehber · Bilgi Güvenliği</p>
+<h1>ISO 27001:2022 Nedir? Bir Baş Denetçinin Gözünden Kapsamlı Rehber</h1>
+<p class="standfirst">ISO 27001 hakkında internette yüzlerce tanım var. Çoğu, standardı satan kurumlar tarafından yazıldığı için size belgeyi anlatır, denetimi anlatmaz. Bu rehber farklı: standardın güncel sürümü olan ISO 27001:2022 üzerinden, bir belgelendirme denetiminde masanın hangi tarafında durduğumu ve gerçekte neye baktığımı anlatıyor.</p>
+
+<div class="byline">
+  <img src="https://www.thegovernance.com.tr/ecem.jpg" alt="Ecem Aksut, ISO 27001 Baş Denetçi">
+  <div><strong>Ecem Aksut</strong> · ISO 27001 Lead Auditor, CRISC · 15+ yıl kurumsal risk ve denetim deneyimi</div>
+</div>
+
+<div class="toc">
+  <p class="toc-label">İçindekiler</p>
+  <ol>
+    <li><a href="#nedir">ISO 27001 nedir, neyi standartlaştırır</a></li>
+    <li><a href="#bgys">BGYS: Standardın asıl konusu sistem, belge değil</a></li>
+    <li><a href="#kimler">ISO 27001 kimler için gerekli ve avantajlı</a></li>
+    <li><a href="#annex">Annex A kontrolleri: 93 maddenin gerçek anlamı</a></li>
+    <li><a href="#versiyon">ISO 27001:2022 önceki sürümden ne değiştirdi</a></li>
+    <li><a href="#kvkk">ISO 27001:2022, KVKK ve GDPR ilişkisi</a></li>
+    <li><a href="#risk">Risk değerlendirmesi gerçekte nasıl yapılır</a></li>
+    <li><a href="#surec">Sertifika süreci adım adım</a></li>
+    <li><a href="#senaryo">Bir denetim sahada nasıl ilerler: anonim örnek</a></li>
+    <li><a href="#maliyet">Sertifika maliyetini ne belirler</a></li>
+    <li><a href="#belgelendirme">Belgelendirme kuruluşu nasıl seçilir</a></li>
+    <li><a href="#hatalar">Denetimde en sık gördüğüm 5 hata</a></li>
+    <li><a href="#sss">Sık sorulan sorular</a></li>
+  </ol>
+</div>
+
+<h2 id="nedir">ISO 27001 nedir, neyi standartlaştırır</h2>
+<p><strong>ISO 27001</strong>, bir kurumun bilgi güvenliğini tek seferlik bir önlem olarak değil, sürekli işleyen bir yönetim sistemi olarak kurmasını şart koşan uluslararası standarttır. Adının açılımı önemlidir: ISO/IEC 27001, Bilgi Güvenliği, Siber Güvenlik ve Gizliliğin Korunması başlığı altında yayımlanır ve dünya genelinde belgelendirmeye esas alınan tek bilgi güvenliği yönetim sistemi standardıdır.</p>
+<p>Burada en sık yapılan kavram hatası şu: ISO 27001'i bir antivirüs, bir güvenlik duvarı ya da bir sızma testi gibi teknik bir çözüm sanmak. Standart hiçbir teknik ürünü zorunlu kılmaz. Onun yerine, kurumun kendi risklerini tanımlamasını, bu risklere karşı bilinçli kararlar vermesini ve verdiği kararları kanıtlayabilmesini ister. Yani ISO 27001 size ne yapacağınızı söylemez; nasıl karar vereceğinizi ve bu kararı nasıl yöneteceğinizi standartlaştırır.</p>
+<p>Bu ayrımı erken kavramak önemli, çünkü ISO 27001 yolculuğuna teknik bir proje gibi başlayan kurumların büyük kısmı denetimde zorlanır. Standart bir teknoloji projesi değil, bir yönetişim projesidir.</p>
+
+<div class="cta">
+  <p class="label">Yeni başlıyorsanız</p>
+  <h4>ISO 27001 yolculuğunun ilk adımı: nerede durduğunuzu görmek</h4>
+  <p>Denetçi gözüyle hazırladığım hazırlık kontrol listesini ve haftalık kurumsal risk bültenini birlikte alın. İlk denetimden önce kapatmanız gereken boşlukları önceden görün.</p>
+  <a class="btn" href="https://www.thegovernance.com.tr/#bulten">Bültene katıl, listeyi al</a>
+</div>
+
+<h2 id="bgys">BGYS: Standardın asıl konusu sistem, belge değil</h2>
+<p>ISO 27001'in kalbinde <strong>BGYS</strong>, yani Bilgi Güvenliği Yönetim Sistemi vardır. Standardın zorunlu maddeleri (4 ile 10 arasındaki ana gövde) tamamen bu sistemi tarif eder. Denetimde bir belgelendirme kuruluşu önce bu maddelere bakar, Annex A'daki teknik kontrollere değil.</p>
+<p>BGYS'nin temel mantığı bir döngüdür: kurum bilgi güvenliği bağlamını anlar, risklerini değerlendirir, bu risklere karşı kontroller seçer, uygular, ölçer ve sürekli iyileştirir. Bu döngünün her halkasının yazılı kanıtı olması beklenir. Bir baş denetçi olarak benim aradığım ilk şey, kurumun bu döngüyü gerçekten yaşayıp yaşamadığıdır, yoksa sadece denetimden bir hafta önce hazırlanmış kâğıtlar mı sunduğudur.</p>
+<blockquote>Bir BGYS'nin canlı olup olmadığını anlamak için belgelere değil, tarihlere bakarım. Tüm kayıtlar aynı haftaya aitse, o sistem yaşamıyor demektir.</blockquote>
+<p>BGYS kurmanın ilk somut çıktısı genellikle üç temel dokümandır: kapsam bildirimi, bilgi güvenliği politikası ve risk değerlendirme metodolojisi. Bu üçü olmadan ilerleyen projeler, sonradan dağılmaya en yatkın olanlardır.</p>
+
+<h2 id="kimler">ISO 27001 kimler için gerekli ve avantajlı</h2>
+<p>ISO 27001 genel olarak gönüllü bir standart olsa da, bazı kurumlar için fiilen zorunlu, bazıları için ise güçlü bir rekabet avantajıdır. Kendinizi aşağıdaki profillerde görüyorsanız, standart sizin gündeminizde olmalıdır:</p>
+<ul>
+  <li><strong>Büyük müşterilere tedarikçi olan şirketler:</strong> Kurumsal alıcılar, tedarikçilerinden giderek daha sık ISO 27001 belgesi istiyor. Belgeniz yoksa ihalede veya tedarikçi listesinde elenebilirsiniz. Bu, standardın en yaygın fiili zorunluluk halidir.</li>
+  <li><strong>Bulut ve yazılım hizmeti sağlayanlar:</strong> Müşteri verisini işleyen veya barındıran teknoloji şirketleri için ISO 27001, güven inşa etmenin en hızlı yoludur. Satış görüşmelerinde güvenlik sorularını tek belgeyle kapatır.</li>
+  <li><strong>Finans, sağlık ve telekomünikasyon gibi düzenlenmiş sektörler:</strong> Bu alanlarda düzenleyici beklentiler ve müşteri hassasiyeti yüksektir; ISO 27001 bu beklentileri karşılamanın yapısal yoludur.</li>
+  <li><strong>Yurt dışına açılan KOBİ'ler:</strong> Uluslararası pazarda ISO 27001, dilden bağımsız ortak bir güven dilidir. Karşı tarafın sizi tanımadığı durumlarda kanıt işlevi görür.</li>
+  <li><strong>Kişisel veri yoğun işleyen kurumlar:</strong> KVKK ve GDPR yükümlülüğü ağır olan kurumlar için ISO 27001:2022, teknik tedbir altyapısını sistematik biçimde kurar.</li>
+</ul>
+<p>Buna karşılık, bilgi varlığı sınırlı ve dış paydaş beklentisi olmayan çok küçük bir işletme için ISO 27001 erken bir yatırım olabilir. Standart herkese her zaman gerekli değildir; doğru soru "almalı mıyım" değil, "benim iş modelimde hangi kapıyı açıyor ya da hangi riski kapatıyor" sorusudur.</p>
+
+<h2 id="annex">Annex A kontrolleri: 93 maddenin gerçek anlamı</h2>
+<p>Standardın ekinde yer alan <strong>Annex A</strong>, kurumların seçebileceği referans kontrolleri listeler. Güncel sürümde bu kontroller dört tema altında toplanmıştır: örgütsel, insan kaynaklı, fiziksel ve teknolojik kontroller. Toplam 93 kontrolden oluşur.</p>
+<p>Burada kritik bir yanlış anlama var: birçok kurum 93 kontrolün tamamını uygulamak zorunda olduğunu sanır. Bu doğru değil. Annex A bir menüdür, bir zorunluluk listesi değil. Kurum, risk değerlendirmesi sonucunda hangi kontrollerin kendisi için anlamlı olduğunu belirler ve bunu Uygulanabilirlik Bildirgesi adı verilen belgede gerekçesiyle yazar. Bir kontrolü uygulamıyorsanız, denetçinin sorduğu soru "neden uygulamıyorsunuz" olur ve makul bir gerekçe yeterlidir.</p>
+
+<table>
+  <thead><tr><th>Annex A Teması</th><th>Neyi kapsar</th></tr></thead>
+  <tbody>
+    <tr><td>Örgütsel kontroller</td><td>Politikalar, roller, tedarikçi ilişkileri, olay yönetimi</td></tr>
+    <tr><td>İnsan kaynaklı kontroller</td><td>Farkındalık, işe alım, ayrılış süreçleri, disiplin</td></tr>
+    <tr><td>Fiziksel kontroller</td><td>Erişim güvenliği, ekipman, temiz masa, imha</td></tr>
+    <tr><td>Teknolojik kontroller</td><td>Erişim yönetimi, şifreleme, yedekleme, log kaydı</td></tr>
+  </tbody>
+</table>
+
+<p>Dört temayı kısaca açmak, hangi kontrolün nereye düştüğünü anlamayı kolaylaştırır:</p>
+<h3>Örgütsel kontroller</h3>
+<p>En geniş tema budur ve genellikle en çok ihmal edilen alandır. Politikalar, bilgi güvenliği rolleri, tedarikçi ilişkileri, olay yönetimi ve sürekliliği kapsar. Kurumların çoğu güvenliği teknik bir mesele sandığı için bu temayı hafife alır; oysa denetimde en fazla bulgu buradan çıkar. Çünkü örgütsel kontroller, sistemin yönetiliyor olduğunu kanıtlayan kontrollerdir.</p>
+<h3>İnsan kaynaklı kontroller</h3>
+<p>Bilgi güvenliğinin en zayıf halkası genellikle teknoloji değil, insandır. Bu tema işe alımdaki güvenlik kontrollerini, çalışan farkındalığını, gizlilik taahhütlerini ve işten ayrılış süreçlerini kapsar. Bir çalışan ayrıldığında erişimlerinin ne kadar sürede kapatıldığı, bu temanın klasik denetim sorusudur.</p>
+<h3>Fiziksel kontroller</h3>
+<p>Uzaktan çalışma yaygınlaşsa da fiziksel güvenlik hâlâ önemlidir. Sunucu odalarına erişim, temiz masa uygulaması, ekipmanın güvenli imhası ve cihazların korunması bu temada yer alır. Tamamen bulutta çalışan bir şirket bile, çalışanların dizüstü bilgisayarları üzerinden fiziksel risk taşır.</p>
+<h3>Teknolojik kontroller</h3>
+<p>Çoğu kurumun ISO 27001 deyince ilk aklına gelen tema budur: erişim yönetimi, şifreleme, yedekleme, log kaydı, güvenli kodlama ve 2022 ile gelen yeni kontroller. Teknik ekiplerin en rahat olduğu alandır, ama paradoksal biçimde denetimde tek başına yeterli olmayan alandır. Çünkü teknoloji vardır da onu işleten süreç yoksa, kontrol kâğıt üzerinde kalır.</p>
+
+<div class="auditor">
+  <p class="label">Denetçi Notu</p>
+  <p>Sahada en çok gördüğüm hata, Uygulanabilirlik Bildirgesi'nin bir şablondan kopyalanmasıdır. Her kontrolün karşısında "Uygulanıyor" yazar ama hiçbirinin gerekçesi yoktur. Bu, denetçiye sistemin düşünülerek değil doldurulmak için kurulduğunu anlatır ve genellikle daha derin bir incelemeyi tetikler.</p>
+</div>
+
+<h2 id="versiyon">ISO 27001:2022 önceki sürümden ne değiştirdi</h2>
+<p>Standardın güncel sürümü <strong>ISO 27001:2022</strong>'dir ve bir önceki 2013 sürümünden anlamlı biçimde farklıdır. Hâlâ eski sürüme göre kurulmuş sistemlerle karşılaşıyorum; bu yüzden farkı bilmek önemli. En kritik değişiklik Annex A tarafındadır:</p>
+<ul>
+  <li><strong>Kontrol sayısı azaldı, yapı sadeleşti:</strong> Eski sürümdeki 114 kontrol, 93 kontrole indirildi. 14 farklı alan, dört temaya toplandı: örgütsel, insan kaynaklı, fiziksel ve teknolojik.</li>
+  <li><strong>11 tamamen yeni kontrol eklendi:</strong> Bunlar standardın çağa uyum sağladığı yerlerdir. Öne çıkanlar: tehdit istihbaratı, bulut hizmetleri güvenliği, iş sürekliliği için BİT hazırlığı, fiziksel güvenlik izleme, yapılandırma yönetimi, bilgi silme, veri maskeleme, veri sızıntısı önleme, izleme faaliyetleri, web filtreleme ve güvenli kodlama.</li>
+  <li><strong>Kontrollere etiketler geldi:</strong> Her kontrol artık özelliklerine göre etiketlenebiliyor (önleyici, tespit edici, düzeltici gibi). Bu, risk haritalamasını kolaylaştırır.</li>
+</ul>
+<p>2013 sürümüne göre belgelendirilmiş kurumlar için 2022'ye geçişin resmi bir son tarihi tanımlanmıştı. Bugün yeni kurulan her BGYS doğrudan 2022 sürümüne göre tasarlanmalıdır; eski sürüm üzerinden ilerlemek, kısa süre sonra geçiş maliyeti doğurur.</p>
+
+<div class="auditor">
+  <p class="label">Denetçi Notu</p>
+  <p>2022'nin getirdiği yeni kontrollerin önemli bir kısmı doğrudan kişisel veri korumasını ilgilendiriyor: veri maskeleme, veri sızıntısı önleme ve bilgi silme bunların başında geliyor. Bu, ISO 27001'i KVKK ve GDPR tarafına belirgin biçimde yaklaştırdı. Yani güncel sürüme göre kurulmuş sağlam bir BGYS, kişisel veri uyumunun teknik ayağında size ciddi yol aldırır.</p>
+</div>
+
+<h2 id="kvkk">ISO 27001:2022, KVKK ve GDPR ilişkisi</h2>
+<p>Türkiye'deki kurumların en çok karıştırdığı konu budur. İkisi sık sık aynı cümlede geçtiği için aynı şey sanılır. Oysa temel doğaları farklıdır.</p>
+<p><strong>KVKK</strong>, yani 6698 sayılı Kişisel Verilerin Korunması Kanunu, Türkiye'de geçerli, zorunlu bir yasal düzenlemedir. Uymamak idari para cezası doğurur. Kapsamı kişisel verilerle sınırlıdır. Avrupa tarafındaki muadili <strong>GDPR</strong>'dır; ikisi felsefe olarak büyük ölçüde örtüşür. <strong>ISO 27001:2022</strong> ise gönüllü, uluslararası bir yönetim sistemi standardıdır; her tür bilgi varlığını kapsar, sadece kişisel veriyi değil.</p>
+<p>İkisi rakip değil, tamamlayıcıdır. Özellikle 2022 sürümüyle gelen veri maskeleme, veri sızıntısı önleme ve bilgi silme kontrolleri, ISO 27001'i kişisel veri korumasının teknik tarafına belirgin biçimde yaklaştırdı. Bu yüzden sağlam bir BGYS, KVKK'nın istediği teknik ve idari tedbirlerin büyük kısmını doğal olarak karşılar.</p>
+<p>Aşağıdaki tablo, KVKK'nın beklediği başlıca teknik tedbir alanlarını ISO 27001:2022 Annex A kontrolleriyle eşleştirir. Bu, "ISO 27001'imiz var, KVKK için ne kadar yol almışız" sorusunun pratik cevabıdır:</p>
+
+<table>
+  <thead><tr><th>KVKK Teknik Tedbir Alanı</th><th>ISO 27001:2022 Karşılığı (Annex A)</th><th>Örtüşme</th></tr></thead>
+  <tbody>
+    <tr><td>Yetki ve erişim matrisleri</td><td>Erişim kontrolü, kimlik yönetimi, ayrıcalıklı erişim hakları</td><td>Yüksek</td></tr>
+    <tr><td>Kişisel veri güvenliği takibi (loglama)</td><td>İzleme faaliyetleri, log kaydı, olay yönetimi</td><td>Yüksek</td></tr>
+    <tr><td>Şifreleme ve kriptografi</td><td>Kriptografi kullanımı, bilgi aktarımının güvenliği</td><td>Yüksek</td></tr>
+    <tr><td>Veri maskeleme ve anonimleştirme</td><td>Veri maskeleme (2022 ile yeni)</td><td>Yüksek</td></tr>
+    <tr><td>Sızıntı önleme</td><td>Veri sızıntısı önleme (2022 ile yeni)</td><td>Yüksek</td></tr>
+    <tr><td>Verilerin yedeklenmesi</td><td>Bilgi yedekleme, BİT iş sürekliliği hazırlığı</td><td>Yüksek</td></tr>
+    <tr><td>Saklama ve imha</td><td>Bilgi silme (2022 ile yeni), kayıtların korunması</td><td>Orta-Yüksek</td></tr>
+    <tr><td>Çalışan farkındalığı ve gizlilik taahhütleri</td><td>Farkındalık eğitimi, gizlilik anlaşmaları, disiplin süreci</td><td>Yüksek</td></tr>
+    <tr><td>Tedarikçi (veri işleyen) yönetimi</td><td>Tedarikçi ilişkilerinde bilgi güvenliği, hizmet sunumu izleme</td><td>Yüksek</td></tr>
+    <tr><td>İhlal bildirimi süreci</td><td>Bilgi güvenliği olaylarının yönetimi ve raporlanması</td><td>Orta-Yüksek</td></tr>
+  </tbody>
+</table>
+
+<p>Tablodan görüleceği gibi örtüşme yüksektir, ancak bire bir değildir. ISO 27001 teknik ve idari altyapıyı kurar; fakat KVKK'nın hukuki yükümlülüklerini (aydınlatma metni, açık rıza yönetimi, VERBİS kaydı, veri sahibi başvuruları gibi) doğrudan karşılamaz. Bu hukuki katman ayrıca ele alınmalıdır. Bir adım öteye gitmek isteyenler için <strong>ISO 27701</strong>, 27001'in üzerine kurulan ve doğrudan kişisel veri gizliliği yönetimine odaklanan uzantı standardıdır; KVKK ve GDPR uyumu için en doğal köprüdür.</p>
+<p>Pratikte sık verdiğim tavsiye şudur: ISO 27001:2022'yi yönetim sistemi omurgası olarak kurun, KVKK uyumunu bu omurganın üzerine oturtun. Tersi, yani her düzenleme için ayrı ada kurmak, kurumu yorar.</p>
+
+<div class="cta soft">
+  <p class="label">Uygulama aşamasındaysanız</p>
+  <h4>Süreci hızlandıracak hazır kurumsal şablonlar</h4>
+  <p>BGYS kurarken iş sürekliliği ve yapay zeka riski gibi alanlarda sıfırdan başlamak zorunda değilsiniz. ISO 22301 uyumlu BCP şablonu ve AI risk değerlendirme çerçevesi, denetime hazır yapıda kullanıma sunulmuştur.</p>
+  <a class="btn" href="https://www.thegovernance.com.tr/arac-kutuphanesi.html">Araç kütüphanesini gör</a>
+</div>
+
+<h2 id="risk">Risk değerlendirmesi gerçekte nasıl yapılır</h2>
+<p>ISO 27001'in en yanlış anlaşılan parçası risk değerlendirmesidir. Birçok kurum bunu denetimden önce doldurulması gereken bir tablo sanır. Oysa risk değerlendirmesi, tüm BGYS'nin üzerine kurulduğu temeldir; hangi kontrolleri neden seçtiğinizin, hangi riski neden kabul ettiğinizin gerekçesi buradan çıkar. Yüzeysel bir risk değerlendirmesi, sağlam görünen bir sistemi denetimde çökerten en yaygın nedendir.</p>
+<p>Standart belirli bir metodolojiyi zorunlu kılmaz; size kendi tutarlı yönteminizi tanımlama özgürlüğü verir. Ancak denetçi olarak aradığım şey her zaman aynıdır: yöntemin yazılı, tekrarlanabilir ve tutarlı uygulanmış olması. Pratikte sağlıklı bir risk değerlendirmesi şu adımlardan geçer:</p>
+<ol>
+  <li><strong>Bilgi varlıklarını belirleyin:</strong> Veriler, sistemler, uygulamalar, fiziksel ortamlar ve insanlar. Burada en sık atlanan varlık türü, üçüncü taraflarda işlenen verilerdir.</li>
+  <li><strong>Tehdit ve zafiyetleri eşleştirin:</strong> Her varlık için "bu nasıl zarar görür" sorusunu sorun. Tehdit dışarıdan (saldırı) ya da içeriden (hata, kötü niyet) gelebilir.</li>
+  <li><strong>Olasılık ve etkiyi puanlayın:</strong> Genellikle bir ölçek kullanılır. Önemli olan ölçeğin tanımlı olması; "yüksek" derken herkesin aynı şeyi anlaması.</li>
+  <li><strong>Risk seviyesini hesaplayın:</strong> Olasılık ve etkinin birleşimi risk seviyesini verir. Bu, kabul edilebilir risk eşiğinizle karşılaştırılır.</li>
+  <li><strong>Risk işleme kararını verin:</strong> Dört seçenek vardır: riski azaltmak (kontrol uygulamak), kabul etmek, transfer etmek (sigorta, dış kaynak) ya da kaçınmak (faaliyeti durdurmak). Bu kararı üst yönetim sahiplenmelidir.</li>
+</ol>
+<p>Burada kritik nokta beşinci adımdır. Bir riski "kabul ediyoruz" demek tamamen geçerlidir; standart sizi her riski sıfırlamaya zorlamaz. Ama bu kararın bilinçli, gerekçeli ve yetkili biri tarafından verilmiş olması gerekir. Denetimde "bu riski neden kabul ettiniz" sorusuna "fark etmemiştik" cevabı bir uygunsuzluktur; "iş gerekçesiyle, şu tarihte yönetim onayıyla kabul ettik" cevabı ise sistemin çalıştığının kanıtıdır.</p>
+<blockquote>İyi bir risk değerlendirmesini kötüsünden ayıran tek şey vardır: iyi olanı okuduğunuzda kurumu tanırsınız. Kötü olanı her kuruma yapıştırabilirsiniz.</blockquote>
+
+<div class="auditor">
+  <p class="label">Denetçi Notu</p>
+  <p>Risk değerlendirmesinin canlı olup olmadığını anlamak için tek bir soru sorarım: "Bu değerlendirmeyi en son ne zaman güncellediniz ve neyi değiştirdiniz?" Cevap "kurduğumuzda yapmıştık" ise, o risk değerlendirmesi bir fotoğraftır, oysa olması gereken bir filmdir. Risk ortamı değişir; değerlendirme onu takip etmiyorsa sistem geride kalmıştır.</p>
+</div>
+
+<h2 id="surec">Sertifika süreci adım adım</h2>
+<p>ISO 27001 sertifikasına giden yol, kurum olgunluğuna göre değişmekle birlikte, genellikle aynı aşamalardan geçer:</p>
+<ol>
+  <li><strong>Boşluk analizi:</strong> Mevcut durumun standarda göre nerede olduğunu görmek. Projenin en çok atlanması yanlış olan adımıdır.</li>
+  <li><strong>Kapsam ve politika:</strong> Sertifikanın hangi birimleri, lokasyonları ve süreçleri kapsayacağının netleştirilmesi.</li>
+  <li><strong>Risk değerlendirme:</strong> Bilgi varlıklarının ve bunlara yönelik risklerin metodolojiye göre değerlendirilmesi.</li>
+  <li><strong>Kontrollerin uygulanması:</strong> Seçilen Annex A kontrollerinin hayata geçirilmesi ve kanıtların biriktirilmesi.</li>
+  <li><strong>İç denetim:</strong> Belgelendirme denetiminden önce kurumun kendi kendini denetlemesi. Zorunludur.</li>
+  <li><strong>Yönetimin gözden geçirmesi:</strong> Üst yönetimin sistemi resmen değerlendirdiği toplantı ve kaydı.</li>
+  <li><strong>Belgelendirme denetimi:</strong> İki aşamadan oluşur. Aşama 1 doküman incelemesi, Aşama 2 saha denetimidir.</li>
+</ol>
+<p>Tipik bir kurumda bu döngü, mevcut olgunluğa göre <strong>4 ila 9 ay</strong> arasında tamamlanır. Süreyi en çok uzatan şey teknik eksiklik değil, risk değerlendirmesinin yüzeysel yapılması ve iç denetimin geç başlatılmasıdır.</p>
+
+<h2 id="senaryo">Bir denetim sahada nasıl ilerler: anonim örnek</h2>
+<p>Teorik anlatım bir yere kadar yardımcı olur. Gerçek bir denetimin nasıl hissettirdiğini aktarmak için, kurum kimliğini gizleyerek tipik bir Aşama 2 saha denetimini özetleyeyim. Orta ölçekli bir teknoloji şirketiydi; teknik altyapıları güçlüydü ve bu yüzden kendilerinden emindiler.</p>
+<p>Denetim, teknik kontrollerle değil, bir soruyla başladı: "Geçen çeyrekte yaşadığınız bir bilgi güvenliği olayını ve nasıl ele aldığınızı anlatır mısınız?" Ekip duraksadı. Sistemleri loglar üretiyordu, ama hiç kimse bu logları düzenli incelemiyordu. Yani teknik kontrol vardı, fakat onu işleten süreç yoktu. Bu, ISO 27001'in tam da yakaladığı boşluktur: araç ile yönetim arasındaki fark.</p>
+<p>İkinci tespit tedarikçi tarafında çıktı. Kritik müşteri verisini bir bulut sağlayıcıda tutuyorlardı, ama bu sağlayıcıyla yapılmış bir bilgi güvenliği değerlendirmesi yoktu. Kendi evleri düzenliydi; ancak verinin yarısı başka birinin evindeydi ve o eve hiç bakılmamıştı.</p>
+<p>Üçüncüsü daha inceydi. Risk değerlendirmeleri özenliydi, fakat altı ay öncesine aitti ve o dönemde şirket yeni bir ürün hattı başlatmıştı. Yeni ürün, yeni veri akışları ve yeni riskler demekti; ama bunların hiçbiri risk değerlendirmesine yansımamıştı. Sistem kurulmuştu, ama yaşamı takip etmiyordu.</p>
+<p>Bu denetim bir uygunsuzlukla kapanmadı, çünkü bulgular düzeltilebilir nitelikteydi ve ekip şeffaf davrandı. Ama anlatmak istediğim nokta şu: hiçbir bulgu teknik bir zafiyet değildi. Hepsi, teknolojinin değil yönetimin boşluklarıydı. ISO 27001 denetimi tam olarak burayı görmek için vardır.</p>
+
+<h2 id="maliyet">Sertifika maliyetini ne belirler</h2>
+<p>"ISO 27001 sertifika fiyatı ne kadar" sorusunun tek bir cevabı yoktur, çünkü fiyat birden çok kalemden oluşur ve bunların çoğu kurumdan kuruma değişir. Maliyeti belirleyen ana etkenler:</p>
+<ul>
+  <li><strong>Kapsam genişliği:</strong> Tek bir birim mi, tüm kurum mu belgelendiriliyor.</li>
+  <li><strong>Çalışan ve lokasyon sayısı:</strong> Belgelendirme kuruluşunun denetim gün sayısını doğrudan etkiler.</li>
+  <li><strong>Danışmanlık ihtiyacı:</strong> İç kaynakla mı yürütülüyor, dışarıdan destek mi alınıyor.</li>
+  <li><strong>Belgelendirme kuruluşu ücreti:</strong> Akredite kuruluşların denetim ve sertifika ücreti.</li>
+  <li><strong>Sürdürme maliyeti:</strong> Sertifika üç yıl geçerlidir ama her yıl gözetim denetimi gerektirir. Tek seferlik değil, süregelen bir maliyettir.</li>
+</ul>
+<p>Burada en sık yapılan bütçeleme hatası, yalnızca belgelendirme kuruluşunun ücretini hesaba katıp iç iş gücünü, danışmanlığı ve yıllık gözetim denetimlerini görmezden gelmektir. Gerçekçi bir bütçe, üç yıllık toplam sahip olma maliyeti üzerinden kurulmalıdır.</p>
+<p>Maliyeti bütçelerken kalemleri ayrı ayrı görmek faydalıdır. Aşağıdaki tablo, tutar vermeden, hangi kalemlerin toplam maliyeti oluşturduğunu ve bunların tek seferlik mi yoksa süregelen mi olduğunu özetler:</p>
+
+<table>
+  <thead><tr><th>Maliyet Kalemi</th><th>Niteliği</th><th>Sık atlanır mı</th></tr></thead>
+  <tbody>
+    <tr><td>Boşluk analizi / hazırlık</td><td>Tek seferlik</td><td>Bazen</td></tr>
+    <tr><td>Danışmanlık desteği</td><td>Tek seferlik (opsiyonel)</td><td>Hayır</td></tr>
+    <tr><td>İç iş gücü (proje ekibi zamanı)</td><td>Tek seferlik, yoğun</td><td>Sıklıkla</td></tr>
+    <tr><td>Teknik iyileştirme yatırımları</td><td>Değişken</td><td>Bazen</td></tr>
+    <tr><td>Aşama 1 + Aşama 2 belgelendirme denetimi</td><td>Tek seferlik</td><td>Hayır</td></tr>
+    <tr><td>Yıllık gözetim denetimi (1. ve 2. yıl)</td><td>Süregelen</td><td>Sıklıkla</td></tr>
+    <tr><td>Üç yıl sonu yeniden belgelendirme</td><td>Periyodik</td><td>Sıklıkla</td></tr>
+    <tr><td>Sistemin sürdürülmesi (personel zamanı)</td><td>Süregelen</td><td>Neredeyse her zaman</td></tr>
+  </tbody>
+</table>
+<p>Tablodaki "neredeyse her zaman atlanır" satırı en önemlisidir: ISO 27001 bir kerede alınıp rafa kaldırılan bir belge değildir. Sertifikanın asıl maliyeti, sistemin canlı tutulması için ayrılan sürekli emektir. Bunu bütçelemeyen kurumlar, ikinci yıl gözetim denetiminde zorlanır.</p>
+
+<h2 id="belgelendirme">Belgelendirme kuruluşu nasıl seçilir</h2>
+<p>Sertifikayı veren belgelendirme kuruluşunun seçimi, çoğu kurumun fiyata bakarak verdiği ama aslında stratejik olan bir karardır. Çünkü tüm sertifikalar eşit ağırlıkta değildir. Dikkat edilmesi gereken başlıca noktalar:</p>
+<ul>
+  <li><strong>Akreditasyon en kritik kriterdir.</strong> Belgelendirme kuruluşunun, tanınmış bir akreditasyon kurumu tarafından akredite edilmiş olması gerekir. Akredite olmayan bir kuruluştan alınan sertifika, kâğıt üzerinde sertifikadır ama müşteriler ve düzenleyiciler nezdinde değer taşımayabilir. Türkiye'de TÜRKAK, uluslararası ağın parçası olan akreditasyon kurumudur.</li>
+  <li><strong>Tanınırlık pazara göre değişir.</strong> Sertifikayı kime göstereceğiniz önemlidir. Yurt dışı müşterilere çalışıyorsanız, o pazarda tanınan bir kuruluş tercih edilmelidir.</li>
+  <li><strong>Sektör deneyimi denetimin kalitesini belirler.</strong> Sizin sektörünüzü tanıyan bir denetçi, hem daha anlamlı bulgular üretir hem de süreci gereksiz yere zorlaştırmaz.</li>
+  <li><strong>En ucuz teklif çoğu zaman en pahalı karardır.</strong> Olağandışı düşük fiyat ve kısa denetim süresi vaat eden teklifler, genellikle yüzeysel bir denetime işaret eder. Bu, kısa vadede ucuz, uzun vadede itibar açısından risklidir.</li>
+</ul>
+<p>Bir denetçi olarak şunu söyleyebilirim: kurumlar bazen "kolay geçiren" bir belgelendirme kuruluşu arar. Oysa kolay geçiren denetim, size hiçbir şey öğretmeyen denetimdir. İyi bir denetim, sertifikadan çok daha değerli bir şey verir: kör noktalarınızın haritasını.</p>
+
+<h2 id="hatalar">Denetimde en sık gördüğüm 5 hata</h2>
+<p>Yıllar içinde farklı sektörlerden onlarca kurumu denetledim. Hatalar şaşırtıcı biçimde tekrar eder. En sık karşılaştığım beşi:</p>
+<h3>1. Sistemi denetimden bir ay önce kurmak</h3>
+<p>BGYS sürekli işlemesi gereken bir döngüdür. Son anda toplanan kayıtlar denetçinin gözünden kaçmaz; tarihler her şeyi anlatır.</p>
+<h3>2. Risk değerlendirmesini bir tabloyu doldurmak sanmak</h3>
+<p>Risk değerlendirmesi bir Excel egzersizi değil, bir karar sürecidir. Çıktısı, yönetimin hangi riski neden kabul ettiğini gösteren bilinçli kararlardır.</p>
+<h3>3. Üst yönetimi sürece dahil etmemek</h3>
+<p>Standart, liderliğin görünür sahipliğini açıkça ister. Yönetimin gözden geçirme toplantısı yapılmamışsa ya da göstermelikse, bu bir uygunsuzluktur.</p>
+<h3>4. Tedarikçi risklerini görmezden gelmek</h3>
+<p>Kurumun kendi güvenliği güçlü olsa bile, kritik verisini işleyen tedarikçileri zayıfsa risk oradadır. Annex A bunu açıkça kapsar ve denetimde giderek daha çok sorgulanır.</p>
+<h3>5. Farkındalığı bir e-posta sanmak</h3>
+<p>Çalışan farkındalığı, herkese gönderilen tek bir bilgilendirme e-postasıyla kanıtlanamaz. Denetçi, farkındalığın ölçüldüğüne dair kanıt arar.</p>
+
+<div class="cta">
+  <p class="label">Süreci tek başınıza yönetmek istemiyorsanız</p>
+  <h4>Bir denetçiyle konuşmak bazen en kısa yoldur</h4>
+  <p>ISO 27001 sürecinizi nereden başlatacağınızdan emin değilseniz ya da yaklaşan bir denetime hazırlanıyorsanız, bağımsız bir bakış açısı zaman ve maliyet kaybını önleyebilir. The Governance üzerinden iletişime geçebilirsiniz.</p>
+  <a class="btn" href="https://www.thegovernance.com.tr/hakkimizda.html">İletişime geç</a>
+</div>
+
+<div class="faq">
+<h2 id="sss">Sık sorulan sorular</h2>
+<details><summary>ISO 27001 zorunlu mu?</summary><p>Genel olarak zorunlu değildir; gönüllü bir standarttır. Ancak bazı kamu ihalelerinde, finans ve telekomünikasyon gibi düzenlenmiş sektörlerde ya da büyük müşterilerin tedarikçi şartlarında fiilen zorunlu hale gelebilir.</p></details>
+<details><summary>ISO 27001 ile ISO 27002 farkı nedir?</summary><p>ISO 27001 belgelendirmeye esas alınan, zorunlu gereklilikleri içeren standarttır. ISO 27002 ise Annex A kontrollerinin nasıl uygulanacağına dair rehber niteliğindedir; belgelendirilmez, yol gösterir.</p></details>
+<details><summary>Sertifika ne kadar süre geçerlidir?</summary><p>Belgelendirme sertifikası üç yıl geçerlidir. Bu süre içinde her yıl gözetim denetimi yapılır ve üç yılın sonunda yeniden belgelendirme denetimi gerekir.</p></details>
+<details><summary>ISO 27001 KVKK uyumu için yeterli mi?</summary><p>Tek başına yeterli değildir ama büyük bir avantaj sağlar. ISO 27001:2022, KVKK'nın istediği teknik ve idari tedbirlerin önemli kısmını karşılar; ancak aydınlatma, açık rıza, VERBİS kaydı ve veri sahibi başvuruları gibi hukuki yükümlülükler ayrıca ele alınmalıdır. Gizlilik tarafını güçlendirmek için ISO 27701 uzantısı değerlendirilebilir.</p></details>
+<details><summary>Küçük bir şirket ISO 27001 alabilir mi?</summary><p>Evet. Standart ölçek bağımsızdır. Kapsam ve kontroller kurumun büyüklüğüne ve risklerine göre ayarlanır; küçük bir ekip de sistemi orantılı biçimde kurabilir.</p></details>
+</div>
+
+<div class="cta soft">
+  <p class="label">Bu rehberi faydalı bulduysanız</p>
+  <h4>Her Pazartesi, kurumsal risk gündemini denetçi gözüyle okuyun</h4>
+  <p>The Governance, Türkiye'nin bağımsız GRC bültenidir. ISO 27001, KVKK, tedarik zinciri riski ve AI yönetişimini yönetici dilinde, haftada 10 dakikada özetler.</p>
+  <a class="btn" href="https://www.thegovernance.com.tr/#bulten">Bültene abone ol</a>
+</div>
+
+<div class="pagefoot">
+  Yazan: Ecem Aksut · ISO 27001 Lead Auditor, CRISC<br>
+  © 2026 The Governance · <a href="https://www.thegovernance.com.tr/">www.thegovernance.com.tr</a><br>
+  Bu içerik bilgilendirme amaçlıdır ve resmi belgelendirme danışmanlığı yerine geçmez.
+</div>
+
+</body>
+</html>
