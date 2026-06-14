@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kurumsal AI Envanteri : 5 Soruluk Kontrol Listesi · The Governance</title>
+<meta name="description" content="Türkiye Yapay Zeka Eylem Planı yönetişimi merkeze alırken, kurumunuzun AI kullanımını regülatör sormadan haritalayın. Yönetim kurulu ve iç denetim için 5 soruluk ücretsiz kontrol listesi.">
+<meta property="og:title" content="Kurumsal AI Envanteri : 5 Soruluk Kontrol Listesi">
+<meta property="og:description" content="Yönetim kurulu ve iç denetim için ücretsiz, doldurulabilir AI envanteri kontrol listesi. The Governance.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bordo:   #8C1F0D;
+    --bordo-m: #B5341A;
+    --ink:     #111009;
+    --paper:   #F5F2EC;
+    --cream:   #EAE5DB;
+    --rule:    #C8C2B6;
+    --mid:     #3D3A34;
+    --light:   #8A8378;
+    --gold:    #B8923A;
+  }
+  body {
+    font-family: 'DM Mono', monospace;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--bordo); text-decoration: none; }
+
+  /* NAV */
+  .nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 32px; border-bottom: 1px solid var(--rule);
+    max-width: 1100px; margin: 0 auto;
+  }
+  .nav-brand {
+    font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 700;
+    color: var(--ink); letter-spacing: -.01em;
+  }
+  .nav-brand em { font-style: normal; color: var(--bordo); }
+  .nav-links { display: flex; gap: 26px; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; }
+  .nav-links a { color: var(--mid); }
+  .nav-links a:hover { color: var(--bordo); }
+
+  /* WRAP */
+  .wrap { max-width: 760px; margin: 0 auto; padding: 56px 32px 80px; }
+
+  .kicker {
+    font-size: 10px; letter-spacing: .24em; text-transform: uppercase;
+    color: var(--bordo); margin-bottom: 18px;
+  }
+  h1 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 700;
+    font-size: clamp(30px, 5vw, 46px); line-height: 1.12; color: var(--ink);
+    margin-bottom: 22px; letter-spacing: -.01em;
+  }
+  .lead {
+    font-size: 14px; line-height: 1.75; color: var(--mid);
+    max-width: 600px; margin-bottom: 14px;
+  }
+  .lead strong { color: var(--ink); }
+
+  /* DOWNLOAD CARD */
+  .dl-card {
+    background: var(--ink); color: var(--paper);
+    padding: 32px 34px; margin: 38px 0 46px;
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 22px;
+    position: relative; overflow: hidden;
+  }
+  .dl-card::after {
+    content: '?'; position: absolute; right: -10px; bottom: -56px;
+    font-family: 'Cormorant Garamond', serif; font-size: 240px; font-weight: 700;
+    color: rgba(255,255,255,.05); line-height: 1; pointer-events: none;
+  }
+  .dl-left { position: relative; z-index: 2; max-width: 380px; }
+  .dl-tag { font-size: 9px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+  .dl-title { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 700; line-height: 1.2; margin-bottom: 8px; }
+  .dl-sub { font-size: 11px; color: rgba(245,242,236,.65); line-height: 1.6; }
+  .dl-btn {
+    position: relative; z-index: 2;
+    background: var(--bordo); color: #fff !important;
+    padding: 15px 26px; font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+    border: none; white-space: nowrap; transition: background .2s; font-family: 'DM Mono', monospace;
+  }
+  .dl-btn:hover { background: var(--bordo-m); }
+
+  /* SECTION RULE */
+  .srule {
+    font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--bordo);
+    padding-bottom: 10px; border-bottom: 1px solid var(--rule); margin: 0 0 28px;
+  }
+
+  /* WHY */
+  .why { background: var(--cream); border-left: 3px solid var(--bordo); padding: 18px 22px; margin-bottom: 42px; }
+  .why-label { font-size: 9px; letter-spacing: .18em; text-transform: uppercase; color: var(--bordo); margin-bottom: 8px; }
+  .why p { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-style: italic; line-height: 1.45; color: var(--ink); }
+
+  /* QUESTIONS */
+  .q { border: 1px solid var(--rule); border-left: 3px solid var(--bordo-m); padding: 20px 24px; margin-bottom: 16px; background: #fbf9f5; }
+  .q-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 10px; }
+  .q-num { font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 700; color: var(--bordo); line-height: 1; }
+  .q-title { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 700; color: var(--ink); line-height: 1.2; }
+  .q-body { padding-left: 44px; }
+  .q-body p { font-size: 12.5px; line-height: 1.65; color: var(--mid); margin-bottom: 10px; }
+  .q-check { display: flex; flex-direction: column; gap: 7px; }
+  .q-check div { font-size: 12px; color: var(--ink); position: relative; padding-left: 24px; line-height: 1.5; }
+  .q-check div::before {
+    content: ''; position: absolute; left: 0; top: 2px; width: 13px; height: 13px;
+    border: 1.5px solid var(--bordo-m); background: var(--paper);
+  }
+  .redflag { font-size: 10.5px; color: var(--bordo); margin-top: 10px; padding-left: 44px; line-height: 1.5; }
+  .redflag b { letter-spacing: .1em; text-transform: uppercase; }
+
+  /* SUBSCRIBE */
+  .sub-block { background: var(--bordo); color: #fff; padding: 40px 34px; margin: 52px 0 0; text-align: center; }
+  .sub-block h2 { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 700; margin-bottom: 12px; line-height: 1.2; }
+  .sub-block p { font-size: 12.5px; color: rgba(255,255,255,.82); max-width: 460px; margin: 0 auto 24px; line-height: 1.65; }
+  .sub-form { display: flex; justify-content: center; }
+
+  /* FOOTER */
+  .foot { max-width: 760px; margin: 0 auto; padding: 36px 32px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; }
+  .foot-brand { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 700; color: var(--ink); }
+  .foot-brand em { font-style: normal; color: var(--bordo); }
+  .foot-meta { font-size: 9px; letter-spacing: .12em; text-transform: uppercase; color: var(--light); text-align: right; line-height: 1.8; }
+  .disclaimer { font-size: 10.5px; color: var(--light); margin-top: 30px; line-height: 1.6; padding-top: 18px; border-top: 1px solid var(--rule); }
+
+  @media (max-width: 640px) {
+    .dl-card { flex-direction: column; align-items: flex-start; }
+    .dl-btn { width: 100%; text-align: center; }
+    .q-body { padding-left: 0; }
+    .redflag { padding-left: 0; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nav-brand">The<em>.</em>Governance</a>
+  <div class="nav-links">
+    <a href="/#bulten">Bülten</a>
+    <a href="/arac-kutuphanesi.html">Araçlar</a>
+    <a href="/hakkimizda.html">Hakkımızda</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="kicker">Ücretsiz Araç · Yönetim Kurulu & İç Denetim</div>
+  <h1>Kurumsal Yapay Zeka Envanteri : 5 Soruluk Kontrol Listesi</h1>
+  <p class="lead">Türkiye Yapay Zeka Eylem Planı, dört eksenden biri olan "yönet" ile yönetişimi devletin gündemine aldı. Bir alan devlet planında "yönet" başlığına girdiğinde, zamanla bir denetim kriterine dönüşür. Bu kontrol listesi, kurumunuzun AI kullanımını regülatör sormadan önce haritalamanız için tasarlandı.</p>
+  <p class="lead">Her departman için beş soruyu yanıtlayın: bu beş yanıt, kurumunuzun AI risk haritasının temelidir.</p>
+
+  <div class="dl-card">
+    <div class="dl-left">
+      <div class="dl-tag">◆ İndir & Doldur</div>
+      <div class="dl-title">Doldurulabilir PDF · Tek Sayfa</div>
+      <div class="dl-sub">Bordo/krem marka kimliğinde, yazdırılabilir ve doldurulabilir kontrol listesi. Her departman yöneticisiyle ayrı doldurup tek envanterde birleştirin.</div>
+    </div>
+    <a href="https://workingwomennotes-max.github.io/thegovernance/TheGovernance_AI_Envanteri_Kontrol_Listesi.pdf" class="dl-btn" download>PDF'i İndir →</a>
+  </div>
+
+  <div class="why">
+    <div class="why-label">Neden Şimdi?</div>
+    <p>Çalışanlarınız bugün kurumsal veriyi yurt dışı AI servislerine giriyor olabilir. Bu artık yalnızca bir KVKK meselesi değil; tedarik ve bağımlılık riski meselesi. Listeleyemediğiniz kullanımı yönetemezsiniz.</p>
+  </div>
+
+  <div class="srule">5 Temel Soru</div>
+
+  <div class="q">
+    <div class="q-head"><div class="q-num">1</div><div class="q-title">Hangi AI araçları kullanılıyor?</div></div>
+    <div class="q-body">
+      <p>Onaylı kurumsal araçlar kadar, onaysız bireysel kullanımı (Shadow AI) da kapsayın. Çoğu risk, BT'nin haberi olmayan kullanımdadır.</p>
+      <div class="q-check">
+        <div>Onaylı kurumsal AI araçları listelendi</div>
+        <div>Çalışanların bireysel kullandığı araçlar (Shadow AI) tespit edildi</div>
+        <div>Her aracın kurumsal bir sahibi belirlendi</div>
+      </div>
+      <div class="redflag"><b>Uyarı işareti:</b> "Kimse resmi olarak kullanmıyor" cevabı, çoğu zaman envanterin hiç çıkarılmadığı anlamına gelir.</div>
+    </div>
+  </div>
+
+  <div class="q">
+    <div class="q-head"><div class="q-num">2</div><div class="q-title">Bu araçlara hangi veri giriliyor?</div></div>
+    <div class="q-body">
+      <p>Kurumsal sır, kişisel veri, müşteri bilgisi veya finansal veri bir AI aracına girildiğinde, o veri artık kurumun tek kontrolünde değildir.</p>
+      <div class="q-check">
+        <div>Girilen veri türleri sınıflandırıldı (kişisel / ticari / kamuya açık)</div>
+        <div>Kişisel veri giriliyorsa KVKK dayanağı belirlendi</div>
+        <div>"Hassas veri girilmez" kuralı yazılı ve duyurulmuş durumda</div>
+      </div>
+      <div class="redflag"><b>Uyarı işareti:</b> Çalışan, müşteri sözleşmesini özetletmek için bir chatbot'a yapıştırıyorsa, bu bir veri aktarımıdır.</div>
+    </div>
+  </div>
+
+  <div class="q">
+    <div class="q-head"><div class="q-num">3</div><div class="q-title">Veri nerede, hangi ülkede işleniyor?</div></div>
+    <div class="q-body">
+      <p>Eylem planının "üret" ekseni yerli modeli önceliklendirirken, yurt dışı sunuculara akan veri hem uyum hem stratejik bağımlılık riskidir.</p>
+      <div class="q-check">
+        <div>Her aracın veri işleme lokasyonu (ülke) tespit edildi</div>
+        <div>Yurt dışı aktarım için KVKK Madde 9 dayanağı kontrol edildi</div>
+        <div>Yerli alternatif değerlendirmesi yapıldı</div>
+      </div>
+      <div class="redflag"><b>Uyarı işareti:</b> Aracın verisini nerede işlediğini bilmiyorsanız, taşıdığınız bağımlılık riskini de bilemezsiniz.</div>
+    </div>
+  </div>
+
+  <div class="q">
+    <div class="q-head"><div class="q-num">4</div><div class="q-title">Çıktı bir kararı etkiliyor mu?</div></div>
+    <div class="q-body">
+      <p>AI çıktısı işe alım, kredi, fiyatlama veya müşteri değerlendirmesi gibi bir kararı etkiliyorsa, hesap verebilirlik ve ayrımcılık riski doğar.</p>
+      <div class="q-check">
+        <div>AI'ın karar süreçlerine etkisi haritalandı</div>
+        <div>Otomatik kararlar için insan gözetimi tanımlandı</div>
+        <div>Çıktıların izlenebilirliği (kim, ne zaman, hangi girdiyle) sağlandı</div>
+      </div>
+      <div class="redflag"><b>Uyarı işareti:</b> "Sadece taslak hazırlıyor" denilen bir araç, çoğu zaman nihai kararın da temelini oluşturuyordur.</div>
+    </div>
+  </div>
+
+  <div class="q">
+    <div class="q-head"><div class="q-num">5</div><div class="q-title">Bu kullanımın bir dayanağı ve sahibi var mı?</div></div>
+    <div class="q-body">
+      <p>Hukuki dayanağı ve sorumlusu olmayan her AI kullanımı, regülatör sorduğunda kurumun cevap veremeyeceği bir boşluktur.</p>
+      <div class="q-check">
+        <div>Kurumsal AI kullanım politikası yazılı ve yürürlükte</div>
+        <div>Her kullanımın bir hukuki dayanağı belgelendi</div>
+        <div>AI yönetişimi kurumsal risk iştahı belgesine eklendi</div>
+      </div>
+      <div class="redflag"><b>Uyarı işareti:</b> Politika "var ama uygulanmıyorsa", denetimde yokluğundan daha ağır bir bulgu olabilir.</div>
+    </div>
+  </div>
+
+  <div class="sub-block">
+    <h2>Bu tür araçları her hafta ilk siz alın</h2>
+    <p>The Governance, Türkiye'nin bağımsız GRC bülteni. Her Pazartesi, kurumsal risk ve yönetişim gündemini yönetici dilinde, uygulanabilir araçlarla birlikte. Abone olun, bir sonraki kontrol listesini ilk siz indirin.</p>
+    <div class="sub-form">
+      <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="e678c8eb-4a9b-449c-a916-09b2ca16c9d6"></script>
+    </div>
+  </div>
+
+  <p class="disclaimer">Bu kontrol listesi genel bilgilendirme amaçlıdır ve hukuki danışmanlık yerine geçmez. Kurumunuzun özel durumuna ilişkin değerlendirme için uzman desteği alınız. © 2026 The Governance · thegovernance.com.tr</p>
+</div>
+
+<footer class="foot">
+  <a href="/" class="foot-brand">The<em>.</em>Governance</a>
+  <div class="foot-meta">
+    Kurumsal Risk & Yönetişim<br>
+    Sayı 03 Eki · 15 Haziran 2026<br>
+    thegovernance.com.tr
+  </div>
+</footer>
+
+</body>
+</html>
