@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Governance : Sayı 03 · Haziran 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Mono:wght@300;400&family=Instrument+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bordo:   #8C1F0D;
+    --bordo-m: #B5341A;
+    --ink:     #111009;
+    --paper:   #F5F2EC;
+    --cream:   #EAE5DB;
+    --rule:    #C8C2B6;
+    --mid:     #3D3A34;
+    --light:   #6E6A62;
+    --white:   #FFFFFF;
+    --gold:    #9A7B3A;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.75;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 28px 100px;
+  }
+
+  /* ── NAMEPLATE ── */
+  .nameplate {
+    border-top: 4px solid var(--ink);
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    animation: rise .5s ease both;
+  }
+
+  .brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: .95;
+    color: var(--ink);
+  }
+  .brand em { font-style: normal; color: var(--bordo); }
+
+  .meta { text-align: right; padding-bottom: 4px; }
+  .meta-row {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--light);
+    line-height: 1.9;
+  }
+
+  /* ── AUDIENCE BAR ── */
+  .audience-bar {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 7px 14px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 28px;
+    margin-bottom: 32px;
+  }
+
+  .kicker {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -.5px;
+    margin-bottom: 14px;
+    color: var(--ink);
+  }
+
+  .hero-lead {
+    font-size: 15px;
+    line-height: 1.82;
+    color: var(--mid);
+  }
+
+  /* ── SECTION RULE ── */
+  .section-rule {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+  .section-rule::before {
+    content: '';
+    width: 20px; height: 2px;
+    background: var(--bordo);
+    flex-shrink: 0;
+  }
+  .section-rule::after {
+    content: '';
+    flex: 1; height: 1px;
+    background: var(--rule);
+  }
+
+  /* ── STAT BLOCK ── */
+  .stat-block {
+    background: var(--ink);
+    padding: 28px 32px;
+    margin: 24px 0;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .stat-number em {
+    font-style: normal;
+    color: var(--bordo-m);
+    font-size: 48px;
+  }
+
+  .stat-text { display: flex; flex-direction: column; gap: 6px; }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.45);
+  }
+
+  .stat-desc {
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(255,255,255,.82);
+  }
+
+  .stat-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    color: rgba(255,255,255,.35);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  .stat-link {
+    color: rgba(181,52,26,.8);
+    text-decoration: none;
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    letter-spacing: .1em;
+    display: block;
+    margin-top: 2px;
+  }
+
+  /* ── ARTICLE ── */
+  .article { margin-bottom: 36px; }
+
+  .article h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.2px;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .article h2 .num {
+    color: var(--bordo);
+    font-style: italic;
+    margin-right: 4px;
+  }
+
+  .hr { width: 28px; height: 2px; background: var(--bordo); margin-bottom: 14px; }
+
+  .article p {
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--mid);
+    margin-bottom: 10px;
+  }
+  .article p:last-child { margin-bottom: 0; }
+
+  .pq {
+    border-left: 2px solid var(--bordo);
+    padding: 2px 16px;
+    margin: 18px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--ink);
+  }
+
+  /* ── KAYNAK ETIKETI ── */
+  .source-tag {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .1em;
+    color: var(--light);
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    padding: 2px 8px;
+    margin-top: 6px;
+    text-decoration: none;
+  }
+
+  /* ── EXECUTIVE TAKEAWAY ── */
+  .takeaway {
+    background: var(--cream);
+    border-left: 3px solid var(--bordo);
+    padding: 16px 20px;
+    margin: 20px 0 0;
+  }
+
+  .takeaway-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .takeaway ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .takeaway ul li {
+    font-size: 13.5px;
+    color: var(--ink);
+    line-height: 1.55;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .takeaway ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--bordo);
+    font-size: 11px;
+  }
+
+  /* ── VERİ KARTLARI GRID ── */
+  .data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-bottom: 36px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .data-card {
+    background: var(--paper);
+    padding: 20px 18px;
+  }
+  .data-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--bordo);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .data-desc {
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--mid);
+    margin-bottom: 8px;
+  }
+  .data-src {
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+  @media (max-width: 560px) {
+    .data-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ── THE GOVERNANCE GÖRÜŞÜ ── */
+  .view {
+    background: var(--white);
+    border: 1px solid var(--bordo);
+    border-top: 3px solid var(--bordo);
+    padding: 18px 22px 16px;
+    margin: 22px 0 0;
+  }
+  .view-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 8px;
+    display: block;
+  }
+  .view p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  /* ── KAPANIŞ SORUSU ── */
+  .closing-q {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 36px 32px;
+    margin: 40px 0 36px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .closing-q::before {
+    content: '?';
+    position: absolute;
+    right: 8px; top: -28px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 180px;
+    font-weight: 700;
+    color: rgba(255,255,255,.04);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .closing-q .cq-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: #E07060;
+    margin-bottom: 14px;
+    display: block;
+  }
+  .closing-q h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--white);
+    max-width: 520px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* ── RADAR ── */
+  .radar {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 24px 26px 22px;
+    margin-bottom: 36px;
+  }
+
+  .radar-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+
+  .radar-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #E07060;
+  }
+
+  .risk-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #E07060;
+    border: 1px solid #E07060;
+    padding: 3px 8px;
+  }
+
+  .radar h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+
+  .radar p {
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: #D0CBC3;
+    margin-bottom: 10px;
+  }
+
+  .radar p:last-child { margin-bottom: 0; }
+  .radar strong { color: var(--white); font-weight: 500; }
+
+  .radar .takeaway {
+    background: rgba(255,255,255,.07);
+    border-left: 2px solid var(--bordo-m);
+    margin-top: 18px;
+  }
+  .radar .takeaway-label { color: #E07060; }
+  .radar .takeaway ul li { color: rgba(255,255,255,.82); font-size: 13px; }
+  .radar .takeaway ul li::before { color: #E07060; }
+
+  /* ── TOOL BOX ── */
+  .toolbox {
+    background: var(--cream);
+    border-left: 3px solid var(--gold);
+    padding: 20px 22px 18px;
+    margin-bottom: 36px;
+  }
+
+  .tool-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .toolbox h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+
+  .toolbox p {
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: var(--mid);
+  }
+
+  /* ── FOCUS ── */
+  .focus {
+    border: 1px solid var(--rule);
+    padding: 22px 22px 20px;
+    margin-bottom: 36px;
+  }
+
+  .focus-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .focus h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    color: var(--ink);
+  }
+
+  .focus p {
+    font-size: 14px;
+    line-height: 1.82;
+    color: var(--mid);
+    margin-bottom: 10px;
+  }
+  .focus p:last-child { margin-bottom: 0; }
+
+  /* ── FRAMEWORK ── */
+  .framework {
+    background: var(--ink);
+    padding: 28px 28px 24px;
+    margin: 32px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .framework::before {
+    content: 'TG';
+    position: absolute;
+    right: -12px; top: -8px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 120px;
+    font-weight: 700;
+    color: rgba(255,255,255,.03);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .fw-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .fw-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 18px;
+    line-height: 1.2;
+  }
+
+  .fw-levels { display: flex; flex-direction: column; gap: 2px; }
+
+  .fw-level {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 14px;
+    background: rgba(255,255,255,.04);
+  }
+
+  .fw-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--bordo-m);
+    min-width: 28px;
+    line-height: 1;
+  }
+
+  .fw-content h5 {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.6);
+    margin-bottom: 2px;
+  }
+
+  .fw-content p {
+    font-size: 12.5px;
+    color: rgba(255,255,255,.7);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* ── READS ── */
+  .reads { margin-bottom: 36px; }
+
+  .read-item {
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .read-item:last-child { border-bottom: none; }
+
+  .rn {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--light);
+    min-width: 20px;
+    padding-top: 2px;
+  }
+
+  .rc h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    color: var(--ink);
+  }
+
+  .rc p {
+    font-size: 13px;
+    color: var(--mid);
+    line-height: 1.65;
+  }
+
+  /* ── CTA BLOCK ── */
+  .cta-block {
+    background: var(--bordo);
+    padding: 32px 28px;
+    margin: 36px 0;
+    text-align: center;
+  }
+
+  .cta-block h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  .cta-block p {
+    font-size: 13.5px;
+    color: rgba(255,255,255,.78);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    padding: 11px 20px;
+    text-decoration: none;
+    transition: all .2s;
+    display: inline-block;
+  }
+
+  .cta-btn.primary {
+    background: var(--white);
+    color: var(--bordo);
+  }
+
+  .cta-btn.secondary {
+    background: transparent;
+    color: rgba(255,255,255,.8);
+    border: 1px solid rgba(255,255,255,.35);
+  }
+
+  /* ── CLOSER ── */
+  .closer {
+    border-top: 3px double var(--ink);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .ed-note h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--ink);
+  }
+
+  .ed-note p {
+    font-size: 12.5px;
+    color: var(--mid);
+    line-height: 1.7;
+    max-width: 400px;
+  }
+
+  .sig { text-align: right; flex-shrink: 0; }
+
+  .sig-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    display: block;
+    margin-bottom: 2px;
+    color: var(--ink);
+  }
+
+  .sig-role {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 560px) {
+    .brand { font-size: 34px; }
+    .hero h1 { font-size: 26px; }
+    .stat-block { flex-direction: column; gap: 16px; }
+    .stat-number { font-size: 56px; }
+    .closer { flex-direction: column; }
+    .sig { text-align: left; }
+    .cta-actions { flex-direction: column; align-items: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAMEPLATE -->
+<header class="nameplate">
+  <div class="brand">The<em>.</em><br>Governance</div>
+  <div class="meta">
+    <span class="meta-row">Sayı 03 · 15 Haziran 2026</span>
+    <span class="meta-row">Kurumsal Risk & Yönetişim</span>
+    <span class="meta-row">Haftalık · Türkçe</span>
+  </div>
+</header>
+
+<div class="audience-bar">
+  Yönetim Kurulu · CIO · CISO · İç Denetim · Risk & Compliance · Hukuk
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="kicker">Bu Sayının Odağı</span>
+  <h1>Yapay Zeka Artık Devlet Politikası : "Yönet" Ekseni Yönetişimi Resmî Gündeme Taşıdı</h1>
+  <p class="hero-lead">
+    Bu hafta gündemin ağırlık merkezi yapay zekaya kaydı. Cumhurbaşkanı 13 Haziran'da 2026-2030 Türkiye Yapay Zeka Eylem Planı'nı açıkladı : dört eksen üzerine kurulu, "fark et, istifade et, üret ve yönet". Dördüncü eksen, "yönet", doğrudan düzenleyici çerçeve ve yönetişim demek. Aynı hafta, siber güvenlikte veri sızıntısına hapis cezası getiren kanun gündemde, KVKK aydınlatma ile açık rıza metinlerini ayırmayı zorunlu kıldı, idari para cezalarına itiraz rejimi değişti. Finansal suç cephesinde ise hem küresel veri hem de Türkiye'nin yeni "Dolunay" projesi aynı yönü gösteriyor. Ortak payda: düzenleyici beklenti hızlanıyor ve sorumluluk, operasyon ekibinden yönetim kuruluna taşınıyor.
+  </p>
+</section>
+
+<!-- STAT BLOCK 1 -->
+<div class="stat-block">
+  <div class="stat-number">13<em>Haz</em></div>
+  <div class="stat-text">
+    <span class="stat-label">Türkiye Yapay Zeka Eylem Planı · Açıklanma Tarihi</span>
+    <p class="stat-desc">2026-2030 Türkiye Yapay Zeka Eylem Planı bu tarihte Cumhurbaşkanı tarafından açıklandı. Dört eksenden biri olan "yönet" doğrudan düzenleyici çerçeve ve yönetişim. Kurumunuzun AI yönetişim çerçevesi, ulusal planla aynı dili konuşuyor mu?</p>
+    <a class="stat-link" href="https://cbddo.gov.tr" target="_blank">→ Cumhurbaşkanlığı Dijital Dönüşüm Ofisi</a>
+  </div>
+</div>
+
+<!-- SECTION -->
+<div class="section-rule">Bu Haftanın Özeti : 5 Kritik Gelişme</div>
+
+<!-- ARTICLE 1 -->
+<div class="article">
+  <h2><span class="num">01</span>Türkiye Yapay Zeka Eylem Planı Açıklandı : "Yönet" Ekseni Yönetişimi Devletin Gündemine Aldı</h2>
+  <div class="hr"></div>
+  <p>13 Haziran 2026'da Cumhurbaşkanı, 2026-2030 dönemini kapsayan Türkiye Yapay Zeka Eylem Planı'nı açıkladı. Plan dört temel eksen ve her eksende birbirini tamamlayan dört eylem üzerine kuruluyor: fark et (toplumsal farkındalık ve okuryazarlık), istifade et (kamudan sağlığa sektörel uygulama), üret (yerli model ve ekosistem) ve : kurumsal dünyayı doğrudan ilgilendiren eksen : yönet (düzenleyici çerçeve ve yönetişim).</p>
+  <div class="pq">"Devletin dört eksenli planında 'yönet' başlığının kendisi bir eksen olması, kurumsal AI yönetişiminin artık lüks değil zemin olduğunun resmî tescili."</div>
+  <p>Plan somut hedeflerle geldi: 81 ilde iki yılda 5 milyon vatandaşa AI okuryazarlığı eğitimi, 10 bin uzman ve 100 bin uygulama profesyoneli yetiştirme, kamu yatırımlarından AI projelerine en az %2 pay, ve altyapıda en az 10 milyar dolarlık özel sektör ağırlıklı kaynak. "Yönet" ekseni ise kullanıcı haklarını koruyan ve yatırımcıya öngörülebilirlik sağlayan bir düzenleyici çerçeve vaat ediyor. Kurumlar için kritik sinyal şu: AI yönetişimi bir "ileride bakarız" konusu olmaktan çıkıyor. Devlet bir alanı eksen düzeyinde "yönet" diye tanımladığında, regülatörün de aynı yöne bakması an meselesi. Bugün AI envanteri, kullanım politikası ve risk değerlendirmesi olmayan kurum, yarının düzenleyici beklentisine hazırlıksız yakalanır.</p>
+  <a class="source-tag" href="https://www.iletisim.gov.tr" target="_blank">Kaynak: Cumhurbaşkanlığı · 2026-2030 Türkiye Yapay Zeka Eylem Planı, 13 Haziran 2026</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>Devlet "yönetişim" dediğinde, bu er ya da geç bir denetim kriterine dönüşür. AI yönetişimini bugün kurumsal risk iştahına yazan kurum, yarın bir uyum yükümlülüğüyle karşılaştığında hazır olacak. Stratejiyi okuyup "bizi ilgilendirmez" diyen, aynı stratejinin denetim diline dönüşmesini bekleyecek.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Kurumda kullanılan tüm AI araçlarının envanterini çıkarın : onaylı ve onaysız (Shadow AI) ayrımıyla</li>
+      <li>AI yönetişimini kurumsal risk iştahı belgesine açık bir madde olarak ekleyin</li>
+      <li>"Yönet" ekseninin işaret ettiği düzenleyici çerçeveye hazırlık için AI risk değerlendirmenizi şimdiden başlatın</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 2 -->
+<div class="article">
+  <h2><span class="num">02</span>Siber Güvenlik Kanunu : Veri Sızıntısı Artık Hapis Cezası Demek</h2>
+  <div class="hr"></div>
+  <p>Türkiye'nin siber güvenlik mevzuatı sertleşiyor. Gündemdeki düzenleme, siber uzayda veri sızıntısı sonucu kişisel veya kritik kamu hizmeti verilerini izinsiz erişime açan, paylaşan ya da satışa çıkaranlara hapis cezası öngörüyor. Daha dikkat çekici olan ikinci hüküm: gerçekte veri sızıntısı olmadığı halde "sızıntı olmuş gibi" algı oluşturarak kurumları hedef alanlara da ceza geliyor.</p>
+  <p>Yönetim kurulu açısından mesele yalnızca ceza değil, sorumluluğun yönü. Kritik altyapıların korunmasında görevinin gereklerine aykırı hareket ederek veri ihlaline sebebiyet verenler de kapsamda. Bu, siber güvenliği "IT'nin işi" olmaktan çıkarıp, gözetim sorumluluğu taşıyan üst yönetimin doğrudan gündemine taşıyor.</p>
+  <a class="source-tag" href="https://turkishlawblog.com" target="_blank">Kaynak: Siber Güvenlik Kanunu · TBMM Teklif Metni</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>Ceza maddesi bir kurumu korumaz : kurulan kontrol korur. "Sızıntı algısı" suçunun bile tanımlanması, itibar saldırılarının artık bir hukuki gerçeklik olduğunu gösteriyor. Bir kurumun en pahalı açığı, çoğu zaman teknik değil: kriz anında kimin neyi açıklayacağına dair belirsizliktir.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Veri ihlali müdahale planınızı (kim, ne zaman, neyi bildirir) yazılı ve test edilmiş hale getirin</li>
+      <li>Kritik altyapı tanımına giriyorsanız, gözetim sorumluluğunun kurulda kimde olduğunu belgeleyin</li>
+      <li>İtibar/algı saldırısı senaryosunu kriz iletişim planınıza ekleyin</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 3 -->
+<div class="article">
+  <h2><span class="num">03</span>KVKK : Aydınlatma ve Açık Rıza Metinleri Artık Ayrılmak Zorunda</h2>
+  <div class="hr"></div>
+  <p>Sayı 02'de KVKK'nın "açık rıza her şeyi meşrulaştırmaz" mesajını işlemiştik. Bu hafta aynı çizginin somut bir uygulama kuralı netleşti: 2026/347 sayılı İlke Kararı ile aydınlatma metni ve açık rıza metninin iç içe sunulması hukuka aykırı sayılıyor. İki metin nitelik olarak farklı : biri bilgilendirme yükümlülüğü, diğeri bir irade beyanı : ve artık ayrı ayrı düzenlenip sunulmaları gerekiyor.</p>
+  <div class="pq">"Aydınlatma yaptığına dair rıza istemek, en sık görülen hukuka aykırılıklardan biri: kurum kendi belgesiyle ihlal üretiyor."</div>
+  <p>Kurul'un hukuka aykırı saydığı uygulamalar tanıdık: çok uzun ve karmaşık metinler, aydınlatma yapıldığına dair "okudum-anladım" onayı alınması, iki metnin tek bir form içinde birleştirilmesi. Bu, her kurumun web sitesi, İK onboarding süreci ve müşteri sözleşmelerindeki standart metinleri doğrudan etkiliyor.</p>
+  <a class="source-tag" href="https://www.kvkk.gov.tr" target="_blank">Kaynak: KVKK · İlke Kararı 2026/347 · Aydınlatma ve Açık Rıza Metni Ayrımı</a>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Web sitesi, İK ve müşteri süreçlerindeki tüm aydınlatma + rıza metinlerini envanterleyin</li>
+      <li>İki metni fiziksel/dijital olarak ayrıştırın : tek tıkla "hepsini kabul" yapısını kaldırın</li>
+      <li>Aydınlatmayı veri işlemeden önce, rızadan bağımsız sunacak şekilde akışı yeniden tasarlayın</li>
+    </ul>
+  </div>
+</div>
+
+<!-- STAT BLOCK 2 -->
+<div class="stat-block">
+  <div class="stat-number">61<em>%</em></div>
+  <div class="stat-text">
+    <span class="stat-label">PwC EMEA AML 2026 · İşlem İzleme Yatırımı</span>
+    <p class="stat-desc">EMEA'da bankaların %61'i, Temmuz 2027 öncesinde yeni işlem izleme araçlarına yatırım yapmayı planlıyor. Finansal suçla mücadele artık bir uyum gideri değil, bir teknoloji ve yönetişim dönüşümü.</p>
+    <a class="stat-link" href="https://www.pwc.com.tr/emea-aml-arastirmasi-2026" target="_blank">→ pwc.com.tr · 2026 EMEA AML Araştırması (40 ülke, 531 kurum)</a>
+  </div>
+</div>
+
+<!-- ARTICLE 4 -->
+<div class="article">
+  <h2><span class="num">04</span>Finansal Suçla Mücadele : Türkiye "Dolunay" ile Veriyi Birleştiriyor</h2>
+  <div class="hr"></div>
+  <p>Finansal suç cephesinde iki sinyal aynı yöne işaret ediyor. Küresel tarafta PwC'nin 40 ülke ve 531 finansal kuruluşu kapsayan 2026 EMEA AML Araştırması, AML dönüşümünün artık "daha fazla kontrol eklemek" değil, veri kalitesi, teknoloji altyapısı ve operasyonel kapasitenin birlikte ele alınması meselesi olduğunu ortaya koyuyor. EMEA kurumlarının üçte biri önümüzdeki yıllarda AML maliyetlerinde %10-30 artış bekliyor; yarısından fazlası uyum baskısının operasyonel aksaklık yaratacağını öngörüyor.</p>
+  <p>Türkiye tarafında ise "Dolunay" projesi gündemde: Emniyet, Jandarma, MASAK, BTK, BDDK ve savcılıkları tek bir dijital çatı altında, yapay zeka destekli bir kalkanda birleştirmeyi hedefleyen bir yapı. Mesaj açık: denetim mercileri verilerini birleştiriyor. Kurumların KYC, CDD ve şüpheli işlem süreçlerindeki dağınık, düşük kaliteli verisi : artık çok daha görünür bir risk.</p>
+  <a class="source-tag" href="https://www.pwc.com.tr/emea-aml-arastirmasi-2026" target="_blank">Kaynak: PwC 2026 EMEA AML Araştırması · Dolunay Projesi (İçişleri Bakanlığı açıklaması)</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>Regülatör verisini birleştirdiğinde, kurumun veri kalitesi bir uyum maliyeti olmaktan çıkıp bir maruziyet kalemine dönüşür. PwC'nin EMEA bulgusu Türkiye için de geçerli: AML'nin asıl sorunu kural eksikliği değil, kurumların kendi verisini tanımaması. Temiz olmayan müşteri verisi, en pahalı denetim bulgusudur.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>KYC/CDD veri kalitesini bir teknoloji projesi olarak ele alın : manuel süreçlerin hata oranını ölçün</li>
+      <li>Şüpheli işlem bildirim sürecinizin izlenebilirliğini ve veri kaynağını denetleyin</li>
+      <li>İşlem izleme aracı yatırımını yönetim kurulu gündemine taşıyın : EMEA'da bankaların çoğunluğu bunu yapıyor</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 5 -->
+<div class="article">
+  <h2><span class="num">05</span>KVKK Cezalarına İtiraz Artık İdare Mahkemesinde : Uyum Bir "Finansal Kalkan"</h2>
+  <div class="hr"></div>
+  <p>2024 reformuyla başlayıp 2026'da yerleşen bir değişiklik, yönetim kurulunun cezaya bakışını değiştiriyor: KVKK idari para cezalarına itirazlar artık Sulh Ceza Hakimliklerine değil, İdare Mahkemelerine yapılıyor. Dava açma süresi kararın tebliğinden itibaren 60 gün ve : kritik nokta : dava açmak cezanın tahsilatını kendiliğinden durdurmuyor. Tahsilatı durdurmak için mahkemeden ayrıca "yürütmenin durdurulması" talep edilmesi gerekiyor.</p>
+  <p>2026 yeniden değerleme oranıyla artan cezalar ve istinaf sınırının düşüklüğü, neredeyse her cezanın üst mahkeme denetimine açık olduğu anlamına geliyor. Yani KVKK uyumu artık bir "itibar projesi" değil, doğrudan bir finansal risk yönetimi konusu : ödenmeyen bir cezanın faiziyle birlikte bilançoya yansıması, dava sürecinde bile devam edebilir.</p>
+  <a class="source-tag" href="https://www.kvkk.gov.tr" target="_blank">Kaynak: 6698 sayılı KVKK · İtiraz Rejimi Değişikliği (İdare Mahkemeleri)</a>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Olası bir cezada hukuk ekibinin "yürütmenin durdurulması" talebini standart prosedür haline getirin</li>
+      <li>KVKK ceza riskini itibar değil, finansal risk kalemi olarak risk haritasına işleyin</li>
+      <li>60 günlük dava açma süresini kaçırmamak için ceza tebligatı takibini bir sorumluya bağlayın</li>
+    </ul>
+  </div>
+</div>
+
+<!-- FRAMEWORK -->
+<div class="section-rule">The Governance · Signature Framework</div>
+
+<div class="framework">
+  <span class="fw-label">The Governance AI Yönetişim Olgunluk Modeli : Kurumsal Hazırlık Seviyeleri</span>
+  <div class="fw-title">Eylem planı "yönet" diyor : kurumunuz hangi seviyede?</div>
+  <div class="fw-levels">
+    <div class="fw-level">
+      <div class="fw-num">1</div>
+      <div class="fw-content">
+        <h5>Farkındasız</h5>
+        <p>AI araçları bireysel ve kontrolsüz kullanılıyor. Kurumsal envanter, politika ve farkındalık yok.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">2</div>
+      <div class="fw-content">
+        <h5>Tepkisel</h5>
+        <p>Bir sorun ya da haber çıkınca harekete geçiliyor. Politika taslakları var ama uygulanmıyor.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">3</div>
+      <div class="fw-content">
+        <h5>Gelişen</h5>
+        <p>AI envanteri çıkarıldı. KVKK uyumu ve risk değerlendirme süreci başladı. Shadow AI haritalanıyor.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">4</div>
+      <div class="fw-content">
+        <h5>Yönetilen</h5>
+        <p>AI yönetişim çerçevesi aktif. Üst yönetim raporlaması ve denetim döngüsü işliyor.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">5</div>
+      <div class="fw-content">
+        <h5>Öngören</h5>
+        <p>AI riski kurumsal risk iştahına entegre. Kurul seviyesinde izleme. Ulusal eylem planı ve AB AI Act ile hizalı.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VERİ KARTLARI -->
+<div class="section-rule">Bu Sayıda Kullanılan Veriler</div>
+
+<div class="data-grid">
+  <div class="data-card">
+    <div class="data-num">531</div>
+    <p class="data-desc">PwC 2026 EMEA AML Araştırması'na 40 ülkeden katılan finansal kuruluş sayısı : sahadaki tabloyu ortaya koyan en geniş bölgesel çalışmalardan biri.</p>
+    <span class="data-src">Kaynak · PwC EMEA AML Survey 2026</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">1/3</div>
+    <p class="data-desc">AB'deki finansal kuruluşların yalnızca üçte biri, Temmuz 2027 itibarıyla AB AML Paketi'ne hazır olmayı bekliyor.</p>
+    <span class="data-src">Kaynak · PwC EMEA AML Survey 2026</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">5<span style="font-size:24px;">milyon</span></div>
+    <p class="data-desc">Eylem planı kapsamında 81 ilde, iki yılda AI okuryazarlığı eğitimi verilmesi hedeflenen vatandaş sayısı : "fark et" ekseninin somut hedefi.</p>
+    <span class="data-src">Kaynak · Türkiye AI Eylem Planı 2026-2030</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">10<span style="font-size:24px;">milyar $</span></div>
+    <p class="data-desc">Veri merkezi, bulut ve AI altyapısında harekete geçirilmesi hedeflenen, özel sektör ağırlıklı asgari kaynak : "yönet" ekseninin altyapı taahhüdü.</p>
+    <span class="data-src">Kaynak · Türkiye AI Eylem Planı 2026-2030</span>
+  </div>
+</div>
+
+<!-- RISK RADAR -->
+<div class="section-rule">Risk Radarı</div>
+
+<div class="radar">
+  <div class="radar-head">
+    <span class="radar-label">⚠ Haftanın Kritik Riski</span>
+    <span class="risk-tag">Yüksek Öncelik</span>
+  </div>
+  <h3>İç İçe Geçmiş Aydınlatma ve Rıza Metinleri : Sessiz Bir Uyum İhlali</h3>
+  <p><strong>Nedir?</strong> Web sitelerinde, İK formlarında ve sözleşmelerde aydınlatma metni ile açık rıza metninin tek bir blokta, çoğu zaman "okudum, kabul ediyorum" kutucuğuyla birleştirilmesi. 2026/347 İlke Kararı bunu açıkça hukuka aykırı sayıyor.</p>
+  <p><strong>Kurumsal etki:</strong> Bu ihlal "görünür" : denetçi ya da şikâyetçi, kurumun web sitesine bakarak tespit edebilir. Yani diğer birçok KVKK riskinin aksine, ispatı kolay ve yaygın. Neredeyse her kurumun mevcut metinleri bu riski taşıyor.</p>
+  <p><strong>Temel gerçek:</strong> Aydınlatma bir yükümlülük, rıza bir irade beyanıdır. İkisini birleştirmek, rızayı sakatlar ve aydınlatmayı geçersiz kılar : tek bir tasarım hatası, iki ayrı ihlal üretir.</p>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Hukuk ve pazarlama ekibiyle tüm dijital temas noktalarındaki metinleri 30 gün içinde gözden geçirin</li>
+      <li>"Hepsini kabul et" tasarımını kaldırıp aydınlatmayı rızadan bağımsız sunun</li>
+      <li>Yeni metin akışını bir sonraki iç denetim kontrol listesine ekleyin</li>
+    </ul>
+  </div>
+</div>
+
+<!-- TOOL BOX -->
+<div class="section-rule">Araç & Yöntem</div>
+
+<div class="toolbox">
+  <span class="tool-tag">Bu Hafta Uygulayın</span>
+  <h3>AI Envanteri : 5 Temel Soru</h3>
+  <p>Eylem planının "yönet" ekseni düzenleyici çerçeveye işaret ederken, kurumunuzun ilk adımı bir AI envanteri olmalı. Her departman için şu beş soruyu sorun: (1) Hangi AI araçları kullanılıyor : onaylı ve onaysız (Shadow AI) dahil? (2) Bu araçlara hangi kurumsal/kişisel veri giriliyor? (3) Aracın verisi nerede, hangi ülkede işleniyor? (4) Aracın çıktısı bir karar sürecini (işe alım, kredi, fiyatlama) etkiliyor mu? (5) Bu kullanımın hukuki dayanağı ve bir sorumlusu var mı? Bu beş yanıt, kurumunuzun AI risk haritasının temelidir : ve regülatör sorduğunda hazır cevabınız olur.</p>
+  <p style="margin-top:12px;"><a href="https://thegovernance.com.tr/araclar/ai-envanteri.html" style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.05em;color:var(--bordo);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:2px;">→ Bu beş soruyu doldurulabilir bir kontrol listesi olarak indirin (Sayı 03 eki)</a></p>
+</div>
+
+<!-- TÜRKİYE ODAĞI -->
+<div class="section-rule">Türkiye Odağı</div>
+
+<div class="focus">
+  <span class="focus-flag">Yerel Gündem</span>
+  <h3>"Üret" Ekseni ve Yerli Model : Kurumsal Veri Nereye Akıyor?</h3>
+  <p>Eylem planının "üret" ekseni, vatandaşların ve kurumların değer üretmesini sağlayacak yerli yapay zeka modellerinin geliştirilmesini hedefliyor; bu kapsamda Oğuz, Kıpçak ve Karluk dillerini kapsayan bir Türk dilleri büyük dil modeli gündemde. Devletin yerli model ve yurt içi veri işleme vurgusu, kurumsal dünyaya doğrudan bir sinyal: yurt dışı AI servislerine kritik veri akışı, yalnızca bir KVKK sorunu değil, giderek stratejik bir bağımlılık meselesi.</p>
+  <p>Türk kurumlarının çoğu bugün ChatGPT, Gemini ya da Copilot gibi araçlara, verinin nereye gittiğini sorgulamadan kurumsal bilgi giriyor. Plan yerli üretimi ve "yönet" eksenindeki düzenleyici çerçeveyi olgunlaştırdıkça, bu kullanım hem uyum hem de tedarik riski açısından mercek altına girecek.</p>
+  <p><strong>İç denetçiler için pratik not:</strong> Bir sonraki denetim planına "Kurumsal AI Kullanımı ve Veri Yerleşimi" başlığını ekleyin. Hangi verinin hangi yurt dışı modele aktığını bilmeyen kurum, taşıdığı bağımlılık ve uyum riskini de bilemez.</p>
+</div>
+
+<!-- READS -->
+<div class="section-rule">Okumanız Gereken</div>
+
+<div class="reads">
+  <div class="read-item">
+    <span class="rn">01</span>
+    <div class="rc">
+      <h4>2026-2030 Türkiye Yapay Zeka Eylem Planı : 13 Haziran 2026</h4>
+      <p>Dört eksen: fark et, istifade et, üret, yönet. "Yönet" ekseni kurumsal AI yönetişiminin yön referansı : iletisim.gov.tr</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">02</span>
+    <div class="rc">
+      <h4>KVKK İlke Kararı 2026/347 : Metin Ayrıştırma Zorunluluğu</h4>
+      <p>Aydınlatma ve açık rıza metinlerinin ayrı sunulmasını zorunlu kılan karar. Her kurumun dijital temas noktasını etkiler : kvkk.gov.tr</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">03</span>
+    <div class="rc">
+      <h4>PwC 2026 EMEA AML Araştırması</h4>
+      <p>40 ülke, 531 finansal kuruluş. AML dönüşümünün veri ve teknoloji boyutunu ortaya koyan bölgesel referans : pwc.com.tr</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">04</span>
+    <div class="rc">
+      <h4>Siber Güvenlik Kanunu Teklifi : Ceza Rejimi</h4>
+      <p>Veri sızıntısı ve "sızıntı algısı" suçlarını düzenleyen teklif. Kritik altyapı ve gözetim sorumluluğu için temel okuma : turkishlawblog.com</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">05</span>
+    <div class="rc">
+      <h4>KVKK İdari Para Cezaları : 2026 İtiraz Rejimi</h4>
+      <p>Cezalara itirazın İdare Mahkemesine taşınması ve "yürütmenin durdurulması" inceliği. Uyumun finansal boyutu için kritik analiz.</p>
+    </div>
+  </div>
+</div>
+
+<!-- KAPANIŞ SORUSU -->
+<div class="closing-q">
+  <span class="cq-label">Yönetim Kurulu İçin Tek Soru</span>
+  <h3>Kurumunuzun hangi AI araçlarını, hangi veriyle, nerede kullandığını bugün eksiksiz listeleyebilir misiniz?</h3>
+</div>
+
+<!-- CTA BLOCK -->
+<div class="cta-block">
+  <h3>Bu sayının ekini indirin, ekibinizle paylaşın</h3>
+  <p>Bu sayıyla birlikte hazırladığımız "Kurumsal AI Envanteri : 5 Soruluk Kontrol Listesi"ni indirip yönetim kurulunuzla ve iç denetim ekibinizle paylaşın. Bir gelişmeyi okumakla, onu kurumunuzda uygulanabilir bir araca çevirmek arasındaki fark budur.</p>
+  <div class="cta-actions">
+    <a href="https://thegovernance.com.tr/araclar/ai-envanteri.html" class="cta-btn primary">Kontrol Listesini İndir</a>
+    <a href="https://www.thegovernance.com.tr" class="cta-btn secondary">Bu Sayıyı İlet</a>
+  </div>
+</div>
+
+<!-- CLOSER -->
+<div class="closer">
+  <div class="ed-note">
+    <h4>Editörden</h4>
+    <p>Bu hafta beş ayrı gelişme aynı şeyi söyledi: yapay zeka, siber güvenlik ve veri yönetişimi artık ayrı başlıklar değil, tek bir gözetim sorumluluğunun parçaları. Devlet yeni AI eylem planını dört eksen üzerine kurup "yönet"i ayrı bir eksen yaparken, kurumların da kendi yönetişimini "ileride" değil bugün kurması gerekiyor. The Governance, bu gelişmeleri haber olarak değil, kararlarınızı etkileyen birer gündem maddesi olarak ele alır. Sorular için her zaman açığım.</p>
+  </div>
+  <div class="sig">
+    <span class="sig-name">Ecem</span>
+    <span class="sig-role">Editör · The Governance</span>
+  </div>
+</div>
+
+</body>
+</html>
