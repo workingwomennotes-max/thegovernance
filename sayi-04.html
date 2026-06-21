@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Governance : Sayı 04 · Haziran 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Mono:wght@300;400&family=Instrument+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bordo:   #8C1F0D;
+    --bordo-m: #B5341A;
+    --ink:     #111009;
+    --paper:   #F5F2EC;
+    --cream:   #EAE5DB;
+    --rule:    #C8C2B6;
+    --mid:     #3D3A34;
+    --light:   #6E6A62;
+    --white:   #FFFFFF;
+    --gold:    #9A7B3A;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.75;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 28px 100px;
+  }
+
+  /* ── NAMEPLATE ── */
+  .nameplate {
+    border-top: 4px solid var(--ink);
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    animation: rise .5s ease both;
+  }
+
+  .brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: .95;
+    color: var(--ink);
+  }
+  .brand em { font-style: normal; color: var(--bordo); }
+
+  .meta { text-align: right; padding-bottom: 4px; }
+  .meta-row {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--light);
+    line-height: 1.9;
+  }
+
+  /* ── AUDIENCE BAR ── */
+  .audience-bar {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 7px 14px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 28px;
+    margin-bottom: 32px;
+  }
+
+  .kicker {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -.5px;
+    margin-bottom: 14px;
+    color: var(--ink);
+  }
+
+  .hero-lead {
+    font-size: 15px;
+    line-height: 1.82;
+    color: var(--mid);
+  }
+
+  /* ── SECTION RULE ── */
+  .section-rule {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+  .section-rule::before {
+    content: '';
+    width: 20px; height: 2px;
+    background: var(--bordo);
+    flex-shrink: 0;
+  }
+  .section-rule::after {
+    content: '';
+    flex: 1; height: 1px;
+    background: var(--rule);
+  }
+
+  /* ── STAT BLOCK ── */
+  .stat-block {
+    background: var(--ink);
+    padding: 28px 32px;
+    margin: 24px 0;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .stat-number em {
+    font-style: normal;
+    color: var(--bordo-m);
+    font-size: 48px;
+  }
+
+  .stat-text { display: flex; flex-direction: column; gap: 6px; }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.45);
+  }
+
+  .stat-desc {
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(255,255,255,.82);
+  }
+
+  .stat-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    color: rgba(255,255,255,.35);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  .stat-link {
+    color: rgba(181,52,26,.8);
+    text-decoration: none;
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    letter-spacing: .1em;
+    display: block;
+    margin-top: 2px;
+  }
+
+  /* ── ARTICLE ── */
+  .article { margin-bottom: 36px; }
+
+  .article h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.2px;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .article h2 .num {
+    color: var(--bordo);
+    font-style: italic;
+    margin-right: 4px;
+  }
+
+  .hr { width: 28px; height: 2px; background: var(--bordo); margin-bottom: 14px; }
+
+  .article p {
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--mid);
+    margin-bottom: 10px;
+  }
+  .article p:last-child { margin-bottom: 0; }
+
+  .pq {
+    border-left: 2px solid var(--bordo);
+    padding: 2px 16px;
+    margin: 18px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--ink);
+  }
+
+  /* ── KAYNAK ETIKETI ── */
+  .source-tag {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .1em;
+    color: var(--light);
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    padding: 2px 8px;
+    margin-top: 6px;
+    text-decoration: none;
+  }
+
+  /* ── EXECUTIVE TAKEAWAY ── */
+  .takeaway {
+    background: var(--cream);
+    border-left: 3px solid var(--bordo);
+    padding: 16px 20px;
+    margin: 20px 0 0;
+  }
+
+  .takeaway-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .takeaway ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .takeaway ul li {
+    font-size: 13.5px;
+    color: var(--ink);
+    line-height: 1.55;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .takeaway ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--bordo);
+    font-size: 11px;
+  }
+
+  /* ── VERİ KARTLARI GRID ── */
+  .data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-bottom: 36px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .data-card {
+    background: var(--paper);
+    padding: 20px 18px;
+  }
+  .data-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--bordo);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .data-desc {
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--mid);
+    margin-bottom: 8px;
+  }
+  .data-src {
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+  @media (max-width: 560px) {
+    .data-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ── THE GOVERNANCE GÖRÜŞÜ ── */
+  .view {
+    background: var(--white);
+    border: 1px solid var(--bordo);
+    border-top: 3px solid var(--bordo);
+    padding: 18px 22px 16px;
+    margin: 22px 0 0;
+  }
+  .view-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 8px;
+    display: block;
+  }
+  .view p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  /* ── KAPANIŞ SORUSU ── */
+  .closing-q {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 36px 32px;
+    margin: 40px 0 36px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .closing-q::before {
+    content: '?';
+    position: absolute;
+    right: 8px; top: -28px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 180px;
+    font-weight: 700;
+    color: rgba(255,255,255,.04);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .closing-q .cq-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: #E07060;
+    margin-bottom: 14px;
+    display: block;
+  }
+  .closing-q h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--white);
+    max-width: 520px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* ── RADAR ── */
+  .radar {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 24px 26px 22px;
+    margin-bottom: 36px;
+  }
+
+  .radar-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+
+  .radar-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #E07060;
+  }
+
+  .risk-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #E07060;
+    border: 1px solid #E07060;
+    padding: 3px 8px;
+  }
+
+  .radar h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+
+  .radar p {
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: #D0CBC3;
+    margin-bottom: 10px;
+  }
+
+  .radar p:last-child { margin-bottom: 0; }
+  .radar strong { color: var(--white); font-weight: 500; }
+
+  .radar .takeaway {
+    background: rgba(255,255,255,.07);
+    border-left: 2px solid var(--bordo-m);
+    margin-top: 18px;
+  }
+  .radar .takeaway-label { color: #E07060; }
+  .radar .takeaway ul li { color: rgba(255,255,255,.82); font-size: 13px; }
+  .radar .takeaway ul li::before { color: #E07060; }
+
+  /* ── TOOL BOX ── */
+  .toolbox {
+    background: var(--cream);
+    border-left: 3px solid var(--gold);
+    padding: 20px 22px 18px;
+    margin-bottom: 36px;
+  }
+
+  .tool-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .toolbox h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+
+  .toolbox p {
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: var(--mid);
+  }
+
+  /* ── FOCUS ── */
+  .focus {
+    border: 1px solid var(--rule);
+    padding: 22px 22px 20px;
+    margin-bottom: 36px;
+  }
+
+  .focus-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .focus h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    color: var(--ink);
+  }
+
+  .focus p {
+    font-size: 14px;
+    line-height: 1.82;
+    color: var(--mid);
+    margin-bottom: 10px;
+  }
+  .focus p:last-child { margin-bottom: 0; }
+
+  /* ── FRAMEWORK ── */
+  .framework {
+    background: var(--ink);
+    padding: 28px 28px 24px;
+    margin: 32px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .framework::before {
+    content: 'TG';
+    position: absolute;
+    right: -12px; top: -8px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 120px;
+    font-weight: 700;
+    color: rgba(255,255,255,.03);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .fw-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .fw-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 18px;
+    line-height: 1.2;
+  }
+
+  .fw-levels { display: flex; flex-direction: column; gap: 2px; }
+
+  .fw-level {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 14px;
+    background: rgba(255,255,255,.04);
+  }
+
+  .fw-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--bordo-m);
+    min-width: 28px;
+    line-height: 1;
+  }
+
+  .fw-content h5 {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.6);
+    margin-bottom: 2px;
+  }
+
+  .fw-content p {
+    font-size: 12.5px;
+    color: rgba(255,255,255,.7);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* ── READS ── */
+  .reads { margin-bottom: 36px; }
+
+  .read-item {
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .read-item:last-child { border-bottom: none; }
+
+  .rn {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--light);
+    min-width: 20px;
+    padding-top: 2px;
+  }
+
+  .rc h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    color: var(--ink);
+  }
+
+  .rc p {
+    font-size: 13px;
+    color: var(--mid);
+    line-height: 1.65;
+  }
+
+  /* ── CTA BLOCK ── */
+  .cta-block {
+    background: var(--bordo);
+    padding: 32px 28px;
+    margin: 36px 0;
+    text-align: center;
+  }
+
+  .cta-block h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  .cta-block p {
+    font-size: 13.5px;
+    color: rgba(255,255,255,.78);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    padding: 11px 20px;
+    text-decoration: none;
+    transition: all .2s;
+    display: inline-block;
+  }
+
+  .cta-btn.primary {
+    background: var(--white);
+    color: var(--bordo);
+  }
+
+  .cta-btn.secondary {
+    background: transparent;
+    color: rgba(255,255,255,.8);
+    border: 1px solid rgba(255,255,255,.35);
+  }
+
+  /* ── CLOSER ── */
+  .closer {
+    border-top: 3px double var(--ink);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .ed-note h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--ink);
+  }
+
+  .ed-note p {
+    font-size: 12.5px;
+    color: var(--mid);
+    line-height: 1.7;
+    max-width: 400px;
+  }
+
+  .sig { text-align: right; flex-shrink: 0; }
+
+  .sig-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    display: block;
+    margin-bottom: 2px;
+    color: var(--ink);
+  }
+
+  .sig-role {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 560px) {
+    .brand { font-size: 34px; }
+    .hero h1 { font-size: 26px; }
+    .stat-block { flex-direction: column; gap: 16px; }
+    .stat-number { font-size: 56px; }
+    .closer { flex-direction: column; }
+    .sig { text-align: left; }
+    .cta-actions { flex-direction: column; align-items: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAMEPLATE -->
+<header class="nameplate">
+  <div class="brand">The<em>.</em><br>Governance</div>
+  <div class="meta">
+    <span class="meta-row">Sayı 04 · 22 Haziran 2026</span>
+    <span class="meta-row">Kurumsal Risk & Yönetişim</span>
+    <span class="meta-row">Haftalık · Türkçe</span>
+  </div>
+</header>
+
+<div class="audience-bar">
+  Yönetim Kurulu · CIO · CISO · İç Denetim · Risk & Compliance · Hukuk
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="kicker">Bu Sayının Odağı</span>
+  <h1>AB Yapay Zeka Yasası'nda Tarihi Geri Adım : Yükümlülükler Ertelendi, Sorumluluk Kalmadı</h1>
+  <p class="hero-lead">
+    Avrupa Parlamentosu bu hafta, AB Yapay Zeka Yasası'nı sadeleştiren omnibus düzenlemesine büyük çoğunlukla onay verdi: 423 lehte, 57 aleyhte, 174 çekimser. Yüksek riskli AI sistemlerine ilişkin yükümlülükler 2026'dan 2027'ye ertelendi, ama yasak listesine "nudifier" ve CSAM üreten sistemler eklendi. Mesaj çift yönlü: Avrupa rekabet gücü için frene basıyor, ama kırmızı çizgileri sertleştiriyor. AB'ye ürün ya da hizmet veren Türk kurumları için bu, "zaman kazandık" değil; "hangi tarihe, neye göre hazırlanacağımız netleşti" demek. Aynı hafta yerli cephede de güçlü sinyaller vardı: PwC Türkiye'nin yeni suistimal araştırması, Rekabet Kurumu'nun yerinde inceleme yetkisindeki gelişmeler ve gündeme yeniden oturan Siber Güvenlik Kanunu. 7545 sayılı Kanun bir yılı geride bıraktı; yükümlülük yürürlükte, ama alt mevzuat takvimi kaydı. KVKK cephesi de hareketliydi: biyometrik veri ilke kararı, güvenlik kamerası duyuruları ve 17 milyon TL'yi aşan ceza eşiği. Tablonun tamamı tek bir cümleyi kuruyor: uyum, ertelenebilir bir konu değil.
+  </p>
+</section>
+
+<!-- STAT BLOCK 1 -->
+<div class="stat-block">
+  <div class="stat-number">423<em>oy</em></div>
+  <div class="stat-text">
+    <span class="stat-label">Avrupa Parlamentosu · AI Act Omnibus Onayı · 16 Haziran 2026</span>
+    <p class="stat-desc">Parlamento, AB Yapay Zeka Yasası'nı sadeleştiren omnibus düzenlemesine 423 lehte, 57 aleyhte ve 174 çekimser oyla onay verdi. Yüksek riskli sistemlerin yükümlülük takvimi ertelendi: ama erteleme, hazırlığı erteleme değil; yön referansını netleştirme anlamına geliyor.</p>
+    <a class="stat-link" href="https://www.europarl.europa.eu" target="_blank">→ Avrupa Parlamentosu · Genel Kurul Oylaması</a>
+  </div>
+</div>
+
+<!-- SECTION -->
+<div class="section-rule">Bu Haftanın Özeti : 8 Kritik Gelişme</div>
+
+<!-- ARTICLE 1 -->
+<div class="article">
+  <h2><span class="num">01</span>AB AI Act Omnibus Onaylandı : Erteleme, Sorumluluğun Kalkması Değil</h2>
+  <div class="hr"></div>
+  <p>16 Haziran 2026'da Avrupa Parlamentosu, AB Yapay Zeka Yasası'nı sadeleştiren "Digital Omnibus on AI" düzenlemesine son onayını verdi. Oylama 423 lehte, 57 aleyhte ve 174 çekimser oyla geçti. Bu adım, 7 Mayıs'taki Konsey-Parlamento uzlaşısının resmî tesciliydi: düzenleme önümüzdeki haftalarda Resmî Gazete'de yayımlanıp yürürlüğe girecek.</p>
+  <p>En kritik değişiklik takvimde: yüksek riskli AI sistemlerine ilişkin yükümlülükler, orijinal 2 Ağustos 2026 tarihinden, bağımsız (Annex III) sistemler için 2 Aralık 2027'ye; sektörel mevzuata tabi ürünlere gömülü sistemler için 2 Ağustos 2028'e ertelendi. Üstelik bu tarihler artık sabit: standart ve kılavuzların hazır olup olmamasından bağımsız olarak uygulanacak. Üretken AI çıktılarının etiketlenmesi (watermarking) yükümlülüğü ise 2 Aralık 2026'ya ötelendi.</p>
+  <div class="pq">"Bir yükümlülüğün ertelenmesi, riskin ertelenmesi değildir: kurumlar için değişen tek şey, hangi tarihe ve hangi sabit takvime göre hazırlanacaklarının netleşmesidir."</div>
+  <p>Madalyonun diğer yüzü daha sert: yasak listesine, kişinin rızası olmadan cinsel veya mahrem içerik üreten sistemler ("nudifier" uygulamaları) ve çocuk istismarı materyali üreten AI sistemleri eklendi. Yani Avrupa, idari yükü azaltırken kırmızı çizgileri genişletti. Sadeleştirme, gevşetme değil; önceliklerin yeniden çizilmesi.</p>
+  <a class="source-tag" href="https://www.europarl.europa.eu" target="_blank">Kaynak: Avrupa Parlamentosu · Digital Omnibus on AI · 16 Haziran 2026 Genel Kurul Oylaması</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>Türk kurumlarının çoğu "AB AI Act bizi ilgilendirmez" diye düşünüyor. Yanlış. AB pazarına ürün ya da hizmet veren, AB vatandaşının verisini işleyen ya da AB'li bir müşteri için karar üreten AI sistemi kullanan her Türk şirketi kapsamda. Erteleme size panik değil, hazırlık penceresi sunuyor. Bu pencereyi "rahatladık" diye okuyan, 2027'de hazırlıksız yakalanır.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>AB pazarına dokunan AI sistemlerinizi (ürün, hizmet, müşteri kararı) Annex I / Annex III ayrımıyla sınıflandırın</li>
+      <li>2 Aralık 2027 ve 2 Ağustos 2028 tarihlerini uyum yol haritanıza sabit kilometre taşı olarak işleyin</li>
+      <li>Watermarking yükümlülüğü için 2 Aralık 2026'yı bekleyen üretken AI kullanımınızı şimdiden envanterleyin</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 2 -->
+<div class="article">
+  <h2><span class="num">02</span>PwC Türkiye Suistimal Araştırması : Vaka Yaygın, Önlem Seyrek</h2>
+  <div class="hr"></div>
+  <p>PwC Türkiye'nin TEİD iş birliğiyle yayımladığı Türkiye Suistimal Araştırması 2026, çarpıcı bir tablo ortaya koyuyor: şirketlerin yaklaşık %85'inde son iki yıl içinde en az bir suistimal vakası tespit edildi. Ancak düzenli suistimal risk değerlendirmesi yapan şirketlerin oranı yalnızca %35. Yani vaka neredeyse evrensel, ama proaktif yönetim istisna.</p>
+  <div class="pq">"Suistimal artık istisnai bir durum değil; yönetilmesi gereken kurumsal bir risk. Asıl sorun vakanın varlığı değil, kurumların ona hazırlıksız yakalanması."</div>
+  <p>Araştırma, şirketlerin hazırlık seviyeleri, etik ihbar (whistleblowing) mekanizmalarının etkinliği ve erken tespitin kritik rolüne odaklanıyor. Buradaki temel boşluk açık: %85'lik maruziyet ile %35'lik düzenli değerlendirme arasındaki 50 puanlık makas, kurumların suistimali "olursa bakarız" diye ertelediği bir körlük alanını gösteriyor. Etik ihbar hattı olmayan ya da çalışanın güvenmediği bir kurum, en ucuz erken uyarı sistemini kendi eliyle kapatmış oluyor.</p>
+  <a class="source-tag" href="https://www.pwc.com.tr" target="_blank">Kaynak: PwC Türkiye & TEİD · Türkiye Suistimal Araştırması 2026</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>Suistimalin en pahalı maliyeti çalınan tutar değil, geç fark edilmesidir. %85 maruziyetin olduğu bir ortamda risk değerlendirmesini "lüks" sayan kurum, aslında suistimali sübvanse ediyor. Etik ihbar mekanizması bir uyum kutucuğu değil, bir maliyet kontrolüdür: çalışan güveniyorsa, ihbar denetimden önce gelir.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Suistimal risk değerlendirmesini yıllık iç denetim planının sabit bir maddesi haline getirin</li>
+      <li>Etik ihbar hattınızın gerçekten kullanılıp kullanılmadığını ölçün : sıfır ihbar, güven yokluğunun işareti olabilir</li>
+      <li>Erken tespit göstergelerini (anormal işlem, yetki ihlali) izleyen bir kontrol seti tanımlayın</li>
+    </ul>
+  </div>
+</div>
+
+<!-- STAT BLOCK 2 -->
+<div class="stat-block">
+  <div class="stat-number">85<em>%</em></div>
+  <div class="stat-text">
+    <span class="stat-label">PwC Türkiye Suistimal Araştırması 2026 · Maruziyet</span>
+    <p class="stat-desc">Türkiye'de şirketlerin yaklaşık %85'inde son iki yılda en az bir suistimal vakası tespit edildi. Buna karşılık düzenli suistimal risk değerlendirmesi yapanların oranı yalnızca %35: maruziyet ile hazırlık arasında 50 puanlık bir körlük makası var.</p>
+    <a class="stat-link" href="https://www.pwc.com.tr" target="_blank">→ pwc.com.tr · TEİD iş birliği · Türkiye Suistimal Araştırması 2026</a>
+  </div>
+</div>
+
+<!-- ARTICLE 3 -->
+<div class="article">
+  <h2><span class="num">03</span>"Nudifier" Yasağı : AB, Üretken AI'ın Karanlık Tarafını Yasakladı</h2>
+  <div class="hr"></div>
+  <p>Omnibus düzenlemesinin en az konuşulan ama en sembolik maddesi, yasak AI uygulamaları listesine yapılan eklemeler. Artık AB'de, bir kişinin rızası olmadan onu tanınabilir biçimde cinsel ya da mahrem içerikte gösteren görüntü, video veya ses üreten sistemler ("nudifier" uygulamaları) ve çocuk istismarı materyali (CSAM) üreten AI sistemleri açıkça yasaklı.</p>
+  <p>Bu, soyut bir etik tartışma değil; somut bir kurumsal sorumluluk. Bir kurumun çalışanı, kurumsal bir AI aracıyla bu tür bir içerik ürettiğinde sorumluluk zinciri nereye uzanır? Kurumun kullandığı üçüncü taraf AI sağlayıcısı bu yasağa uyumlu mu? Yasak listesi büyüdükçe, "hangi AI aracını kime, hangi denetimle açtık" sorusu bir uyum sorusu haline geliyor.</p>
+  <a class="source-tag" href="https://www.europarl.europa.eu" target="_blank">Kaynak: Digital Omnibus on AI · Madde 5 · Yasaklı AI Uygulamaları</a>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Kurumsal AI kullanım politikanıza yasaklı kullanım kategorilerini açıkça yazın</li>
+      <li>Üçüncü taraf AI sağlayıcılarınızın yasak listesine uyum beyanını tedarik sözleşmesine ekleyin</li>
+      <li>Çalışanların kurumsal AI araçlarıyla ürettiği içeriğin denetim izini (log) tutulabilir hale getirin</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 4 -->
+<div class="article">
+  <h2><span class="num">04</span>Rekabet Kurumu Yerinde İncelemede : Dijital Veri ve Silinen WhatsApp Mesajı</h2>
+  <div class="hr"></div>
+  <p>Yerli cephede, rekabet hukuku tarafı hareketli. Anayasa Mahkemesi 17 Şubat 2026'da, Rekabet Kurulu'nun hakim kararı olmaksızın yaptığı yerinde incelemenin (dawn raid) anayasaya uygunluğunu bir kez daha gündemine aldı. Aynı dönemde Kurum'un "Yerinde İncelemelerde Dijital Verilerin İncelenmesine İlişkin Kılavuzu", incelemelerde teşebbüslerin elektronik ortam ve bilişim sistemlerindeki verilerinin incelenmesi ve muhafazasına ilişkin esasları çizmeye devam ediyor.</p>
+  <p>Pratikte en sık ceza üreten nokta şu: yerinde inceleme başladıktan sonra çalışanların WhatsApp yazışmalarını, e-postalarını ya da dosyalarını silmesi. Kurul kararlarında, silinen mesajların adli bilişim yazılımıyla geri getirilmesi ve "incelemenin engellenmesi" gerekçesiyle teşebbüse idari para cezası verilmesi yerleşik bir uygulama. Bir tek çalışanın paniğiyle silinen bir mesaj, tüm kuruma fatura çıkarabiliyor.</p>
+  <a class="source-tag" href="https://www.rekabet.gov.tr" target="_blank">Kaynak: Rekabet Kurumu · Yerinde İncelemelerde Dijital Verilerin İncelenmesine İlişkin Kılavuz · AYM 17.02.2026</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>Dawn raid'de kurumu koruyan şey hukuk ekibinin gelişi değil, ilk beş dakikada çalışanın ne yaptığıdır. "Hiçbir şeyi silme" talimatını kriz anında değil, bugün vermelisiniz. Silinen bir mesajın geri getirilmesi, ihlalin kanıtına bir de "engelleme" cezası ekler: en pahalı hata, asıl ihlal değil, panikle verilen tepkidir.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Yerinde inceleme anında "hiçbir veri silinmez" kuralını yazılı bir protokole bağlayın</li>
+      <li>Çalışanların ilk teması nasıl yöneteceğini (kapıda kim karşılar, hukuka kim haber verir) bugünden tanımlayın</li>
+      <li>Kurumsal ve şahsi cihaz ayrımını netleştirin : karışık kullanım, inceleme kapsamını genişletir</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 5 -->
+<div class="article">
+  <h2><span class="num">05</span>Sabit Tarih Rejimi : "Standart Hazır Değil" Artık Mazeret Değil</h2>
+  <div class="hr"></div>
+  <p>Omnibus'un teknik ama stratejik bir detayı, kurumsal planlama açısından kritik: yüksek riskli sistemler için yeni uygulama tarihleri "sabit" olarak belirlendi. Komisyon'un ilk önerisi, yükümlülükleri "gerekli standart ve araçlar hazır olduğunda" başlatmaktı: yani belirsiz, koşullu bir takvim. Parlamento ve Konsey bunu reddetti ve sabit tarihlerde uzlaştı.</p>
+  <p>Bunun kurumsal anlamı büyük: artık "ilgili teknik standart henüz yayımlanmadı" mazereti, uyum yükümlülüğünü ertelemez. Tarih gelir, yükümlülük başlar. Bu, belirsizliği seven değil, planlama yapabilen kurumun lehine bir rejim. Hazırlığını standartların çıkmasına bağlayan kurum, kendini tarih baskısı altında bulacak.</p>
+  <a class="source-tag" href="https://www.consilium.europa.eu" target="_blank">Kaynak: Konsey & Parlamento · AI Act Sadeleştirme Uzlaşısı · Sabit Tarih Rejimi</a>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Uyum yol haritanızı standartların çıkışına değil, sabit tarihlere göre kurgulayın</li>
+      <li>"Standart bekliyoruz" gerekçesini bir aksiyon erteleme aracı olmaktan çıkarın</li>
+      <li>Geri sayımı bugün başlatın : 2 Aralık 2027'ye kalan süreyi proje planına dönüştürün</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 6 : SİBER GÜVENLİK KANUNU -->
+<div class="article">
+  <h2><span class="num">06</span>Siber Güvenlik Kanunu Bir Yaşında : Yükümlülük Yürürlükte, Alt Mevzuat Gecikti</h2>
+  <div class="hr"></div>
+  <p>7545 sayılı Siber Güvenlik Kanunu 19 Mart 2025'te Resmî Gazete'de yayımlanarak yürürlüğe girdi: Türkiye'de siber güvenliği yatay bir çatı altında düzenleyen ilk kapsamlı çerçeve. Kanunla Siber Güvenlik Başkanlığı kuruldu ve Başkanlığa geniş denetim, bilgi-belge talep etme ve müdahale yetkileri tanındı. Aradan bir yılı aşkın süre geçti, ama Kanun'un Geçici Madde 1'i uyarınca bir yıl içinde çıkması öngörülen ikincil mevzuatın takvimi büyük ölçüde kaydı.</p>
+  <p>Bu boşluk, kurumlarda tehlikeli bir refleks yarattı: "Detaylar henüz net değilse, biz de bekleyelim." Oysa Kanun'un kendisi yürürlükte. Denetim ve bilgi-belge talep etme yetkisi, alt düzenlemelerin tamamlanmasını beklemiyor. Üstelik Kanun yalnızca kritik altyapıları değil; bilgi sistemleri üzerinden hizmet sunan, hassas veri işleyen orta ve büyük ölçekli birçok şirketi kapsayan yükümlülükler getiriyor.</p>
+  <div class="pq">"Alt mevzuatın gecikmesi bir mola değil, bir hazırlık penceresidir: yükümlülük yürürlükteyken belirsizliği mazeret sayan kurum, denetim geldiğinde savunmasız kalır."</div>
+  <p>Yaptırım tarafı ciddi. Bilgi ve belge vermeme 1 ila 3 yıl hapis ve adli para cezasıyla; güvenlik tedbirlerine uymama ve olay bildirimini yapmama 1 milyon ila 10 milyon TL arası idari para cezasıyla; denetime engel olma ticari şirketlerde brüt satış hasılatının %5'ine kadar çıkabilen cezalarla karşılanıyor. Veri sızıntısı içeriğinin izinsiz paylaşımı için 3 ila 5 yıl hapis öngörülüyor. Bunlar, uyumu "olursa bakarız" listesinden çıkaran rakamlar.</p>
+  <a class="source-tag" href="https://www.mevzuat.gov.tr" target="_blank">Kaynak: 7545 sayılı Siber Güvenlik Kanunu · 19 Mart 2025 · 32846 sayılı Resmî Gazete</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>Siber güvenlik uyumunu IT departmanına havale eden her şirket aynı hatayı yapıyor. Bu bir teknik konu değil, bir yönetim kurulu sorumluluğu. IT olayı engeller; yönetişim olayın kime mal olacağını belirler. Kapsamda olup olmadığını "herhalde değiliz" diye varsayan kurum, riski yönetmiyor, sadece görmüyor. Alt mevzuatın gecikmesi, hazırlık için kazanılmış zamandır: bu pencereyi kapalı tutan, dışarıda kalır.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Şirketinizin kanun kapsamında olup olmadığını yazılı olarak, varsayımla değil kanun metniyle değerlendirin</li>
+      <li>Siber güvenlik yükümlülüklerinin sorumluluk dağılımını (kurul, hukuk, IT) yazılı bir matrise bağlayın</li>
+      <li>Olay bildirim akışını bugün tanımlayın : bildirim yapmama 10 milyon TL'ye kadar cezalı</li>
+    </ul>
+  </div>
+</div>
+
+<!-- STAT BLOCK 3 : SİBER GÜVENLİK KANUNU -->
+<div class="stat-block">
+  <div class="stat-number">10<em>m₺</em></div>
+  <div class="stat-text">
+    <span class="stat-label">7545 sayılı Siber Güvenlik Kanunu · İdari Para Cezası Tavanı</span>
+    <p class="stat-desc">Siber güvenlik tedbirlerine uymama ve olay bildirimini yapmama, kurum başına 1 milyon ila 10 milyon TL arası idari para cezasıyla karşılanıyor. Denetime engel olma ise ticari şirketlerde brüt satış hasılatının %5'ine kadar çıkabiliyor: uyumsuzluğun bedeli, hazırlığın maliyetinin çok üzerinde.</p>
+    <a class="stat-link" href="https://www.mevzuat.gov.tr" target="_blank">→ 7545 sayılı Kanun · Cezai ve İdari Yaptırımlar</a>
+  </div>
+</div>
+
+<!-- ARTICLE 7 : KVKK -->
+<div class="article">
+  <h2><span class="num">07</span>KVKK Cephesinde Yoğun Hafta : Biyometrik Veri, Kamera ve 17 Milyon TL'lik Eşik</h2>
+  <div class="hr"></div>
+  <p>Haziran 2026, Kişisel Verileri Koruma Kurumu açısından hareketli geçti. Kurul'un 29 Nisan 2026 tarihli ve 2026/921 sayılı İlke Kararı 2 Haziran'da Resmî Gazete'de yayımlandı: mesai ve devam takibinde parmak izi, yüz tanıma ve benzeri biyometrik sistemlerin kullanımına ciddi sınırlamalar getiriyor. Hemen ardından, 8 Haziran'da Kurum güvenlik kamerası sistemlerinin hukuka uygun kullanımına ilişkin biri işyerlerini, diğeri apartman ve site yönetimlerini kapsayan iki ayrı kamuoyu duyurusu yayımladı.</p>
+  <p>Aynı dönemde VERBİS kayıt ve bildirim süresi, 2025 mali bilanço kriterleri nedeniyle yükümlülük doğan veri sorumluları için 5 Haziran 2026'ya uzatıldı. Arka planda ise daha büyük bir tablo var: 2026 idari para cezaları, %25,49'luk yeniden değerleme oranıyla güncellendi ve veri güvenliği ile VERBİS ihlallerinde tavan 17 milyon TL'yi aştı. TBMM gündeminde, sabit tutarlı cezalardan yıllık cironun %2 ila %4'ü oranında cirosal ceza rejimine geçiş öngören bir teklif bulunuyor.</p>
+  <div class="pq">"Biyometrik veri ve kamera kayıtları artık 'standart İK uygulaması' değil; her biri ayrı bir hukuka uygunluk gerekçesi, açık rıza ve orantılılık testi gerektiren yüksek riskli işleme faaliyetidir."</div>
+  <p>Tek tek bakıldığında teknik görünen bu kararlar, birlikte okunduğunda net bir yön gösteriyor: Kurul, denetimini kağıt evraktan dijital izlere, özellikle yapay zeka, bulut bilişim ve biyometrik sistemlere kaydırıyor. Çalışanın parmak izini "kapıyı açsın diye" toplayan kurum, artık orantılılık ilkesi karşısında bunu savunmak zorunda.</p>
+  <a class="source-tag" href="https://www.kvkk.gov.tr" target="_blank">Kaynak: KVKK · İlke Kararı 2026/921 · 8 Haziran 2026 Kamuoyu Duyuruları · VERBİS Süre Uzatımı</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>Biyometrik veri kararı, bir uyum detayı değil, bir prensip beyanı: kolaylık, hukuka uygunluğun yerini tutmaz. Bir kurum "çalışanlar onayladı" diyerek parmak izi toplamayı meşrulaştıramaz; çünkü Kurul, çalışan-işveren ilişkisinde açık rızanın gerçekten özgür iradeyle verilip verilmediğini sorguluyor. 17 milyon TL'lik eşik ve gündemdeki cirosal ceza teklifi, KVKK'yı bir hukuk departmanı konusu olmaktan çıkarıp finans direktörünün ve yönetim kurulunun masasına taşıyor.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Mesai takibinde biyometrik sistem kullanıyorsanız, alternatif yöntem sunup sunmadığınızı ve orantılılık gerekçenizi yazılı olarak gözden geçirin</li>
+      <li>İşyeri ve ortak alan kameralarınızın aydınlatma, saklama süresi ve erişim politikasını 8 Haziran duyuruları ışığında güncelleyin</li>
+      <li>Cirosal ceza teklifini bütçe riski olarak izleyin : ceza artık sabit tutar değil, cironuzun yüzdesi olabilir</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 8 : SİBER + KVKK PARALEL BİLDİRİM -->
+<div class="article">
+  <h2><span class="num">08</span>Çifte Bildirim Tuzağı : Bir Veri İhlali, İki Ayrı Merci, Eşzamanlı Sorumluluk</h2>
+  <div class="hr"></div>
+  <p>Bu sayının en stratejik kesişimi burada. Bir siber olay kişisel veriyi de etkilediğinde, kurum aynı anda iki ayrı bildirim rejimiyle karşı karşıya kalıyor. Siber Güvenlik Kanunu, bilişim sistemleri üzerinden hizmet sunan kuruluşların tespit ettikleri siber olayları gecikmeksizin Siber Güvenlik Başkanlığı'na bildirmesini zorunlu kılıyor. Aynı olayda kişisel veri etkilenmişse, KVKK'nın 72 saat içinde Kurul'a bildirim yükümlülüğü paralel olarak devreye giriyor.</p>
+  <p>Sonuç: tek bir ihlal, iki ayrı idari merci karşısında eşzamanlı hukuki sorumluluk. AB tarafında bu zaman baskısı daha da keskin. NIS2 Direktifi, önemli siber olaylarda 24 saat içinde erken uyarı, 72 saat içinde ayrıntılı bildirim ve en geç bir ay içinde nihai rapor sunulmasını öngören katmanlı bir rejim getiriyor. Bu süreler iyi niyet göstergesi değil, hukuki zorunluluk.</p>
+  <a class="source-tag" href="https://www.mevzuat.gov.tr" target="_blank">Kaynak: 7545 sayılı Siber Güvenlik Kanunu · KVKK madde 12 · AB NIS2 Direktifi Bildirim Rejimi</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>Çoğu kurumun olay müdahale planı tek bir bildirim varsayar. Oysa gerçek bir ihlalde saat işlerken, hangi mercie, hangi sürede, hangi formatta bildirim yapılacağını kriz anında düşünmek için vakit yoktur. İki rejimi tek bir akışta birleştiren, sorumluyu önceden atayan kurum kazanır. Bildirim takvimini olaydan sonra öğrenen kurum, asıl ihlalin üstüne bir de "geç bildirim" cezası ekler.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Olay müdahale planınıza çift bildirim akışı ekleyin : Siber Güvenlik Başkanlığı ve KVKK için ayrı sorumlu ve süre</li>
+      <li>72 saatlik KVKK penceresini ve siber olay bildirim zorunluluğunu tek bir karar ağacında birleştirin</li>
+      <li>AB'ye dokunan operasyonunuz varsa NIS2'nin 24 saatlik erken uyarı eşiğini de senaryolarınıza dahil edin</li>
+    </ul>
+  </div>
+</div>
+
+<!-- FRAMEWORK -->
+<div class="section-rule">The Governance · Signature Framework</div>
+
+<div class="framework">
+  <span class="fw-label">The Governance Yönetişim Olgunluk Modeli : Düzenleyici Hazırlık Seviyeleri</span>
+  <div class="fw-title">AB takvimi sabitlendi : kurumunuz hangi hazırlık seviyesinde?</div>
+  <div class="fw-levels">
+    <div class="fw-level">
+      <div class="fw-num">1</div>
+      <div class="fw-content">
+        <h5>Farkındasız</h5>
+        <p>"AB AI Act bizi ilgilendirmez" varsayımı hakim. Kapsam analizi yapılmamış, AI envanteri yok.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">2</div>
+      <div class="fw-content">
+        <h5>Tepkisel</h5>
+        <p>Haber çıkınca konuşuluyor ama aksiyon yok. Erteleme "rahatladık" diye okunuyor.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">3</div>
+      <div class="fw-content">
+        <h5>Gelişen</h5>
+        <p>AB pazarına dokunan sistemler sınıflandırılıyor. Annex I / III ayrımı ve sabit tarihler haritalanıyor.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">4</div>
+      <div class="fw-content">
+        <h5>Yönetilen</h5>
+        <p>Uyum yol haritası sabit tarihlere bağlı. Üst yönetim raporlaması ve tedarikçi uyum beyanı işliyor.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">5</div>
+      <div class="fw-content">
+        <h5>Öngören</h5>
+        <p>AB ve ulusal AI rejimi kurumsal risk iştahına entegre. Kurul seviyesinde izleme. Yasak liste tedarik sürecine gömülü.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VERİ KARTLARI -->
+<div class="section-rule">Bu Sayıda Kullanılan Veriler</div>
+
+<div class="data-grid">
+  <div class="data-card">
+    <div class="data-num">423</div>
+    <p class="data-desc">Avrupa Parlamentosu'nda AI Act omnibus düzenlemesine lehte oy veren milletvekili sayısı (57 aleyhte, 174 çekimser): sadeleştirmeye verilen güçlü siyasi destek.</p>
+    <span class="data-src">Kaynak · Avrupa Parlamentosu · 16 Haziran 2026</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">85<span style="font-size:24px;">%</span></div>
+    <p class="data-desc">Türkiye'de son iki yılda en az bir suistimal vakası tespit edilen şirketlerin oranı: suistimal artık istisna değil, yaygın bir kurumsal risk.</p>
+    <span class="data-src">Kaynak · PwC Türkiye & TEİD 2026</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">35<span style="font-size:24px;">%</span></div>
+    <p class="data-desc">Düzenli suistimal risk değerlendirmesi yapan şirketlerin oranı: maruziyetin %85, hazırlığın %35 olması 50 puanlık bir körlük makası yaratıyor.</p>
+    <span class="data-src">Kaynak · PwC Türkiye & TEİD 2026</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">2027</div>
+    <p class="data-desc">Yüksek riskli (Annex III) AI sistemleri için yeni ve sabit uyum tarihi (2 Aralık): orijinal 2 Ağustos 2026 tarihinden 16 ay sonraya ertelendi.</p>
+    <span class="data-src">Kaynak · Digital Omnibus on AI</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">7545</div>
+    <p class="data-desc">19 Mart 2025'te yürürlüğe giren Siber Güvenlik Kanunu'nun numarası: Türkiye'nin siber güvenliği yatay düzenleyen ilk kapsamlı çerçevesi. Geçici Madde 1'in öngördüğü bir yıllık ikincil mevzuat takvimi büyük ölçüde kaydı.</p>
+    <span class="data-src">Kaynak · 7545 sayılı Kanun · Resmî Gazete</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">5<span style="font-size:24px;">%</span></div>
+    <p class="data-desc">Denetime engel olma halinde ticari şirketlere kesilebilecek idari para cezasının brüt satış hasılatına oranı tavanı: siber güvenlik uyumsuzluğunun bilanço üzerindeki doğrudan etkisi.</p>
+    <span class="data-src">Kaynak · 7545 sayılı Siber Güvenlik Kanunu</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">17<span style="font-size:24px;">m₺</span></div>
+    <p class="data-desc">2026'da %25,49 yeniden değerleme sonrası KVKK veri güvenliği ve VERBİS ihlallerinde ulaşılan idari para cezası tavanı. Gündemde ise yıllık cironun %2-4'ü oranında cirosal ceza teklifi var.</p>
+    <span class="data-src">Kaynak · KVKK · 2026 Ceza Tarifesi</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">72<span style="font-size:24px;">saat</span></div>
+    <p class="data-desc">Kişisel veri ihlalinde KVKK'ya bildirim için tanınan azami süre. Siber olay aynı anda Siber Güvenlik Başkanlığı'na da bildirilmek zorunda: tek ihlal, iki merci, eşzamanlı sorumluluk.</p>
+    <span class="data-src">Kaynak · KVKK madde 12 & 7545 sayılı Kanun</span>
+  </div>
+</div>
+
+<!-- RISK RADAR -->
+<div class="section-rule">Risk Radarı</div>
+
+<div class="radar">
+  <div class="radar-head">
+    <span class="radar-label">⚠ Haftanın Kritik Riski</span>
+    <span class="risk-tag">Yüksek Öncelik</span>
+  </div>
+  <h3>"Erteleme Rahatlaması" : En Sessiz Uyum Riski</h3>
+  <p><strong>Nedir?</strong> AB AI Act yükümlülüklerinin 2027'ye ertelenmesini, hazırlığı erteleme gerekçesi olarak okumak. "Daha vakit var" algısı, en pahalı uyum hatalarının kaynağıdır.</p>
+  <p><strong>Kurumsal etki:</strong> Sabit tarih rejiminde geri sayım başladı. Yüksek riskli AI sistemi olan bir kurumun envanter, sınıflandırma ve dokümantasyon hazırlığı aylar sürer. 2027 yakındır; 2026'da başlamayan kurum, son altı ayda panik moduna girer.</p>
+  <p><strong>Temel gerçek:</strong> Düzenleyici erteleme, kuruma bir hediye değil, bir hazırlık penceresidir. Pencereyi kapalı tutan, dışarıda kalır.</p>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>AB pazarına dokunan AI sistemlerinizin kapsam analizini bu çeyrekte tamamlayın</li>
+      <li>2 Aralık 2027'yi bir "uzak tarih" değil, aktif proje son tarihi olarak planınıza işleyin</li>
+      <li>Erteleme döneminde hazırlık yapan rakiplerinizle aranızdaki uyum farkını izleyin</li>
+    </ul>
+  </div>
+</div>
+
+<!-- TOOL BOX -->
+<div class="section-rule">Araç & Yöntem</div>
+
+<div class="toolbox">
+  <span class="tool-tag">Bu Hafta Uygulayın</span>
+  <h3>AB AI Act Kapsam Testi : 5 Soru</h3>
+  <p>Kurumunuzun AB Yapay Zeka Yasası kapsamında olup olmadığını anlamanın en hızlı yolu beş soru: (1) AB pazarına AI içeren bir ürün ya da hizmet sunuyor musunuz? (2) AB'de yerleşik kişilerin verisini bir AI sistemiyle işliyor musunuz? (3) Kullandığınız AI bir karar sürecini (işe alım, kredi, fiyatlama) etkiliyor mu : yani yüksek riskli kategoriye girebilir mi? (4) Tedarikçileriniz arasında AB'ye AI çıktısı sunan biri var mı : sorumluluk zinciri size uzanır mı? (5) Kullandığınız üretken AI araçları için watermarking ve yasak liste uyumunu sağlayabiliyor musunuz? Bir "evet" bile sizi kapsama sokabilir : ve sabit tarih rejiminde "bilmiyordum" bir savunma değil.</p>
+</div>
+
+<!-- TÜRKİYE ODAĞI -->
+<div class="section-rule">Türkiye Odağı</div>
+
+<div class="focus">
+  <span class="focus-flag">Yerel Gündem</span>
+  <h3>AB'nin Sabit Takvimi Türk Kurumları İçin Neden Bir "Sessiz Yükümlülük"?</h3>
+  <p>Türkiye'nin henüz AB AI Act'in birebir karşılığı bir yatay yapay zeka yasası yok. Bu, birçok kurumda "o zaman bizi bağlamaz" rahatlığı yaratıyor. Oysa gerçek tersine işliyor: AB'ye ihracat yapan, AB'li müşteriye hizmet veren ya da AB merkezli bir grup şirketinin parçası olan Türk kurumları, kendi ulusal mevzuatı beklemeden AB rejimine uymak zorunda kalıyor. Uyum, sınırda değil, sözleşmede başlıyor.</p>
+  <p>Üstelik Türkiye'nin yeni ulusal AI vizyonu da yönetişimi beş odaktan biri ilan etmişti (Sayı 03). İki sinyal aynı yöne işaret ediyor: AI yönetişimi, ister AB ister ulusal kaynaklı olsun, kurumsal gündemin kalıcı bir maddesi haline geliyor.</p>
+  <p><strong>İç denetçiler için pratik not:</strong> Bir sonraki denetim planına "AB AI Act maruziyet ve kapsam analizi" başlığını ekleyin. AB'ye dokunan hangi sürecin hangi AI sistemini kullandığını bilmeyen kurum, taşıdığı sınır ötesi uyum riskini de göremez.</p>
+</div>
+
+<!-- READS -->
+<div class="section-rule">Okumanız Gereken</div>
+
+<div class="reads">
+  <div class="read-item">
+    <span class="rn">01</span>
+    <div class="rc">
+      <h4>Digital Omnibus on AI : Genel Kurul Onayı, 16 Haziran 2026</h4>
+      <p>AB AI Act'i sadeleştiren omnibus düzenlemesinin son metni. Sabit tarih rejimi ve yeni yasak liste için temel referans : europarl.europa.eu</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">02</span>
+    <div class="rc">
+      <h4>PwC Türkiye & TEİD : Türkiye Suistimal Araştırması 2026</h4>
+      <p>%85 maruziyet, %35 düzenli risk değerlendirmesi. Etik ihbar ve erken tespitin rolüne dair yerli veri : pwc.com.tr</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">03</span>
+    <div class="rc">
+      <h4>Rekabet Kurumu : Yerinde İncelemelerde Dijital Verilerin İncelenmesine İlişkin Kılavuz</h4>
+      <p>Dawn raid sırasında dijital veri inceleme ve muhafaza esasları. Silinen veriye "engelleme" cezası için kritik okuma : rekabet.gov.tr</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">04</span>
+    <div class="rc">
+      <h4>AYM Kararı : Rekabet Kurulu Yerinde İnceleme Yetkisi, 17 Şubat 2026</h4>
+      <p>Hakim kararı olmaksızın yerinde inceleme yetkisinin anayasaya uygunluk tartışması. Dawn raid hukukunun zemini.</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">05</span>
+    <div class="rc">
+      <h4>Konsey & Parlamento : AI Act Sadeleştirme Uzlaşısı, 7 Mayıs 2026</h4>
+      <p>16 Haziran onayının dayandığı siyasi uzlaşı. Erteleme takviminin ve müzakere sürecinin arka planı : consilium.europa.eu</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">06</span>
+    <div class="rc">
+      <h4>7545 sayılı Siber Güvenlik Kanunu : Tam Metin ve Cezai Hükümler</h4>
+      <p>19 Mart 2025 tarihli Kanun'un resmî metni. Kurumsal yükümlülükler, denetim yetkisi ve idari para cezaları için temel referans : mevzuat.gov.tr</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">07</span>
+    <div class="rc">
+      <h4>KVKK İlke Kararı 2026/921 : Mesai Takibinde Biyometrik Veri</h4>
+      <p>2 Haziran 2026 Resmî Gazete. Parmak izi ve yüz tanımayla devam takibinde orantılılık ve açık rıza değerlendirmesi : kvkk.gov.tr</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">08</span>
+    <div class="rc">
+      <h4>KVKK Kamuoyu Duyuruları : Güvenlik Kamerası Sistemleri, 8 Haziran 2026</h4>
+      <p>İşyeri ve apartman/site kameralarında aydınlatma, saklama ve erişim esasları. İki ayrı duyuru : kvkk.gov.tr</p>
+    </div>
+  </div>
+</div>
+
+<!-- HAFTAYA TEASER -->
+<div class="section-rule">Haftaya The Governance'da</div>
+
+<div class="focus">
+  <span class="focus-flag">Önümüzdeki Sayı</span>
+  <h3>Dawn Raid : Kapı Çaldığında İlk 30 Dakika</h3>
+  <p>Bu sayıda Rekabet Kurumu'nun yerinde inceleme yetkisine değindik. Gelecek hafta bu konuyu tek başına ele alıyoruz: bir dawn raid başladığında kurumu koruyan ya da batıran, ilk yarım saatte verilen kararlardır. Kapıda kim karşılar, hukuk ekibi ne zaman devreye girer, hangi cihaz incelenebilir, hangi veri "şahsi" sayılır, ve neden tek bir silinen mesaj tüm kuruma ceza çıkarır? Haftaya, kurumsal bir dawn raid hazırlık protokolünü adım adım kuruyoruz.</p>
+  <p><strong>Hazırlık notu:</strong> Bu sayıyı dağıtık tutmayın : hukuk, uyum ve iç denetim ekibinizle paylaşın. Gelecek hafta hep birlikte aynı protokole bakacağız.</p>
+</div>
+
+<!-- KAPANIŞ SORUSU -->
+<div class="closing-q">
+  <span class="cq-label">Yönetim Kurulu İçin Tek Soru</span>
+  <h3>AB pazarına dokunan kaç AI sisteminiz olduğunu ve bunların hangi sabit uyum tarihine tabi olduğunu bugün söyleyebilir misiniz?</h3>
+</div>
+
+<!-- CTA BLOCK -->
+<div class="cta-block">
+  <h3>Bu sayıyı faydalı buldunuz mu?</h3>
+  <p>The Governance'ı ekibinizle paylaşın, LinkedIn'de kaydedin ve sayfamızı takip edin. Kurumsal risk ve teknoloji yönetişiminde Türkiye'nin en nitelikli bültenini birlikte büyütelim.</p>
+  <div class="cta-actions">
+    <a href="https://www.linkedin.com/company/thegovernance" class="cta-btn primary">LinkedIn'de Takip Et</a>
+    <a href="https://thegovernance.beehiiv.com" class="cta-btn secondary">Bültene Abone Ol</a>
+  </div>
+</div>
+
+<!-- CLOSER -->
+<div class="closer">
+  <div class="ed-note">
+    <h4>Editörden</h4>
+    <p>Bu hafta birbirinden bağımsız gelişmeler aynı cümleyi kurdu: yönetişim ertelenebilir bir konu değil. Avrupa AI yükümlülüklerini öteledi ama tarihleri sabitledi; PwC suistimalin yaygın ama önlemin seyrek olduğunu gösterdi; Rekabet Kurumu cephesinde tek bir silinen mesajın bedelini hatırladık; Siber Güvenlik Kanunu bir yılı geride bıraktı; KVKK ise biyometrik veriden güvenlik kamerasına, 17 milyon TL'lik ceza eşiğinden çifte bildirim yükümlülüğüne uzanan yoğun bir hafta yaşattı. Ortak ders: hazırlık, kriz anında değil, sessiz dönemde yapılır. The Governance bu gelişmeleri haber olarak değil, kararlarınızı etkileyen gündem maddeleri olarak ele alır. Sorular için her zaman açığım.</p>
+  </div>
+  <div class="sig">
+    <span class="sig-name">Ecem</span>
+    <span class="sig-role">Editör · The Governance</span>
+  </div>
+</div>
+
+</body>
+</html>
