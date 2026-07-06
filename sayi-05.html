@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Governance : Sayı 05 · Haziran 2026</title>
+<meta name="description" content="Dawn raid: yerinde incelemede ilk 30 dakika, KVKK biyometrik ilke kararı 2026/921, DORA tedarikçi riski ve MASAK suistimal denetimi. Bağımsız GRC bülteni.">
+<link rel="canonical" href="https://www.thegovernance.com.tr/sayi-05.html">
+<meta property="og:title" content="The Governance : Sayı 05 · Dawn Raid, Kapı Çaldığında İlk 30 Dakika">
+<meta property="og:description" content="Yerinde incelemede kurumu koruyan, hukuk ekibinin gelişi değil ilk yarım saatteki reflekstir. KVKK, DORA ve MASAK cephesiyle birlikte.">
+<meta property="og:url" content="https://www.thegovernance.com.tr/sayi-05.html">
+<meta property="og:type" content="article">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Mono:wght@300;400&family=Instrument+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bordo:   #8C1F0D;
+    --bordo-m: #B5341A;
+    --ink:     #111009;
+    --paper:   #F5F2EC;
+    --cream:   #EAE5DB;
+    --rule:    #C8C2B6;
+    --mid:     #3D3A34;
+    --light:   #6E6A62;
+    --white:   #FFFFFF;
+    --gold:    #9A7B3A;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.75;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 28px 100px;
+  }
+
+  /* ── NAMEPLATE ── */
+  .nameplate {
+    border-top: 4px solid var(--ink);
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    animation: rise .5s ease both;
+  }
+
+  .brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: .95;
+    color: var(--ink);
+  }
+  .brand em { font-style: normal; color: var(--bordo); }
+
+  .meta { text-align: right; padding-bottom: 4px; }
+  .meta-row {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--light);
+    line-height: 1.9;
+  }
+
+  /* ── AUDIENCE BAR ── */
+  .audience-bar {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 7px 14px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 28px;
+    margin-bottom: 32px;
+  }
+
+  .kicker {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -.5px;
+    margin-bottom: 14px;
+    color: var(--ink);
+  }
+
+  .hero-lead {
+    font-size: 15px;
+    line-height: 1.82;
+    color: var(--mid);
+  }
+
+  /* ── SECTION RULE ── */
+  .section-rule {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+  .section-rule::before {
+    content: '';
+    width: 20px; height: 2px;
+    background: var(--bordo);
+    flex-shrink: 0;
+  }
+  .section-rule::after {
+    content: '';
+    flex: 1; height: 1px;
+    background: var(--rule);
+  }
+
+  /* ── STAT BLOCK ── */
+  .stat-block {
+    background: var(--ink);
+    padding: 28px 32px;
+    margin: 24px 0;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .stat-number em {
+    font-style: normal;
+    color: var(--bordo-m);
+    font-size: 48px;
+  }
+
+  .stat-text { display: flex; flex-direction: column; gap: 6px; }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.45);
+  }
+
+  .stat-desc {
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(255,255,255,.82);
+  }
+
+  .stat-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    color: rgba(255,255,255,.35);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  .stat-link {
+    color: rgba(181,52,26,.8);
+    text-decoration: none;
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    letter-spacing: .1em;
+    display: block;
+    margin-top: 2px;
+  }
+
+  /* ── ARTICLE ── */
+  .article { margin-bottom: 36px; }
+
+  .article h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.2px;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .article h2 .num {
+    color: var(--bordo);
+    font-style: italic;
+    margin-right: 4px;
+  }
+
+  .hr { width: 28px; height: 2px; background: var(--bordo); margin-bottom: 14px; }
+
+  .article p {
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--mid);
+    margin-bottom: 10px;
+  }
+  .article p:last-child { margin-bottom: 0; }
+
+  .pq {
+    border-left: 2px solid var(--bordo);
+    padding: 2px 16px;
+    margin: 18px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--ink);
+  }
+
+  /* ── KAYNAK ETIKETI ── */
+  .source-tag {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .1em;
+    color: var(--light);
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    padding: 2px 8px;
+    margin-top: 6px;
+    text-decoration: none;
+  }
+
+  /* ── EXECUTIVE TAKEAWAY ── */
+  .takeaway {
+    background: var(--cream);
+    border-left: 3px solid var(--bordo);
+    padding: 16px 20px;
+    margin: 20px 0 0;
+  }
+
+  .takeaway-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .takeaway ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .takeaway ul li {
+    font-size: 13.5px;
+    color: var(--ink);
+    line-height: 1.55;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .takeaway ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--bordo);
+    font-size: 11px;
+  }
+
+  /* ── VERİ KARTLARI GRID ── */
+  .data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-bottom: 36px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .data-card {
+    background: var(--paper);
+    padding: 20px 18px;
+  }
+  .data-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--bordo);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .data-desc {
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--mid);
+    margin-bottom: 8px;
+  }
+  .data-src {
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+  @media (max-width: 560px) {
+    .data-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ── THE GOVERNANCE GÖRÜŞÜ ── */
+  .view {
+    background: var(--white);
+    border: 1px solid var(--bordo);
+    border-top: 3px solid var(--bordo);
+    padding: 18px 22px 16px;
+    margin: 22px 0 0;
+  }
+  .view-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 8px;
+    display: block;
+  }
+  .view p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  /* ── KAPANIŞ SORUSU ── */
+  .closing-q {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 36px 32px;
+    margin: 40px 0 36px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .closing-q::before {
+    content: '?';
+    position: absolute;
+    right: 8px; top: -28px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 180px;
+    font-weight: 700;
+    color: rgba(255,255,255,.04);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .closing-q .cq-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: #E07060;
+    margin-bottom: 14px;
+    display: block;
+  }
+  .closing-q h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--white);
+    max-width: 520px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* ── RADAR ── */
+  .radar {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 24px 26px 22px;
+    margin-bottom: 36px;
+  }
+
+  .radar-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+
+  .radar-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #E07060;
+  }
+
+  .risk-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #E07060;
+    border: 1px solid #E07060;
+    padding: 3px 8px;
+  }
+
+  .radar h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+
+  .radar p {
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: #D0CBC3;
+    margin-bottom: 10px;
+  }
+
+  .radar p:last-child { margin-bottom: 0; }
+  .radar strong { color: var(--white); font-weight: 500; }
+
+  .radar .takeaway {
+    background: rgba(255,255,255,.07);
+    border-left: 2px solid var(--bordo-m);
+    margin-top: 18px;
+  }
+  .radar .takeaway-label { color: #E07060; }
+  .radar .takeaway ul li { color: rgba(255,255,255,.82); font-size: 13px; }
+  .radar .takeaway ul li::before { color: #E07060; }
+
+  /* ── TOOL BOX ── */
+  .toolbox {
+    background: var(--cream);
+    border-left: 3px solid var(--gold);
+    padding: 20px 22px 18px;
+    margin-bottom: 36px;
+  }
+
+  .tool-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .toolbox h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+
+  .toolbox p {
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: var(--mid);
+  }
+
+  /* ── FOCUS ── */
+  .focus {
+    border: 1px solid var(--rule);
+    padding: 22px 22px 20px;
+    margin-bottom: 36px;
+  }
+
+  .focus-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .focus h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    color: var(--ink);
+  }
+
+  .focus p {
+    font-size: 14px;
+    line-height: 1.82;
+    color: var(--mid);
+    margin-bottom: 10px;
+  }
+  .focus p:last-child { margin-bottom: 0; }
+
+  /* ── FRAMEWORK ── */
+  .framework {
+    background: var(--ink);
+    padding: 28px 28px 24px;
+    margin: 32px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .framework::before {
+    content: 'TG';
+    position: absolute;
+    right: -12px; top: -8px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 120px;
+    font-weight: 700;
+    color: rgba(255,255,255,.03);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .fw-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .fw-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 18px;
+    line-height: 1.2;
+  }
+
+  .fw-levels { display: flex; flex-direction: column; gap: 2px; }
+
+  .fw-level {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 14px;
+    background: rgba(255,255,255,.04);
+  }
+
+  .fw-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--bordo-m);
+    min-width: 28px;
+    line-height: 1;
+  }
+
+  .fw-content h5 {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.6);
+    margin-bottom: 2px;
+  }
+
+  .fw-content p {
+    font-size: 12.5px;
+    color: rgba(255,255,255,.7);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* ── READS ── */
+  .reads { margin-bottom: 36px; }
+
+  .read-item {
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .read-item:last-child { border-bottom: none; }
+
+  .rn {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--light);
+    min-width: 20px;
+    padding-top: 2px;
+  }
+
+  .rc h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    color: var(--ink);
+  }
+
+  .rc p {
+    font-size: 13px;
+    color: var(--mid);
+    line-height: 1.65;
+  }
+
+  /* ── CTA BLOCK ── */
+  .cta-block {
+    background: var(--bordo);
+    padding: 32px 28px;
+    margin: 36px 0;
+    text-align: center;
+  }
+
+  .cta-block h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  .cta-block p {
+    font-size: 13.5px;
+    color: rgba(255,255,255,.78);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    padding: 11px 20px;
+    text-decoration: none;
+    transition: all .2s;
+    display: inline-block;
+  }
+
+  .cta-btn.primary {
+    background: var(--white);
+    color: var(--bordo);
+  }
+
+  .cta-btn.secondary {
+    background: transparent;
+    color: rgba(255,255,255,.8);
+    border: 1px solid rgba(255,255,255,.35);
+  }
+
+  /* ── CLOSER ── */
+  .closer {
+    border-top: 3px double var(--ink);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .ed-note h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--ink);
+  }
+
+  .ed-note p {
+    font-size: 12.5px;
+    color: var(--mid);
+    line-height: 1.7;
+    max-width: 400px;
+  }
+
+  .sig { text-align: right; flex-shrink: 0; }
+
+  .sig-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    display: block;
+    margin-bottom: 2px;
+    color: var(--ink);
+  }
+
+  .sig-role {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 560px) {
+    .brand { font-size: 34px; }
+    .hero h1 { font-size: 26px; }
+    .stat-block { flex-direction: column; gap: 16px; }
+    .stat-number { font-size: 56px; }
+    .closer { flex-direction: column; }
+    .sig { text-align: left; }
+    .cta-actions { flex-direction: column; align-items: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAMEPLATE -->
+<header class="nameplate">
+  <div class="brand">The<em>.</em><br>Governance</div>
+  <div class="meta">
+    <span class="meta-row">Sayı 05 · 29 Haziran 2026</span>
+    <span class="meta-row">Kurumsal Risk & Yönetişim</span>
+    <span class="meta-row">Haftalık · Türkçe</span>
+  </div>
+</header>
+
+<div class="audience-bar">
+  Yönetim Kurulu · CIO · CISO · İç Denetim · Risk & Compliance · Hukuk
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="kicker">Bu Sayının Odağı</span>
+  <h1>Dawn Raid : Kapı Çaldığında Kurumu Koruyan ya da Batıran İlk 30 Dakika</h1>
+  <p class="hero-lead">
+    Geçen sayı söz vermiştik: bu hafta Rekabet Kurumu'nun habersiz yerinde incelemesini (dawn raid) tek başına ele alıyoruz. Çünkü bir dawn raid'de kurumu koruyan, hukuk ekibinin saatler sonra gelmesi değil; ilk yarım saatte kapıdaki çalışanın ne yaptığıdır. Kurul uzmanları habersiz gelir, organizasyon şemasını ister, kilit çalışanların bilgisayarını ve telefonunu inceler, silinen WhatsApp mesajlarını adli bilişim yazılımıyla geri getirir. Ve en pahalı ceza çoğu zaman asıl ihlal değil, panikle silinen tek bir mesajdır: bu, teşebbüsün yıllık gayri safi gelirinin binde beşi oranında idari para cezası demektir. Bu sayıda, kurumsal bir dawn raid hazırlık protokolünü adım adım kuruyoruz; ayrıca KVKK'nın biyometrik ilke kararını, DORA'nın tedarikçi riski cephesini ve MASAK'ın sıkılaşan suistimal denetimini ele alıyoruz.
+  </p>
+</section>
+
+<!-- STAT BLOCK 1 -->
+<div class="stat-block">
+  <div class="stat-number">binde<em>5</em></div>
+  <div class="stat-text">
+    <span class="stat-label">Yerinde İncelemenin Engellenmesi · İdari Para Cezası</span>
+    <p class="stat-desc">Dawn raid sırasında veri silerek incelemeyi engelleyen ya da zorlaştıran teşebbüse, bir önceki mali yıl gayri safi gelirinin binde beşi oranında idari para cezası uygulanır. Bu ceza, asıl ihlal hiç kanıtlanamasa bile kesilebilir: silinen mesajın kendisi yeterli sebeptir.</p>
+    <a class="stat-link" href="https://www.rekabet.gov.tr" target="_blank">→ 4054 sayılı Kanun · Madde 16 · Yerinde İncelemenin Engellenmesi</a>
+  </div>
+</div>
+
+<!-- SECTION -->
+<div class="section-rule">Bu Haftanın Özeti : 5 Kritik Gelişme</div>
+
+<!-- ARTICLE 1 -->
+<div class="article">
+  <h2><span class="num">01</span>Dawn Raid Protokolü : İlk 30 Dakikada Kim, Neyi, Nasıl Yapar?</h2>
+  <div class="hr"></div>
+  <p>Habersiz yerinde inceleme, Türk rekabet hukukunun en güçlü delil toplama aracı. Kurul uzmanları, çoğunlukla mesai başında ve önceden haber vermeden kapıda belirir. Yetki belgelerini gösterir, sıklıkla ilk olarak organizasyon şemasını talep eder ve bu şema üzerinden inceleme konusuyla ilgili kilit çalışanları belirler. Ardından bu kişilerin bilgisayarları, ajandaları ve mobil cihazları hızla inceleme altına alınır.</p>
+  <div class="pq">"Dawn raid'de kurumu koruyan şey hukuk ekibinin gelişi değil, ilk beş dakikada çalışanın refleksidir: 'hiçbir şeyi silme' talimatı kriz anında değil, bugün verilir."</div>
+  <p>En sık ve en pahalı hata, panikle veri silmek. Kurul kararlarında, inceleme başladıktan sonra silinen WhatsApp yazışmalarının ve e-postaların Cellebrite gibi adli bilişim araçlarıyla geri getirildiği, hangi mesajın ne zaman silindiğinin log kayıtlarından tespit edildiği yerleşik bir uygulama. Bilinen bir Kurul kararında, bir genel müdür telefonunu "arabada kaldı" diyip getirmeye giderken, o kısa sürede sohbet içeriklerini silmiş; sonuç teşebbüse engelleme cezası olmuştu. Rekabet hukukuyla alakası olmayan, hatta tehlike arz etmeyen bir mesajın bile silinmesi, tespit edildiğinde kurumu binde beşlik ceza riskine sokuyor.</p>
+  <a class="source-tag" href="https://www.rekabet.gov.tr" target="_blank">Kaynak: Rekabet Kurumu · Yerinde İncelemelerde Dijital Verilerin İncelenmesine İlişkin Kılavuz · 4054 sayılı Kanun Md. 15-16</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>Dawn raid bir hukuk olayı değil, bir refleks olayıdır. Hukuk ekibi en hızlı ihtimalle bir saatte gelir; ihlal ya da ceza ise ilk on dakikada üretilir. Bu yüzden dawn raid hazırlığı eğitim biriminin değil, yönetim kurulunun gündemidir: çünkü en ucuz savunma, hiç eğitilmemiş bir çalışanın paniğine bırakılamayacak kadar pahalıdır.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>"İnceleme başladığında hiçbir veri silinmez" kuralını yazılı bir protokole bağlayın ve tüm çalışanlara duyurun</li>
+      <li>Kapıda kim karşılar, hukuka kim haber verir, uzmanlar kime yönlendirilir : bu rolleri bugünden isimlendirin</li>
+      <li>Yılda en az bir kez masaüstü (tabletop) dawn raid tatbikatı yapın : ilk 30 dakikayı prova edin</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 2 -->
+<div class="article">
+  <h2><span class="num">02</span>KVKK : Mesai Takibinde Parmak İzi ve Yüz Tanıma Artık Hukuka Aykırı</h2>
+  <div class="hr"></div>
+  <p>Kişisel Verileri Koruma Kurulu'nun 29 Nisan 2026 tarihli ve 2026/921 sayılı İlke Kararı, 2 Haziran 2026 tarihli Resmî Gazete'de yayımlandı. Karar net: çalışanların mesai takibi amacıyla parmak izi, yüz tanıma, iris veya retina gibi biyometrik verilerinin işlenmesi, açık rıza bulunsa dahi hukuka uygun kabul edilemez. Çünkü biyometrik veri özel nitelikli kişisel veridir ve mesai takibi için işlenmesi, ölçülülük ve veri minimizasyonu ilkelerini karşılamaz.</p>
+  <div class="pq">"Kurul, işçi-işveren ilişkisindeki güç dengesizliği nedeniyle açık rızanın özgür iradeye dayanıp dayanmadığının tartışmalı olduğunu söyledi: yani rıza, her şeyi meşrulaştırmaz."</div>
+  <p>Kurul, mesai takibi için daha az müdahaleci alternatifleri açıkça saydı: şifreli kart, PIN tabanlı sistemler, RFID/NFC kimlik kartları, kâğıt bazlı devam çizelgeleri. Bu, soyut bir ilke değil; çok sayıda Türk kurumunun bugün kullandığı parmak izli/yüz tanımalı PDKS sistemlerini doğrudan hukuka aykırı konuma sokan, uygulanabilir bir karar. Karara uymayan veri sorumluları, 6698 sayılı Kanun'un 18. maddesi kapsamında işleme tabi.</p>
+  <a class="source-tag" href="https://www.kvkk.gov.tr" target="_blank">Kaynak: KVKK · İlke Kararı 2026/921 · Resmî Gazete 02.06.2026 · No. 33268</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>Bu karar, "rıza aldık, sorun yok" savunmasının sonudur. KVKK iki sayıdır aynı çizgiyi çiziyor: rıza bir kalkan değil, bir irade beyanıdır ve zorla alınan rıza hiç alınmamış sayılır. Parmak izli PDKS kullanan her kurum, bugün bir uyum açığı taşıyor: ve bu açık "görünür", çünkü her çalışan tanığıdır.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Mesai takibinde biyometrik sistem kullanıyorsanız, 2026/921 ışığında alternatif yönteme geçiş planı başlatın</li>
+      <li>İK ve bilgi işlem ekibiyle mevcut PDKS sözleşmenizi ve veri envanterini gözden geçirin</li>
+      <li>"Açık rıza var" gerekçesine dayanan tüm veri işleme süreçlerinizi güç dengesizliği testinden geçirin</li>
+    </ul>
+  </div>
+</div>
+
+<!-- STAT BLOCK 2 -->
+<div class="stat-block">
+  <div class="stat-number">17<em>M₺</em></div>
+  <div class="stat-text">
+    <span class="stat-label">KVKK Veri Güvenliği İhlali · 2026 Ceza Tavanı</span>
+    <p class="stat-desc">Veri güvenliği yükümlülüğünün ihlalinde (Md. 12) 2026 idari para cezası tavanı 17 milyon TL'yi aştı. Kurul tek bir olayda birden fazla yükümlülüğün ihlal edildiğini tespit ederse, her biri için ayrı ceza verebiliyor: cezalar katlanarak artıyor.</p>
+    <a class="stat-link" href="https://www.kvkk.gov.tr" target="_blank">→ kvkk.gov.tr · 2026 Yeniden Değerleme Oranıyla Güncel Tarife</a>
+  </div>
+</div>
+
+<!-- ARTICLE 3 -->
+<div class="article">
+  <h2><span class="num">03</span>DORA : "Belge Uyumu" Dönemi Bitti, Tedarikçi Riski Denetimin Merkezinde</h2>
+  <div class="hr"></div>
+  <p>AB'nin finansal sektör için Dijital Operasyonel Dayanıklılık Yasası (DORA), 17 Ocak 2025'te tam yürürlüğe girmişti. 2026'da ise dönem değişti: düzenleyiciler "kâğıt üzerinde uyum"u denetlemekten, "gerçek dayanıklılık kanıtı" istemeye geçti. Bu yeni denetim duruşu "müdahaleci gözetim" olarak tanımlanıyor; ulusal otoriteler artık aktif inceleme yapıyor ve ilk yaptırımlar uygulanmaya başlandı.</p>
+  <p>Asıl ağırlık noktası üçüncü taraf, yani tedarikçi riski. DORA'nın 28-44. maddeleri, finansal kurumların ICT (bilgi ve iletişim teknolojisi) tedarikçilerini sıkı sözleşmesel hükümler, sürekli izleme ve bir "Bilgi Kaydı" (Register of Information) ile yönetmesini zorunlu kılıyor. 2025 pilot turunda kurumların çoğu, tedarikçi ilişkilerine dair merkezi bir görünürlükten yoksun olduğunu fark etti: sözleşmeler satın alma, iş birimleri ve iştirakler arasına dağılmıştı. Almanya'nın BaFin'i Ocak 2026'da, üretken AI ve büyük dil modelleri dahil AI sistemlerinin de mevcut ICT yönetişim çerçevesine gömülmesi gerektiğini netleştirdi.</p>
+  <a class="source-tag" href="https://www.eiopa.europa.eu" target="_blank">Kaynak: DORA · Regulation (EU) 2022/2554 · 2026 Enforcement Dönemi · ESA/BaFin Rehberleri</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>DORA doğrudan Türk kurumlarını bağlamasa da, sinyali evrensel: tedarikçi riski artık bir satın alma detayı değil, bir yönetim kurulu konusu. AB'li bir finansal kuruma hizmet veren Türk teknoloji ya da hizmet sağlayıcısı, kendisi DORA'ya tabi olmasa bile müşterisinin DORA yükümlülüğü üzerinden denetlenir. Tedarikçinizin tedarikçisini tanımıyorsanız, taşıdığınız operasyonel riski de tanımıyorsunuz demektir.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Kritik tedarikçilerinizi (ICT, bulut, kimlik doğrulama) ayrı bir kademede izleyin : tek tedarikçiye bağımlılığı haritalayın</li>
+      <li>Tedarikçi sözleşmelerinize denetim hakkı, olay bildirimi ve hizmet sürekliliği maddeleri ekleyin</li>
+      <li>AB'li müşteriye hizmet veriyorsanız, müşterinizin DORA yükümlülüğünün size yansıyan kısmını belgeleyin</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 4 -->
+<div class="article">
+  <h2><span class="num">04</span>Dawn Raid'in İnce Detayı : Şahsi Telefon, Bulut ve Avukat-Müvekkil Gizliliği</h2>
+  <div class="hr"></div>
+  <p>Yerinde inceleme yetkisinin sınırları, kurumların en çok yanıldığı alan. Kılavuz uyarınca Kurum uzmanları yalnızca teşebbüse ait sunucu, bilgisayar ve taşınabilir cihazları değil; CD, USB, harici disk, yedekleme kayıtları ve bulut servislerini de inceleyebilir. Çalışanların şahsi cep telefonları ise "hızlı gözden geçirme" (quick look) ile değerlendirilir: cihaz iş amaçlı kullanılıyorsa, şahsi olsa bile inceleme kapsamına girer. Tümüyle şahsi olduğu tespit edilen cihazlar ise kapsam dışıdır.</p>
+  <p>İki kritik koruma var. Birincisi: bağımsız avukat ile müvekkil arasındaki, savunma hakkının kullanımına yönelik yazışmalar avukat-müvekkil gizliliği kapsamında korunur. Ancak bir ihlali gizlemeye ya da devam ettirmeye yönelik yazışmalar bu korumadan yararlanmaz. İkincisi: incelemede elde edilen veriler içinde ticari sır bulunması halinde, 2010/3 sayılı Tebliğ kapsamında işlem yapılır. Bu detayları bilmeyen kurum, ya hakkını kullanamaz ya da farkında olmadan kapsamı genişletir.</p>
+  <a class="source-tag" href="https://www.rekabet.gov.tr" target="_blank">Kaynak: Yerinde İnceleme Kılavuzu · Hızlı Gözden Geçirme · Avukat-Müvekkil Gizliliği · 2010/3 sayılı Tebliğ</a>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Kurumsal ve şahsi cihaz kullanımını ayırın : karışık kullanım, şahsi telefonu inceleme kapsamına sokar</li>
+      <li>Hukuki danışmanlık yazışmalarını ayrı, etiketlenmiş bir yapıda tutun : gizlilik korumasını ispatlanabilir kılın</li>
+      <li>Bulut ve yedekleme servislerinizin de inceleme kapsamında olduğunu kabul ederek veri yönetiminizi planlayın</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 5 -->
+<div class="article">
+  <h2><span class="num">05</span>MASAK : Suistimal ve Aklama Cephesinde Denetim Sıkılaşıyor</h2>
+  <div class="hr"></div>
+  <p>Mali Suçları Araştırma Kurulu (MASAK) cephesinde uyum çıtası 2026'da belirgin biçimde yükseldi. Yükümlülük ihlallerine uygulanacak 2026 idari para cezaları güncellendi; "Sıkılaştırılmış Tedbirler Rehberi" kripto varlık hizmet sağlayıcıları, ödeme ve elektronik para kuruluşları ile riskli ülke ilişkilerini kapsayacak şekilde yenilendi; uyum görevlisi atamaları artık yetkilendirme ve Başkanlıkça tutulan sicile kayıt zorunluluğuna bağlandı. Yön açık: AML uyumu bir form doldurma işi olmaktan çıkıp, denetlenebilir bir yönetişim sürecine dönüşüyor.</p>
+  <div class="pq">"Şüpheli işlem bildirimi yapmamak ile bildirimde bulunulduğunu ifşa etmek: ikisi de suç. Suistimalle mücadelede sessizlik kadar, yanlış yerde konuşmak da cezalandırılıyor."</div>
+  <p>Mekanizma suistimal yönetimiyle doğrudan kesişiyor. Yükümlüler, bir işlemden şüphelendiklerinde en geç 10 iş günü içinde MASAK'a bildirmek; bu bildirimi ise işleme taraf olanlar dahil hiç kimseye açıklamamak zorunda. Bildirim yükümlülüğünün ihlali hem idari hem adli para cezası, hatta hapis cezası doğurabiliyor. PwC Türkiye'nin bu ay paylaştığı %85'lik suistimal maruziyetiyle birleştiğinde tablo netleşiyor: erken tespit ve doğru bildirim, artık bir tercih değil, yasal bir refleks.</p>
+  <a class="source-tag" href="https://masak.hmb.gov.tr" target="_blank">Kaynak: MASAK · 5549 sayılı Kanun Md. 4, 13, 14 · 2026 Yaptırım Tarifesi · Sıkılaştırılmış Tedbirler Rehberi</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>MASAK uyumunun en kırılgan noktası teknoloji değil, uyum görevlisinin bağımsızlığıdır. Satış hedefi ya da üst yönetim baskısıyla riskli bir müşteriyi kabul ettiren kurum, en pahalı cezayı kendi eliyle hazırlar. Suistimalle mücadele, ŞİB sayısıyla değil, uyum görevlisinin "hayır" diyebilme gücüyle ölçülür.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Uyum görevlinizin yetkilendirme ve sicil durumunu 2026 düzenlemeleri ışığında teyit edin</li>
+      <li>Şüpheli işlem senaryolarınızı kripto ve yeni ödeme araçlarını kapsayacak şekilde güncelleyin : statik senaryo körlük üretir</li>
+      <li>Uyum görevlisine gerçek bağımsızlık tanıyın : "hayır" diyebilmesi bir maliyet değil, bir sigortadır</li>
+    </ul>
+  </div>
+</div>
+
+<!-- FRAMEWORK -->
+<div class="section-rule">The Governance · Signature Framework</div>
+
+<div class="framework">
+  <span class="fw-label">The Governance Dawn Raid Hazırlık Modeli : Kurumsal Direnç Seviyeleri</span>
+  <div class="fw-title">Kapı bugün çalsa, kurumunuz hangi seviyede karşılardı?</div>
+  <div class="fw-levels">
+    <div class="fw-level">
+      <div class="fw-num">1</div>
+      <div class="fw-content">
+        <h5>Farkındasız</h5>
+        <p>Dawn raid'in ne olduğu bilinmiyor. Çalışanlar uzmanları kapıda nasıl karşılayacağını bilmiyor; panik kaçınılmaz.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">2</div>
+      <div class="fw-content">
+        <h5>Tepkisel</h5>
+        <p>Konu duyulmuş ama yazılı protokol yok. "Olursa hukuku ararız" yaklaşımı hakim; ilk 30 dakika boşlukta.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">3</div>
+      <div class="fw-content">
+        <h5>Gelişen</h5>
+        <p>Yazılı bir dawn raid protokolü var. Roller tanımlanmış, "veri silinmez" kuralı duyurulmuş ama prova edilmemiş.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">4</div>
+      <div class="fw-content">
+        <h5>Yönetilen</h5>
+        <p>Protokol düzenli tatbikatla test ediliyor. Kapı ekibi, hukuk ve bilgi işlem koordineli; cihaz ayrımı net.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">5</div>
+      <div class="fw-content">
+        <h5>Öngören</h5>
+        <p>Dawn raid hazırlığı, rekabet uyum programının ve kurumsal risk iştahının parçası. Kurul seviyesinde izleniyor.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VERİ KARTLARI -->
+<div class="section-rule">Bu Sayıda Kullanılan Veriler</div>
+
+<div class="data-grid">
+  <div class="data-card">
+    <div class="data-num">binde 5</div>
+    <p class="data-desc">Yerinde incelemeyi engelleyen teşebbüse uygulanan idari para cezası oranı: bir önceki mali yıl gayri safi gelirinin binde beşi. Asıl ihlal kanıtlanmasa bile kesilebilir.</p>
+    <span class="data-src">Kaynak · 4054 sayılı Kanun Md. 16</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">2026<span style="font-size:24px;">/921</span></div>
+    <p class="data-desc">KVKK'nın mesai takibinde biyometrik veri işlenmesini hukuka aykırı sayan İlke Kararı numarası. Resmî Gazete: 02.06.2026.</p>
+    <span class="data-src">Kaynak · KVKK İlke Kararı 2026/921</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">17<span style="font-size:24px;">Oca</span></div>
+    <p class="data-desc">DORA'nın tam yürürlük tarihi (17 Ocak 2025). 2026 ise "belge uyumu"ndan "kanıtlanmış dayanıklılık"a geçilen aktif enforcement yılı.</p>
+    <span class="data-src">Kaynak · Regulation (EU) 2022/2554</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">10<span style="font-size:24px;">iş günü</span></div>
+    <p class="data-desc">Yükümlülerin bir işlemden şüphelendikleri andan itibaren MASAK'a şüpheli işlem bildirimi yapması gereken azami süre. Bildirim yapmamak da, bildirimi ifşa etmek de cezalandırılır.</p>
+    <span class="data-src">Kaynak · 5549 sayılı Kanun Md. 4</span>
+  </div>
+</div>
+
+<!-- RISK RADAR -->
+<div class="section-rule">Risk Radarı</div>
+
+<div class="radar">
+  <div class="radar-head">
+    <span class="radar-label">⚠ Haftanın Kritik Riski</span>
+    <span class="risk-tag">Yüksek Öncelik</span>
+  </div>
+  <h3>Eğitilmemiş Çalışan : Dawn Raid'in En Zayıf Halkası</h3>
+  <p><strong>Nedir?</strong> Kurumun rekabet uyum programı olsa bile, kapıyı açan resepsiyon görevlisinin ya da paniğe kapılan bir orta kademe yöneticinin dawn raid anında ne yapacağını bilmemesi. Risk hukuk biriminde değil, koridorda.</p>
+  <p><strong>Kurumsal etki:</strong> Tek bir çalışanın panikle sildiği mesaj, tüm teşebbüse gayri safi gelirin binde beşi oranında ceza çıkarır. Adli bilişim araçları silinen veriyi ve silinme zamanını geri getirir; "fark etmez sandım" bir savunma değildir.</p>
+  <p><strong>Temel gerçek:</strong> Dawn raid hazırlığı bir hukuk belgesi değil, bir davranış eğitimidir. En iyi protokol bile prova edilmemişse, kriz anında işe yaramaz.</p>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Kapı ekibi dahil tüm çalışanlara kısa, net bir "dawn raid ilk dakikalar" eğitimi verin</li>
+      <li>"Hiçbir veri silinmez, hukuk derhal aranır" mesajını herkesin bildiği bir refleks haline getirin</li>
+      <li>Tatbikatı yılda bir kez gerçek bir senaryoyla tekrarlayın : bilgi değil, davranış test edilir</li>
+    </ul>
+  </div>
+</div>
+
+<!-- TOOL BOX -->
+<div class="section-rule">Araç & Yöntem</div>
+
+<div class="toolbox">
+  <span class="tool-tag">Bu Hafta Uygulayın</span>
+  <h3>Dawn Raid İlk 30 Dakika : 7 Adımlık Kapı Protokolü</h3>
+  <p>Habersiz bir yerinde inceleme başladığında ekibinizin izleyeceği yedi adım: (1) Uzmanların yetki belgesini isteyin ve fotoğraflayın : incelemenin konusu ve kapsamı buradadır. (2) Hukuk birimini ve dış danışmanı derhal arayın : gelene kadar inceleme makul ölçüde bekletilebilir. (3) Hiçbir veriyi silmeyin, hiçbir cihazı kapatmayın : bu kural istisnasızdır. (4) Bir kurum çalışanını her uzmana refakatçi olarak atayın : ne incelendiğini not edin. (5) Organizasyon şeması ve istenen belgeleri makul sürede, eksiksiz sunun. (6) Avukat-müvekkil gizliliği kapsamındaki belgeleri ayrı tutun ve bu durumu tutanağa geçirin. (7) İnceleme tutanağını dikkatle okuyun, çekincelerinizi yazılı olarak ekleyin. Bu yedi adım, paniğin yerini protokolün almasını sağlar.</p>
+</div>
+
+<!-- TÜRKİYE ODAĞI -->
+<div class="section-rule">Türkiye Odağı</div>
+
+<div class="focus">
+  <span class="focus-flag">Yerel Gündem</span>
+  <h3>Dawn Raid Neden Artık Daha Sık ve Daha Pahalı?</h3>
+  <p>Rekabet Kurulu'nun yerinde incelemenin engellenmesi nedeniyle verdiği cezaların sayısında son dönemde bariz bir artış var. Bunun iki nedeni öne çıkıyor: birincisi, Dijital İnceleme Kılavuzu kapsamında adli bilişim araçlarının yaygınlaşması, artık silinen verinin geri getirilebilmesi anlamına geliyor. İkincisi, uzmanların çalışan telefonlarındaki WhatsApp yazışmalarını "hızlı gözden geçirme" ile inceleyebilmesi, kapsamı kişisel cihazlara taşıdı.</p>
+  <p>Bu, Türk kurumları için doğrudan bir uyarı: rekabet uyumu artık yalnızca "anlaşma yapmamak" değil, bir dawn raid'e hazır olmak demek. Kurumun kartel riski olmasa bile, bir önaraştırma kapsamında kapısı çalınabilir: ve hazırlıksız bir inceleme, masum bir kuruma bile engelleme cezası çıkarabilir.</p>
+  <p><strong>İç denetçiler için pratik not:</strong> Bir sonraki denetim planına "Dawn Raid Hazırlık Olgunluğu" başlığını ekleyin. Çalışanların ilk 30 dakikada ne yapacağını bilmeyen kurum, taşıdığı rekabet uyum riskini de bilemez.</p>
+</div>
+
+<!-- READS -->
+<div class="section-rule">Okumanız Gereken</div>
+
+<div class="reads">
+  <div class="read-item">
+    <span class="rn">01</span>
+    <div class="rc">
+      <h4>Rekabet Kurumu : Yerinde İncelemelerde Dijital Verilerin İncelenmesine İlişkin Kılavuz</h4>
+      <p>Dawn raid'de dijital veri inceleme, hızlı gözden geçirme ve muhafaza esasları. Hazırlık protokolünün temel referansı : rekabet.gov.tr</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">02</span>
+    <div class="rc">
+      <h4>KVKK İlke Kararı 2026/921 : Mesai Takibinde Biyometrik Veri</h4>
+      <p>Parmak izi ve yüz tanımayı açık rıza olsa bile hukuka aykırı sayan karar. Her PDKS kullanan kurumu etkiler : Resmî Gazete 02.06.2026</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">03</span>
+    <div class="rc">
+      <h4>DORA : Dijital Operasyonel Dayanıklılık Yasası · 2026 Enforcement</h4>
+      <p>Belge uyumundan kanıtlanmış dayanıklılığa geçiş ve tedarikçi (üçüncü taraf) riskinin merkeze oturması : eiopa.europa.eu</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">04</span>
+    <div class="rc">
+      <h4>AYM Kararı : Rekabet Kurulu Yerinde İnceleme Yetkisi, 17 Şubat 2026</h4>
+      <p>Hakim kararı olmaksızın yerinde inceleme yetkisinin anayasaya uygunluk tartışması. Dawn raid hukukunun zemini.</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">05</span>
+    <div class="rc">
+      <h4>MASAK : 2026 Yaptırım Tarifesi ve Sıkılaştırılmış Tedbirler Rehberi</h4>
+      <p>Güncellenen idari para cezaları, kripto ve yeni ödeme araçlarını kapsayan tedbirler, uyum görevlisi sicil zorunluluğu : masak.hmb.gov.tr</p>
+    </div>
+  </div>
+</div>
+
+<!-- KAPANIŞ SORUSU -->
+<div class="closing-q">
+  <span class="cq-label">Yönetim Kurulu İçin Tek Soru</span>
+  <h3>Rekabet Kurumu uzmanları yarın sabah kapınızda belirse, ilk 30 dakikada hangi çalışanınızın ne yapacağını bugün biliyor musunuz?</h3>
+</div>
+
+<!-- CTA BLOCK -->
+<div class="cta-block">
+  <h3>Bu sayıyı faydalı buldunuz mu?</h3>
+  <p>The Governance'ı ekibinizle paylaşın, LinkedIn'de kaydedin ve sayfamızı takip edin. Kurumsal risk ve teknoloji yönetişiminde Türkiye'nin en nitelikli bültenini birlikte büyütelim.</p>
+  <div class="cta-actions">
+    <a href="https://www.linkedin.com/company/thegovernance" class="cta-btn primary">LinkedIn'de Takip Et</a>
+    <a href="https://thegovernance.beehiiv.com" class="cta-btn secondary">Bültene Abone Ol</a>
+  </div>
+</div>
+
+<!-- CLOSER -->
+<div class="closer">
+  <div class="ed-note">
+    <h4>Editörden</h4>
+    <p>Bu hafta dört ayrı gelişme aynı şeyi söyledi: hazırlık, kriz anında değil, sessiz dönemde yapılır. Bir dawn raid'de kurumu ilk 30 dakika kurtarır; bir KVKK ihlalinde "rıza aldık" artık savunma değil; DORA tedarikçi riskini yönetim kuruluna taşıyor; MASAK ise suistimalle mücadeleyi uyum görevlisinin bağımsızlığına bağlıyor. The Governance bu gelişmeleri haber olarak değil, kararlarınızı etkileyen gündem maddeleri olarak ele alır. Sorular için her zaman açığım.</p>
+  </div>
+  <div class="sig">
+    <span class="sig-name">Ecem</span>
+    <span class="sig-role">Editör · The Governance</span>
+  </div>
+</div>
+
+</body>
+</html>
