@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Governance : Sayı 07 · Temmuz 2026</title>
+<meta name="description" content="Çin öncülüğünde 29 ülke WAICO'yu kurdu: küresel AI yönetişimi ikiye bölünüyor. AB AI Act ertelemesi, KVKK kaza mağduru kararı, bağımsız denetim eşikleri ve yeni nesil siber tehditler. Bağımsız GRC bülteni.">
+<link rel="canonical" href="https://www.thegovernance.com.tr/sayi-07.html">
+<meta property="og:title" content="The Governance : Sayı 07 · WAICO Kuruldu, Küresel AI Yönetişimi İkiye Bölünüyor">
+<meta property="og:description" content="Çin öncülüğünde 29 ülke WAICO'yu kurdu; AB AI Act ertelendi ama 2 Ağustos hâlâ kritik. KVKK, bağımsız denetim ve siber tehditlerle birlikte.">
+<meta property="og:url" content="https://www.thegovernance.com.tr/sayi-07.html">
+<meta property="og:type" content="article">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Mono:wght@300;400&family=Instrument+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bordo:   #8C1F0D;
+    --bordo-m: #B5341A;
+    --ink:     #111009;
+    --paper:   #F5F2EC;
+    --cream:   #EAE5DB;
+    --rule:    #C8C2B6;
+    --mid:     #3D3A34;
+    --light:   #6E6A62;
+    --white:   #FFFFFF;
+    --gold:    #9A7B3A;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.75;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 28px 100px;
+  }
+
+  /* ── NAMEPLATE ── */
+  .nameplate {
+    border-top: 4px solid var(--ink);
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    animation: rise .5s ease both;
+  }
+
+  .brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: .95;
+    color: var(--ink);
+  }
+  .brand em { font-style: normal; color: var(--bordo); }
+
+  .meta { text-align: right; padding-bottom: 4px; }
+  .meta-row {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--light);
+    line-height: 1.9;
+  }
+
+  /* ── AUDIENCE BAR ── */
+  .audience-bar {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 7px 14px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 28px;
+    margin-bottom: 32px;
+  }
+
+  .kicker {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -.5px;
+    margin-bottom: 14px;
+    color: var(--ink);
+  }
+
+  .hero-lead {
+    font-size: 15px;
+    line-height: 1.82;
+    color: var(--mid);
+  }
+
+  /* ── SECTION RULE ── */
+  .section-rule {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+  .section-rule::before {
+    content: '';
+    width: 20px; height: 2px;
+    background: var(--bordo);
+    flex-shrink: 0;
+  }
+  .section-rule::after {
+    content: '';
+    flex: 1; height: 1px;
+    background: var(--rule);
+  }
+
+  /* ── STAT BLOCK ── */
+  .stat-block {
+    background: var(--ink);
+    padding: 28px 32px;
+    margin: 24px 0;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .stat-number em {
+    font-style: normal;
+    color: var(--bordo-m);
+    font-size: 48px;
+  }
+
+  .stat-text { display: flex; flex-direction: column; gap: 6px; }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.45);
+  }
+
+  .stat-desc {
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(255,255,255,.82);
+  }
+
+  .stat-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    color: rgba(255,255,255,.35);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  .stat-link {
+    color: rgba(181,52,26,.8);
+    text-decoration: none;
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    letter-spacing: .1em;
+    display: block;
+    margin-top: 2px;
+  }
+
+  /* ── ARTICLE ── */
+  .article { margin-bottom: 36px; }
+
+  .article h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.2px;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .article h2 .num {
+    color: var(--bordo);
+    font-style: italic;
+    margin-right: 4px;
+  }
+
+  .hr { width: 28px; height: 2px; background: var(--bordo); margin-bottom: 14px; }
+
+  .article p {
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--mid);
+    margin-bottom: 10px;
+  }
+  .article p:last-child { margin-bottom: 0; }
+
+  .pq {
+    border-left: 2px solid var(--bordo);
+    padding: 2px 16px;
+    margin: 18px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--ink);
+  }
+
+  /* ── KAYNAK ETIKETI ── */
+  .source-tag {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .1em;
+    color: var(--light);
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    padding: 2px 8px;
+    margin-top: 6px;
+    text-decoration: none;
+  }
+
+  /* ── EXECUTIVE TAKEAWAY ── */
+  .takeaway {
+    background: var(--cream);
+    border-left: 3px solid var(--bordo);
+    padding: 16px 20px;
+    margin: 20px 0 0;
+  }
+
+  .takeaway-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .takeaway ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .takeaway ul li {
+    font-size: 13.5px;
+    color: var(--ink);
+    line-height: 1.55;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .takeaway ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--bordo);
+    font-size: 11px;
+  }
+
+  /* ── VERİ KARTLARI GRID ── */
+  .data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-bottom: 36px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .data-card {
+    background: var(--paper);
+    padding: 20px 18px;
+  }
+  .data-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--bordo);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .data-desc {
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--mid);
+    margin-bottom: 8px;
+  }
+  .data-src {
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+  @media (max-width: 560px) {
+    .data-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ── THE GOVERNANCE GÖRÜŞÜ ── */
+  .view {
+    background: var(--white);
+    border: 1px solid var(--bordo);
+    border-top: 3px solid var(--bordo);
+    padding: 18px 22px 16px;
+    margin: 22px 0 0;
+  }
+  .view-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 8px;
+    display: block;
+  }
+  .view p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  /* ── KAPANIŞ SORUSU ── */
+  .closing-q {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 36px 32px;
+    margin: 40px 0 36px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .closing-q::before {
+    content: '?';
+    position: absolute;
+    right: 8px; top: -28px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 180px;
+    font-weight: 700;
+    color: rgba(255,255,255,.04);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .closing-q .cq-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: #E07060;
+    margin-bottom: 14px;
+    display: block;
+  }
+  .closing-q h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--white);
+    max-width: 520px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* ── RADAR ── */
+  .radar {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 24px 26px 22px;
+    margin-bottom: 36px;
+  }
+
+  .radar-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+
+  .radar-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #E07060;
+  }
+
+  .risk-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #E07060;
+    border: 1px solid #E07060;
+    padding: 3px 8px;
+  }
+
+  .radar h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+
+  .radar p {
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: #D0CBC3;
+    margin-bottom: 10px;
+  }
+
+  .radar p:last-child { margin-bottom: 0; }
+  .radar strong { color: var(--white); font-weight: 500; }
+
+  .radar .takeaway {
+    background: rgba(255,255,255,.07);
+    border-left: 2px solid var(--bordo-m);
+    margin-top: 18px;
+  }
+  .radar .takeaway-label { color: #E07060; }
+  .radar .takeaway ul li { color: rgba(255,255,255,.82); font-size: 13px; }
+  .radar .takeaway ul li::before { color: #E07060; }
+
+  /* ── TOOL BOX ── */
+  .toolbox {
+    background: var(--cream);
+    border-left: 3px solid var(--gold);
+    padding: 20px 22px 18px;
+    margin-bottom: 36px;
+  }
+
+  .tool-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .toolbox h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+
+  .toolbox p {
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: var(--mid);
+  }
+
+  /* ── FOCUS ── */
+  .focus {
+    border: 1px solid var(--rule);
+    padding: 22px 22px 20px;
+    margin-bottom: 36px;
+  }
+
+  .focus-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .focus h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    color: var(--ink);
+  }
+
+  .focus p {
+    font-size: 14px;
+    line-height: 1.82;
+    color: var(--mid);
+    margin-bottom: 10px;
+  }
+  .focus p:last-child { margin-bottom: 0; }
+
+  /* ── FRAMEWORK ── */
+  .framework {
+    background: var(--ink);
+    padding: 28px 28px 24px;
+    margin: 32px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .framework::before {
+    content: 'TG';
+    position: absolute;
+    right: -12px; top: -8px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 120px;
+    font-weight: 700;
+    color: rgba(255,255,255,.03);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .fw-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .fw-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 18px;
+    line-height: 1.2;
+  }
+
+  .fw-levels { display: flex; flex-direction: column; gap: 2px; }
+
+  .fw-level {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 14px;
+    background: rgba(255,255,255,.04);
+  }
+
+  .fw-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--bordo-m);
+    min-width: 28px;
+    line-height: 1;
+  }
+
+  .fw-content h5 {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.6);
+    margin-bottom: 2px;
+  }
+
+  .fw-content p {
+    font-size: 12.5px;
+    color: rgba(255,255,255,.7);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* ── READS ── */
+  .reads { margin-bottom: 36px; }
+
+  .read-item {
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .read-item:last-child { border-bottom: none; }
+
+  .rn {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--light);
+    min-width: 20px;
+    padding-top: 2px;
+  }
+
+  .rc h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    color: var(--ink);
+  }
+
+  .rc p {
+    font-size: 13px;
+    color: var(--mid);
+    line-height: 1.65;
+  }
+
+  /* ── CTA BLOCK ── */
+  .cta-block {
+    background: var(--bordo);
+    padding: 32px 28px;
+    margin: 36px 0;
+    text-align: center;
+  }
+
+  .cta-block h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  .cta-block p {
+    font-size: 13.5px;
+    color: rgba(255,255,255,.78);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    padding: 11px 20px;
+    text-decoration: none;
+    transition: all .2s;
+    display: inline-block;
+  }
+
+  .cta-btn.primary {
+    background: var(--white);
+    color: var(--bordo);
+  }
+
+  .cta-btn.secondary {
+    background: transparent;
+    color: rgba(255,255,255,.8);
+    border: 1px solid rgba(255,255,255,.35);
+  }
+
+  /* ── CLOSER ── */
+  .closer {
+    border-top: 3px double var(--ink);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .ed-note h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--ink);
+  }
+
+  .ed-note p {
+    font-size: 12.5px;
+    color: var(--mid);
+    line-height: 1.7;
+    max-width: 400px;
+  }
+
+  .sig { text-align: right; flex-shrink: 0; }
+
+  .sig-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    display: block;
+    margin-bottom: 2px;
+    color: var(--ink);
+  }
+
+  .sig-role {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 560px) {
+    .brand { font-size: 34px; }
+    .hero h1 { font-size: 26px; }
+    .stat-block { flex-direction: column; gap: 16px; }
+    .stat-number { font-size: 56px; }
+    .closer { flex-direction: column; }
+    .sig { text-align: left; }
+    .cta-actions { flex-direction: column; align-items: center; }
+  }
+  /* --- Sektör rozet grid (15 kritik altyapı) --- */
+  .sector-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 28px 0;
+  }
+  .sector-chip {
+    background: var(--cream);
+    border: 1px solid rgba(140,31,13,0.25);
+    border-left: 3px solid var(--bordo);
+    padding: 14px 16px;
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    min-height: 52px;
+    line-height: 1.3;
+  }
+  .sector-note {
+    text-align: center;
+    font-size: 13px;
+    color: rgba(17,16,9,0.6);
+    font-style: italic;
+    margin-top: 4px;
+  }
+  /* --- Yatay zaman şeridi --- */
+  .timeline {
+    margin: 30px 0;
+    padding: 0 6px;
+  }
+  .tl-track {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  .tl-track::before {
+    content: '';
+    position: absolute;
+    top: 19px;
+    left: 5%;
+    right: 5%;
+    height: 3px;
+    background: var(--bordo);
+    z-index: 0;
+  }
+  .tl-node {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    width: 24%;
+  }
+  .tl-dot {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--bordo);
+    color: var(--cream);
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    line-height: 1;
+    text-align: center;
+  }
+  .tl-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--bordo);
+    margin-bottom: 4px;
+  }
+  .tl-label {
+    font-size: 12.5px;
+    color: var(--ink);
+    line-height: 1.35;
+  }
+  .tl-node.pending .tl-dot {
+    background: var(--cream);
+    color: var(--bordo);
+    border: 2px dashed var(--bordo);
+  }
+  /* --- Büyük geri sayım rozeti --- */
+  .countdown {
+    background: var(--bordo);
+    color: var(--cream);
+    border-radius: 4px;
+    padding: 32px 40px;
+    margin: 32px 0;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  .cd-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 96px;
+    line-height: 0.9;
+  }
+  .cd-num em { font-size: 32px; font-style: normal; display: block; margin-top: 4px; }
+  .cd-text { flex: 1; }
+  .cd-text h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    margin: 0 0 8px;
+    font-weight: 600;
+  }
+  .cd-text p { font-size: 14px; line-height: 1.5; margin: 0; opacity: 0.92; }
+  /* --- Karşılaştırma tablosu --- */
+  .ctable {
+    margin: 28px 0;
+    border: 1px solid rgba(140,31,13,0.3);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .ctable-row {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    border-bottom: 1px solid rgba(140,31,13,0.15);
+  }
+  .ctable-row:last-child { border-bottom: none; }
+  .ctable-row.head {
+    background: var(--bordo);
+    color: var(--cream);
+  }
+  .ctable-cell {
+    padding: 14px 18px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .ctable-row.head .ctable-cell {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+  }
+  .ctable-cell.label { font-weight: 600; color: var(--ink); }
+  .ctable-cell.old { color: rgba(17,16,9,0.55); }
+  .ctable-cell.new { color: var(--bordo); font-weight: 600; }
+  .ctable-row:nth-child(even):not(.head) { background: rgba(140,31,13,0.03); }
+</style>
+</head>
+<body>
+
+<!-- NAMEPLATE -->
+<header class="nameplate">
+  <div class="brand">The<em>.</em><br>Governance</div>
+  <div class="meta">
+    <span class="meta-row">Sayı 07 · 20 Temmuz 2026</span>
+    <span class="meta-row">Kurumsal Risk & Yönetişim</span>
+    <span class="meta-row">Haftalık · Türkçe</span>
+  </div>
+</header>
+
+<div class="audience-bar">
+  Yönetim Kurulu · CIO · CISO · İç Denetim · Risk & Compliance · Hukuk
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="kicker">Bu Sayının Odağı</span>
+  <h1>WAICO Kuruldu : Küresel AI Yönetişimi İkiye Bölünüyor</h1>
+  <p class="hero-lead">
+    16 Temmuz 2026'da Şanghay'da, Çin öncülüğünde 29 ülke Dünya Yapay Zeka İşbirliği Örgütü'nü (WAICO) kurdu. AB ve G7 dışında, Küresel Güney odaklı bu blok, kendi üyeleri için AB AI Act ile uyumlu olmak zorunda olmayan kurallar geliştirecek. Sonuç: küresel ölçekte iş yapan her kurum, artık birbiriyle çelişebilen iki düzenleyici ekosistemde aynı anda gezinmek zorunda. Aynı hafta AB cephesinde de tablo netleşti: yüksek riskli AI yükümlülükleri resmen 2027'ye ertelendi, ama 2 Ağustos hâlâ kritik bir eşik.
+  </p>
+</section>
+
+<!-- WAICO ROZETİ -->
+<div class="countdown">
+  <div class="cd-num">29<em>ülke</em></div>
+  <div class="cd-text">
+    <h4>WAICO'nun kurucu üye sayısı · 16 Temmuz 2026</h4>
+    <p>Rusya, Endonezya, Pakistan, Brezilya, Malezya ve diğer Küresel Güney ülkeleri, Çin öncülüğünde Şanghay merkezli bir AI yönetişim bloğu kurdu. AB AI Act'e alternatif bir standart doğdu.</p>
+  </div>
+</div>
+
+<!-- ZAMAN ŞERİDİ -->
+<div class="timeline">
+  <div class="tl-track">
+    <div class="tl-node">
+      <div class="tl-dot">✓</div>
+      <div class="tl-date">Haz 2026</div>
+      <div class="tl-label">AB omnibus ertelemesi kabul edildi</div>
+    </div>
+    <div class="tl-node pending">
+      <div class="tl-dot">!</div>
+      <div class="tl-date">2 Ağu 2026</div>
+      <div class="tl-label">Şeffaflık + ceza yetkisi başlıyor</div>
+    </div>
+    <div class="tl-node">
+      <div class="tl-dot">◆</div>
+      <div class="tl-date">16 Tem 2026</div>
+      <div class="tl-label">WAICO kuruldu (alternatif blok)</div>
+    </div>
+    <div class="tl-node pending">
+      <div class="tl-dot">→</div>
+      <div class="tl-date">Ara 2027</div>
+      <div class="tl-label">Yüksek risk yükümlülükleri (ertelendi)</div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION -->
+<div class="section-rule">Bu Haftanın Özeti : 5 Kritik Gelişme</div>
+
+<!-- ARTICLE 1 -->
+<div class="article">
+  <h2><span class="num">01</span>WAICO : İki Bloklu AI Dünyasının Kurumsal Anlamı</h2>
+  <div class="hr"></div>
+  <p>16 Temmuz 2026'da 29 ülke, BM Genel Sekreteri Guterres'in de katıldığı bir törenle WAICO'yu kurdu. Merkez Şanghay; kurucular arasında Rusya, Endonezya, Pakistan, Brezilya, Malezya ve Senegal var. Çin bunu "dünya AI tarihinde bir dönüm noktası" olarak tanımlıyor; analistler ise Batı'nın (AB AI Act, G7 Hiroşima Süreci, OECD) karşısına bir alternatif blok konduğunu söylüyor.</p>
+  <div class="pq">"WAICO ile uyumlu ülkeler, AB AI Act ya da OECD ilkeleriyle uyumlu olmak zorunda olmayan kurallar geliştirecek. Küresel iş yapan kurum için AI uyumu artık iki uyumsuz rejimde aynı anda yürütülmek zorunda."</div>
+  <p>Kurumsal karşılığı somut: bugüne kadar "AB'ye uy, gerisi gelir" mantığı işe yarıyordu; artık yaramayabilir. WAICO üyesi bir pazara (ör. Endonezya, Pakistan) hizmet veren bir Türk şirketi, orada AB'den farklı bir çerçeveyle karşılaşabilir. Tek bir küresel AI uyum programı kurma dönemi kapanıyor; yerini çok katmanlı, rejim-farkında bir yönetişim alıyor.</p>
+  <a class="source-tag" href="https://en.wikipedia.org/wiki/World_Artificial_Intelligence_Cooperation_Organization" target="_blank">Kaynak: WAICO Kuruluş Anlaşması · 16 Temmuz 2026 · Reuters, Xinhua, Al Jazeera</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>Regülasyon parçalandıkça, yönetişim merkezileşmek zorunda. Her pazara ayrı bir uyum ekibi kuran değil, tek bir birleşik AI envanteri üzerinden farklı rejimleri yöneten kurum ayakta kalır. İki bloklu dünyada rekabet avantajı, en katı rejime göre hazırlanandadır.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>AI uyum stratejinizi tek bir çerçeveye değil, AB ve alternatif rejimlere göre çok katmanlı kurgulayın</li>
+      <li>Hangi pazarlara hizmet verdiğinizi ve her birinin hangi bloğa yakın olduğunu haritalayın</li>
+      <li>Tek bir birleşik AI envanteri tutun: farklı rejimleri bunun üzerinden yönetin</li>
+    </ul>
+  </div>
+</div>
+
+<!-- CEZA KARŞILAŞTIRMA TABLOSU -->
+<div class="section-rule">Ceza Tavanları : AB vs Türkiye</div>
+
+<div class="ctable">
+  <div class="ctable-row head">
+    <div class="ctable-cell">İhlal / Rejim</div>
+    <div class="ctable-cell">Ceza Tavanı</div>
+    <div class="ctable-cell">Ölçüt</div>
+  </div>
+  <div class="ctable-row">
+    <div class="ctable-cell label">AB AI Act · yasaklı uygulama</div>
+    <div class="ctable-cell new">€35M</div>
+    <div class="ctable-cell old">veya cironun %7'si</div>
+  </div>
+  <div class="ctable-row">
+    <div class="ctable-cell label">AB AI Act · yüksek risk ihlali</div>
+    <div class="ctable-cell new">€15M</div>
+    <div class="ctable-cell old">veya cironun %3'ü</div>
+  </div>
+  <div class="ctable-row">
+    <div class="ctable-cell label">KVKK · veri güvenliği (Md. 12)</div>
+    <div class="ctable-cell new">17M₺</div>
+    <div class="ctable-cell old">2026 yeniden değerleme</div>
+  </div>
+</div>
+
+<!-- ARTICLE 2 -->
+<div class="article">
+  <h2><span class="num">02</span>KVKK : Kaza Mağdurunun Verisi Artık Özel Korumada</h2>
+  <div class="hr"></div>
+  <p>KVKK'nın 2026/1095 sayılı İlke Kararı (1 Temmuz 2026 RG), yaygın bir istismarı hedef alıyor: "hasar danışmanlığı" ya da "sigorta takip merkezi" adı altında, çoğu baro kaydı olmayan kişilerin kaza mağdurlarıyla izinsiz iletişime geçip verilerine erişmesi.</p>
+  <div class="pq">"Kurul açık: bu tür veri işleme yalnızca idari ceza değil, TCK 136-137 kapsamında 'verileri hukuka aykırı ele geçirme' suçunu da doğurabilir."</div>
+  <p>Karar, kaza mağduru verisi işleyen tüm kurumlara somut yükümlülük getiriyor: rol tabanlı erişim kontrolü, asgari yetki prensibi, çalışan eğitimi ve takip mekanizmaları. Sigorta eksperlerinin de veriyi yalnızca görev sınırında kullanması zorunlu.</p>
+  <a class="source-tag" href="https://www.kvkk.gov.tr" target="_blank">Kaynak: KVKK İlke Kararı 2026/1095 · Resmî Gazete 01.07.2026 · TCK Md. 136-137</a>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Hassas veri işleyen süreçlerde rol tabanlı erişim ve asgari yetki matrisini uygulayın</li>
+      <li>Üçüncü taraf "danışmanlık" hizmetlerinin veri erişim meşruiyetini sözleşmede denetleyin</li>
+      <li>Yetkisiz veri erişiminin cezai boyutunu (TCK 136-137) uyum eğitiminize ekleyin</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 3 -->
+<div class="article">
+  <h2><span class="num">03</span>Bağımsız Denetim Eşikleri Yükseldi : Yük Azaldı, Boşluk Doğdu</h2>
+  <div class="hr"></div>
+  <p>17 Mart 2026 tarihli Cumhurbaşkanı Kararı ve KGK'nın 4 Mayıs 2026 düzenlemesiyle, bağımsız denetime tabi olma eşikleri enflasyona göre yükseltildi. Sonuç: orta ölçekli birçok şirket denetim kapsamının dışına çıkıyor. Yeni eşikler 1 Ocak 2026'da başlayan hesap dönemlerinden itibaren geçerli.</p>
+  <p>Bu iki yönlü bir gelişme. Bir yandan KOBİ'ler üzerindeki denetim yükü hafifliyor; diğer yandan, dış denetimin sağladığı bağımsız güvence ortadan kalkıyor. Denetimden çıkan bir şirkette finansal şeffaflık artık gönüllülüğe kalıyor.</p>
+  <a class="source-tag" href="https://www.kgk.gov.tr" target="_blank">Kaynak: 11066 sayılı Cumhurbaşkanı Kararı · RG 17.03.2026 · KGK Usul ve Esaslar 04.05.2026</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>Denetim yükümlülüğünün kalkması, yönetişim ihtiyacının kalkması değil. Kapsamdan çıkan şirket, bankalar ve yatırımcılar nezdinde güvenilirliğini korumak için gönüllü denetimi düşünmeli. Denetimsizlik bir kolaylık gibi görünür, ama bir boşluktur.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Yeni eşiklere göre kapsam durumunuzu grup/konsolidasyon dahil yeniden hesaplayın</li>
+      <li>Kapsamdan çıkıyorsanız, kredi ve yatırımcı ilişkileri için gönüllü denetimi değerlendirin</li>
+      <li>Denetim boşluğunu iç kontrol ve iç denetim yapısıyla telafi edin</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 4 -->
+<div class="article">
+  <h2><span class="num">04</span>KVKK'nın Yeni Nesil Tehdit Radarı : Quishing, Fotokopi, Algoritma</h2>
+  <div class="hr"></div>
+  <p>KVKK 2026'da teknik tedbir sorumluluğunu üç yeni cephede genişletti. Quishing (QR kod ile kimlik avı, 26 Şubat 2026 duyurusu): fiziksel mekandaki QR kodun manipüle edilip edilmediğini kontrol etmek artık veri sorumlusunun sorumluluğunda. Konaklama tesislerinin misafirin kimlik kartını fotokopilemesi veri minimizasyonuna aykırı bulundu. İşe alım algoritmalarının ayrımcı veri seti kullanmaması ve elenen adaya açıklanabilir olması gerekiyor.</p>
+  <a class="source-tag" href="https://www.kvkk.gov.tr" target="_blank">Kaynak: KVKK 2026 Kamuoyu Duyuruları · Quishing 26.02.2026 · Veri Minimizasyonu</a>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Fiziksel QR kodlarınızın manipülasyona karşı düzenli kontrolünü bir sürece bağlayın</li>
+      <li>Kimlik belgesi fotokopisi/tam tarama alışkanlığını gözden geçirin: sadece gerekli alanı işleyin</li>
+      <li>İşe alım algoritmalarınızı ayrımcılık ve açıklanabilirlik açısından denetleyin</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 5 -->
+<div class="article">
+  <h2><span class="num">05</span>AB AI Act Ertelendi : Ama "AB Erteledi" Diye Rahatlayan Yanılıyor</h2>
+  <div class="hr"></div>
+  <p>WAICO tartışılırken AB cephesinde de tablo netleşti. Digital Omnibus kabul edildi (Parlamento 16 Haziran, Konsey 29 Haziran 2026): yüksek riskli AI yükümlülükleri, bağımsız Annex III sistemler için 2 Aralık 2027'ye, ürüne gömülü Annex I sistemler için 2 Ağustos 2028'e ertelendi. Manşetler "AB erteledi" diyor; ama bu yarım gerçek.</p>
+  <div class="pq">"Erteleme her şeyi ertelemedi. 2 Ağustos 2026'da Madde 50 şeffaflık yükümlülükleri, GPAI ceza yetkisi ve ulusal denetim otoritelerinin yaptırım gücü yürürlüğe giriyor. Bunlar ötelenmedi."</div>
+  <p>Yani yüksek riskli sistemleriniz için zaman kazandınız, ama üretken AI kullanan her kurum için 2 Ağustos hâlâ kritik: AI ürettiği içeriği açık etme, kullanıcıyı bir AI ile etkileştiğinde bilgilendirme yükümlülükleri o gün başlıyor. Ceza tavanları da yerinde: yasaklı uygulamada 35 milyon avro / %7, yüksek risk ve şeffaflık ihlalinde 15 milyon avro / %3.</p>
+  <a class="source-tag" href="https://digital-strategy.ec.europa.eu" target="_blank">Kaynak: Digital Omnibus on AI · Parlamento 16.06.2026 · Konsey 29.06.2026 · AI Act Md. 50, 99</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>"Erteleme geldi" haberi, hazırlığı durdurmak için gerekçe değil. Yüksek risk 2027'ye kaydı ama şeffaflık 2 Ağustos'ta başlıyor. Manşetin yarısını okuyup rahatlayan kurum, üretken AI şeffaflığında hazırlıksız yakalanır.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Üretken AI kullanan süreçleriniz için 2 Ağustos şeffaflık yükümlülüğünü bu ay tamamlayın</li>
+      <li>Yüksek riskli sistemler için kazandığınız süreyi (2027) envanter ve dokümantasyona harcayın</li>
+      <li>"AB erteledi" manşetine değil, hangi yükümlülüğün hangi tarihte başladığına bakın</li>
+    </ul>
+  </div>
+</div>
+
+<!-- VERİ KARTLARI -->
+<div class="section-rule">Bu Sayıda Kullanılan Veriler</div>
+
+<div class="data-grid">
+  <div class="data-card">
+    <div class="data-num">2<span style="font-size:24px;">Ağu</span></div>
+    <p class="data-desc">AB AI Act şeffaflık yükümlülükleri ve GPAI ceza yetkisinin başladığı tarih (2 Ağustos 2026). Erteleme yüksek riski öteledi ama bunu ötelemedi.</p>
+    <span class="data-src">Kaynak · AI Act Md. 50 · Digital Omnibus</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">€35<span style="font-size:24px;">M</span></div>
+    <p class="data-desc">AB AI Act'te yasaklı uygulama ihlalinin ceza tavanı; alternatifi küresel cironun %7'si. GDPR'ın da üzerinde bir eşik.</p>
+    <span class="data-src">Kaynak · AI Act Md. 99</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">1<span style="font-size:24px;">Tem</span></div>
+    <p class="data-desc">KVKK'nın kaza mağduru verisini özel korumaya alan 2026/1095 İlke Kararı'nın Resmî Gazete tarihi (1 Temmuz 2026).</p>
+    <span class="data-src">Kaynak · KVKK 2026/1095</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">29<span style="font-size:24px;">ülke</span></div>
+    <p class="data-desc">16 Temmuz 2026'da Çin öncülüğünde WAICO'yu kuran ülke sayısı. AB AI Act'e alternatif, Küresel Güney odaklı bir yönetişim bloğu doğdu.</p>
+    <span class="data-src">Kaynak · WAICO Kuruluş Anlaşması</span>
+  </div>
+</div>
+
+<!-- RISK RADAR -->
+<div class="section-rule">Risk Radarı</div>
+
+<div class="radar">
+  <div class="radar-head">
+    <span class="radar-label">⚠ Haftanın Kritik Riski</span>
+    <span class="risk-tag">Yüksek Öncelik</span>
+  </div>
+  <h3>"AB Erteledi" Yanılgısı : Manşetin Yarısını Okumak</h3>
+  <p><strong>Nedir?</strong> Digital Omnibus'un kabul edilmesiyle "AB AI Act ertelendi" manşetini okuyup tüm hazırlığı durdurmak. Oysa erteleme yalnızca yüksek riskli sistemleri (2027'ye) kaydırdı; şeffaflık yükümlülükleri 2 Ağustos 2026'da başlıyor.</p>
+  <p><strong>Kurumsal etki:</strong> Üretken AI kullanan bir kurum, 2 Ağustos'ta içerik etiketleme ve kullanıcı bilgilendirme yükümlülüğüne giriyor. "Ertelendi" diye rahatlayan, bu tarihte hazırlıksız yakalanır: 15 milyon avroya varan ceza riski.</p>
+  <p><strong>Temel gerçek:</strong> "Erteleme" tek bir şey değil, katmanlı bir takvimdir. Hangi yükümlülüğün hangi tarihte başladığını bilmeyen kurum, yanlış tarihe hazırlanır.</p>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Şeffaflık (2 Ağustos) ile yüksek risk (2027) yükümlülüklerini ayrı takvimlerde izleyin</li>
+      <li>Üretken AI şeffaflık yükümlülüğünüzü bu ay tamamlayın: bu ötelenmedi</li>
+      <li>Kazandığınız süreyi yüksek riskli AI envanteri ve dokümantasyonuna harcayın</li>
+    </ul>
+  </div>
+</div>
+
+<!-- TOOL BOX -->
+<div class="section-rule">Araç & Yöntem</div>
+
+<div class="toolbox">
+  <span class="tool-tag">Bu Hafta Uygulayın</span>
+  <h3>Birleşik AI + Veri Envanter Testi : 5 Soru</h3>
+  <p>AI yönetişimi ile KVKK uyumunuzun ne kadar entegre olduğunu beş soruda ölçün: (1) Kullandığınız AI sistemlerinin listesi ile kişisel veri işleme envanteriniz aynı yerde tutuluyor mu? (2) Her AI sistemi için hem risk sınıfı hem veri işleme dayanağı belgeli mi? (3) İşe alım, kredi ya da fiyatlama gibi bir kararı etkileyen AI'ınız var mı: yani yüksek riskli olabilir mi? (4) Elenen bir adaya algoritmanın mantığını açıklayabiliyor musunuz? (5) AB pazarına dokunan AI sistemleriniz için 2 Ağustos hazırlığı başladı mı? Üç "hayır", birleşik bir yönetişim boşluğuna işaret eder.</p>
+</div>
+
+<!-- READS -->
+<div class="section-rule">Okumanız Gereken</div>
+
+<div class="reads">
+  <div class="read-item">
+    <span class="rn">01</span>
+    <div class="rc">
+      <h4>AB Yapay Zeka Yasası · Digital Omnibus (Kabul Edildi)</h4>
+      <p>Yüksek risk 2027'ye ertelendi, şeffaflık 2 Ağustos'ta başlıyor. Katmanlı takvimin güncel hali için temel referans : digital-strategy.ec.europa.eu</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">02</span>
+    <div class="rc">
+      <h4>KVKK İlke Kararı 2026/1095 : Kaza Mağduru Verisi</h4>
+      <p>Hasar danışmanlığı istismarı, rol tabanlı erişim zorunluluğu ve TCK 136-137 boyutu : Resmî Gazete 01.07.2026</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">03</span>
+    <div class="rc">
+      <h4>Bağımsız Denetim Eşikleri : 11066 sayılı Karar</h4>
+      <p>Yükseltilen eşikler, kapsam dışına çıkan şirketler ve grup konsolidasyonu gerçeği : RG 17.03.2026 · KGK 04.05.2026</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">04</span>
+    <div class="rc">
+      <h4>KVKK 2026 Tehdit Duyuruları : Quishing ve Veri Minimizasyonu</h4>
+      <p>QR phishing, kimlik fotokopisi yasağı ve işe alım algoritması ayrımcılığı üzerine teknik tedbir rehberi : kvkk.gov.tr</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">05</span>
+    <div class="rc">
+      <h4>WAICO Kuruluş Anlaşması : Küresel AI Yönetişiminde İkinci Blok</h4>
+      <p>29 ülkenin Çin öncülüğünde kurduğu WAICO, AB AI Act'e alternatif bir standart doğuruyor. Kurumsal AI uyumu için yeni parçalanma : Reuters, Al Jazeera, 16.07.2026</p>
+    </div>
+  </div>
+</div>
+
+<!-- KAPANIŞ SORUSU -->
+<div class="closing-q">
+  <span class="cq-label">Yönetim Kurulu İçin Tek Soru</span>
+  <h3>AI sistemleriniz için tek bir küresel uyum programınız mı var, yoksa iki bloklu dünyada hangi pazarın hangi rejime tabi olduğunu bugün söyleyebilir misiniz?</h3>
+</div>
+
+<!-- CTA BLOCK -->
+<div class="cta-block">
+  <h3>Bu sayıyı faydalı buldunuz mu?</h3>
+  <p>The Governance'ı ekibinizle paylaşın, LinkedIn'de kaydedin ve sayfamızı takip edin. Kurumsal risk ve teknoloji yönetişiminde Türkiye'nin en nitelikli bültenini birlikte büyütelim.</p>
+  <div class="cta-actions">
+    <a href="https://www.linkedin.com/company/thegovernance" class="cta-btn primary">LinkedIn'de Takip Et</a>
+    <a href="https://thegovernance.beehiiv.com" class="cta-btn secondary">Bültene Abone Ol</a>
+  </div>
+</div>
+
+<!-- CLOSER -->
+<div class="closer">
+  <div class="ed-note">
+    <h4>Editörden</h4>
+    <p>Bu hafta küresel AI yönetişimi ikiye bölündü: Çin öncülüğünde 29 ülke WAICO'yu kurdu, AB ise ertelemeyi kabul etti ama şeffaflık yükümlülüklerini 2 Ağustos'ta başlatıyor. Yerelde KVKK kaza mağduru verisini özel korumaya aldı; bağımsız denetim eşikleri yükselince yönetişim gönüllülüğe kaldı. Ortak ders: hazırlık, kuralın kesinleşmesini beklemez, ve "ertelendi" manşeti hep tam okunmalı. The Governance bu gelişmeleri haber olarak değil, kararlarınızı etkileyen gündem maddeleri olarak ele alır. Sorular için her zaman açığım.</p>
+  </div>
+  <div class="sig">
+    <span class="sig-name">Ecem</span>
+    <span class="sig-role">Editör · The Governance</span>
+  </div>
+</div>
+
+</body>
+</html>
