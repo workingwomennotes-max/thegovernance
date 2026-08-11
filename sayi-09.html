@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Governance : Sayı 09 · Ağustos 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Mono:wght@300;400&family=Instrument+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bordo:   #8C1F0D;
+    --bordo-m: #B5341A;
+    --ink:     #111009;
+    --paper:   #F5F2EC;
+    --cream:   #EAE5DB;
+    --rule:    #C8C2B6;
+    --mid:     #3D3A34;
+    --light:   #6E6A62;
+    --white:   #FFFFFF;
+    --gold:    #9A7B3A;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.75;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 28px 100px;
+  }
+
+  /* ── NAMEPLATE ── */
+  .nameplate {
+    border-top: 4px solid var(--ink);
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    animation: rise .5s ease both;
+  }
+
+  .brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: .95;
+    color: var(--ink);
+  }
+  .brand em { font-style: normal; color: var(--bordo); }
+
+  .meta { text-align: right; padding-bottom: 4px; }
+  .meta-row {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--light);
+    line-height: 1.9;
+  }
+
+  /* ── AUDIENCE BAR ── */
+  .audience-bar {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 7px 14px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 28px;
+    margin-bottom: 32px;
+  }
+
+  .kicker {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -.5px;
+    margin-bottom: 14px;
+    color: var(--ink);
+  }
+
+  .hero-lead {
+    font-size: 15px;
+    line-height: 1.82;
+    color: var(--mid);
+  }
+
+  /* ── SECTION RULE ── */
+  .section-rule {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+  .section-rule::before {
+    content: '';
+    width: 20px; height: 2px;
+    background: var(--bordo);
+    flex-shrink: 0;
+  }
+  .section-rule::after {
+    content: '';
+    flex: 1; height: 1px;
+    background: var(--rule);
+  }
+
+  /* ── STAT BLOCK ── */
+  .stat-block {
+    background: var(--ink);
+    padding: 28px 32px;
+    margin: 24px 0;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .stat-number em {
+    font-style: normal;
+    color: var(--bordo-m);
+    font-size: 48px;
+  }
+
+  .stat-text { display: flex; flex-direction: column; gap: 6px; }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.45);
+  }
+
+  .stat-desc {
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(255,255,255,.82);
+  }
+
+  .stat-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    color: rgba(255,255,255,.35);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  .stat-link {
+    color: rgba(181,52,26,.8);
+    text-decoration: none;
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    letter-spacing: .1em;
+    display: block;
+    margin-top: 2px;
+  }
+
+  /* ── ARTICLE ── */
+  .article { margin-bottom: 36px; }
+
+  .article h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.2px;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .article h2 .num {
+    color: var(--bordo);
+    font-style: italic;
+    margin-right: 4px;
+  }
+
+  .hr { width: 28px; height: 2px; background: var(--bordo); margin-bottom: 14px; }
+
+  .article p {
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--mid);
+    margin-bottom: 10px;
+  }
+  .article p:last-child { margin-bottom: 0; }
+
+  .pq {
+    border-left: 2px solid var(--bordo);
+    padding: 2px 16px;
+    margin: 18px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--ink);
+  }
+
+  /* ── KAYNAK ETIKETI ── */
+  .source-tag {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .1em;
+    color: var(--light);
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    padding: 2px 8px;
+    margin-top: 6px;
+    text-decoration: none;
+  }
+
+  /* ── EXECUTIVE TAKEAWAY ── */
+  .takeaway {
+    background: var(--cream);
+    border-left: 3px solid var(--bordo);
+    padding: 16px 20px;
+    margin: 20px 0 0;
+  }
+
+  .takeaway-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .takeaway ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .takeaway ul li {
+    font-size: 13.5px;
+    color: var(--ink);
+    line-height: 1.55;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .takeaway ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--bordo);
+    font-size: 11px;
+  }
+
+  /* ── VERİ KARTLARI GRID ── */
+  .data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-bottom: 36px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .data-card {
+    background: var(--paper);
+    padding: 20px 18px;
+  }
+  .data-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--bordo);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .data-desc {
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--mid);
+    margin-bottom: 8px;
+  }
+  .data-src {
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+  @media (max-width: 560px) {
+    .data-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ── THE GOVERNANCE GÖRÜŞÜ ── */
+  .view {
+    background: var(--white);
+    border: 1px solid var(--bordo);
+    border-top: 3px solid var(--bordo);
+    padding: 18px 22px 16px;
+    margin: 22px 0 0;
+  }
+  .view-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 8px;
+    display: block;
+  }
+  .view p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  /* ── KAPANIŞ SORUSU ── */
+  .closing-q {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 36px 32px;
+    margin: 40px 0 36px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .closing-q::before {
+    content: '?';
+    position: absolute;
+    right: 8px; top: -28px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 180px;
+    font-weight: 700;
+    color: rgba(255,255,255,.04);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .closing-q .cq-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: #E07060;
+    margin-bottom: 14px;
+    display: block;
+  }
+  .closing-q h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--white);
+    max-width: 520px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* ── RADAR ── */
+  .radar {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 24px 26px 22px;
+    margin-bottom: 36px;
+  }
+
+  .radar-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+
+  .radar-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #E07060;
+  }
+
+  .risk-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #E07060;
+    border: 1px solid #E07060;
+    padding: 3px 8px;
+  }
+
+  .radar h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+
+  .radar p {
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: #D0CBC3;
+    margin-bottom: 10px;
+  }
+
+  .radar p:last-child { margin-bottom: 0; }
+  .radar strong { color: var(--white); font-weight: 500; }
+
+  .radar .takeaway {
+    background: rgba(255,255,255,.07);
+    border-left: 2px solid var(--bordo-m);
+    margin-top: 18px;
+  }
+  .radar .takeaway-label { color: #E07060; }
+  .radar .takeaway ul li { color: rgba(255,255,255,.82); font-size: 13px; }
+  .radar .takeaway ul li::before { color: #E07060; }
+
+  /* ── TOOL BOX ── */
+  .toolbox {
+    background: var(--cream);
+    border-left: 3px solid var(--gold);
+    padding: 20px 22px 18px;
+    margin-bottom: 36px;
+  }
+
+  .tool-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .toolbox h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+
+  .toolbox p {
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: var(--mid);
+  }
+
+  /* ── FOCUS ── */
+  .focus {
+    border: 1px solid var(--rule);
+    padding: 22px 22px 20px;
+    margin-bottom: 36px;
+  }
+
+  .focus-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .focus h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    color: var(--ink);
+  }
+
+  .focus p {
+    font-size: 14px;
+    line-height: 1.82;
+    color: var(--mid);
+    margin-bottom: 10px;
+  }
+  .focus p:last-child { margin-bottom: 0; }
+
+  /* ── FRAMEWORK ── */
+  .framework {
+    background: var(--ink);
+    padding: 28px 28px 24px;
+    margin: 32px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .framework::before {
+    content: 'TG';
+    position: absolute;
+    right: -12px; top: -8px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 120px;
+    font-weight: 700;
+    color: rgba(255,255,255,.03);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .fw-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .fw-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 18px;
+    line-height: 1.2;
+  }
+
+  .fw-levels { display: flex; flex-direction: column; gap: 2px; }
+
+  .fw-level {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 14px;
+    background: rgba(255,255,255,.04);
+  }
+
+  .fw-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--bordo-m);
+    min-width: 28px;
+    line-height: 1;
+  }
+
+  .fw-content h5 {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.6);
+    margin-bottom: 2px;
+  }
+
+  .fw-content p {
+    font-size: 12.5px;
+    color: rgba(255,255,255,.7);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* ── READS ── */
+  .reads { margin-bottom: 36px; }
+
+  .read-item {
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .read-item:last-child { border-bottom: none; }
+
+  .rn {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--light);
+    min-width: 20px;
+    padding-top: 2px;
+  }
+
+  .rc h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    color: var(--ink);
+  }
+
+  .rc p {
+    font-size: 13px;
+    color: var(--mid);
+    line-height: 1.65;
+  }
+
+  /* ── CTA BLOCK ── */
+  .cta-block {
+    background: var(--bordo);
+    padding: 32px 28px;
+    margin: 36px 0;
+    text-align: center;
+  }
+
+  .cta-block h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  .cta-block p {
+    font-size: 13.5px;
+    color: rgba(255,255,255,.78);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    padding: 11px 20px;
+    text-decoration: none;
+    transition: all .2s;
+    display: inline-block;
+  }
+
+  .cta-btn.primary {
+    background: var(--white);
+    color: var(--bordo);
+  }
+
+  .cta-btn.secondary {
+    background: transparent;
+    color: rgba(255,255,255,.8);
+    border: 1px solid rgba(255,255,255,.35);
+  }
+
+  /* ── CLOSER ── */
+  .closer {
+    border-top: 3px double var(--ink);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .ed-note h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--ink);
+  }
+
+  .ed-note p {
+    font-size: 12.5px;
+    color: var(--mid);
+    line-height: 1.7;
+    max-width: 400px;
+  }
+
+  .sig { text-align: right; flex-shrink: 0; }
+
+  .sig-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    display: block;
+    margin-bottom: 2px;
+    color: var(--ink);
+  }
+
+  .sig-role {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 560px) {
+    .brand { font-size: 34px; }
+    .hero h1 { font-size: 26px; }
+    .stat-block { flex-direction: column; gap: 16px; }
+    .stat-number { font-size: 56px; }
+    .closer { flex-direction: column; }
+    .sig { text-align: left; }
+    .cta-actions { flex-direction: column; align-items: center; }
+  }
+  /* ── BAR CHART (yeni) ── */
+  .bar-chart {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    padding: 22px 24px 20px;
+    margin: 20px 0 0;
+  }
+  .bar-chart-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 14px;
+    display: block;
+  }
+  .bar-track {
+    position: relative;
+    height: 14px;
+    background: var(--cream);
+    border-radius: 2px;
+    overflow: visible;
+    margin: 10px 0 8px;
+  }
+  .bar-fill {
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    background: linear-gradient(90deg, var(--gold), var(--bordo-m));
+    border-radius: 2px;
+  }
+  .bar-marker {
+    position: absolute;
+    top: -6px;
+    width: 2px; height: 26px;
+    background: var(--ink);
+  }
+  .bar-labels {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    color: var(--mid);
+  }
+  .bar-labels .hi { color: var(--bordo); font-weight: 700; }
+
+  /* ── PILLAR DOT ── */
+  .pdot {
+    display: inline-block;
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    margin-right: 7px;
+    vertical-align: middle;
+  }
+  .pdot.ai { background: var(--bordo); }
+  .pdot.res { background: var(--gold); }
+  .pdot.reg { background: var(--mid); }
+
+  /* ── COMPARISON TABLE ── */
+  .cmp-table {
+    border: 1px solid var(--rule);
+    margin: 20px 0 0;
+  }
+  .cmp-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+  .cmp-row:last-child { border-bottom: none; }
+  .cmp-row.head { background: var(--ink); }
+  .cmp-row.head .cmp-k, .cmp-row.head .cmp-v {
+    color: var(--white);
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    padding: 10px 16px;
+  }
+  .cmp-k {
+    background: var(--cream);
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--ink);
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    letter-spacing: .04em;
+    flex: 0 0 108px;
+  }
+  .cmp-v {
+    flex: 1 1 auto;
+    padding: 14px 16px;
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--mid);
+  }
+  .cmp-v strong { color: var(--ink); font-weight: 600; }
+
+</style>
+
+</head>
+<body>
+
+<!-- NAMEPLATE -->
+<header class="nameplate">
+  <div class="brand">The<em>.</em><br>Governance</div>
+  <div class="meta">
+    <span class="meta-row">Sayı 09 · 10 Ağustos 2026</span>
+    <span class="meta-row">Kurumsal Risk & Yönetişim</span>
+    <span class="meta-row">Haftalık · Türkçe</span>
+  </div>
+</header>
+
+<div class="audience-bar">
+  Yönetim Kurulu · CIO · CISO · İç Denetim · Risk & Compliance · Hukuk
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="kicker">Bu Sayının Odağı</span>
+  <h1>Küresel AI Regülasyonu Parçalanıyor: Tek Bir Uyum Programı Artık Yeterli Değil</h1>
+  <p class="hero-lead">
+    ABD'de federal AI yasası tıkandı, sahne artık eyaletlerde: California bugün, 10 Ağustos'ta Frontier AI Safety Act'i son oylamadan geçirdi, 14 farklı eyalet çerçevesi birbiriyle çelişiyor. Çin'de ise 15 Temmuz'dan beri yürürlükte olan yeni ajan rejimi ilk üç haftada 12 ceza kesti. Aynı hafta İran bağlantılı saldırganlar ABD'de 7 eyalette 30'dan fazla su sistemini hedef aldı: fiziksel altyapı artık siber saldırının doğal hedefi. Türkiye'de ise BDDK, tasarruf finansman şirketlerinde risk yoğunlaşmasını sıkılaştıran somut sayısal limitler getirdi ve KVKK denetiminin merkezine artık "insan müdahalesi"nin fiilen çalışıp çalışmadığı oturdu. Ortak payda: kurumlar artık tek bir uyum programı değil, aynı anda birden fazla rejimde yönetişim kurmak zorunda.
+  </p>
+</section>
+
+<!-- STAT BLOCK 1 -->
+<div class="stat-block">
+  <div class="stat-number">14</div>
+  <div class="stat-text">
+    <span class="stat-label">ABD · Aktif Eyalet Bazlı AI Regülasyon Çerçevesi</span>
+    <p class="stat-desc">Federal AI yasası Kongre'de tıkandı. Şirketler artık 14 farklı eyalet çerçevesini aynı anda yönetmek zorunda: Teksas'ta uyumlu bir işe alım aracı, Illinois ya da Colorado'da cezaya yol açabiliyor.</p>
+    <a class="stat-link" href="https://cubbbix.com/blog/ai-regulation-august-2026-global-update/" target="_blank">→ Cubbbix · AI Regulation News, Ağustos 2026</a>
+  </div>
+</div>
+
+<!-- SECTION -->
+<div class="section-rule">Bu Haftanın Özeti : 4 Kritik Gelişme</div>
+
+<!-- ARTICLE 1 -->
+<div class="article">
+  <h2><span class="pdot ai"></span><span class="num">01</span>ABD'de 14 Eyalet, Çin'de Katmanlı Yetki: AI Regülasyonu Coğrafyaya Göre Değişiyor</h2>
+  <div class="hr"></div>
+  <p>ABD'de federal düzeyde tek bir AI yasası çıkarma girişimi tıkandı; boşluğu eyalet yasaları dolduruyor. Colorado'nun SB-205 algoritmik ayrımcılık kuralları tam yürürlükte. California'nın kapsamlı Frontier AI Safety Act'i bugün, 10 Ağustos'ta son meclis oylamasından geçti ve valinin imzasını bekliyor. Ulusal ölçekte faaliyet gösteren şirketler artık 14 farklı eyalet çerçevesini aynı anda yönetmek zorunda: aynı AI işe alım aracı Teksas'ta uyumluyken Illinois ve Colorado'da idari para cezası doğurabiliyor.</p>
+  <p>Çin cephesinde tablo daha da netleşti. 15 Temmuz'da yürürlüğe giren Akıllı Ajanlara İlişkin Uygulama Görüşleri, AI ajanlarını kendi başına bir kategori olarak ele alan ilk ulusal çerçeve: her ajanın kararları, devreye alınmadan önce yetki katmanlarına ayrılmak zorunda. Siber Uzay Yönetimi (CAC), yürürlüğün ilk üç haftasında companion/duygusal destek AI ihlalleri için 12 ceza kesti, toplam 4,2 milyon RMB.</p>
+  <div class="pq">"Kurumlar artık tek bir 'en iyi uygulama' peşinde koşamaz: coğrafi ayrıştırma (geo-fencing) ya da en sıkı standardı tüm kullanıcı tabanına uygulama, tek gerçekçi strateji haline geldi."</div>
+  <a class="source-tag" href="https://cubbbix.com/blog/ai-regulation-august-2026-global-update/" target="_blank">Kaynak: Cubbbix · AI Regulation News, Ağustos 2026</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>Türkiye merkezli ama ABD, AB ya da Çin pazarında faaliyet gösteren her kurum için bu parçalanma soyut bir haber değil, doğrudan bir uyum maliyeti. Tek bir "global AI politikası" yazıp her pazara aynı şekilde uygulamak artık mümkün değil.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Faaliyet gösterdiğiniz her pazar için ayrı bir AI regülasyon haritası çıkarın: tek bir global politika yeterli değil</li>
+      <li>AI destekli işe alım, kredi ya da müşteri hizmetleri araçlarınızı pazar bazında ayrı ayrı değerlendirin</li>
+      <li>Ajan tabanlı (agentic) AI kullanıyorsanız, kararların hangi yetki katmanında alındığını belgeleyin: Çin modeli örnek teşkil edebilir</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 2 -->
+<div class="article">
+  <h2><span class="pdot res"></span><span class="num">02</span>Su Şebekeleri Siber Saldırının Yeni Cephesi: Fiziksel Altyapı Artık Sınır Değil</h2>
+  <div class="hr"></div>
+  <p>ABD'de İran bağlantılı APT grupları, en az 7 eyalette 30'dan fazla su ve atık su sistemini hedef aldı; Minnesota'da bir arıtma tesisi kısa süreliğine etkilendi. Saldırganlar internete açık PLC'lere (programlanabilir mantık denetleyicileri) uzaktan erişim yazılımı üzerinden ulaşıyor, güvenli çalışma parametrelerini koruyan komut dizilerini değiştiriyor. CISA, Temmuz'da yayımladığı uyarıyı güncelleyerek kapsamı Rockwell Automation'ın yanı sıra Schneider Electric ve Siemens marka PLC'leri de içerecek şekilde genişletti.</p>
+  <p>Bu saldırıların ayırt edici yanı: amaç veri çalmak değil, fiziksel sistemleri manipüle etmek. World Economic Forum'un Global Cybersecurity Outlook 2026 raporuna göre, özel sektör CEO'larının %45'inden azı, ülkesinin kritik altyapıya yönelik büyük siber saldırılara yanıt verme kapasitesine güveniyor; %64'ü artık jeopolitik gerilimleri siber güvenlik planlamasına dahil ediyor.</p>
+  <a class="source-tag" href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-097a" target="_blank">Kaynak: CISA, Danışma Belgesi AA26-097A (güncelleme: 22 Temmuz 2026)</a>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Operasyonel teknoloji (OT/SCADA/PLC) sistemlerinizin internete açık olup olmadığını bu hafta teyit edin</li>
+      <li>Uzaktan erişim gerektiren tüm OT sistemlerinde çok faktörlü kimlik doğrulamayı zorunlu kılın</li>
+      <li>Fiziksel altyapı bağımlılığınız varsa (üretim, enerji, su, lojistik), BCP planınızı OT senaryolarıyla test edin</li>
+    </ul>
+  </div>
+</div>
+
+<!-- STAT BLOCK 2 -->
+<div class="stat-block">
+  <div class="stat-number">45<em>%</em></div>
+  <div class="stat-text">
+    <span class="stat-label">WEF Global Cybersecurity Outlook 2026</span>
+    <p class="stat-desc">Özel sektör CEO'larının %45'inden azı, ülkesinin kritik altyapıya yönelik büyük siber saldırılara yanıt verme kapasitesine güveniyor. %64'ü jeopolitik gerilimleri artık siber güvenlik planlamasının bir parçası olarak görüyor.</p>
+    <a class="stat-link" href="https://reports.weforum.org/docs/WEF_Global_Cybersecurity_Outlook_2026.pdf" target="_blank">→ WEF · Global Cybersecurity Outlook 2026</a>
+  </div>
+</div>
+
+<!-- ARTICLE 3 -->
+<div class="article">
+  <h2><span class="pdot reg"></span><span class="num">03</span>BDDK, Tasarruf Finansman Şirketlerinde Risk Yoğunlaşmasını Sayısal Limitle Sıkılaştırdı</h2>
+  <div class="hr"></div>
+  <p>7 Ağustos 2026'da Bankacılık Düzenleme ve Denetleme Kurulu (BDDK), tasarruf finansman şirketlerinin fon kullanımına ilişkin kuralları belirgin biçimde sıkılaştırdı. Şirketlerin fon havuzlarını düşük riskli ve likit varlıklarda değerlendirmesi zorunlu hale getirildi; yüksek tutarlı sözleşme limitleri yukarı çekildi (genel sözleşmelerde 2,5 milyon TL'den 5 milyon TL'ye, konut/çatılı iş yeri finansmanında 6,27 milyon TL'den 12,5 milyon TL'ye) ve kişi/risk grubu bazında toplam sözleşme tutarına 62,5 milyon TL tavan getirildi.</p>
+  <p>Asıl dikkat çekici olan mekanizma: yeni kurulan şirketler için kademeli bir geçiş rejimi tasarlanmış. Yüksek tutarlı sözleşme oranı 30 Haziran 2027'ye kadar %15, ardından %10, 2028'den itibaren ise genel %5 sınırına düşüyor. Bu, düzenleyicinin artık tek bir sabit eşik yerine, zamana yayılan ve risk yoğunlaşmasını kademeli azaltan bir model tercih ettiğini gösteriyor : GRC ekipleri için izlenmesi gereken bir yöntem farkı.</p>
+  <a class="source-tag" href="https://www.aa.com.tr/tr/ekonomi/bddkden-tasarruf-finansman-sirketlerine-yeni-duzenleme/4021250" target="_blank">Kaynak: Anadolu Ajansı, BDDK Düzenlemesi, 7 Ağustos 2026 (yürürlük: 1 Ekim 2026)</a>
+
+  <div class="bar-chart">
+    <span class="bar-chart-label">Genel Sözleşme Limiti: Eski ve Yeni Tavan</span>
+    <div class="bar-track">
+      <div class="bar-fill" style="width:100%;"></div>
+      <div class="bar-marker" style="left:50%;"></div>
+    </div>
+    <div class="bar-labels">
+      <span>2,5M TL <span style="color:var(--light);">(eski limit)</span></span>
+      <span class="hi">5M TL (yeni limit, 1 Ekim'den itibaren)</span>
+    </div>
+  </div>
+
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Finansal kuruluşsanız risk yoğunlaşması limitlerinizi 1 Ekim'e kadar yeni eşiklere göre güncelleyin</li>
+      <li>Kademeli geçiş rejimini örnek alın: sabit eşik yerine zamana yayılan azaltma modeli iç risk politikanıza da uygulanabilir</li>
+      <li>Finansal olmayan sektörlerde de "risk grubu bazında toplam maruziyet tavanı" mantığını tedarikçi ve müşteri konsantrasyonu için değerlendirin</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 4 -->
+<div class="article">
+  <h2><span class="pdot ai"></span><span class="num">04</span>Türkiye'de AI Kararlarında "İnsan Müdahalesi" Artık Fiilen Denetleniyor</h2>
+  <div class="hr"></div>
+  <p>2026 itibarıyla, otomatik karar alma süreçlerinde anlamlı insan müdahalesi (human-in-the-loop) KVKK denetiminin merkezine oturdu. Kurul artık kağıt üzerindeki uyum metinlerinden çok, siber dayanıklılığı ve fiili veri akışlarını denetliyor: bir şirketin politikası ne kadar iyi yazılmış olursa olsun, gerçek uygulamada insan onayı olmadan otomatik karar veren bir sistem artık tek başına savunulabilir değil. Bu, "belgeyi hazırladık, dosyada duruyor" dönemini kapatan bir denetim felsefesi değişikliği.</p>
+  <p>Hatırlatma: Sayı 04'te ele aldığımız güncel ceza tavanı (17.092.242 TL) ve VERBİS eşiği (100 milyon TL yıllık bilanço) hâlâ geçerli. Asıl değişen, bu rakamların arkasındaki denetim biçimi: Kurul artık yalnızca "politika var mı" değil, "insan onayı fiilen çalışıyor mu" sorusuna cevap arıyor.</p>
+  <a class="source-tag" href="https://www.nesilteknoloji.com/2026-kvkk-para-cezalari-ve-kararlar/" target="_blank">Kaynak: 2026 KVKK İdari Para Cezaları Rehberi; VUK 585 Sıra No'lu Genel Tebliğ</a>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Otomatik karar veren tüm AI/algoritma sistemlerinizde insan onay adımının fiilen çalıştığını test edin, belgelemekle yetinmeyin</li>
+      <li>İnsan onayının "gerçek" olduğunu kanıtlayacak log/kayıt mekanizmanız var mı, kontrol edin</li>
+      <li>Bir sonraki iç denetimde "insan müdahalesi" adımını örnek vakalarla test edin, politika metnini okumakla yetinmeyin</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- FRAMEWORK -->
+<div class="section-rule">The Governance · Signature Framework</div>
+
+<div class="framework">
+  <span class="fw-label">The Governance AI Yönetişim Olgunluk Modeli : Kurumsal Hazırlık Seviyeleri</span>
+  <div class="fw-title">Kaç farklı rejimde, kaç farklı seviyede yönetişiminiz var?</div>
+  <div class="fw-levels">
+    <div class="fw-level">
+      <div class="fw-num">1</div>
+      <div class="fw-content">
+        <h5>Farkındasız</h5>
+        <p>AI araçları bireysel ve kontrolsüz kullanılıyor. Hangi pazarda hangi rejime tabi olduğunuz belirsiz.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">2</div>
+      <div class="fw-content">
+        <h5>Tepkisel</h5>
+        <p>Bir ceza ya da haber çıkınca harekete geçiliyor. Tek bir "global politika" ile her pazarı yönetmeye çalışıyorsunuz.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">3</div>
+      <div class="fw-content">
+        <h5>Gelişen</h5>
+        <p>Faaliyet gösterilen her pazarın regülasyon haritası çıkarıldı. Hangi rejimin hangi yükümlülüğü getirdiği biliniyor.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">4</div>
+      <div class="fw-content">
+        <h5>Yönetilen</h5>
+        <p>Pazar bazlı AI yönetişim çerçeveleri aktif. İnsan müdahalesi noktaları belgelenmiş ve fiilen test ediliyor.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">5</div>
+      <div class="fw-content">
+        <h5>Öngören</h5>
+        <p>Çoklu rejim yönetişimi kurumsal risk iştahına entegre. Yeni bir eyalet ya da ülke yasası çıktığında hazırlık süresi gün bazında ölçülüyor.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VERİ KARTLARI -->
+<div class="section-rule">Bu Sayıda Kullanılan Veriler</div>
+
+<div class="data-grid">
+  <div class="data-card">
+    <div class="data-num">14</div>
+    <p class="data-desc">ABD'de şu anda aktif olan, birbirinden farklı eyalet bazlı AI regülasyon çerçevesi sayısı.</p>
+    <span class="data-src">Kaynak · Cubbbix, AI Regulation News 2026</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">4,2M<span style="font-size:22px;"> RMB</span></div>
+    <p class="data-desc">Çin CAC'ın, yeni AI ajan rejiminin ilk 3 haftasında kestiği 12 cezanın toplam tutarı.</p>
+    <span class="data-src">Kaynak · Cubbbix, AI Regulation News 2026</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">45<span style="font-size:24px;">%</span></div>
+    <p class="data-desc">Ülkesinin kritik altyapı saldırılarına yanıt kapasitesine güvenen CEO oranının üst sınırı.</p>
+    <span class="data-src">Kaynak · WEF Global Cybersecurity Outlook 2026</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">2/5</div>
+    <p class="data-desc">Gartner'a göre 2026 sonunda AI ajanı kullanacak kurumsal uygulama oranı (2025'te yirmide birden az).</p>
+    <span class="data-src">Kaynak · Gartner 2026 Hype Cycle for Agentic AI</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">62,5<span style="font-size:22px;">M TL</span></div>
+    <p class="data-desc">BDDK'nın tasarruf finansman şirketlerinde kişi/risk grubu bazında getirdiği toplam sözleşme tavanı.</p>
+    <span class="data-src">Kaynak · Anadolu Ajansı, BDDK Düzenlemesi 2026</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">%15<span style="font-size:20px;">→%5</span></div>
+    <p class="data-desc">Yeni kurulan şirketler için kademeli geçiş oranı: 2027 ortasına kadar %15, sonrasında kademeli olarak genel %5 sınırına iniyor.</p>
+    <span class="data-src">Kaynak · BDDK Düzenlemesi, 7 Ağustos 2026</span>
+  </div>
+</div>
+
+<!-- RISK RADAR -->
+<div class="section-rule">Risk Radarı</div>
+
+<div class="radar">
+  <div class="radar-head">
+    <span class="radar-label">⚠ Haftanın Kritik Riski</span>
+    <span class="risk-tag">Yüksek Öncelik</span>
+  </div>
+  <h3>İnternete Açık Endüstriyel Kontrol Sistemleri: Sadece Su Şirketlerinin Sorunu Değil</h3>
+  <p><strong>Nedir?</strong> Su sistemlerine yönelik saldırılar bir istisna değil, daha geniş bir örüntünün en görünür örneği. Uzaktan izleme için internete bağlanan PLC ve SCADA sistemleri; enerji, üretim, lojistik ve gıda sektörlerinde de yaygın. Saldırganlar artık veri çalmak değil, fiziksel süreci manipüle etmek için bu sistemleri hedefliyor.</p>
+  <p><strong>Kurumsal etki:</strong> Üretim hattı, soğuk zincir, enerji şebekesi ya da lojistik operasyonu internete bağlı bir OT sistemine dayanıyorsa, aynı saldırı yüzeyi sizde de var. Çoğu kurum bu maruziyeti bilmiyor çünkü OT güvenliği geleneksel olarak BT güvenliğinin dışında, ayrı bir ekip tarafından yönetiliyor.</p>
+  <p><strong>Temel gerçek:</strong> CISA'nın genişlettiği uyarı kapsamı (Rockwell, Schneider Electric, Siemens) gösteriyor ki bu tekil bir tedarikçi zafiyeti değil, sektörün genelinde yaygın bir mimari sorun.</p>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>OT/SCADA/PLC envanterinizi BT güvenlik ekibinizle birlikte bu ay gözden geçirin: hangi sistemler internete açık?</li>
+      <li>Uzaktan erişim gerektiren OT sistemlerinde MFA'yı zorunlu kılın, mümkünse internet erişimini tamamen kesin</li>
+      <li>BT ve OT güvenlik ekiplerinizin ortak bir risk raporlama hattı olup olmadığını kontrol edin</li>
+    </ul>
+  </div>
+</div>
+
+<!-- TOOL BOX -->
+<div class="section-rule">Araç & Yöntem</div>
+
+<div class="toolbox">
+  <span class="tool-tag">Bu Hafta Uygulayın</span>
+  <h3>OT Maruziyet Taraması: 3 Soru</h3>
+  <p>BT ve operasyon ekibinize şu üç soruyu sorun: (1) Hangi endüstriyel kontrol sistemlerimiz (PLC, SCADA, HMI) internete bağlı ve neden? (2) Bu sistemlere uzaktan erişim çok faktörlü kimlik doğrulama ile korunuyor mu? (3) Son sızma testi ya da güvenlik denetimi ne zaman yapıldı? Üç sorunun da net bir cevabı yoksa, OT güvenliğiniz muhtemelen BT güvenlik programınızın dışında kalmış demektir.</p>
+</div>
+
+<!-- TÜRKİYE ODAĞI -->
+<div class="section-rule">Türkiye Odağı</div>
+
+<div class="focus">
+  <span class="focus-flag">Yerel Gündem</span>
+  <h3>Çoklu Rejim Gerçeği, Türkiye Şirketleri İçin Ne Anlama Geliyor</h3>
+  <p>ABD ve Çin'deki regülasyon parçalanması uzak bir haber gibi görünebilir, ama ihracat yapan, yurt dışında şube açan ya da küresel SaaS araçları kullanan her Türkiye merkezli şirket için doğrudan bir uyum meselesi. AI destekli bir işe alım aracını hem Türkiye'de hem ABD'de kullanan bir şirket, artık KVKK'nın yanı sıra hangi eyalet çerçevesine tabi olduğunu da bilmek zorunda.</p>
+
+  <div class="cmp-table">
+    <div class="cmp-row head">
+      <div class="cmp-k">Rejim</div>
+      <div class="cmp-v">Yaklaşım</div>
+    </div>
+    <div class="cmp-row">
+      <div class="cmp-k">AB</div>
+      <div class="cmp-v">Tek blok, kademeli yürürlük: <strong>AI Act</strong>, risk seviyesine göre farklı yükümlülük.</div>
+    </div>
+    <div class="cmp-row">
+      <div class="cmp-k">ABD</div>
+      <div class="cmp-v">Federal boşluk, eyalet patchwork'ü: <strong>14 farklı çerçeve</strong>, en sıkısı fiilen standart oluyor.</div>
+    </div>
+    <div class="cmp-row">
+      <div class="cmp-k">Çin</div>
+      <div class="cmp-v">Kategori bazlı, hızlı yaptırım: ajanlar <strong>yetki katmanına</strong> göre sınıflandırılıyor.</div>
+    </div>
+    <div class="cmp-row">
+      <div class="cmp-k">Türkiye</div>
+      <div class="cmp-v">KVKK merkezli, uygulama odaklı: <strong>insan müdahalesi</strong> ve fiili veri akışı denetleniyor.</div>
+    </div>
+  </div>
+
+  <p style="margin-top:16px;"><strong>İç denetçiler için pratik not:</strong> Bir sonraki denetim planına "Çoklu Pazar AI Uyum Haritası" başlığını ekleyin. Hangi pazarda hangi AI aracının hangi rejime tabi olduğunu tek bir sayfada gösterebiliyor musunuz? Çoğu kurum bu soruya net bir cevap veremiyor.</p>
+</div>
+
+<!-- READS -->
+<div class="section-rule">Okumanız Gereken</div>
+
+<div class="reads">
+  <div class="read-item">
+    <span class="rn">01</span>
+    <div class="rc">
+      <h4>AI Regulation News August 2026: The Enforcement Era Begins</h4>
+      <p>ABD eyalet patchwork'ü, Çin ajan rejimi ve küresel takvim için kapsamlı özet : cubbbix.com</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">02</span>
+    <div class="rc">
+      <h4>CISA Danışma Belgesi AA26-097A</h4>
+      <p>İran bağlantılı APT gruplarının ABD kritik altyapısındaki PLC'leri hedef alması üzerine güncellenen resmî uyarı : cisa.gov</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">03</span>
+    <div class="rc">
+      <h4>BDDK Tasarruf Finansman Düzenlemesi</h4>
+      <p>Risk yoğunlaşması limitleri, kademeli geçiş rejimi ve yeni sözleşme tavanları, 7 Ağustos 2026 : aa.com.tr</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">04</span>
+    <div class="rc">
+      <h4>2026 KVKK İdari Para Cezaları Rehberi</h4>
+      <p>Güncel ceza tutarları, VERBİS eşiği ve insan müdahalesi zorunluluğu üzerine kapsamlı analiz : nesilteknoloji.com</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">05</span>
+    <div class="rc">
+      <h4>WEF Global Cybersecurity Outlook 2026</h4>
+      <p>CEO güven endeksi, jeopolitik risk ve genAI kaynaklı güvenlik endişeleri üzerine küresel rapor : weforum.org</p>
+    </div>
+  </div>
+</div>
+
+<!-- KAPANIŞ SORUSU -->
+<div class="closing-q">
+  <span class="cq-label">Yönetim Kurulu İçin Tek Soru</span>
+  <h3>Kurumunuz, faaliyet gösterdiği her pazarda hangi AI regülasyon rejimine tabi olduğunu tek bir sayfada gösterebilir mi?</h3>
+</div>
+
+<!-- CTA BLOCK -->
+<div class="cta-block">
+  <h3>Bu sayıyı faydalı buldunuz mu?</h3>
+  <p>The Governance'ı ekibinizle paylaşın, LinkedIn'de kaydedin ve sayfamızı takip edin. Kurumsal risk ve teknoloji yönetişiminde Türkiye'nin en nitelikli bültenini birlikte büyütelim.</p>
+  <div class="cta-actions">
+    <a href="https://www.linkedin.com/company/thegovernance" class="cta-btn primary">LinkedIn'de Takip Et</a>
+    <a href="https://www.thegovernance.com.tr" class="cta-btn secondary">Bültene Abone Ol</a>
+  </div>
+</div>
+
+<!-- CLOSER -->
+<div class="closer">
+  <div class="ed-note">
+    <h4>Editörden</h4>
+    <p>Bugün, 10 Ağustos'a bu bültenle iki ay, dokuz sayı oldu. Bu hafta gördüğümüz ortak ders, iki aydır izlediğimiz eğilimin netleşmiş hali: tek bir uyum programı dönemi kapanıyor. ABD eyalet bazlı, Çin kategori bazlı, AB blok bazlı, Türkiye uygulama bazlı ilerliyor. Kurumların işi artık kural ezberlemek değil, hangi kuralın nerede geçerli olduğunu bilmek. The Governance, bu haritayı çıkarmaya devam edecek.</p>
+  </div>
+  <div class="sig">
+    <span class="sig-name">Ecem</span>
+    <span class="sig-role">Editör · The Governance</span>
+  </div>
+</div>
+
+</body>
+
+</html>
