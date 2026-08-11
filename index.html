@@ -1675,15 +1675,29 @@
 </footer>
 
 <script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 100);
-      }
-    });
-  }, { threshold: 0.1 });
+  const revealEls = document.querySelectorAll('.reveal');
 
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  // Güvenlik ağı: gözlemci herhangi bir sebeple tetiklenmezse
+  // (bazı mobil/uygulama-içi tarayıcılarda olabiliyor), içerik
+  // 1.2 saniye sonra yine de görünür hale gelir.
+  const fallbackTimer = setTimeout(() => {
+    revealEls.forEach(el => el.classList.add('visible'));
+  }, 1200);
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 100);
+        }
+      });
+    }, { threshold: 0.05, rootMargin: '0px 0px -10% 0px' });
+
+    revealEls.forEach(el => observer.observe(el));
+  } else {
+    // IntersectionObserver desteklenmiyorsa doğrudan göster
+    revealEls.forEach(el => el.classList.add('visible'));
+  }
 </script>
 
 </body>
