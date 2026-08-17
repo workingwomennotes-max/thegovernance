@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Governance : Sayı 10 · Ağustos 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Mono:wght@300;400&family=Instrument+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bordo:   #8C1F0D;
+    --bordo-m: #B5341A;
+    --ink:     #111009;
+    --paper:   #F5F2EC;
+    --cream:   #EAE5DB;
+    --rule:    #C8C2B6;
+    --mid:     #3D3A34;
+    --light:   #6E6A62;
+    --white:   #FFFFFF;
+    --gold:    #9A7B3A;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.75;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 28px 100px;
+  }
+
+  /* ── NAMEPLATE ── */
+  .nameplate {
+    border-top: 4px solid var(--ink);
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    animation: rise .5s ease both;
+  }
+
+  .brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: .95;
+    color: var(--ink);
+  }
+  .brand em { font-style: normal; color: var(--bordo); }
+
+  .meta { text-align: right; padding-bottom: 4px; }
+  .meta-row {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--light);
+    line-height: 1.9;
+  }
+
+  /* ── AUDIENCE BAR ── */
+  .audience-bar {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 7px 14px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 28px;
+    margin-bottom: 32px;
+  }
+
+  .kicker {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -.5px;
+    margin-bottom: 14px;
+    color: var(--ink);
+  }
+
+  .hero-lead {
+    font-size: 15px;
+    line-height: 1.82;
+    color: var(--mid);
+  }
+
+  /* ── SECTION RULE ── */
+  .section-rule {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+  .section-rule::before {
+    content: '';
+    width: 20px; height: 2px;
+    background: var(--bordo);
+    flex-shrink: 0;
+  }
+  .section-rule::after {
+    content: '';
+    flex: 1; height: 1px;
+    background: var(--rule);
+  }
+
+  /* ── STAT BLOCK ── */
+  .stat-block {
+    background: var(--ink);
+    padding: 28px 32px;
+    margin: 24px 0;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .stat-number em {
+    font-style: normal;
+    color: var(--bordo-m);
+    font-size: 48px;
+  }
+
+  .stat-text { display: flex; flex-direction: column; gap: 6px; }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.45);
+  }
+
+  .stat-desc {
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(255,255,255,.82);
+  }
+
+  .stat-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    color: rgba(255,255,255,.35);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  .stat-link {
+    color: rgba(181,52,26,.8);
+    text-decoration: none;
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    letter-spacing: .1em;
+    display: block;
+    margin-top: 2px;
+  }
+
+  /* ── ARTICLE ── */
+  .article { margin-bottom: 36px; }
+
+  .article h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.2px;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .article h2 .num {
+    color: var(--bordo);
+    font-style: italic;
+    margin-right: 4px;
+  }
+
+  .hr { width: 28px; height: 2px; background: var(--bordo); margin-bottom: 14px; }
+
+  .article p {
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--mid);
+    margin-bottom: 10px;
+  }
+  .article p:last-child { margin-bottom: 0; }
+
+  .pq {
+    border-left: 2px solid var(--bordo);
+    padding: 2px 16px;
+    margin: 18px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--ink);
+  }
+
+  /* ── KAYNAK ETIKETI ── */
+  .source-tag {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .1em;
+    color: var(--light);
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    padding: 2px 8px;
+    margin-top: 6px;
+    text-decoration: none;
+  }
+
+  /* ── EXECUTIVE TAKEAWAY ── */
+  .takeaway {
+    background: var(--cream);
+    border-left: 3px solid var(--bordo);
+    padding: 16px 20px;
+    margin: 20px 0 0;
+  }
+
+  .takeaway-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .takeaway ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .takeaway ul li {
+    font-size: 13.5px;
+    color: var(--ink);
+    line-height: 1.55;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .takeaway ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--bordo);
+    font-size: 11px;
+  }
+
+  /* ── VERİ KARTLARI GRID ── */
+  .data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-bottom: 36px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .data-card {
+    background: var(--paper);
+    padding: 20px 18px;
+  }
+  .data-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--bordo);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .data-desc {
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--mid);
+    margin-bottom: 8px;
+  }
+  .data-src {
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+  @media (max-width: 560px) {
+    .data-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ── THE GOVERNANCE GÖRÜŞÜ ── */
+  .view {
+    background: var(--white);
+    border: 1px solid var(--bordo);
+    border-top: 3px solid var(--bordo);
+    padding: 18px 22px 16px;
+    margin: 22px 0 0;
+  }
+  .view-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 8px;
+    display: block;
+  }
+  .view p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  /* ── KAPANIŞ SORUSU ── */
+  .closing-q {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 36px 32px;
+    margin: 40px 0 36px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .closing-q::before {
+    content: '?';
+    position: absolute;
+    right: 8px; top: -28px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 180px;
+    font-weight: 700;
+    color: rgba(255,255,255,.04);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .closing-q .cq-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: #E07060;
+    margin-bottom: 14px;
+    display: block;
+  }
+  .closing-q h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--white);
+    max-width: 520px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* ── RADAR ── */
+  .radar {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 24px 26px 22px;
+    margin-bottom: 36px;
+  }
+
+  .radar-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+
+  .radar-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #E07060;
+  }
+
+  .risk-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #E07060;
+    border: 1px solid #E07060;
+    padding: 3px 8px;
+  }
+
+  .radar h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+
+  .radar p {
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: #D0CBC3;
+    margin-bottom: 10px;
+  }
+
+  .radar p:last-child { margin-bottom: 0; }
+  .radar strong { color: var(--white); font-weight: 500; }
+
+  .radar .takeaway {
+    background: rgba(255,255,255,.07);
+    border-left: 2px solid var(--bordo-m);
+    margin-top: 18px;
+  }
+  .radar .takeaway-label { color: #E07060; }
+  .radar .takeaway ul li { color: rgba(255,255,255,.82); font-size: 13px; }
+  .radar .takeaway ul li::before { color: #E07060; }
+
+  /* ── TOOL BOX ── */
+  .toolbox {
+    background: var(--cream);
+    border-left: 3px solid var(--gold);
+    padding: 20px 22px 18px;
+    margin-bottom: 36px;
+  }
+
+  .tool-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .toolbox h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+
+  .toolbox p {
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: var(--mid);
+  }
+
+  /* ── FOCUS ── */
+  .focus {
+    border: 1px solid var(--rule);
+    padding: 22px 22px 20px;
+    margin-bottom: 36px;
+  }
+
+  .focus-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .focus h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    color: var(--ink);
+  }
+
+  .focus p {
+    font-size: 14px;
+    line-height: 1.82;
+    color: var(--mid);
+    margin-bottom: 10px;
+  }
+  .focus p:last-child { margin-bottom: 0; }
+
+  /* ── FRAMEWORK ── */
+  .framework {
+    background: var(--ink);
+    padding: 28px 28px 24px;
+    margin: 32px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .framework::before {
+    content: 'TG';
+    position: absolute;
+    right: -12px; top: -8px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 120px;
+    font-weight: 700;
+    color: rgba(255,255,255,.03);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .fw-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .fw-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 18px;
+    line-height: 1.2;
+  }
+
+  .fw-levels { display: flex; flex-direction: column; gap: 2px; }
+
+  .fw-level {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 14px;
+    background: rgba(255,255,255,.04);
+  }
+
+  .fw-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--bordo-m);
+    min-width: 28px;
+    line-height: 1;
+  }
+
+  .fw-content h5 {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.6);
+    margin-bottom: 2px;
+  }
+
+  .fw-content p {
+    font-size: 12.5px;
+    color: rgba(255,255,255,.7);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* ── READS ── */
+  .reads { margin-bottom: 36px; }
+
+  .read-item {
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .read-item:last-child { border-bottom: none; }
+
+  .rn {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--light);
+    min-width: 20px;
+    padding-top: 2px;
+  }
+
+  .rc h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    color: var(--ink);
+  }
+
+  .rc p {
+    font-size: 13px;
+    color: var(--mid);
+    line-height: 1.65;
+  }
+
+  /* ── CTA BLOCK ── */
+  .cta-block {
+    background: var(--bordo);
+    padding: 32px 28px;
+    margin: 36px 0;
+    text-align: center;
+  }
+
+  .cta-block h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  .cta-block p {
+    font-size: 13.5px;
+    color: rgba(255,255,255,.78);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    padding: 11px 20px;
+    text-decoration: none;
+    transition: all .2s;
+    display: inline-block;
+  }
+
+  .cta-btn.primary {
+    background: var(--white);
+    color: var(--bordo);
+  }
+
+  .cta-btn.secondary {
+    background: transparent;
+    color: rgba(255,255,255,.8);
+    border: 1px solid rgba(255,255,255,.35);
+  }
+
+  /* ── CLOSER ── */
+  .closer {
+    border-top: 3px double var(--ink);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .ed-note h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--ink);
+  }
+
+  .ed-note p {
+    font-size: 12.5px;
+    color: var(--mid);
+    line-height: 1.7;
+    max-width: 400px;
+  }
+
+  .sig { text-align: right; flex-shrink: 0; }
+
+  .sig-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    display: block;
+    margin-bottom: 2px;
+    color: var(--ink);
+  }
+
+  .sig-role {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 560px) {
+    .brand { font-size: 34px; }
+    .hero h1 { font-size: 26px; }
+    .stat-block { flex-direction: column; gap: 16px; }
+    .stat-number { font-size: 56px; }
+    .closer { flex-direction: column; }
+    .sig { text-align: left; }
+    .cta-actions { flex-direction: column; align-items: center; }
+  }
+  /* ── BAR CHART (yeni) ── */
+  .bar-chart {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    padding: 22px 24px 20px;
+    margin: 20px 0 0;
+  }
+  .bar-chart-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 14px;
+    display: block;
+  }
+  .bar-track {
+    position: relative;
+    height: 14px;
+    background: var(--cream);
+    border-radius: 2px;
+    overflow: visible;
+    margin: 10px 0 8px;
+  }
+  .bar-fill {
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    background: linear-gradient(90deg, var(--gold), var(--bordo-m));
+    border-radius: 2px;
+  }
+  .bar-marker {
+    position: absolute;
+    top: -6px;
+    width: 2px; height: 26px;
+    background: var(--ink);
+  }
+  .bar-labels {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    color: var(--mid);
+  }
+  .bar-labels .hi { color: var(--bordo); font-weight: 700; }
+
+  /* ── PILLAR DOT ── */
+  .pdot {
+    display: inline-block;
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    margin-right: 7px;
+    vertical-align: middle;
+  }
+  .pdot.ai { background: var(--bordo); }
+  .pdot.res { background: var(--gold); }
+  .pdot.reg { background: var(--mid); }
+
+  /* ── COMPARISON TABLE ── */
+  .cmp-table {
+    border: 1px solid var(--rule);
+    margin: 20px 0 0;
+  }
+  .cmp-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+  .cmp-row:last-child { border-bottom: none; }
+  .cmp-row.head { background: var(--ink); }
+  .cmp-row.head .cmp-k, .cmp-row.head .cmp-v {
+    color: var(--white);
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    padding: 10px 16px;
+  }
+  .cmp-k {
+    background: var(--cream);
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--ink);
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    letter-spacing: .04em;
+    flex: 0 0 108px;
+  }
+  .cmp-v {
+    flex: 1 1 auto;
+    padding: 14px 16px;
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--mid);
+  }
+  .cmp-v strong { color: var(--ink); font-weight: 600; }
+
+</style>
+
+</head>
+<body>
+
+<!-- NAMEPLATE -->
+<header class="nameplate">
+  <div class="brand">The<em>.</em><br>Governance</div>
+  <div class="meta">
+    <span class="meta-row">Sayı 10 · 18 Ağustos 2026</span>
+    <span class="meta-row">Kurumsal Risk & Yönetişim</span>
+    <span class="meta-row">Haftalık · Türkçe</span>
+  </div>
+</header>
+
+<div class="audience-bar">
+  Yönetim Kurulu · CIO · CISO · İç Denetim · Risk & Compliance · Hukuk
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="kicker">Bu Sayının Odağı</span>
+  <h1>Sesiniz Artık Kimliğiniz Değil: Deepfake CEO Dolandırıcılığı Kurumsal Kontrolleri Test Ediyor</h1>
+  <p class="hero-lead">
+    Hong Kong'da bir finans çalışanı, görüntülü bir toplantıda CFO'sunu ve meslektaşlarını gördüğünü sandı; hepsi yapay zekâ ile üretilmiş sahte görüntülerdi. Kayıp: 25,6 milyon dolar. Bu tekil bir vaka değil: 2025'te yapay zekâ kaynaklı dolandırıcılık küresel ölçekte 40 milyar doları aştı. Türkiye'de de sigorta sektörünün üst düzey isimleri aynı riski işaret ediyor: ses klonlama ve sahte IBAN artık finans ekiplerinin gündeminde. Aynı hafta KPMG Türkiye ve TEİD'in Etik ve Uyum Araştırması 2026'sı, kurumların üçte ikisinde yapay zekâ kullanımının hâlâ tanımlı bir etik çerçeveden yoksun olduğunu, yaptırım riskinin ise artık niş bir konu olmaktan çıktığını ortaya koydu. Ortak payda: teknoloji ne kadar gelişirse gelişsin, kurumu koruyan şey hâlâ doğrulama disiplini.
+  </p>
+</section>
+
+<!-- STAT BLOCK 1 -->
+<div class="stat-block">
+  <div class="stat-number">25,6<em>M $</em></div>
+  <div class="stat-text">
+    <span class="stat-label">Hong Kong · Deepfake Video Konferans Vakası</span>
+    <p class="stat-desc">Bir finans çalışanı, video konferansta CFO dahil tüm katılımcıların yapay zekâ ile üretilmiş sahte görüntüler olduğunu fark edemedi. 15 ayrı işlemle toplam 25,6 milyon dolar transfer edildi.</p>
+    <a class="stat-link" href="https://cybelangel.com/blog/deepfake-ceo-fraud-how-voice-cloning-targets-us-executives/" target="_blank">→ CybelAngel · Deepfake CEO Fraud Raporu, 2026</a>
+  </div>
+</div>
+
+<!-- SECTION -->
+<div class="section-rule">Bu Haftanın Özeti : 4 Kritik Gelişme</div>
+
+<!-- ARTICLE 1 -->
+<div class="article">
+  <h2><span class="pdot ai"></span><span class="num">01</span>Sesiniz Artık Kimliğiniz Değil: Deepfake CEO Dolandırıcılığının Gerçek Maliyeti</h2>
+  <div class="hr"></div>
+  <p>Bir İngiliz enerji şirketinin CEO'su, ana şirketinin genel müdürüyle konuştuğuna inanarak dolandırıcı bir hesaba 220.000 avro transfer etti. Ses, gerçek yöneticiden ayırt edilemiyordu; yalnızca birkaç saniyelik halka açık bir ses kaydından klonlanmıştı. Hong Kong'daki vaka daha da ileri gitti: bir finans çalışanı, video konferansta CFO ve diğer katılımcıların hepsinin yapay zekâ üretimi olduğu bir toplantıda 15 ayrı işlemle 25,6 milyon dolar transfer etti. Dolandırıcılık, ancak şirket merkeziyle manuel teyit yapıldığında ortaya çıktı.</p>
+  <p>Bu vakalar istisna değil, artık şablon. Siber güvenlik analistlerine göre yapay zekâ kaynaklı dolandırıcılık kayıpları 2025'te küresel ölçekte 40 milyar doları aştı. Teknolojinin eşiği çok düşük: bir sesi klonlamak için üç saniyelik kayıt yeterli, ve her kazanç görüşmesi, konferans konuşması, podcast kaydı bu verinin kaynağı.</p>
+  <div class="pq">"Video görüşmeler artık kimlik kanıtı değil. Kim olduğunu iddia ederse etsin, olağandışı her finansal talep ikinci bir doğrulama kanalı gerektiriyor."</div>
+  <a class="source-tag" href="https://deepfakecheck.io/blog/deepfake-fraud-real-cases/" target="_blank">Kaynak: DeepFakeCheck, Deepfake Fraud: 7 Real Cases in 2026</a>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Yüksek tutarlı veya olağandışı ödeme taleplerinde, talimatın geldiği kanaldan bağımsız ikinci bir doğrulama adımını zorunlu kılın</li>
+      <li>Üst düzey yöneticilerin halka açık ses/video içeriğini (konferans, podcast, yatırımcı sunumu) bir risk faktörü olarak değerlendirin</li>
+      <li>Finans ekibinize "CEO'dan geldi" baskısına karşı prosedürü önceliklendirme yetkisi verin</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 2 -->
+<div class="article">
+  <h2><span class="pdot res"></span><span class="num">02</span>Türkiye Sigorta Sektörü Uyarıyor: "Risk Artık İnsanı Hedef Alıyor"</h2>
+  <div class="hr"></div>
+  <p>IBS Sigorta ve Reasürans Brokerliği CEO'su Murat Çiftçi, 30 Temmuz'da yaptığı açıklamada ses klonlama, deepfake ve sahte IBAN manipülasyonlarının artık yalnızca BT birimlerinin değil, şirket yönetimlerinin gündeminde olması gerektiğini vurguladı. Çiftçi'ye göre saldırganlar artık kurumların web sitesi, sosyal medya ve çalışan profillerini analiz ederek kişiye özel, son derece inandırıcı senaryolar üretebiliyor.</p>
+  <p>Risk yalnızca finans ve BT'de değil: Çiftçi, riskin özellikle finans, sağlık, üretim, lojistik ve perakende gibi yoğun dijital işlem gerçekleştirilen sektörlerde arttığını belirtti. Sektörün cevabı da şekilleniyor: standart siber sigorta poliçelerinin yapay zekâ kaynaklı dolandırıcılık senaryolarını yeterince kapsamadığı, yeni nesil teminat ihtiyaçlarının doğduğu ifade ediliyor.</p>
+  <a class="source-tag" href="https://www.sigortakulisi.com/sigorta-teknolojisi/yapay-zeka-dolandiricilarin-yeni-silahi-oldu-ses-klonlama-sahte-iban/3826" target="_blank">Kaynak: Sigorta Kulisi, Murat Çiftçi (IBS Sigorta), 30 Temmuz 2026</a>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Mevcut siber sigorta poliçenizin yapay zekâ kaynaklı dolandırıcılık senaryolarını kapsayıp kapsamadığını brokerinizle teyit edin</li>
+      <li>QR kod ve IBAN değişikliği taleplerini her zaman farklı bir iletişim kanalıyla doğrulayın</li>
+      <li>Finans, sağlık, üretim, lojistik ve perakende ekiplerine öncelikli farkındalık eğitimi planlayın</li>
+    </ul>
+  </div>
+</div>
+
+<!-- STAT BLOCK 2 -->
+<div class="stat-block">
+  <div class="stat-number">61<em>%</em></div>
+  <div class="stat-text">
+    <span class="stat-label">KPMG Türkiye · TEİD Etik ve Uyum Araştırması 2026</span>
+    <p class="stat-desc">Türkiye'deki kurumların %61'i, yaptırım risklerinin artık merkezi ve sistematik şekilde yönetildiğini ya da kurumsal risk yönetiminin öncelikli alanlarından biri olduğunu belirtiyor. Yaptırımlar artık yalnızca uluslararası ticaret yapan şirketlerin meselesi değil.</p>
+    <a class="stat-link" href="https://etikblog.com/uyumun-genisleyen-gundemi-yapay-zekadan-yaptirimlara-kurumlari-bekleyen-yeni-donem/" target="_blank">→ TEİD · Etik ve Uyum Araştırması 2026</a>
+  </div>
+</div>
+
+<!-- ARTICLE 3 -->
+<div class="article">
+  <h2><span class="pdot reg"></span><span class="num">03</span>Yaptırım Riski Artık Niş Değil, Üçüncü Taraf Risk Yönetimi En Büyük Sınav</h2>
+  <div class="hr"></div>
+  <p>KPMG Türkiye ve TEİD'in ortaklaşa yürüttüğü Etik ve Uyum Araştırması 2026, Türkiye'deki uyum fonksiyonlarının gündeminin ne kadar genişlediğini gösteriyor. Katılımcıların %61'i yaptırım risklerini artık merkezi ve sistematik biçimde yönetiyor ya da bunu öncelikli risk alanlarından biri olarak görüyor. Bunun nedeni açık: tedarik zincirlerinin karmaşıklaşması, sınır ötesi işlemler ve üçüncü taraf ilişkilerinin yaygınlaşması, yaptırım riskini çok daha geniş bir kurum kitlesine yayıyor.</p>
+  <p>Ama asıl zorluk başka bir yerde. Katılımcıların en fazla zorlandığı alan, %50 ile üçüncü taraf risk yönetimi. Teknoloji yatırımları artıyor (%62'si önümüzdeki 12-24 ayda artırmayı planlıyor) ama yalnızca %27'si bu yatırımların beklenen değeri ürettiğini düşünüyor. Araştırmanın öne çıkan mesajı net: "teknoloji varsa uyum da vardır" varsayımı yanlış.</p>
+  <a class="source-tag" href="https://etikblog.com/uyumun-genisleyen-gundemi-yapay-zekadan-yaptirimlara-kurumlari-bekleyen-yeni-donem/" target="_blank">Kaynak: KPMG Türkiye · TEİD, Etik ve Uyum Araştırması 2026</a>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Üçüncü taraf risk yönetimi programınızı bu çeyrekte gözden geçirin: sektördeki en büyük zorluk alanı burası</li>
+      <li>Uyum teknolojisi satın almadan önce veri kalitesi ve süreç tasarımının hazır olduğundan emin olun</li>
+      <li>Yaptırım riskini yalnızca hukuk/finans ekiplerinin değil, tüm kurumun sahiplendiği bir yönetişim konusu haline getirin</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 4 -->
+<div class="article">
+  <h2><span class="pdot ai"></span><span class="num">04</span>Kurumların Üçte İkisinde AI Kullanımı Var, Etik Çerçeve Yok</h2>
+  <div class="hr"></div>
+  <p>Aynı araştırmanın en çarpıcı bulgusu yapay zekâ yönetişiminde. Katılımcıların %33'ü kurumlarında yapay zekâ kullanımının sınırlı olduğunu ve etik gündemin henüz oluşmadığını belirtirken, %31'i yapay zekânın kullanıldığını ama etik yönetişim çerçevesinin net olmadığını ifade ediyor. Toplamda katılımcıların yaklaşık üçte ikisi, kurumsal düzeyde yeterince tanımlanmış etik ilkeler ve yönetişim mekanizmaları olmadan yapay zekâ kullanıldığını söylüyor.</p>
+  <p>Katılımcılara geleceğe dönük sorulduğunda, uyum fonksiyonunun gündemine girmesi beklenen ilk başlık "algoritmik ve yapay zekâ destekli sistemlerin etik sonuçlarının yönetimi" oldu. Bu, AI Governance'ın önümüzdeki dönemde uyum profesyonellerinin merkezi çalışma alanı haline geleceğinin güçlü bir işareti.</p>
+  <a class="source-tag" href="https://etikblog.com/uyumun-genisleyen-gundemi-yapay-zekadan-yaptirimlara-kurumlari-bekleyen-yeni-donem/" target="_blank">Kaynak: KPMG Türkiye · TEİD, Etik ve Uyum Araştırması 2026</a>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Kurumunuzdaki AI kullanımını "sınırlı mı, yaygın mı" diye sınıflandırmadan önce fiili envanteri çıkarın</li>
+      <li>Etik çerçeveniz yoksa, bunu bir sonraki uyum gündeminin ilk maddesi yapın: rakip kurumların çoğu da aynı boşlukta</li>
+      <li>Algoritmik karar süreçlerinde açıklanabilirlik ve hesap verebilirlik sorumluluğunu net bir role bağlayın</li>
+    </ul>
+  </div>
+</div>
+
+<!-- FRAMEWORK -->
+<div class="section-rule">The Governance · Signature Framework</div>
+
+<div class="framework">
+  <span class="fw-label">The Governance AI Yönetişim Olgunluk Modeli : Kurumsal Hazırlık Seviyeleri</span>
+  <div class="fw-title">Bir ödeme talimatını doğrulamadan önce, kurumunuz hangi seviyede duruyor?</div>
+  <div class="fw-levels">
+    <div class="fw-level">
+      <div class="fw-num">1</div>
+      <div class="fw-content">
+        <h5>Farkındasız</h5>
+        <p>Ödeme talimatları tek kanaldan, tek doğrulamayla işleniyor. Deepfake riski gündemde değil.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">2</div>
+      <div class="fw-content">
+        <h5>Tepkisel</h5>
+        <p>Bir olay ya da haber çıkınca harekete geçiliyor. Politika var ama fiilen test edilmemiş.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">3</div>
+      <div class="fw-content">
+        <h5>Gelişen</h5>
+        <p>Çift doğrulama prosedürü tanımlı. Ama finans ekibi baskı altında bunu atlayabiliyor.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">4</div>
+      <div class="fw-content">
+        <h5>Yönetilen</h5>
+        <p>Farklı kanal teyidi zorunlu ve izleniyor. Siber sigorta poliçesi AI kaynaklı dolandırıcılığı kapsıyor.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">5</div>
+      <div class="fw-content">
+        <h5>Öngören</h5>
+        <p>Yönetici ses/görüntü maruziyeti bir risk faktörü olarak izleniyor. Senaryo tatbikatları düzenli yapılıyor.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VERİ KARTLARI -->
+<div class="section-rule">Bu Sayıda Kullanılan Veriler</div>
+
+<div class="data-grid">
+  <div class="data-card">
+    <div class="data-num">40<span style="font-size:22px;">Milyar $</span></div>
+    <p class="data-desc">2025'te küresel ölçekte yapay zekâ kaynaklı dolandırıcılık kayıplarının toplam tutarı.</p>
+    <span class="data-src">Kaynak · DeepFakeCheck, 2026 Vaka Analizi</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">25,6<span style="font-size:22px;">M $</span></div>
+    <p class="data-desc">Hong Kong'daki tek bir deepfake video konferans vakasında transfer edilen toplam tutar.</p>
+    <span class="data-src">Kaynak · CybelAngel, Deepfake CEO Fraud Raporu</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">61<span style="font-size:22px;">%</span></div>
+    <p class="data-desc">Türkiye'de yaptırım risklerini merkezi/sistematik yöneten ya da öncelikli gören kurum oranı.</p>
+    <span class="data-src">Kaynak · KPMG Türkiye · TEİD, 2026</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">50<span style="font-size:22px;">%</span></div>
+    <p class="data-desc">Kurumların en çok zorlandığı uyum alanı olarak üçüncü taraf risk yönetimini işaret eden oran.</p>
+    <span class="data-src">Kaynak · KPMG Türkiye · TEİD, 2026</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">64<span style="font-size:22px;">%</span></div>
+    <p class="data-desc">Kurumsal düzeyde tanımlı etik ilke ve yönetişim mekanizması olmadan AI kullanan kurumların yaklaşık oranı.</p>
+    <span class="data-src">Kaynak · KPMG Türkiye · TEİD, 2026</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">27<span style="font-size:22px;">%</span></div>
+    <p class="data-desc">Uyum teknolojisi yatırımlarının beklenen değeri ürettiğini düşünen kurum oranı.</p>
+    <span class="data-src">Kaynak · KPMG Türkiye · TEİD, 2026</span>
+  </div>
+</div>
+
+<!-- RISK RADAR -->
+<div class="section-rule">Risk Radarı</div>
+
+<div class="radar">
+  <div class="radar-head">
+    <span class="radar-label">⚠ Haftanın Kritik Riski</span>
+    <span class="risk-tag">Yüksek Öncelik</span>
+  </div>
+  <h3>Sesli Talimat Artık Kimlik Doğrulaması Değil</h3>
+  <p><strong>Nedir?</strong> Yapay zekâ ile bir sesi klonlamak için üç saniyelik halka açık bir kayıt yeterli. Her kazanç görüşmesi, konferans konuşması, podcast kaydı bu verinin kaynağı olabiliyor. Sonuç: "sesini duydum, o yüzden gerçek" varsayımı artık geçerli bir güvenlik kontrolü değil.</p>
+  <p><strong>Kurumsal etki:</strong> Finans, İK ve tedarikçi ödeme süreçleri, tarihsel olarak "yetkiliden geldi" güvenine dayanıyor. Bu güven artık istismar edilebilir bir zafiyet. Hong Kong ve İngiltere vakaları gösteriyor ki büyük, deneyimli kurumlar bile bu tuzağa düşebiliyor.</p>
+  <p><strong>Temel gerçek:</strong> Teknik savunma (deepfake tespit yazılımı) tek başına yeterli değil. Sektör uzmanlarının ortak önerisi prosedürel: yüksek riskli talepler, farklı ve önceden bilinen bir kanaldan bağımsız doğrulama gerektirmeli.</p>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Ödeme, IBAN değişikliği ve kritik veri paylaşım taleplerinde "geri arama" protokolünü (bilinen numaradan teyit) zorunlu kılın</li>
+      <li>Üst yönetimin talimatlarını "acil, gizli, olağandışı" çerçevesiyle ileten her mesajı otomatik şüpheli sayan bir kültür oluşturun</li>
+      <li>Deepfake tatbikatını (simüle sahte talimat senaryosu) yıllık farkındalık eğitiminize ekleyin</li>
+    </ul>
+  </div>
+</div>
+
+<!-- TOOL BOX -->
+<div class="section-rule">Araç & Yöntem</div>
+
+<div class="toolbox">
+  <span class="tool-tag">Bu Hafta Uygulayın</span>
+  <h3>Ödeme Talimatı Doğrulama Protokolü: 3 Adım</h3>
+  <p>Finans ekibinize şu üç adımı standart prosedür yapın: (1) Olağandışı, acil ya da gizlilik vurgusu yapan her ödeme/IBAN değişikliği talebini otomatik olarak "doğrulama gerektirir" kategorisine alın. (2) Talebi, geldiği kanaldan değil, önceden bilinen ve kayıtlı bir numara/kanaldan bağımsız olarak teyit edin. (3) Sesli ya da görüntülü teyidi tek başına yeterli saymayın; kritik işlemlerde ikinci bir insan onayını zorunlu kılın. Bu üç adımın hepsi karşılanmadan hiçbir yüksek tutarlı işlem onaylanmamalı.</p>
+</div>
+
+<!-- TÜRKİYE ODAĞI -->
+<div class="section-rule">Türkiye Odağı</div>
+
+<div class="focus">
+  <span class="focus-flag">Yerel Gündem</span>
+  <h3>Türkiye'de Uyum Fonksiyonu Dönüşüyor, Ama Yolun Sonuna Gelinmedi</h3>
+  <p>KPMG Türkiye ve TEİD'in araştırması, Türkiye'deki uyum fonksiyonlarının olgunluk tablosunu net gösteriyor: katılımcıların %30'u temel uyum gerekliliklerinin karşılandığını ama süreçlerin henüz sistematik bir yapıya ulaşmadığını belirtirken, yalnızca %22'si uyum fonksiyonlarının veri temelli, proaktif ve stratejik çalıştığını söylüyor.</p>
+  <p><strong>İç denetçiler için pratik not:</strong> Uluslararası faaliyet gösteren kurumlarda uyumun risk yönetimi ve yönetişimle daha güçlü entegre olduğu görülüyor; yerel odaklı kurumlarda ise uyum hâlâ çoğunlukla operasyonel bir zorunluluk olarak algılanıyor. Kurumunuzun hangi grupta olduğunu dürüstçe değerlendirmek, bir sonraki yatırım kararının başlangıç noktası olmalı.</p>
+</div>
+
+<!-- READS -->
+<div class="section-rule">Okumanız Gereken</div>
+
+<div class="reads">
+  <div class="read-item">
+    <span class="rn">01</span>
+    <div class="rc">
+      <h4>Deepfake Fraud: 7 Real Cases in 2026</h4>
+      <p>Hong Kong ve İngiltere vakaları dahil, belgelenmiş deepfake CEO dolandırıcılığı örnekleri : deepfakecheck.io</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">02</span>
+    <div class="rc">
+      <h4>Voice Cloning Is the New BEC</h4>
+      <p>Deepfake CEO dolandırıcılığının teknik altyapısı ve kurumsal kontrol önerileri : cybelangel.com</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">03</span>
+    <div class="rc">
+      <h4>Murat Çiftçi (IBS Sigorta): Ses Klonlama, Sahte IBAN</h4>
+      <p>Türkiye sigorta sektöründen yapay zekâ kaynaklı dolandırıcılık riskleri üzerine değerlendirme, 30 Temmuz 2026 : sigortakulisi.com</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">04</span>
+    <div class="rc">
+      <h4>KPMG Türkiye · TEİD Etik ve Uyum Araştırması 2026</h4>
+      <p>Türkiye'deki uyum fonksiyonlarının dönüşümü, yaptırım riski ve AI yönetişimi üzerine kapsamlı araştırma : etikblog.com</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">05</span>
+    <div class="rc">
+      <h4>EY · IIF Küresel Sigorta Risk Yönetimi 2026 Araştırması</h4>
+      <p>Siber risk, üçüncü taraf riski ve yapay zekânın sigorta sektörü risk gündemindeki yeri : sigortacigazetesi.com.tr</p>
+    </div>
+  </div>
+</div>
+
+<!-- KAPANIŞ SORUSU -->
+<div class="closing-q">
+  <span class="cq-label">Yönetim Kurulu İçin Tek Soru</span>
+  <h3>Kurumunuzda bir ödeme talimatı, yalnızca bir ses kaydına ya da görüntülü aramaya dayanarak onaylanabilir mi?</h3>
+</div>
+
+<!-- CTA BLOCK -->
+<div class="cta-block">
+  <h3>Bu sayıyı faydalı buldunuz mu?</h3>
+  <p>The Governance'ı ekibinizle paylaşın, LinkedIn'de kaydedin ve sayfamızı takip edin. Kurumsal risk ve teknoloji yönetişiminde Türkiye'nin en nitelikli bültenini birlikte büyütelim.</p>
+  <div class="cta-actions">
+    <a href="https://www.linkedin.com/company/thegovernance" class="cta-btn primary">LinkedIn'de Takip Et</a>
+    <a href="https://www.thegovernance.com.tr" class="cta-btn secondary">Bültene Abone Ol</a>
+  </div>
+</div>
+
+<!-- CLOSER -->
+<div class="closer">
+  <div class="ed-note">
+    <h4>Editörden</h4>
+    <p>Bu hafta iki farklı kaynaktan aynı ders geldi. Deepfake dolandırıcılığı, teknolojinin ne kadar gelişirse gelişsin insan doğrulamasının yerini alamayacağını gösteriyor. TEİD'in araştırması da aynı noktaya varıyor: "teknoloji varsa uyum da vardır" varsayımı yanlış. İkisinin ortak reçetesi de aynı: prosedür, disiplin ve insan muhakemesi. The Governance, bu dengeyi izlemeye devam edecek.</p>
+  </div>
+  <div class="sig">
+    <span class="sig-name">Ecem</span>
+    <span class="sig-role">Editör · The Governance</span>
+  </div>
+</div>
+
+</body>
+
+
+</html>
