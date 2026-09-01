@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Governance : Sayı 11 · 24 Ağustos 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Mono:wght@300;400&family=Instrument+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bordo:   #8C1F0D;
+    --bordo-m: #B5341A;
+    --ink:     #111009;
+    --paper:   #F5F2EC;
+    --cream:   #EAE5DB;
+    --rule:    #C8C2B6;
+    --mid:     #3D3A34;
+    --light:   #6E6A62;
+    --white:   #FFFFFF;
+    --gold:    #9A7B3A;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.75;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 28px 100px;
+  }
+
+  /* ── NAMEPLATE ── */
+  .nameplate {
+    border-top: 4px solid var(--ink);
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    animation: rise .5s ease both;
+  }
+
+  .brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: .95;
+    color: var(--ink);
+  }
+  .brand em { font-style: normal; color: var(--bordo); }
+
+  .meta { text-align: right; padding-bottom: 4px; }
+  .meta-row {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--light);
+    line-height: 1.9;
+  }
+
+  /* ── AUDIENCE BAR ── */
+  .audience-bar {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 7px 14px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 28px;
+    margin-bottom: 32px;
+  }
+
+  .kicker {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -.5px;
+    margin-bottom: 14px;
+    color: var(--ink);
+  }
+
+  .hero-lead {
+    font-size: 15px;
+    line-height: 1.82;
+    color: var(--mid);
+  }
+
+  /* ── SECTION RULE ── */
+  .section-rule {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+  .section-rule::before {
+    content: '';
+    width: 20px; height: 2px;
+    background: var(--bordo);
+    flex-shrink: 0;
+  }
+  .section-rule::after {
+    content: '';
+    flex: 1; height: 1px;
+    background: var(--rule);
+  }
+
+  /* ── STAT BLOCK ── */
+  .stat-block {
+    background: var(--ink);
+    padding: 28px 32px;
+    margin: 24px 0;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .stat-number em {
+    font-style: normal;
+    color: var(--bordo-m);
+    font-size: 48px;
+  }
+
+  .stat-text { display: flex; flex-direction: column; gap: 6px; }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.45);
+  }
+
+  .stat-desc {
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(255,255,255,.82);
+  }
+
+  .stat-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    color: rgba(255,255,255,.35);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  .stat-link {
+    color: rgba(181,52,26,.8);
+    text-decoration: none;
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    letter-spacing: .1em;
+    display: block;
+    margin-top: 2px;
+  }
+
+  /* ── ARTICLE ── */
+  .article { margin-bottom: 36px; }
+
+  .article h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.2px;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .article h2 .num {
+    color: var(--bordo);
+    font-style: italic;
+    margin-right: 4px;
+  }
+
+  .hr { width: 28px; height: 2px; background: var(--bordo); margin-bottom: 14px; }
+
+  .article p {
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--mid);
+    margin-bottom: 10px;
+  }
+  .article p:last-child { margin-bottom: 0; }
+
+  .pq {
+    border-left: 2px solid var(--bordo);
+    padding: 2px 16px;
+    margin: 18px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--ink);
+  }
+
+  /* ── KAYNAK ETIKETI ── */
+  .source-tag {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .1em;
+    color: var(--light);
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    padding: 2px 8px;
+    margin-top: 6px;
+    text-decoration: none;
+  }
+
+  /* ── EXECUTIVE TAKEAWAY ── */
+  .takeaway {
+    background: var(--cream);
+    border-left: 3px solid var(--bordo);
+    padding: 16px 20px;
+    margin: 20px 0 0;
+  }
+
+  .takeaway-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .takeaway ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .takeaway ul li {
+    font-size: 13.5px;
+    color: var(--ink);
+    line-height: 1.55;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .takeaway ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--bordo);
+    font-size: 11px;
+  }
+
+  /* ── VERİ KARTLARI GRID ── */
+  .data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-bottom: 36px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .data-card {
+    background: var(--paper);
+    padding: 20px 18px;
+  }
+  .data-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--bordo);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .data-desc {
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--mid);
+    margin-bottom: 8px;
+  }
+  .data-src {
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+  @media (max-width: 560px) {
+    .data-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ── THE GOVERNANCE GÖRÜŞÜ ── */
+  .view {
+    background: var(--white);
+    border: 1px solid var(--bordo);
+    border-top: 3px solid var(--bordo);
+    padding: 18px 22px 16px;
+    margin: 22px 0 0;
+  }
+  .view-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 8px;
+    display: block;
+  }
+  .view p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  /* ── KAPANIŞ SORUSU ── */
+  .closing-q {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 36px 32px;
+    margin: 40px 0 36px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .closing-q::before {
+    content: '?';
+    position: absolute;
+    right: 8px; top: -28px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 180px;
+    font-weight: 700;
+    color: rgba(255,255,255,.04);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .closing-q .cq-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: #E07060;
+    margin-bottom: 14px;
+    display: block;
+  }
+  .closing-q h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--white);
+    max-width: 520px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* ── RADAR ── */
+  .radar {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 24px 26px 22px;
+    margin-bottom: 36px;
+  }
+
+  .radar-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+
+  .radar-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #E07060;
+  }
+
+  .risk-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #E07060;
+    border: 1px solid #E07060;
+    padding: 3px 8px;
+  }
+
+  .radar h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+
+  .radar p {
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: #D0CBC3;
+    margin-bottom: 10px;
+  }
+
+  .radar p:last-child { margin-bottom: 0; }
+  .radar strong { color: var(--white); font-weight: 500; }
+
+  .radar .takeaway {
+    background: rgba(255,255,255,.07);
+    border-left: 2px solid var(--bordo-m);
+    margin-top: 18px;
+  }
+  .radar .takeaway-label { color: #E07060; }
+  .radar .takeaway ul li { color: rgba(255,255,255,.82); font-size: 13px; }
+  .radar .takeaway ul li::before { color: #E07060; }
+
+  /* ── TOOL BOX ── */
+  .toolbox {
+    background: var(--cream);
+    border-left: 3px solid var(--gold);
+    padding: 20px 22px 18px;
+    margin-bottom: 36px;
+  }
+
+  .tool-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .toolbox h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+
+  .toolbox p {
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: var(--mid);
+  }
+
+  /* ── FOCUS ── */
+  .focus {
+    border: 1px solid var(--rule);
+    padding: 22px 22px 20px;
+    margin-bottom: 36px;
+  }
+
+  .focus-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .focus h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    color: var(--ink);
+  }
+
+  .focus p {
+    font-size: 14px;
+    line-height: 1.82;
+    color: var(--mid);
+    margin-bottom: 10px;
+  }
+  .focus p:last-child { margin-bottom: 0; }
+
+  /* ── FRAMEWORK ── */
+  .framework {
+    background: var(--ink);
+    padding: 28px 28px 24px;
+    margin: 32px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .framework::before {
+    content: 'TG';
+    position: absolute;
+    right: -12px; top: -8px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 120px;
+    font-weight: 700;
+    color: rgba(255,255,255,.03);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .fw-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .fw-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 18px;
+    line-height: 1.2;
+  }
+
+  .fw-levels { display: flex; flex-direction: column; gap: 2px; }
+
+  .fw-level {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 14px;
+    background: rgba(255,255,255,.04);
+  }
+
+  .fw-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--bordo-m);
+    min-width: 28px;
+    line-height: 1;
+  }
+
+  .fw-content h5 {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.6);
+    margin-bottom: 2px;
+  }
+
+  .fw-content p {
+    font-size: 12.5px;
+    color: rgba(255,255,255,.7);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* ── READS ── */
+  .reads { margin-bottom: 36px; }
+
+  .read-item {
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .read-item:last-child { border-bottom: none; }
+
+  .rn {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--light);
+    min-width: 20px;
+    padding-top: 2px;
+  }
+
+  .rc h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    color: var(--ink);
+  }
+
+  .rc p {
+    font-size: 13px;
+    color: var(--mid);
+    line-height: 1.65;
+  }
+
+  /* ── CTA BLOCK ── */
+  .cta-block {
+    background: var(--bordo);
+    padding: 32px 28px;
+    margin: 36px 0;
+    text-align: center;
+  }
+
+  .cta-block h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  .cta-block p {
+    font-size: 13.5px;
+    color: rgba(255,255,255,.78);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    padding: 11px 20px;
+    text-decoration: none;
+    transition: all .2s;
+    display: inline-block;
+  }
+
+  .cta-btn.primary {
+    background: var(--white);
+    color: var(--bordo);
+  }
+
+  .cta-btn.secondary {
+    background: transparent;
+    color: rgba(255,255,255,.8);
+    border: 1px solid rgba(255,255,255,.35);
+  }
+
+  /* ── CLOSER ── */
+  .closer {
+    border-top: 3px double var(--ink);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .ed-note h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--ink);
+  }
+
+  .ed-note p {
+    font-size: 12.5px;
+    color: var(--mid);
+    line-height: 1.7;
+    max-width: 400px;
+  }
+
+  .sig { text-align: right; flex-shrink: 0; }
+
+  .sig-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    display: block;
+    margin-bottom: 2px;
+    color: var(--ink);
+  }
+
+  .sig-role {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 560px) {
+    .brand { font-size: 34px; }
+    .hero h1 { font-size: 26px; }
+    .stat-block { flex-direction: column; gap: 16px; }
+    .stat-number { font-size: 56px; }
+    .closer { flex-direction: column; }
+    .sig { text-align: left; }
+    .cta-actions { flex-direction: column; align-items: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAMEPLATE -->
+<header class="nameplate">
+  <div class="brand">The<em>.</em><br>Governance</div>
+  <div class="meta">
+    <span class="meta-row">Sayı 11 · 24 Ağustos 2026</span>
+    <span class="meta-row">Kurumsal Risk & Yönetişim</span>
+    <span class="meta-row">Haftalık · Türkçe</span>
+  </div>
+</header>
+
+<div class="audience-bar">
+  Yönetim Kurulu · CIO · CISO · İç Denetim · Risk & Compliance · Hukuk
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="kicker">Bu Sayının Odağı</span>
+  <h1>Uyum Kağıtta Yükseldi, Dayanıklılık Yerinde Saydı : Denetim Devri Başladı</h1>
+  <p class="hero-lead">
+    Bu hafta gündemin ortak teması tek bir kelimeydi: uygulama. AB Yapay Zeka Yasası'nın şeffaflık yükümlülükleri artık fiilen denetleniyor ve odak "sistemi geliştiren" taraftan "sistemi kullanan" tarafa (deployer) kayıyor. AI kaynaklı sorumluluk vakaları dokuz-on haneli finansal büyüklüklere ulaştı. Yönetim kurullarının yapay zeka gözetimi resmîleşiyor ama direktörlerin AI yetkinliği hâlâ çok gerude. Siber tarafta saldırıların ezici çoğunluğu artık zararlı yazılımla değil, çalınmış kimlik bilgileriyle geliyor. Ve Türkiye'de Yapay Zeka Eylem Planı bir genelgeyle resmen yürürlüğe girdi. Hepsinin altında tek bir gerçek var: kurumların kağıt üzerinde gösterebildiği uyum ile kriz anında gerçekten ayakta kalabildiği dayanıklılık arasındaki makas açılıyor.
+  </p>
+</section>
+
+<!-- STAT BLOCK 1 -->
+<div class="stat-block">
+  <div class="stat-number">5<em>%</em></div>
+  <div class="stat-text">
+    <span class="stat-label">Yönetim Kurulu · AI Yetkinlik Açığı</span>
+    <p class="stat-desc">S&P 500 yönetim kurullarında AI deneyimine sahip direktör oranı bu yıl yalnızca %5 : 2022'de %1'di. Şirketlerin %37'si en az bir direktörü için AI deneyimini vurguluyor, ama gerçek yetkinlik hâlâ istisna. Sizin kurulunuzda AI kararlarını kim, hangi bilgiyle sorguluyor?</p>
+    <a class="stat-link" href="https://www.thecorporatecounsel.net" target="_blank">→ 2026 Proxy Sezonu · Kurul AI Gözetimi Analizi</a>
+  </div>
+</div>
+
+<!-- SECTION -->
+<div class="section-rule">Bu Haftanın Özeti : 5 Kritik Gelişme</div>
+
+<!-- ARTICLE 1 -->
+<div class="article">
+  <h2><span class="num">01</span>Yönetim Kurulları AI'yı Gözetmeye Başladı : Ama Masada Yetkinlik Yok</h2>
+  <div class="hr"></div>
+  <p>2026 proxy sezonunun tanımlayıcı teması yapay zeka gözetimi oldu. Büyük şirketlerde kurul düzeyinde AI gözetiminin resmîleşmesi hızla yaygınlaşıyor: Avrupa'da büyük ölçekli şirketlerin yaklaşık yüzde yetmişinde tanımlı bir AI gözetimi var ve yarısından fazlasında yazılı bir AI politikası bulunuyor. Ama bir çelişki de aynı hızda büyüyor: gözetim resmîleşirken, o gözetimi yapacak yetkinlik kurulda yok. S&P 500 direktörlerinin yalnızca yüzde beşi proxy belgelerinde AI deneyimiyle anılıyor.</p>
+  <div class="pq">"Kurul bir riski gözetmekle görevlendirildiğinde, o riski anlayan kimse masada yoksa, gözetim bir imzadan ibaret kalır: sorumluluk var, yetkinlik yok."</div>
+  <p>Tablo net bir açık gösteriyor. Siber güvenlik gözetimi büyük şirketlerde neredeyse evrensel hale geldi; AI gözetimi ise hızla yaygınlaşsa da hâlâ gerisinde. Yatırımcılar artık "AI kullanıyor musunuz" sorusunun ötesine geçti; kurulun bu gözetimi hangi bilgiyle, hangi komiteyle ve hangi direktör deneyimiyle yürüttüğünü görmek istiyor. Yani mesele bir AI politikası yazmak değil; o politikayı gerçekten sorgulayabilecek birinin kurulda olması.</p>
+  <a class="source-tag" href="https://www.glasslewis.com" target="_blank">Kaynak: 2026 Proxy Sezonu Küresel Trendleri · Kurul Gözetimi Analizleri</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>Bir kurul, anlamadığı bir riski gözetemez; sadece gözetiyormuş gibi yapar. AI gözetimini "teknoloji komitesine havale ettik" demek çözüm değil, sorumluluğu görünür kılıp yetkinliği görünmez bırakmaktır. Türkiye'de de kurullar yakında aynı soruyla karşılaşacak: AI kararlarımızı sorgulayacak yetkinlik bu masada var mı, yoksa sadece tutanakta mı?</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Kurulun ya da denetim komitesinin AI gözetimini hangi bilgiyle yaptığını dürüstçe değerlendirin : yetkinlik gerçek mi, biçimsel mi?</li>
+      <li>Direktörlere yönelik bir AI yönetişimi bilgilendirmesini yıllık gündeme ekleyin</li>
+      <li>AI gözetim sorumluluğunu belirli bir komiteye ve yazılı bir çerçeveye bağlayın</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 2 -->
+<div class="article">
+  <h2><span class="num">02</span>AB AI Act Denetimi Olgunlaşıyor : Odak Artık "Kullanan" Tarafta</h2>
+  <div class="hr"></div>
+  <p>AB Yapay Zeka Yasası'nın şeffaflık yükümlülükleri 2 Ağustos'tan bu yana fiilen yürürlükte ve denetim mimarisi hızla olgunlaşıyor. Kritik kayma şu: düzenleyici odak, sistemi geliştiren sağlayıcıdan (provider), sistemi hayata geçiren kullanıcıya (deployer) doğru genişliyor. Yani bir AI sistemini kendisi üretmeyip yalnızca kullanan kurumlar da artık doğrudan yükümlülük ve sorgu kapsamında. Bir tedarikçinin AI'ında yaşanan olay karşısında, kullanan kurumun "yeterli tedarikçi-olay kanıtına" sahip olup olmadığı denetlenmeye başlıyor.</p>
+  <p>Bu, yükümlülüğün coğrafyayla sınırlı olmadığını gösteriyor. AI kararının sorumluluğu teknik ekipten yönetim kurulunun gözetimine taşınırken, aynı anda geliştiriciden kullanıcıya da yayılıyor. "Biz o modeli biz yapmadık, sadece kullanıyoruz" cümlesi artık bir savunma değil; tam da sorgulanan noktanın kendisi.</p>
+  <a class="source-tag" href="https://iapp.org" target="_blank">Kaynak: AB AI Act · Şeffaflık Denetimi Analizleri, Ağustos 2026</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>Bir AI'ı kendiniz üretmemeniz, ondan doğan riski taşımadığınız anlamına gelmiyor. Deployer sorumluluğu, Türk kurumları için de yakın bir gerçek: bir yurt dışı AI aracını kurumsal karara bağlayan her şirket, o aracın davranışından kendi sorumlu. Tedarikçinin AI'ı sizin denetim izinizin bir parçasıdır, dışında değil.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Kullandığınız üçüncü taraf AI araçları için tedarikçiden olay bildirimi ve kanıt sağlama taahhüdü isteyin</li>
+      <li>Bir AI aracının kurumsal karara etkisini, kendi denetim kapsamınıza dahil edin</li>
+      <li>"Geliştirmedik, sadece kullanıyoruz" gerekçesine dayanan süreçleri risk olarak işaretleyin</li>
+    </ul>
+  </div>
+</div>
+
+<!-- STAT BLOCK 2 -->
+<div class="stat-block">
+  <div class="stat-number">82<em>%</em></div>
+  <div class="stat-text">
+    <span class="stat-label">Siber İhlal · Zararlı Yazılım Olmadan</span>
+    <p class="stat-desc">2026 küresel tehdit verilerine göre tespit edilen izinsiz erişimlerin yüzde 82'si zararlı yazılım içermiyor: saldırganlar çalınmış kimlik bilgileri, meşru erişim yolları ve güvenilen bağlantılar üzerinden giriyor. Antivirüs mantığına dayalı savunma, artık göremediği bir tehdide karşı duruyor.</p>
+    <a class="stat-link" href="https://www.ey.com/en_gl/insights/consulting/how-can-you-redefine-resilience-for-the-next-frontier-of-vulnerabilities" target="_blank">→ EY · Küresel Siber Güvenlik Liderlik Çalışması 2026</a>
+  </div>
+</div>
+
+<!-- ARTICLE 3 -->
+<div class="article">
+  <h2><span class="num">03</span>Saldırılar Artık "İçeri Girmiyor", "İçeri Giriş Yapıyor" : Kimlik Yeni Çevre</h2>
+  <div class="hr"></div>
+  <p>Siber tehdit tablosunda sessiz ama köklü bir kayma var. 2026 küresel tehdit verilerine göre tespit edilen izinsiz erişimlerin yüzde 82'si zararlı yazılım içermiyor. Saldırganlar kapıyı kırmıyor; çalınmış kimlik bilgileri, meşru hesaplar ve güvenilen erişim yollarıyla içeri "giriş yapıyor". EY'nin araştırması bu tabloyu tamamlıyor: kurumların varlıklarının yaklaşık yüzde 36'sı, AI destekli saldırılara karşı yetersiz görünürlük ve kontrol taşıyor. Yani saldırgan hızlanırken, savunma tarafında görmediğimiz geniş bir alan duruyor.</p>
+  <p>Bunun kurumsal anlamı, perimetre (çevre güvenliği) mantığının sonu. "Duvarı yükseltmek" artık işe yaramıyor, çünkü saldırgan duvarı aşmıyor; içeriden birinin kimliğiyle kapıdan giriyor. EY'nin çerçevesi de aynı yöne işaret ediyor: savunma "kontrolümüz var mı" sorusundan, "kontrollerimiz pratikte gerçekten çalışıyor mu" sorusuna, sürekli üretilen kanıta dayalı bir modele geçiyor.</p>
+  <a class="source-tag" href="https://www.ey.com/en_gl/insights/consulting/how-can-you-redefine-resilience-for-the-next-frontier-of-vulnerabilities" target="_blank">Kaynak: EY · Küresel Siber Güvenlik Liderlik Çalışması 2026</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>En tehlikeli saldırı, alarmı hiç çaldırmayan saldırıdır. Kimlik bilgisiyle giren saldırgan, sistem için "meşru kullanıcı" görünür: onu durduran şey duvar değil, davranışı sorgulayan bir kontroldür. Sıfır güven (Zero Trust) artık bir slogan değil, "içeridekine de güvenme" ilkesinin operasyonel karşılığı.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Kritik sistemlerde çok faktörlü kimlik doğrulamayı ve ayrıcalıklı hesap izlemeyi öncelikli hale getirin</li>
+      <li>Savunmanızı "kontrol var mı" değil "kontrol çalışıyor mu" ekseninde, kanıtla test edin</li>
+      <li>AI destekli saldırılara karşı en düşük görünürlüğe sahip varlıklarınızı bir listeye çıkarın</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 4 -->
+<div class="article">
+  <h2><span class="num">04</span>Operasyonel Dayanıklılık Bir Uyum Kutusu Değil : Kağıt ile Gerçek Arasındaki Makas</h2>
+  <div class="hr"></div>
+  <p>EY'nin 2026 operasyonel dayanıklılık analizi çarpıcı bir tespitle başlıyor: kurallar yürürlükte, ama dayanıklılık aynı hızda ilerlemedi. Uyum yükseldi, dayanabilme yükselmedi. Sonuç, kurumların kağıt üzerinde gösterebildiği ile pratikte dayanabildiği arasında genişleyen bir boşluk. Denetim ve sektör göstergeleri tek bir mesaj veriyor: operasyonel dayanıklılık riski azalmıyor, hızlanıyor.</p>
+  <p>İki eğilim bu boşluğu büyütüyor. Birincisi yoğunlaşma riski: kritik hizmetler buluta ve yazılım-servis (SaaS) sağlayıcılara taşındıkça, tek bir sağlayıcıya bağımlılık teorik bir kaygı olmaktan çıkıp sistemik bir soruna dönüştü. Bir analizde İsviçre finans sektöründeki operasyonel olayların yaklaşık üçte biri bir tedarikçiden kaynaklanıyor. İkincisi paylaşılan altyapı: saldırılar giderek ortak altyapıyı istismar ediyor, tek bir olay birden fazla kurumu aynı anda vurabiliyor. Öne çıkan reçete net: standartlara bağlı, yaşayan bir çerçeve ve düzenli, ciddi senaryo testleri.</p>
+  <a class="source-tag" href="https://www.ey.com/en_ch/insights/cybersecurity/operational-resilience-2026-progress-vs-pressure" target="_blank">Kaynak: EY · Operational Resilience 2026 : Progress vs. Pressure</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>Bir BCP dokümanının "var" olması, kurumun ayakta kalacağı anlamına gelmez : tıpkı yangın tatbikatı yapmamış bir binanın yönetmeliğe "uyumlu" görünmesi gibi. Kağıt uyum ile gerçek dayanıklılık arasındaki makas, çoğu kurumda kimsenin ölçmediği sessiz bir açıktır. Ve bu açık, ancak kriz gerçekten geldiğinde faturasını keser.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>En kritik üç iş hizmetinizin hangi tek tedarikçiye ya da buluta bağımlı olduğunu tek sayfada çıkarın</li>
+      <li>Dayanıklılığı kurumsal risk iştahına nicel bir gösterge olarak ekleyin : niteliksel bir dipnot olarak değil</li>
+      <li>BCP/DR planınızı masaüstü tatbikatla test edin : belgenin varlığı test yerine geçmez</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 5 -->
+<div class="article">
+  <h2><span class="num">05</span>Türkiye AI Eylem Planı Genelgeyle Yürürlükte : Duyuru Bitti, Uygulama Başladı</h2>
+  <div class="hr"></div>
+  <p>Haziran ayında bir zirvede duyurulan Türkiye Yapay Zeka Eylem Planı, bu ay resmî bir uygulama çerçevesine kavuştu. 18 Ağustos 2026 tarihli Resmî Gazete'de yayımlanan 2026/9 sayılı Cumhurbaşkanlığı Genelgesi ile plan fiilen yürürlüğe girdi. Koordinasyonu Sanayi ve Teknoloji Bakanlığı yürütecek; tüm kamu kurum ve kuruluşları kendilerine verilen görev ve sorumlulukları yerine getirecek. Yeni dönem insan odaklılık, güvenilirlik, etik, dijitallik ve sürdürülebilir kalkınma ilkeleri üzerine kuruluyor.</p>
+  <p>Buradaki nüans kritik: bir stratejinin "açıklanması" ile bir genelgeyle "yürürlüğe girmesi" aynı şey değil. Duyuru bir niyet beyanıdır; genelge, kamu kurumlarına somut görev ve takvim yükleyen bir uygulama aracı. Kamu süreçlerinde veri analitiği, otomasyon ve AI tabanlı karar destek sistemlerinin kullanımının artması hedeflenirken, özel sektörde de yaygınlaşma bekleniyor. Ayrıca KVKK'nın gündemine etken yapay zeka (agentic AI) başlığını taşıması, düzenleyici ilginin otonom AI sistemlerine doğru genişlediğini gösteriyor.</p>
+  <a class="source-tag" href="https://www.resmigazete.gov.tr" target="_blank">Kaynak: 2026/9 sayılı Cumhurbaşkanlığı Genelgesi · 18.08.2026 Resmî Gazete</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>Devlet bir alanı önce "eksen" ilan eder, sonra genelgeyle "görev" haline getirir : bir sonraki durak çoğu zaman denetim kriteridir. Kamuya AI karar destek sistemi zorunluluğu geldiğinde, o kamuyla çalışan özel sektör tedarikçileri de aynı beklentiyle karşılaşır. Genelgeyi "bizi ilgilendirmez" diye okuyan kurum, kendi müşterisinin yükümlülüğünü görmezden gelmiş olur.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Kamuyla iş yapıyorsanız, AI karar destek beklentisinin tedarik zincirinize nasıl yansıyacağını değerlendirin</li>
+      <li>Kurumsal AI kullanımınızı planın "güvenilirlik ve etik" ilkeleriyle eşleştirin</li>
+      <li>Etken (agentic) AI kullanıyorsanız, bu sistemlerin hangi kararı otonom verdiğini bugün belgeleyin</li>
+    </ul>
+  </div>
+</div>
+
+<!-- FRAMEWORK -->
+<div class="section-rule">The Governance · Signature Framework</div>
+
+<div class="framework">
+  <span class="fw-label">The Governance Dayanıklılık Olgunluk Modeli : Kağıt Uyumdan Gerçek Dayanıklılığa</span>
+  <div class="fw-title">Uyum belgeniz var : peki kriz anında ayakta kalır mısınız?</div>
+  <div class="fw-levels">
+    <div class="fw-level">
+      <div class="fw-num">1</div>
+      <div class="fw-content">
+        <h5>Belgesiz</h5>
+        <p>Yazılı BCP/DR planı yok. Kritik süreç ve tedarikçi bağımlılıkları haritalanmamış.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">2</div>
+      <div class="fw-content">
+        <h5>Kağıt Uyum</h5>
+        <p>Plan var ve denetimden geçiyor; ama hiç test edilmedi. "Uyumlu" görünür, dayanıklı değildir.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">3</div>
+      <div class="fw-content">
+        <h5>Test Eden</h5>
+        <p>Masaüstü tatbikatlar başladı. Kritik hizmet-tedarikçi bağımlılıkları çıkarıldı. RTO/RPO tanımlı.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">4</div>
+      <div class="fw-content">
+        <h5>Yönetilen</h5>
+        <p>Dayanıklılık nicel göstergelerle kurul raporlamasında. Üçüncü taraf yoğunlaşma riski izleniyor.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">5</div>
+      <div class="fw-content">
+        <h5>Öngören</h5>
+        <p>Dayanıklılık risk iştahına entegre. Tedarikçinin tedarikçisi haritalı. Senaryolar canlı test ediliyor.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VERİ KARTLARI -->
+<div class="section-rule">Bu Sayıda Kullanılan Veriler</div>
+
+<div class="data-grid">
+  <div class="data-card">
+    <div class="data-num">5<span style="font-size:24px;">%</span></div>
+    <p class="data-desc">S&P 500 direktörlerinin AI deneyimiyle anılan oranı (2022'de %1). Şirketlerin %37'si en az bir direktör için AI deneyimi vurguluyor: gözetim resmîleşiyor, yetkinlik geride.</p>
+    <span class="data-src">Kaynak · 2026 Proxy Sezonu Analizleri</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">82<span style="font-size:24px;">%</span></div>
+    <p class="data-desc">Tespit edilen izinsiz erişimlerin zararlı yazılım içermeyen oranı: saldırılar artık çalınmış kimlik bilgileri ve meşru erişim yollarıyla geliyor.</p>
+    <span class="data-src">Kaynak · EY Küresel Siber Güvenlik Çalışması 2026</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">36<span style="font-size:24px;">%</span></div>
+    <p class="data-desc">EY'ye göre kurumların, AI destekli saldırılara karşı yetersiz görünürlük ve kontrol taşıyan varlık oranı. Görmediğiniz varlığı koruyamazsınız.</p>
+    <span class="data-src">Kaynak · EY Küresel Siber Güvenlik Çalışması 2026</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">1/3</div>
+    <p class="data-desc">Bir analize göre İsviçre finans sektöründeki operasyonel olayların yaklaşık üçte biri bir tedarikçiden kaynaklanıyor: yoğunlaşma riski artık teorik değil.</p>
+    <span class="data-src">Kaynak · EY Operational Resilience 2026</span>
+  </div>
+</div>
+
+<!-- RISK RADAR -->
+<div class="section-rule">Risk Radarı</div>
+
+<div class="radar">
+  <div class="radar-head">
+    <span class="radar-label">⚠ Haftanın Kritik Riski</span>
+    <span class="risk-tag">Yüksek Öncelik</span>
+  </div>
+  <h3>Deployer Sorumluluğu : "Biz O AI'ı Yapmadık" Artık Bir Savunma Değil</h3>
+  <p><strong>Nedir?</strong> AB AI Act denetiminin, sistemi geliştiren sağlayıcıdan sistemi kullanan kuruma (deployer) doğru genişlemesi. Bir AI aracını üretmeyip yalnızca kullanan kurum da artık o aracın davranışından ve olay kanıtından sorumlu tutuluyor.</p>
+  <p><strong>Kurumsal etki:</strong> Yurt dışı bir AI aracını kredi, işe alım, fiyatlama gibi bir kurumsal karara bağlayan her Türk kurumu bu riski taşıyor. Tedarikçinin AI'ında yaşanan bir olay, kullanan kurumun da denetim gündemine giriyor.</p>
+  <p><strong>Temel gerçek:</strong> Bir AI'ı kendiniz üretmemeniz, ondan doğan riski taşımadığınız anlamına gelmez. Kullandığınız aracın kararı, sizin kararınızdır.</p>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Kullandığınız üçüncü taraf AI araçlarını 30 gün içinde envanterleyin: hangi karara etki ediyor?</li>
+      <li>Tedarikçi sözleşmelerine AI olay bildirimi ve kanıt sağlama yükümlülüğü ekleyin</li>
+      <li>"Sadece kullanıyoruz" gerekçesine dayanan AI süreçlerini denetim kapsamına alın</li>
+    </ul>
+  </div>
+</div>
+
+<!-- TOOL BOX -->
+<div class="section-rule">Araç & Yöntem</div>
+
+<div class="toolbox">
+  <span class="tool-tag">Bu Hafta Uygulayın</span>
+  <h3>Dayanıklılık Testi : Kritik Hizmet İçin 5 Soru</h3>
+  <p>Kağıt uyum ile gerçek dayanıklılık arasındaki makası ölçmek için, en kritik iş hizmetinizi beş soruyla test edin: (1) Bu hizmet hangi tek tedarikçiye, buluta ya da sisteme bağımlı : ve o nokta çökerse ne olur? (2) Maksimum tolere edilebilir kesinti süresi (RTO) tanımlı mı, yoksa sadece belgede mi yazıyor? (3) Bu planı en son ne zaman gerçekten test ettiniz : masaüstü tatbikat, gerçek senaryo? (4) Tedarikçinizin tedarikçisini tanıyor musunuz : bağımlılık zinciri nerede bitiyor? (5) Bir kesinti anında kim, neyi, hangi sırayla yapacak : yazılı ve prova edilmiş mi? Bu beş yanıt, kurumunuzun dayanıklılık olgunluk seviyesini gösterir : ve kriz geldiğinde belgeye değil, bu cevaplara dayanırsınız.</p>
+</div>
+
+<!-- TÜRKİYE ODAĞI -->
+<div class="section-rule">Türkiye Odağı</div>
+
+<div class="focus">
+  <span class="focus-flag">Yerel Gündem</span>
+  <h3>Genelge Kamuya Görev Yükledi : Özel Sektör Neden İzlemeli?</h3>
+  <p>Türkiye Yapay Zeka Eylem Planı'nın 2026/9 sayılı genelgeyle yürürlüğe girmesi, ilk bakışta yalnızca kamuyu ilgilendiren bir gelişme gibi görünebilir. Oysa kamu kurumlarının süreçlerine AI tabanlı karar destek sistemleri girdikçe, bu kurumlara hizmet ve ürün sağlayan özel sektör de aynı beklenti çerçevesine dahil olur. Kamunun tedarikçisiyseniz, kamunun AI yönetişim standardı yarın sizin sözleşme şartınız olabilir.</p>
+  <p>İkinci sinyal düzenleyici tarafta. KVKK'nın gündemine etken yapay zeka (agentic AI) başlığını alması, düzenleyici ilginin tek seferlik AI kullanımından, kendi başına karar verebilen otonom sistemlere doğru genişlediğini gösteriyor. Bu, bir sonraki dönemin denetim diline dair güçlü bir ipucu.</p>
+  <p><strong>İç denetçiler ve risk ekipleri için pratik not:</strong> Kurumsal AI kullanımınızı planın beş ilkesiyle (insan odaklılık, güvenilirlik, etik, dijitallik, sürdürülebilirlik) eşleştiren kısa bir öz-değerlendirme yapın. Etken AI kullanıyorsanız, hangi sistemin hangi kararı insan onayı olmadan verdiğini bugün belgeleyin : düzenleyici sorduğunda hazır olun.</p>
+</div>
+
+<!-- READS -->
+<div class="section-rule">Okumanız Gereken</div>
+
+<div class="reads">
+  <div class="read-item">
+    <span class="rn">01</span>
+    <div class="rc">
+      <h4>2026 Proxy Sezonu · Kurul AI Gözetimi Analizleri</h4>
+      <p>Yönetim kurullarında AI gözetiminin resmîleşmesi ile direktör yetkinliği arasındaki açığı ortaya koyan güncel veriler.</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">02</span>
+    <div class="rc">
+      <h4>EY · Operational Resilience 2026: Progress vs. Pressure</h4>
+      <p>Kağıt uyum ile gerçek dayanıklılık arasındaki makası ve üçüncü taraf yoğunlaşma riskini ele alan analiz : ey.com</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">03</span>
+    <div class="rc">
+      <h4>EY · Küresel Siber Güvenlik Liderlik Çalışması 2026</h4>
+      <p>İzinsiz erişimlerin %82'sinin zararlı yazılımsız oluşu ve varlıkların %36'sının AI destekli saldırılara açık kalması : ey.com</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">04</span>
+    <div class="rc">
+      <h4>2026/9 sayılı Cumhurbaşkanlığı Genelgesi · AI Eylem Planı</h4>
+      <p>Türkiye Yapay Zeka Eylem Planı'nı yürürlüğe koyan genelge. Koordinasyon Sanayi ve Teknoloji Bakanlığı'nda : resmigazete.gov.tr</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">05</span>
+    <div class="rc">
+      <h4>AB AI Act · Şeffaflık Denetimi ve Deployer Sorumluluğu</h4>
+      <p>Denetim odağının geliştiriciden kullanıcıya kayması. Üçüncü taraf AI kullanan her kurum için temel okuma : iapp.org</p>
+    </div>
+  </div>
+</div>
+
+<!-- KAPANIŞ SORUSU -->
+<div class="closing-q">
+  <span class="cq-label">Yönetim Kurulu İçin Tek Soru</span>
+  <h3>Kurumunuzun uyum belgeleri denetimden geçiyor : peki o belgelerin anlattığı dayanıklılığı en son ne zaman gerçekten test ettiniz?</h3>
+</div>
+
+<!-- CTA BLOCK -->
+<div class="cta-block">
+  <h3>Bu sayıyı faydalı buldunuz mu?</h3>
+  <p>The Governance'ı ekibinizle paylaşın, LinkedIn'de kaydedin ve sayfamızı takip edin. Kurumsal risk ve teknoloji yönetişiminde Türkiye'nin en nitelikli bağımsız yayınını birlikte büyütelim.</p>
+  <div class="cta-actions">
+    <a href="https://www.linkedin.com/company/thegovernance" class="cta-btn primary">LinkedIn'de Takip Et</a>
+    <a href="https://www.thegovernance.com.tr" class="cta-btn secondary">Bültene Abone Ol</a>
+  </div>
+</div>
+
+<!-- CLOSER -->
+<div class="closer">
+  <div class="ed-note">
+    <h4>Editörden</h4>
+    <p>Bu hafta beş ayrı gelişme aynı cümleyi kurdu: uyum belgesi ile gerçek dayanıklılık aynı şey değil. Kurullar AI'yı gözetmeye başladı ama yetkinlik masada yok; denetim odağı kullanan tarafa kaydı; saldırılar kimliğin içinden geliyor; ve Türkiye'de bir strateji genelgeyle göreve dönüştü. Hepsinde ortak ders: kağıt üzerinde "uyumlu" görünmek, kriz anında ayakta kalmayı garanti etmez. The Governance, bu gelişmeleri haber olarak değil, kararlarınızı etkileyen birer gündem maddesi olarak ele alır. Sorular için her zaman açığım.</p>
+  </div>
+  <div class="sig">
+    <span class="sig-name">Ecem</span>
+    <span class="sig-role">Editör · The Governance</span>
+  </div>
+</div>
+
+</body>
+</html>
