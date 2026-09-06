@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Governance : Sayı 12 · 31 Ağustos 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Mono:wght@300;400&family=Instrument+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bordo:   #8C1F0D;
+    --bordo-m: #B5341A;
+    --ink:     #111009;
+    --paper:   #F5F2EC;
+    --cream:   #EAE5DB;
+    --rule:    #C8C2B6;
+    --mid:     #3D3A34;
+    --light:   #6E6A62;
+    --white:   #FFFFFF;
+    --gold:    #9A7B3A;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.75;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 28px 100px;
+  }
+
+  /* ── NAMEPLATE ── */
+  .nameplate {
+    border-top: 4px solid var(--ink);
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    animation: rise .5s ease both;
+  }
+
+  .brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: .95;
+    color: var(--ink);
+  }
+  .brand em { font-style: normal; color: var(--bordo); }
+
+  .meta { text-align: right; padding-bottom: 4px; }
+  .meta-row {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--light);
+    line-height: 1.9;
+  }
+
+  /* ── AUDIENCE BAR ── */
+  .audience-bar {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 7px 14px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 28px;
+    margin-bottom: 32px;
+  }
+
+  .kicker {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -.5px;
+    margin-bottom: 14px;
+    color: var(--ink);
+  }
+
+  .hero-lead {
+    font-size: 15px;
+    line-height: 1.82;
+    color: var(--mid);
+  }
+
+  /* ── SECTION RULE ── */
+  .section-rule {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+  .section-rule::before {
+    content: '';
+    width: 20px; height: 2px;
+    background: var(--bordo);
+    flex-shrink: 0;
+  }
+  .section-rule::after {
+    content: '';
+    flex: 1; height: 1px;
+    background: var(--rule);
+  }
+
+  /* ── STAT BLOCK ── */
+  .stat-block {
+    background: var(--ink);
+    padding: 28px 32px;
+    margin: 24px 0;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .stat-number em {
+    font-style: normal;
+    color: var(--bordo-m);
+    font-size: 48px;
+  }
+
+  .stat-text { display: flex; flex-direction: column; gap: 6px; }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.45);
+  }
+
+  .stat-desc {
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(255,255,255,.82);
+  }
+
+  .stat-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    color: rgba(255,255,255,.35);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  .stat-link {
+    color: rgba(181,52,26,.8);
+    text-decoration: none;
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    letter-spacing: .1em;
+    display: block;
+    margin-top: 2px;
+  }
+
+  /* ── ARTICLE ── */
+  .article { margin-bottom: 36px; }
+
+  .article h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.2px;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .article h2 .num {
+    color: var(--bordo);
+    font-style: italic;
+    margin-right: 4px;
+  }
+
+  .hr { width: 28px; height: 2px; background: var(--bordo); margin-bottom: 14px; }
+
+  .article p {
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--mid);
+    margin-bottom: 10px;
+  }
+  .article p:last-child { margin-bottom: 0; }
+
+  .pq {
+    border-left: 2px solid var(--bordo);
+    padding: 2px 16px;
+    margin: 18px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--ink);
+  }
+
+  /* ── KAYNAK ETIKETI ── */
+  .source-tag {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .1em;
+    color: var(--light);
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    padding: 2px 8px;
+    margin-top: 6px;
+    text-decoration: none;
+  }
+
+  /* ── EXECUTIVE TAKEAWAY ── */
+  .takeaway {
+    background: var(--cream);
+    border-left: 3px solid var(--bordo);
+    padding: 16px 20px;
+    margin: 20px 0 0;
+  }
+
+  .takeaway-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .takeaway ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .takeaway ul li {
+    font-size: 13.5px;
+    color: var(--ink);
+    line-height: 1.55;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .takeaway ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--bordo);
+    font-size: 11px;
+  }
+
+  /* ── VERİ KARTLARI GRID ── */
+  .data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-bottom: 36px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .data-card {
+    background: var(--paper);
+    padding: 20px 18px;
+  }
+  .data-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--bordo);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .data-desc {
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--mid);
+    margin-bottom: 8px;
+  }
+  .data-src {
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+  @media (max-width: 560px) {
+    .data-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ── THE GOVERNANCE GÖRÜŞÜ ── */
+  .view {
+    background: var(--white);
+    border: 1px solid var(--bordo);
+    border-top: 3px solid var(--bordo);
+    padding: 18px 22px 16px;
+    margin: 22px 0 0;
+  }
+  .view-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 8px;
+    display: block;
+  }
+  .view p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  /* ── KAPANIŞ SORUSU ── */
+  .closing-q {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 36px 32px;
+    margin: 40px 0 36px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .closing-q::before {
+    content: '?';
+    position: absolute;
+    right: 8px; top: -28px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 180px;
+    font-weight: 700;
+    color: rgba(255,255,255,.04);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .closing-q .cq-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: #E07060;
+    margin-bottom: 14px;
+    display: block;
+  }
+  .closing-q h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--white);
+    max-width: 520px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* ── RADAR ── */
+  .radar {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 24px 26px 22px;
+    margin-bottom: 36px;
+  }
+
+  .radar-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+
+  .radar-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #E07060;
+  }
+
+  .risk-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #E07060;
+    border: 1px solid #E07060;
+    padding: 3px 8px;
+  }
+
+  .radar h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+
+  .radar p {
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: #D0CBC3;
+    margin-bottom: 10px;
+  }
+
+  .radar p:last-child { margin-bottom: 0; }
+  .radar strong { color: var(--white); font-weight: 500; }
+
+  .radar .takeaway {
+    background: rgba(255,255,255,.07);
+    border-left: 2px solid var(--bordo-m);
+    margin-top: 18px;
+  }
+  .radar .takeaway-label { color: #E07060; }
+  .radar .takeaway ul li { color: rgba(255,255,255,.82); font-size: 13px; }
+  .radar .takeaway ul li::before { color: #E07060; }
+
+  /* ── TOOL BOX ── */
+  .toolbox {
+    background: var(--cream);
+    border-left: 3px solid var(--gold);
+    padding: 20px 22px 18px;
+    margin-bottom: 36px;
+  }
+
+  .tool-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .toolbox h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+
+  .toolbox p {
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: var(--mid);
+  }
+
+  /* ── FOCUS ── */
+  .focus {
+    border: 1px solid var(--rule);
+    padding: 22px 22px 20px;
+    margin-bottom: 36px;
+  }
+
+  .focus-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .focus h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    color: var(--ink);
+  }
+
+  .focus p {
+    font-size: 14px;
+    line-height: 1.82;
+    color: var(--mid);
+    margin-bottom: 10px;
+  }
+  .focus p:last-child { margin-bottom: 0; }
+
+  /* ── FRAMEWORK ── */
+  .framework {
+    background: var(--ink);
+    padding: 28px 28px 24px;
+    margin: 32px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .framework::before {
+    content: 'TG';
+    position: absolute;
+    right: -12px; top: -8px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 120px;
+    font-weight: 700;
+    color: rgba(255,255,255,.03);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .fw-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .fw-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 18px;
+    line-height: 1.2;
+  }
+
+  .fw-levels { display: flex; flex-direction: column; gap: 2px; }
+
+  .fw-level {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 14px;
+    background: rgba(255,255,255,.04);
+  }
+
+  .fw-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--bordo-m);
+    min-width: 28px;
+    line-height: 1;
+  }
+
+  .fw-content h5 {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.6);
+    margin-bottom: 2px;
+  }
+
+  .fw-content p {
+    font-size: 12.5px;
+    color: rgba(255,255,255,.7);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* ── READS ── */
+  .reads { margin-bottom: 36px; }
+
+  .read-item {
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .read-item:last-child { border-bottom: none; }
+
+  .rn {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--light);
+    min-width: 20px;
+    padding-top: 2px;
+  }
+
+  .rc h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    color: var(--ink);
+  }
+
+  .rc p {
+    font-size: 13px;
+    color: var(--mid);
+    line-height: 1.65;
+  }
+
+  /* ── CTA BLOCK ── */
+  .cta-block {
+    background: var(--bordo);
+    padding: 32px 28px;
+    margin: 36px 0;
+    text-align: center;
+  }
+
+  .cta-block h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  .cta-block p {
+    font-size: 13.5px;
+    color: rgba(255,255,255,.78);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    padding: 11px 20px;
+    text-decoration: none;
+    transition: all .2s;
+    display: inline-block;
+  }
+
+  .cta-btn.primary {
+    background: var(--white);
+    color: var(--bordo);
+  }
+
+  .cta-btn.secondary {
+    background: transparent;
+    color: rgba(255,255,255,.8);
+    border: 1px solid rgba(255,255,255,.35);
+  }
+
+  /* ── CLOSER ── */
+  .closer {
+    border-top: 3px double var(--ink);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .ed-note h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--ink);
+  }
+
+  .ed-note p {
+    font-size: 12.5px;
+    color: var(--mid);
+    line-height: 1.7;
+    max-width: 400px;
+  }
+
+  .sig { text-align: right; flex-shrink: 0; }
+
+  .sig-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    display: block;
+    margin-bottom: 2px;
+    color: var(--ink);
+  }
+
+  .sig-role {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 560px) {
+    .brand { font-size: 34px; }
+    .hero h1 { font-size: 26px; }
+    .stat-block { flex-direction: column; gap: 16px; }
+    .stat-number { font-size: 56px; }
+    .closer { flex-direction: column; }
+    .sig { text-align: left; }
+    .cta-actions { flex-direction: column; align-items: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAMEPLATE -->
+<header class="nameplate">
+  <div class="brand">The<em>.</em><br>Governance</div>
+  <div class="meta">
+    <span class="meta-row">Sayı 12 · 31 Ağustos 2026</span>
+    <span class="meta-row">Kurumsal Risk & Yönetişim</span>
+    <span class="meta-row">Haftalık · Türkçe</span>
+  </div>
+</header>
+
+<div class="audience-bar">
+  Yönetim Kurulu · CIO · CISO · İç Denetim · Risk & Compliance · Hukuk
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="kicker">Bu Sayının Odağı</span>
+  <h1>Durduramadığınız Sistemi Devreye Aldınız : Etken AI'nın Kontrol Açığı</h1>
+  <p class="hero-lead">
+    Bu hafta gündemin ortak teması otonomiydi. Kurumlar, kendi başına karar verip aksiyon alan etken (agentic) yapay zeka sistemlerini hızla devreye alıyor : ama çoğu, bu sistemleri gerektiğinde durduramıyor. Bir araştırmaya göre kurumların üçte biri, kontrolden çıkan bir AI ajanını kapatamayacağını kabul ediyor. Aynı hafta AB Yapay Zeka Yasası'nın denetim dalgası başladı: AB AI Ofisi ve ulusal otoriteler ilk fiili incelemelere girişti. Etken AI artık bir iç kontrol ve denetim konusu; SOX kapsamına giren finansal süreçlere dokunduğunda, denetçinin test edeceği bir kontrole dönüşüyor. Ve Türkiye'de KVKK gündemine etken yapay zekayı aldı. Ortak payda tek: bir sistemi devreye almak, onu yönetebildiğiniz anlamına gelmiyor.
+  </p>
+</section>
+
+<!-- STAT BLOCK 1 -->
+<div class="stat-block">
+  <div class="stat-number">35<em>%</em></div>
+  <div class="stat-text">
+    <span class="stat-label">Kaçak AI Ajanı · Durdurulamama Oranı</span>
+    <p class="stat-desc">Bir araştırmaya göre kurumların yüzde 35'i, kontrolden çıkan bir AI ajanını gerektiğinde durduramayacağını kabul ediyor. Yüzde 36'sının ise ajan devreye alma konusunda hiçbir resmî planı yok. Otonom bir sistemi kapatamıyorsanız, onu yönetmiyorsunuz demektir.</p>
+    <a class="stat-link" href="https://www.thegovernance.com.tr" target="_blank">→ The Governance · Etken AI Kontrol Analizi</a>
+  </div>
+</div>
+
+<!-- SECTION -->
+<div class="section-rule">Bu Haftanın Özeti : 5 Kritik Gelişme</div>
+
+<!-- ARTICLE 1 -->
+<div class="article">
+  <h2><span class="num">01</span>Kill-Switch Açığı : Kurumlar Durduramadıkları Ajanları Devreye Alıyor</h2>
+  <div class="hr"></div>
+  <p>Etken (agentic) yapay zeka, kurumsal AI'ın bir sonraki dalgası: artık sadece içerik üretmeyen, kendi başına araç çağıran, karar veren ve aksiyon alan sistemler. Ama benimseme hızı, kontrol kapasitesini geride bıraktı. Bir araştırmaya göre kurumların yüzde 35'i, kontrolden çıkan bir AI ajanını durduramayacağını kabul ediyor; yüzde 36'sının ise ajan devreye alma konusunda yazılı bir planı bile yok. Bir başka araştırma daha da çarpıcı: AI ajanı çalıştıran kurumların büyük çoğunluğu, son on iki ayda en az bir ajan kaynaklı güvenlik ihlali yaşadı.</p>
+  <div class="pq">"Bir insan oturumunu kapatmak ile bir AI ajanını durdurmak aynı şey değil: ajan, araçları zincirleyip başka ajanlara devredip birden çok sistemde çalışmaya devam edebilir. Etki alanı, statik kontrolün tepki hızından daha hızlı büyüyor."</div>
+  <p>Buradaki asıl mesele bir teknoloji sorunu değil, bir yönetişim sorunu. Bir AI ajanının "geri alınabilir" olması gerekiyor: araçları iptal edilebilmeli, hafızası dondurulabilmeli, oturumu askıya alınabilmeli. Bunlar tasarım aşamasında düşünülmediyse, kriz anında yapılamıyor. Otonomi, statik kimlik-erişim yönetiminin (IAM) reaksiyon süresinden daha hızlı yayılan bir etki alanı yaratıyor.</p>
+  <a class="source-tag" href="https://www.thegovernance.com.tr" target="_blank">Kaynak: Etken AI Kontrol Araştırmaları, 2026 (bir araştırmaya göre)</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>Bir sistemi devreye almak kolay; onu durdurabilmek yönetişimdir. "Kapatma düğmesi" (kill-switch) olmayan bir otonom ajan, hiçbir kurumsal risk çerçevesinin başka bir teknolojide kabul etmeyeceği bir açıktır. Kurulun sorması gereken soru "AI ajanı kullanıyor muyuz" değil: "kontrolden çıkarsa, onu kim, nasıl, ne kadar sürede durdurabilir?"</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Devreye aldığınız her AI ajanı için bir "kapatma protokolü" tanımlayın: kim yetkili, hangi düğme, ne kadar sürede?</li>
+      <li>Ajanların hangi araçlara ve sistemlere erişebildiğini değil, hangi kararı otonom verebildiğini envanterleyin</li>
+      <li>Statik IAM'in yeterli olduğu varsayımını sorgulayın: otonom sistemler çalışma anında (runtime) izlenmeli</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 2 -->
+<div class="article">
+  <h2><span class="num">02</span>AB AI Act Denetim Dalgası Başladı : Enforcement Artık Takvimli</h2>
+  <div class="hr"></div>
+  <p>AB Yapay Zeka Yasası'nın yüksek riskli sistemlere ilişkin geçiş dönemi tamamlandı ve denetim fiilen başladı. Bu ay, AB AI Ofisi ve ona bağlı çok sayıda ulusal piyasa gözetim otoritesi, ilk planlı uygunluk incelemeleri dalgasına girişiyor. İlk talepler üç düzenlemeye tabi sektöre odaklanıyor: insan kaynaklarında otomatik özgeçmiş tarama araçları, perakende bankacılıkta algoritmik kredi değerlendirme sistemleri ve sigortada AI kullanımı. Odak noktası, yüksek riskli sistemlerin teknik dokümantasyonu ve kayıtları.</p>
+  <p>Bu, "AB erteledi, rahatladık" algısının neden yanıltıcı olduğunu bir kez daha gösteriyor. Yüksek riskli bazı yükümlülüklerin tarihi 2027'ye ötelenmiş olabilir; ama şeffaflık, teknik dosya ve sürekli izleme gibi yükümlülükler yürürlükte ve artık denetleniyor. Denetim, bir belge hazırlamış olmakla değil, o belgenin arkasındaki sistemin gerçekten yükümlülüğü karşılamasıyla ilgileniyor.</p>
+  <a class="source-tag" href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank">Kaynak: Avrupa Komisyonu · AI Act Denetim Takvimi, Eylül 2026</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>Denetimin başladığı gün, hazırlık için geç kalınmış gündür. İK, kredi ve sigortada AI kullanan Türk kurumları için sinyal net: AB pazarına dokunan ya da AB'li iş ortağı olan her kurum, bu denetim mantığının dolaylı kapsamındadır. Teknik dosyası olmayan sistem, denetlenebilir bir sistem değildir : sadece bir riskin adı konmamış halidir.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>İK, kredi ve sigorta süreçlerinizde AI kullanıyorsanız, her sistem için teknik dosya ve kayıt (log) düzenini bugün kontrol edin</li>
+      <li>AB'li iş ortağı ya da müşteriniz varsa, onların AI Act yükümlülüğünün size nasıl yansıyacağını sorun</li>
+      <li>"Yüksek riskli" tanımına giren sistemlerinizi ayrı bir envanterde izleyin</li>
+    </ul>
+  </div>
+</div>
+
+<!-- STAT BLOCK 2 -->
+<div class="stat-block">
+  <div class="stat-number">52<em>%</em></div>
+  <div class="stat-text">
+    <span class="stat-label">EY · Onaysız Departman AI Girişimleri</span>
+    <p class="stat-desc">EY araştırmasına göre departman düzeyindeki AI girişimlerinin yüzde 52'si resmî onay ya da gözetim olmadan çalışıyor. Liderlerin yüzde 78'i, AI benimsemesinin kurumun bunu yönetme kapasitesini geride bıraktığını söylüyor. Kontrol, hızın gerisinde.</p>
+    <a class="stat-link" href="https://www.ey.com/en_us/newsroom/2026/03/ey-survey-autonomous-ai-adoption-surges-at-tech-companies-as-oversight-falls-behind" target="_blank">→ EY · Otonom AI Benimseme Araştırması 2026</a>
+  </div>
+</div>
+
+<!-- ARTICLE 3 -->
+<div class="article">
+  <h2><span class="num">03</span>Etken AI Artık Bir İç Denetim Konusu : "AI Politikası" Test Edilebilir Kontrole Dönüşüyor</h2>
+  <div class="hr"></div>
+  <p>Yıllarca AI politikası, etik çerçeveler ve gönüllü rehberlerden ibaretti. Bu dönem kapanıyor. Bir AI ajanı finansal süreçlere, erişimlere ya da finansal raporlamayı besleyen veri akışlarına dokunduğunda, artık bir iç kontrol riski haline geliyor : yani denetçinin kontrol ve kanıt üzerinden test edebileceği, düzenleyicinin soruşturabileceği bir konu. "AI politikamız var" demek yetmiyor; o politikanın gerçekten işleyen bir kontrol olarak var olması gerekiyor.</p>
+  <p>EY'nin araştırması bu boşluğu somutluyor: departman düzeyindeki AI girişimlerinin yüzde 52'si resmî onay ya da gözetim olmadan çalışıyor, liderlerin yüzde 78'i benimsemenin yönetme kapasitesini aştığını söylüyor. İç denetim için bu, denetim evreninin genişlemesi demek: AI ajanının kimliği, yetki kapsamı, karar izi ve değiştirilemez denetim kaydı artık test edilmesi gereken kontroller. İnsan aktörler etrafında tasarlanmış klasik uyum programları, aksiyon alan bir ajanı kapsamıyor.</p>
+  <a class="source-tag" href="https://www.ey.com/en_us/newsroom/2026/03/ey-survey-autonomous-ai-adoption-surges-at-tech-companies-as-oversight-falls-behind" target="_blank">Kaynak: EY · Otonom AI Benimseme Araştırması 2026</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>İç denetimin yıllardır sorduğu soru şuydu: "insanların fazla yetkisi var mı?" 2026'nın daha zor sorusu şu: "AI ajanlarınızın fazla yetkisi var mı, ve bunu kurula, denetçiye, düzenleyiciye kanıtlayabiliyor musunuz?" Bir ajanın ne yapmaya yetkili olduğu belgelenmemişse, o yetki denetlenemez : ve denetlenemeyen yetki, yönetilmeyen risktir.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Finansal süreçlere dokunan AI ajanlarını iç kontrol matrisinize bir kontrol noktası olarak ekleyin</li>
+      <li>Her ajan için değiştirilemez denetim izi (immutable audit trail) ve insan sorumluluğu tanımlayın</li>
+      <li>Bir sonraki iç denetim planına "Etken AI Yetki ve Kontrol Testi" başlığını yazın</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 4 -->
+<div class="article">
+  <h2><span class="num">04</span>AI Ajanı İhlalleri Yaygınlaştı : Statik Kimlik Kontrolü Artık Yetmiyor</h2>
+  <div class="hr"></div>
+  <p>Etken AI'nın güvenlik cephesi hızla olgunlaşan bir tehdit tablosu gösteriyor. Bir araştırmaya göre AI ajanı çalıştıran kurumların büyük çoğunluğu, son on iki ayda en az bir ajan kaynaklı güvenlik ihlali yaşadı; en sık iki olay türü veri sızıntısı ve güvenilmeyen ya da kötü niyetli girdilerle manipülasyon. Bu, birkaç şanssız kurumu etkileyen bir kuyruk riski değil; ajanları uygun bir kontrol katmanı olmadan çalıştıran kurumlar için neredeyse ortanca sonuç.</p>
+  <p>Sorunun kökeni, otonom sistemlerin geleneksel uygulama güvenliğinin varsaydığı sınırları geçersiz kılması. Bir ajan; özerklik, durum tutma (statefulness) ve araç erişimi özellikleriyle, komut ve veri arasındaki sınırı bulanıklaştırıyor. Statik kimlik-erişim yönetimi, tek seferlik kurallar ve sonradan bakılan kayıtlar yetmiyor. Gereken şey çalışma anında (runtime) uygulanan kontrol: her ajana benzersiz kimlik, göreve özel yetkilendirme, canlı politika uygulaması ve çok-ajanlı akışlarda kapsam yalıtımı.</p>
+  <a class="source-tag" href="https://obot.ai/blog/ai-agent-control-plane-governance-2026/" target="_blank">Kaynak: AI Ajanı Güvenlik Araştırmaları, 2026 (bir araştırmaya göre)</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>Statik IAM, hareket etmeyen bir dünya için tasarlandı. Aksiyon alan bir ajan, o dünyayı geride bıraktı. Bir ajana "kim olduğunu" sormak yetmiyor; "şu an ne yapmaya çalıştığını" da sormak gerekiyor. Güvenliği kuruluma değil, çalışma anına taşımayan kurum, en hızlı büyüyen tehdit sınıfına en yavaş tepki veren kurum olur.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Her AI ajanına insan hesaplarından ayrı, benzersiz bir kimlik ve en düşük yetki tanımlayın</li>
+      <li>Ajanların prompt, araç çağrısı ve devir işlemlerini çalışma anında izleyen bir kontrol katmanı kurun</li>
+      <li>Çok-ajanlı iş akışlarında kapsam yalıtımı (scope isolation) uygulayın: bir ajanın açığı diğerine yayılmasın</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 5 -->
+<div class="article">
+  <h2><span class="num">05</span>Türkiye'de Etken AI Düzenleyici Radara Girdi : KVKK ve Yeni Siber Çerçeve</h2>
+  <div class="hr"></div>
+  <p>Otonom AI'ya düzenleyici ilgi Türkiye'de de başladı. KVKK, gündemine etken yapay zeka (agentic AI) başlığını aldı ve bu sistemlerin artan otonomi düzeyi ile veri işleme kapasitesinin, kişisel verilerin korunması bakımından yeni değerlendirme alanları doğurduğunu vurguladı. Bu, tek seferlik AI kullanımından, kendi başına karar verip veri işleyen sistemlere doğru düzenleyici bakışın genişlediğinin ilk resmî işareti. Aynı dönemde, 7590 sayılı Kanun ile siber güvenlik ve elektronik haberleşme alanında yapılan düzenlemeler, yetkilerin Siber Güvenlik Başkanlığı çatısı altında toplanmasını sürdürüyor.</p>
+  <p>Buradaki mesaj, kurumsal dünya için erken bir uyarı. Bir sistem kendi başına karar verip kişisel veri işlediğinde, KVKK'nın "veri sorumlusu kim, hangi işleme şartına dayanıyor, karar nasıl açıklanabilir" soruları çok daha karmaşık hale geliyor. Otonom bir ajanın verdiği kararın hukuki dayanağını ve açıklanabilirliğini bugünden belgelemeyen kurum, düzenleyici bu alana tam girdiğinde hazırlıksız yakalanır.</p>
+  <a class="source-tag" href="https://www.kvkk.gov.tr" target="_blank">Kaynak: KVKK · Etken Yapay Zeka (Agentic AI) Gündemi · 7590 sayılı Kanun</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>KVKK bir başlığı gündemine aldığında, o başlık zamanla bir ilke kararına ya da denetim kriterine dönüşür. Etken AI'nın radara girmesi, "otonom karar" ile "veri sorumlusunun sorumluluğu" arasındaki boşluğun yakında kapanacağının işareti. Bir ajanın verdiği kararın hukuki dayanağını gösteremiyorsanız, o kararı kurumunuz veriyor sayılır : sorumluluk sizde kalır.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Kişisel veri işleyen etken AI sistemlerinizin hukuki dayanağını ve veri sorumlusunu bugün belgeleyin</li>
+      <li>Otonom bir ajanın verdiği kararın açıklanabilirliğini (neden bu karar?) kayıt altına alın</li>
+      <li>Siber güvenlik bildirim yükümlülüklerinizi yeni Başkanlık çatısına göre güncel tutun</li>
+    </ul>
+  </div>
+</div>
+
+<!-- FRAMEWORK -->
+<div class="section-rule">The Governance · Signature Framework</div>
+
+<div class="framework">
+  <span class="fw-label">The Governance Etken AI Kontrol Olgunluk Modeli : Devreye Almaktan Durdurabilmeye</span>
+  <div class="fw-title">AI ajanınız çalışıyor : peki kontrolden çıkarsa durdurabilir misiniz?</div>
+  <div class="fw-levels">
+    <div class="fw-level">
+      <div class="fw-num">1</div>
+      <div class="fw-content">
+        <h5>Görünmez</h5>
+        <p>Ajanlar bireysel ve kontrolsüz devrede. Envanter yok, kimin hangi ajanı çalıştırdığı bilinmiyor.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">2</div>
+      <div class="fw-content">
+        <h5>Listeli</h5>
+        <p>Ajan envanteri var ama yetki sınırları belirsiz. Kapatma protokolü yok; kriz anında ne yapılacağı yazılı değil.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">3</div>
+      <div class="fw-content">
+        <h5>Yetkilendirilmiş</h5>
+        <p>Her ajanın benzersiz kimliği ve göreve özel yetkisi var. Kapatma düğmesi tanımlı. Denetim izi tutuluyor.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">4</div>
+      <div class="fw-content">
+        <h5>İzlenen</h5>
+        <p>Çalışma anında (runtime) izleme aktif. Prompt, araç çağrısı ve devirler canlı denetleniyor. Kapsam yalıtımı var.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">5</div>
+      <div class="fw-content">
+        <h5>Yönetilen</h5>
+        <p>Etken AI kurumsal risk iştahında. Kurul seviyesinde raporlama. Selektif izolasyonla anlık, kanıtlı müdahale mümkün.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VERİ KARTLARI -->
+<div class="section-rule">Bu Sayıda Kullanılan Veriler</div>
+
+<div class="data-grid">
+  <div class="data-card">
+    <div class="data-num">35<span style="font-size:24px;">%</span></div>
+    <p class="data-desc">Bir araştırmaya göre kaçak bir AI ajanını gerektiğinde durduramayacağını kabul eden kurumların oranı. Kapatamadığınız sistemi yönetemezsiniz.</p>
+    <span class="data-src">Kaynak · Etken AI Kontrol Araştırmaları 2026</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">52<span style="font-size:24px;">%</span></div>
+    <p class="data-desc">EY'ye göre departman düzeyindeki AI girişimlerinin resmî onay ya da gözetim olmadan çalışan oranı. Gölge AI artık departman seviyesinde.</p>
+    <span class="data-src">Kaynak · EY Otonom AI Araştırması 2026</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">78<span style="font-size:24px;">%</span></div>
+    <p class="data-desc">EY'ye göre AI benimsemesinin, kurumun bunu etkin yönetme kapasitesini geride bıraktığını söyleyen liderlerin oranı.</p>
+    <span class="data-src">Kaynak · EY Otonom AI Araştırması 2026</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">36<span style="font-size:24px;">%</span></div>
+    <p class="data-desc">Bir araştırmaya göre AI ajanı devreye alma konusunda hiçbir resmî planı olmayan kurumların oranı. Otonomi plansız devrede.</p>
+    <span class="data-src">Kaynak · Etken AI Kontrol Araştırmaları 2026</span>
+  </div>
+</div>
+
+<!-- RISK RADAR -->
+<div class="section-rule">Risk Radarı</div>
+
+<div class="radar">
+  <div class="radar-head">
+    <span class="radar-label">⚠ Haftanın Kritik Riski</span>
+    <span class="risk-tag">Yüksek Öncelik</span>
+  </div>
+  <h3>Kill-Switch Açığı : Durdurulamayan Otonom Ajan</h3>
+  <p><strong>Nedir?</strong> Kendi başına karar verip aksiyon alan bir AI ajanının, kontrolden çıktığında güvenli ve seçici biçimde durdurulamaması. Ajan araçları zincirleyip başka ajanlara devredebildiği için, bir insan oturumunu kapatmak gibi basit bir müdahale yetmiyor.</p>
+  <p><strong>Kurumsal etki:</strong> Ajan birden çok sistemde çalışmaya devam edebilir; etki alanı statik kontrolün tepki hızından hızlı büyür. Finansal süreçlere dokunan bir ajan söz konusuysa, bu doğrudan bir iç kontrol ve raporlama riski.</p>
+  <p><strong>Temel gerçek:</strong> Bir sistemi devreye almak, onu yönetebildiğiniz anlamına gelmez. Kapatma protokolü tasarım aşamasında kurulmadıysa, kriz anında kurulamaz.</p>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Devrede olan her AI ajanı için 30 gün içinde bir kapatma protokolü yazın: yetkili kişi, yöntem, süre</li>
+      <li>Ajanların çok-ajanlı akışlarda birbirine devrettiği yetkileri haritalayın</li>
+      <li>Siber olay tatbikatınıza "kontrolden çıkan ajan" senaryosunu ekleyin</li>
+    </ul>
+  </div>
+</div>
+
+<!-- TOOL BOX -->
+<div class="section-rule">Araç & Yöntem</div>
+
+<div class="toolbox">
+  <span class="tool-tag">Bu Hafta Uygulayın</span>
+  <h3>Etken AI Kontrolü : Ajan Başına 5 Soru</h3>
+  <p>Devreye aldığınız her AI ajanı için şu beş soruyu yanıtlayın: (1) Bu ajan hangi kararları insan onayı olmadan verebilir : sınırları yazılı mı? (2) Hangi sistemlere ve verilere erişebiliyor : yetkisi göreve özel mi, yoksa geniş mi? (3) Kontrolden çıkarsa kim, hangi düğmeyle, ne kadar sürede durdurabilir? (4) Verdiği her kararın değiştirilemez bir denetim izi (audit trail) var mı : sonradan "neden bu karar" sorusuna cevap verebiliyor musunuz? (5) Bu ajan başka bir ajana yetki devredebiliyor mu : ediyorsa bu zincir izlenebilir mi? Bu beş yanıt, bir ajanı "çalışan" durumdan "yönetilen" duruma taşır : ve denetçi, düzenleyici ya da kurul sorduğunda hazır olursunuz.</p>
+</div>
+
+<!-- TÜRKİYE ODAĞI -->
+<div class="section-rule">Türkiye Odağı</div>
+
+<div class="focus">
+  <span class="focus-flag">Yerel Gündem</span>
+  <h3>KVKK Etken AI'yı Gündemine Aldı : "Otonom Karar" Kimin Sorumluluğu?</h3>
+  <p>KVKK'nın etken yapay zekayı (agentic AI) gündemine alması, ilk bakışta teknik bir başlık gibi görünebilir. Oysa altında çok pratik bir soru yatıyor: kendi başına karar verip kişisel veri işleyen bir sistem söz konusu olduğunda, veri sorumlusu kim, hangi işleme şartına dayanılıyor ve bu karar ilgili kişiye nasıl açıklanacak? Otonomi arttıkça, bu sorulara cevap vermek zorlaşıyor : ama sorumluluk kurumda kalmaya devam ediyor.</p>
+  <p>Türkiye'de bugün etken AI'ya özel bir ilke kararı yok. Ancak KVKK'nın bir başlığı gündemine alması, o başlığın zamanla somut bir yükümlülüğe dönüşmesinin habercisi : Türkiye Yapay Zeka Eylem Planı da yönetişimi merkeze almış durumda. Aynı dönemde siber güvenlik yetkilerinin tek çatı altında toplanması, denetim ve bildirim beklentilerinin de sıkılaşacağına işaret ediyor.</p>
+  <p><strong>İç denetçiler ve risk ekipleri için pratik not:</strong> Kurumunuzda kişisel veri işleyen bir etken AI sistemi varsa, üç şeyi bugün belgeleyin: veri sorumlusunun kim olduğu, kararın hukuki dayanağı ve kararın açıklanabilirliği. Düzenleyici bu alana tam girdiğinde, hazır olan kurum ile aceleyle uyum arayan kurum arasındaki fark bu belgeler olacak.</p>
+</div>
+
+<!-- READS -->
+<div class="section-rule">Okumanız Gereken</div>
+
+<div class="reads">
+  <div class="read-item">
+    <span class="rn">01</span>
+    <div class="rc">
+      <h4>EY · Otonom AI Benimseme Araştırması 2026</h4>
+      <p>Departman AI girişimlerinin %52'sinin gözetimsiz oluşu ve liderlerin %78'inin "benimseme yönetimi aştı" demesi : ey.com</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">02</span>
+    <div class="rc">
+      <h4>AB AI Act · Denetim Dalgası ve Yüksek Riskli Sistemler</h4>
+      <p>AB AI Ofisi ve ulusal otoritelerin İK, kredi ve sigortaya odaklanan ilk uygunluk incelemeleri : ec.europa.eu</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">03</span>
+    <div class="rc">
+      <h4>Etken AI Kontrol Düzlemi ve Kapatma Açığı</h4>
+      <p>Kaçak ajanı durduramama (%35), ajan ihlallerinin yaygınlığı ve runtime kontrol ihtiyacına dair güncel araştırma derlemesi.</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">04</span>
+    <div class="rc">
+      <h4>Etken AI ve İç Kontrol : SOX-İlgili AI Riski</h4>
+      <p>Finansal süreçlere dokunan AI ajanlarının denetlenebilir kontrole dönüşmesi. İç denetim için yeni test alanı.</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">05</span>
+    <div class="rc">
+      <h4>KVKK · Etken Yapay Zeka (Agentic AI) Gündemi</h4>
+      <p>Otonom sistemlerin veri işleme kapasitesine dair KVKK değerlendirmesi. Türkiye'de düzenleyici bakışın genişlemesi : kvkk.gov.tr</p>
+    </div>
+  </div>
+</div>
+
+<!-- KAPANIŞ SORUSU -->
+<div class="closing-q">
+  <span class="cq-label">Yönetim Kurulu İçin Tek Soru</span>
+  <h3>Kurumunuzdaki bir AI ajanı yarın kontrolden çıkarsa : onu kim, hangi düğmeyle, ne kadar sürede durdurabilir?</h3>
+</div>
+
+<!-- CTA BLOCK -->
+<div class="cta-block">
+  <h3>Bu sayıyı faydalı buldunuz mu?</h3>
+  <p>The Governance'ı ekibinizle paylaşın, LinkedIn'de kaydedin ve sayfamızı takip edin. Kurumsal risk ve teknoloji yönetişiminde Türkiye'nin en nitelikli bağımsız yayınını birlikte büyütelim.</p>
+  <div class="cta-actions">
+    <a href="https://www.linkedin.com/company/thegovernance" class="cta-btn primary">LinkedIn'de Takip Et</a>
+    <a href="https://www.thegovernance.com.tr" class="cta-btn secondary">Bültene Abone Ol</a>
+  </div>
+</div>
+
+<!-- CLOSER -->
+<div class="closer">
+  <div class="ed-note">
+    <h4>Editörden</h4>
+    <p>Bu hafta beş ayrı gelişme aynı cümleyi kurdu: bir sistemi devreye almak, onu yönetebildiğiniz anlamına gelmiyor. Kurumlar durduramadıkları AI ajanlarını çalıştırıyor, AB denetimi başladı, etken AI iç denetimin ve KVKK'nın gündemine girdi. Hepsinde ortak ders: otonomi bir kolaylık değil, bir kontrol sorumluluğudur. En kritik soru bir ajanı devreye almak değil, gerektiğinde durdurabilmektir. The Governance, bu gelişmeleri haber olarak değil, kararlarınızı etkileyen birer gündem maddesi olarak ele alır. Sorular için her zaman açığım.</p>
+  </div>
+  <div class="sig">
+    <span class="sig-name">Ecem</span>
+    <span class="sig-role">Editör · The Governance</span>
+  </div>
+</div>
+
+</body>
+</html>
