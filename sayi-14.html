@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Governance : Sayı 14 · 21 Eylül 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Mono:wght@300;400&family=Instrument+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bordo:   #8C1F0D;
+    --bordo-m: #B5341A;
+    --ink:     #111009;
+    --paper:   #F5F2EC;
+    --cream:   #EAE5DB;
+    --rule:    #C8C2B6;
+    --mid:     #3D3A34;
+    --light:   #6E6A62;
+    --white:   #FFFFFF;
+    --gold:    #9A7B3A;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.75;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 28px 100px;
+  }
+
+  /* ── NAMEPLATE ── */
+  .nameplate {
+    border-top: 4px solid var(--ink);
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    animation: rise .5s ease both;
+  }
+
+  .brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: .95;
+    color: var(--ink);
+  }
+  .brand em { font-style: normal; color: var(--bordo); }
+
+  .meta { text-align: right; padding-bottom: 4px; }
+  .meta-row {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--light);
+    line-height: 1.9;
+  }
+
+  /* ── AUDIENCE BAR ── */
+  .audience-bar {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 7px 14px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 28px;
+    margin-bottom: 32px;
+  }
+
+  .kicker {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -.5px;
+    margin-bottom: 14px;
+    color: var(--ink);
+  }
+
+  .hero-lead {
+    font-size: 15px;
+    line-height: 1.82;
+    color: var(--mid);
+  }
+
+  /* ── SECTION RULE ── */
+  .section-rule {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+  .section-rule::before {
+    content: '';
+    width: 20px; height: 2px;
+    background: var(--bordo);
+    flex-shrink: 0;
+  }
+  .section-rule::after {
+    content: '';
+    flex: 1; height: 1px;
+    background: var(--rule);
+  }
+
+  /* ── STAT BLOCK ── */
+  .stat-block {
+    background: var(--ink);
+    padding: 28px 32px;
+    margin: 24px 0;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .stat-number em {
+    font-style: normal;
+    color: var(--bordo-m);
+    font-size: 48px;
+  }
+
+  .stat-text { display: flex; flex-direction: column; gap: 6px; }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.45);
+  }
+
+  .stat-desc {
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(255,255,255,.82);
+  }
+
+  .stat-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    color: rgba(255,255,255,.35);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  .stat-link {
+    color: rgba(181,52,26,.8);
+    text-decoration: none;
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    letter-spacing: .1em;
+    display: block;
+    margin-top: 2px;
+  }
+
+  /* ── ARTICLE ── */
+  .article { margin-bottom: 36px; }
+
+  .article h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.2px;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .article h2 .num {
+    color: var(--bordo);
+    font-style: italic;
+    margin-right: 4px;
+  }
+
+  .hr { width: 28px; height: 2px; background: var(--bordo); margin-bottom: 14px; }
+
+  .article p {
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--mid);
+    margin-bottom: 10px;
+  }
+  .article p:last-child { margin-bottom: 0; }
+
+  .pq {
+    border-left: 2px solid var(--bordo);
+    padding: 2px 16px;
+    margin: 18px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--ink);
+  }
+
+  /* ── KAYNAK ETIKETI ── */
+  .source-tag {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .1em;
+    color: var(--light);
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    padding: 2px 8px;
+    margin-top: 6px;
+    text-decoration: none;
+  }
+
+  /* ── EXECUTIVE TAKEAWAY ── */
+  .takeaway {
+    background: var(--cream);
+    border-left: 3px solid var(--bordo);
+    padding: 16px 20px;
+    margin: 20px 0 0;
+  }
+
+  .takeaway-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .takeaway ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .takeaway ul li {
+    font-size: 13.5px;
+    color: var(--ink);
+    line-height: 1.55;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .takeaway ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--bordo);
+    font-size: 11px;
+  }
+
+  /* ── VERİ KARTLARI GRID ── */
+  .data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-bottom: 36px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .data-card {
+    background: var(--paper);
+    padding: 20px 18px;
+  }
+  .data-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--bordo);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .data-desc {
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--mid);
+    margin-bottom: 8px;
+  }
+  .data-src {
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+  @media (max-width: 560px) {
+    .data-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ── THE GOVERNANCE GÖRÜŞÜ ── */
+  .view {
+    background: var(--white);
+    border: 1px solid var(--bordo);
+    border-top: 3px solid var(--bordo);
+    padding: 18px 22px 16px;
+    margin: 22px 0 0;
+  }
+  .view-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 8px;
+    display: block;
+  }
+  .view p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  /* ── KAPANIŞ SORUSU ── */
+  .closing-q {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 36px 32px;
+    margin: 40px 0 36px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .closing-q::before {
+    content: '?';
+    position: absolute;
+    right: 8px; top: -28px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 180px;
+    font-weight: 700;
+    color: rgba(255,255,255,.04);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .closing-q .cq-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: #E07060;
+    margin-bottom: 14px;
+    display: block;
+  }
+  .closing-q h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--white);
+    max-width: 520px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* ── RADAR ── */
+  .radar {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 24px 26px 22px;
+    margin-bottom: 36px;
+  }
+
+  .radar-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+
+  .radar-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #E07060;
+  }
+
+  .risk-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #E07060;
+    border: 1px solid #E07060;
+    padding: 3px 8px;
+  }
+
+  .radar h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+
+  .radar p {
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: #D0CBC3;
+    margin-bottom: 10px;
+  }
+
+  .radar p:last-child { margin-bottom: 0; }
+  .radar strong { color: var(--white); font-weight: 500; }
+
+  .radar .takeaway {
+    background: rgba(255,255,255,.07);
+    border-left: 2px solid var(--bordo-m);
+    margin-top: 18px;
+  }
+  .radar .takeaway-label { color: #E07060; }
+  .radar .takeaway ul li { color: rgba(255,255,255,.82); font-size: 13px; }
+  .radar .takeaway ul li::before { color: #E07060; }
+
+  /* ── TOOL BOX ── */
+  .toolbox {
+    background: var(--cream);
+    border-left: 3px solid var(--gold);
+    padding: 20px 22px 18px;
+    margin-bottom: 36px;
+  }
+
+  .tool-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .toolbox h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+
+  .toolbox p {
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: var(--mid);
+  }
+
+  /* ── FOCUS ── */
+  .focus {
+    border: 1px solid var(--rule);
+    padding: 22px 22px 20px;
+    margin-bottom: 36px;
+  }
+
+  .focus-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .focus h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    color: var(--ink);
+  }
+
+  .focus p {
+    font-size: 14px;
+    line-height: 1.82;
+    color: var(--mid);
+    margin-bottom: 10px;
+  }
+  .focus p:last-child { margin-bottom: 0; }
+
+  /* ── FRAMEWORK ── */
+  .framework {
+    background: var(--ink);
+    padding: 28px 28px 24px;
+    margin: 32px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .framework::before {
+    content: 'TG';
+    position: absolute;
+    right: -12px; top: -8px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 120px;
+    font-weight: 700;
+    color: rgba(255,255,255,.03);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .fw-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .fw-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 18px;
+    line-height: 1.2;
+  }
+
+  .fw-levels { display: flex; flex-direction: column; gap: 2px; }
+
+  .fw-level {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 14px;
+    background: rgba(255,255,255,.04);
+  }
+
+  .fw-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--bordo-m);
+    min-width: 28px;
+    line-height: 1;
+  }
+
+  .fw-content h5 {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.6);
+    margin-bottom: 2px;
+  }
+
+  .fw-content p {
+    font-size: 12.5px;
+    color: rgba(255,255,255,.7);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* ── READS ── */
+  .reads { margin-bottom: 36px; }
+
+  .read-item {
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .read-item:last-child { border-bottom: none; }
+
+  .rn {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--light);
+    min-width: 20px;
+    padding-top: 2px;
+  }
+
+  .rc h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    color: var(--ink);
+  }
+
+  .rc p {
+    font-size: 13px;
+    color: var(--mid);
+    line-height: 1.65;
+  }
+
+  /* ── CTA BLOCK ── */
+  .cta-block {
+    background: var(--bordo);
+    padding: 32px 28px;
+    margin: 36px 0;
+    text-align: center;
+  }
+
+  .cta-block h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  .cta-block p {
+    font-size: 13.5px;
+    color: rgba(255,255,255,.78);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    padding: 11px 20px;
+    text-decoration: none;
+    transition: all .2s;
+    display: inline-block;
+  }
+
+  .cta-btn.primary {
+    background: var(--white);
+    color: var(--bordo);
+  }
+
+  .cta-btn.secondary {
+    background: transparent;
+    color: rgba(255,255,255,.8);
+    border: 1px solid rgba(255,255,255,.35);
+  }
+
+  /* ── CLOSER ── */
+  .closer {
+    border-top: 3px double var(--ink);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .ed-note h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--ink);
+  }
+
+  .ed-note p {
+    font-size: 12.5px;
+    color: var(--mid);
+    line-height: 1.7;
+    max-width: 400px;
+  }
+
+  .sig { text-align: right; flex-shrink: 0; }
+
+  .sig-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    display: block;
+    margin-bottom: 2px;
+    color: var(--ink);
+  }
+
+  .sig-role {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 560px) {
+    .brand { font-size: 34px; }
+    .hero h1 { font-size: 26px; }
+    .stat-block { flex-direction: column; gap: 16px; }
+    .stat-number { font-size: 56px; }
+    .closer { flex-direction: column; }
+    .sig { text-align: left; }
+    .cta-actions { flex-direction: column; align-items: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAMEPLATE -->
+<header class="nameplate">
+  <div class="brand">The<em>.</em><br>Governance</div>
+  <div class="meta">
+    <span class="meta-row">Sayı 14 · 21 Eylül 2026</span>
+    <span class="meta-row">Kurumsal Risk & Yönetişim</span>
+    <span class="meta-row">Haftalık · Türkçe</span>
+  </div>
+</header>
+
+<div class="audience-bar">
+  Yönetim Kurulu · CIO · CISO · İç Denetim · Risk & Compliance · Hukuk
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="kicker">Bu Sayının Odağı</span>
+  <h1>Yaptırım Hem Birleşiyor Hem Katmanlanıyor : Bir Ceza Devri Kapanırken Diğeri Açılıyor</h1>
+  <p class="hero-lead">
+    Bu hafta gündemin ortak teması yaptırımın yön değiştirmesiydi. ABD yabancı rüşvet yasasının uygulamasını gevşetirken, İngiltere, Fransa ve İsviçre savcılıkları boşluğu doldurmak için ortak bir uluslararası yolsuzluk görev gücü kurdu: enforcement bir yerde geri çekilirken başka yerde sıkılaşıyor. Aynı anda veri koruma tarafında yeni bir "çifte ceza" dönemi başladı: tek bir yapay zeka olayı, hem GDPR hem de AB Yapay Zeka Yasası kapsamında iki ayrı cezayı aynı anda tetikleyebiliyor. Üç ayrı cephenin (rüşvet, veri, AI) ortak paydası ise tek bir şey: üçüncü taraflar ve politika ile pratik arasındaki makas. Ortak ders: bir düzenleyici geri adım attığında risk azalmıyor, sadece yer değiştiriyor ve çoğu zaman katmanlanarak geri geliyor.
+  </p>
+</section>
+
+<!-- STAT BLOCK 1 -->
+<div class="stat-block">
+  <div class="stat-number">68<em>%</em></div>
+  <div class="stat-text">
+    <span class="stat-label">EY · Üçüncü Taraf Kaynaklı Bütünlük Olayları</span>
+    <p class="stat-desc">EY Global Integrity Report'a göre, önemli bir bütünlük (integrity) olayı yaşadığını söyleyen kurumların üçte ikisinden fazlasında (yüzde 68) olay bir üçüncü tarafı içeriyor. Rüşvet ve yolsuzluk denetiminin en zayıf halkası hâlâ tedarikçiler, aracılar ve iş ortakları : yani kurumun doğrudan kontrol etmediği yerler.</p>
+    <a class="stat-link" href="https://www.ey.com/en_gl/insights/forensic-integrity-services/global-integrity-report" target="_blank">→ EY · Global Integrity Report</a>
+  </div>
+</div>
+
+<!-- SECTION -->
+<div class="section-rule">Bu Haftanın Özeti : 5 Kritik Gelişme</div>
+
+<!-- ARTICLE 1 -->
+<div class="article">
+  <h2><span class="num">01</span>ABD Rüşvet Yasasını Gevşetti, Diğerleri Boşluğu Doldurdu : Enforcement Yer Değiştirdi</h2>
+  <div class="hr"></div>
+  <p>Küresel yolsuzlukla mücadelede önemli bir kayma yaşanıyor. ABD, yabancı rüşvet yasası FCPA'in uygulamasında bir duraklama ve kapsam daraltmasına giderken, uluslararası kuruluşlar bu boşluğu doldurmak için harekete geçti. İngiltere'nin Ciddi Dolandırıcılık Ofisi (SFO), Fransa'nın Ulusal Mali Savcılığı (PNF) ve İsviçre Başsavcılığı (OAG), bilgi paylaşımı ve strateji koordinasyonu için ortak bir Uluslararası Yolsuzlukla Mücadele Görev Gücü kurdu. Ayrıca İngiltere, Avustralya, Kanada, Yeni Zelanda ve ABD'li otoriteler birlikte "Yabancı Rüşvet Göstergeleri" başlıklı bir kılavuz yayımladı; SFO ise kurumsal uyum programlarının değerlendirilmesine dair yeni bir rehber çıkardı.</p>
+  <div class="pq">"Bir yargı bölgesinin geri çekilmesi, riskin ortadan kalkması değil yer değiştirmesidir: aynı davranış artık farklı bir bayrak altında, çoğu zaman daha koordineli bir soruşturmayla karşınıza çıkabilir."</div>
+  <p>Kurumsal anlamı net. Çok uluslu bir şirketin "ABD gevşetti" diye rahatlaması yanıltıcı: rüşvet vakalarının büyük çoğunluğu üçüncü taraf aracılar (acenteler, danışmanlar, distribütörler, ortak girişim ortakları) üzerinden gerçekleşiyor ve bir kurum, bilmesi gereken durumdayken bir üçüncü tarafın rüşvetinden sorumlu tutulabiliyor. EY'nin bütünlük araştırması da aynı noktaya işaret ediyor: önemli olayların yüzde 68'i bir üçüncü tarafı içeriyor ve finansal kuruluşların rüşvet-yolsuzluk (ABC) programları çoğu zaman kara para aklama programları kadar olgunlaşmış değil.</p>
+  <a class="source-tag" href="https://www.ey.com/en_us/insights/forensic-integrity-services/anti-bribery-and-corruption-policy-is-not-enough" target="_blank">Kaynak: EY · "Anti-Bribery and Corruption Policy Is Not Enough" · Uluslararası Görev Gücü Açıklamaları</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>Rüşvet uyumunda en tehlikeli cümle "biz kimseye rüşvet vermeyiz" değil, "aracımızın ne yaptığını bilmiyoruz"dur. Bir yolsuzluk vakasının kapıdan girdiği yer neredeyse her zaman üçüncü taraf. Bir düzenleyicinin geri çekilmesi de koruma sağlamaz: enforcement küreselleşti, koordine oldu ve bir bayrak inerken bir başkası kalkıyor. Politikanız değil, üçüncü taraf durum tespitiniz sizi korur.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Üçüncü taraf rüşvet-yolsuzluk durum tespitinizi risk bazlı ve belgeli hale getirin: yüksek riskli aracıda daha derin inceleme</li>
+      <li>ABC programınızın olgunluğunu AML programınızla kıyaslayın: aradaki fark, denetimin ilk bulacağı boşluktur</li>
+      <li>"ABD gevşetti" varsayımına dayanan hiçbir kararı programınıza yansıtmayın: enforcement çok bayraklı</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 2 -->
+<div class="article">
+  <h2><span class="num">02</span>Çifte Ceza Dönemi Başladı : Tek Bir AI Olayı, İki Ayrı Yaptırım</h2>
+  <div class="hr"></div>
+  <p>Veri koruma ve yapay zeka yaptırımı bu yıl birbirine kenetlendi. AB Yapay Zeka Yasası'nın yüksek riskli sistemlere ilişkin kuralları Ağustos 2026'da tam yürürlüğe girerken, GDPR kısıtlamasız işlemeye devam ediyor. Sonuç, kurumların bir "çifte ceza" kıskacına girmesi: aynı olay hem GDPR (kişisel verinin korunması) hem de AB Yapay Zeka Yasası (AI sisteminin güvenliği) kapsamında ayrı ayrı cezalandırılabiliyor. İki yasa farklı koruma amaçlarına hizmet ettiği için, iki ayrı cezanın aynı anda uygulanması hukuken mümkün; AB Yapay Zeka Yasası'nın cezaları küresel cironun yüzde 7'sine ya da 35 milyon avroya kadar çıkabiliyor.</p>
+  <p>Bu, kişisel verinin uzun süredir taşıdığı "teknoloji-nötr" korumanın sonu anlamına geliyor. Eskiden bir veri koruma sorumlusunun (DPO) meselesi olan bir konu, artık kurul seviyesinde bir tırmandırma başlatıyor. Bir yapay zeka aracını kullanan kurum, tek bir hatalı işleme ile iki ayrı denetim otoritesinin radarına aynı anda girebiliyor. Uzmanların önerdiği savunma tek: AI sistemlerini sistematik biçimde envanterlemek, insan gözetimini net süreçlere bağlamak ve iki yasayı ayrı ayrı değil, entegre bir uyum stratejisiyle ele almak.</p>
+  <a class="source-tag" href="https://www.dwt.com/blogs/privacy--security-law-blog/2026/09/trust-issues-september-2026" target="_blank">Kaynak: Veri Koruma ve AI Act Kesişimi Analizleri, Eylül 2026</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>"Cezayı bir kere öderiz" varsayımı artık geçerli değil. Aynı olayın iki ayrı yasadan iki ayrı ceza doğurması, uyumu tek bir departmanın değil, hukuk, veri koruma ve teknoloji fonksiyonlarının ortak sorumluluğuna taşıyor. GDPR uyumunuz varken AI Act tarafını görmezden gelmek, kapıyı bir yandan kilitleyip diğer yandan açık bırakmaktır.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Kişisel veri işleyen AI sistemlerinizi tek bir envanterde toplayın: hem GDPR hem AI Act açısından etiketleyin</li>
+      <li>İnsan gözetimini (human oversight) belgelenebilir bir sürece bağlayın: iki yasa da bunu arıyor</li>
+      <li>Uyumu en katı standarda göre kurun: iki yasadan hangisi daha sıkıysa onu evrensel uygulayın</li>
+    </ul>
+  </div>
+</div>
+
+<!-- STAT BLOCK 2 -->
+<div class="stat-block">
+  <div class="stat-number">443<em>/gün</em></div>
+  <div class="stat-text">
+    <span class="stat-label">GDPR · Günlük Veri İhlali Bildirimi</span>
+    <p class="stat-desc">Avrupa veri koruma otoriteleri artık günde 443 veri ihlali bildirimi alıyor: yıllık yüzde 22 artış. Cezaların yüzde 78'i ise 1.000 avro ile 500.000 avro bandında; yalnızca yüzde 5'i 1 milyon avroyu aşıyor. Asıl risk manşetlere çıkan dev cezalar değil, sürekli işleyen orta ölçekli yaptırım ve itibar kaybı.</p>
+    <a class="stat-link" href="https://www.engagecompliance.co/gdpr-fines-2026" target="_blank">→ GDPR Yaptırım Verileri 2026 (bir araştırmaya göre)</a>
+  </div>
+</div>
+
+<!-- ARTICLE 3 -->
+<div class="article">
+  <h2><span class="num">03</span>GDPR Yaptırımında Asıl Risk Dev Cezalar Değil : Sessiz, Sürekli Orta Ölçek</h2>
+  <div class="hr"></div>
+  <p>GDPR yaptırımının kamuoyu algısı, büyük teknoloji şirketlerine kesilen milyar avroluk cezalarla şekilleniyor. Ama veriler farklı bir hikaye anlatıyor. Bir araştırmaya göre kayıt altındaki cezaların yüzde 78'i 1.000 ile 500.000 avro arasında; yalnızca yüzde 5'i 1 milyon avroyu aşıyor. Yani ortalama bir kurum için gerçek tehdit, nadir görülen bir dev ceza değil, sürekli işleyen orta ölçekli yaptırım artı itibar kaybı ve müşteri kaybı. Avrupa otoriteleri günde 443 ihlal bildirimi alıyor ve bildirim sayısı yıllık yüzde 22 artıyor.</p>
+  <p>Enforcement ayrıca yeni cephelere kayıyor. Otomatik karar verme (automated decision-making) ve gölge veri tabanları giderek daha fazla mercek altında: bir sivil toplum kuruluşu, Almanya'nın en büyük kredi derecelendirme kuruluşuna karşı gizli bir "gölge veritabanı" ile kredi skorlaması yaptığı iddiasıyla resmi uyarı yayımladı ve GDPR'ın otomatik karar ve şeffaflık hükümleri üzerinden bir toplu dava hazırlığına girişti. Davranışsal reklamcılık, uluslararası aktarım, çocuk verisi, çerez onayı ve veri sahibi başvurularının yanıtsız kalması ise en sık görülen ihlal kalıpları olmayı sürdürüyor.</p>
+  <a class="source-tag" href="https://www.engagecompliance.co/gdpr-fines-2026" target="_blank">Kaynak: GDPR Yaptırım Analizleri, Eylül 2026 (bir araştırmaya göre)</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>Milyar avroluk cezalar manşet olur ama çoğu kurumu asıl yoran, üç yılda bir gelen büyük darbe değil, sürekli sızan orta ölçekli yaptırımlardır. "Bize o kadar büyük ceza gelmez" doğru olabilir; ama yanlış soru. Doğru soru: veri sahibi başvurularına zamanında yanıt veriyor muyuz, çerez onayımız gerçek mi, otomatik kararlarımızı açıklayabiliyor muyuz? Risk büyük değil, sürekli.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Veri sahibi başvuru (DSAR) yanıt sürenizi ölçün: en sık ceza, yanıtsız ya da geç kalan başvurudan geliyor</li>
+      <li>Otomatik karar verdiğiniz her süreci belgeleyin ve açıklanabilir kılın: yeni enforcement cephesi burası</li>
+      <li>Çerez onayı ve davranışsal reklam meşru dayanağınızı gözden geçirin: karanlık desen (dark pattern) denetimi artıyor</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 4 -->
+<div class="article">
+  <h2><span class="num">04</span>Üç Cephenin Tek Kökü : Üçüncü Taraf ve Politika-Pratik Makası</h2>
+  <div class="hr"></div>
+  <p>Bu haftanın rüşvet, veri koruma ve yapay zeka gelişmeleri ayrı başlıklar gibi görünüyor; ama altlarında tek bir ortak kök var. Birincisi üçüncü taraf: rüşvet vakalarının çoğu aracılar üzerinden geliyor, bütünlük olaylarının yüzde 68'i üçüncü tarafı içeriyor, veri ihlallerinin ve AI risklerinin büyük kısmı tedarikçi ve satıcı zincirinde doğuyor. Kurumun doğrudan görmediği yer, her üç cephede de en zayıf halka.</p>
+  <p>İkincisi politika ile pratik arasındaki makas. EY'nin bütünlük araştırması, liderlerin bütünlük hakkında söyledikleri ile yaptıkları arasındaki açığın büyüdüğünü gösteriyor. Bir ABC politikasının, bir GDPR prosedürünün ya da bir AI yönetişim çerçevesinin "var olması", pratikte çalıştığı anlamına gelmiyor. Denetçinin, düzenleyicinin ve savcının sorduğu soru aynı: belgeniz var da, işliyor mu, ve bunu kanıtlayabiliyor musunuz? İç denetim için bu, üç ayrı konuyu ayrı ayrı değil, ortak kök üzerinden ele alma fırsatı.</p>
+  <a class="source-tag" href="https://www.ey.com/en_gl/insights/forensic-integrity-services/global-integrity-report" target="_blank">Kaynak: EY · Global Integrity Report · Politika-Pratik Açığı Analizi</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>Rüşvet, veri ve AI'yı üç ayrı ada gibi yönetmek kurumu yorar ve aynı boşluğu üç kez üretir. Üçünün de kök nedeni aynı: görmediğiniz üçüncü taraf ve test etmediğiniz politika. Tek bir üçüncü taraf yönetişimi ve tek bir "politika gerçekten çalışıyor mu" disiplini, üç cepheyi birden güçlendirir. Ayrı ayrı kovalamak yerine ortak kökü kapatın.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Üçüncü taraf yönetişimini rüşvet, veri koruma ve AI risklerini birlikte kapsayacak tek bir çerçevede toplayın</li>
+      <li>Her kritik politika için "en son ne zaman test edildi, kanıtı nerede" sorusunu bir kontrol noktası yapın</li>
+      <li>İç denetim planında bu üç konuyu ayrı silolar yerine ortak kök (üçüncü taraf + politika-pratik) üzerinden kurgulayın</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 5 -->
+<div class="article">
+  <h2><span class="num">05</span>Türkiye'ye Yansıma : AI Verisi, Yurt Dışı Aktarım ve Rüşvet Denetiminin Kesişimi</h2>
+  <div class="hr"></div>
+  <p>Küresel gündemin üç başlığı da Türkiye'ye doğrudan değiyor. Veri tarafında, Avrupa Veri Koruma Kurulu'nun (EDPB) üretken yapay zeka kapsamında web kazıma ve anonimleştirmeye ilişkin yeni rehber taslağı, KVKK'nın üretken AI yaklaşımıyla aynı yöne işaret ediyor: bir AI modeline aktarılan kişisel veri, çoğu zaman bir işleme, bazen bir yurt dışı aktarım faaliyeti. KVKK'nın aydınlatma ile açık rızayı ayrı belgeye bağlayan ilke kararı da hâlâ yürürlükte; bu iki katman üst üste geldiğinde, tek bir dikkatsiz AI kullanımı birden fazla KVKK yükümlülüğünü aynı anda tetikleyebiliyor.</p>
+  <p>Rüşvet tarafında ise küresel enforcement'ın koordineli hale gelmesi, uluslararası iş yapan Türk şirketleri için doğrudan risk. Bir Türk şirketi, ABD, İngiltere ya da AB pazarına dokunan bir işlemde üçüncü taraf aracının davranışından sorumlu tutulabilir; ve MASAK çerçevesindeki yükümlülükler bu tabloyla örtüşüyor. Ortak ders: rüşvet, veri ve AI uyumunu ayrı ayrı değil, üçüncü taraf ve kanıt ekseninde birlikte yönetmek gerekiyor.</p>
+  <a class="source-tag" href="https://www.kvkk.gov.tr/Icerik/8547/uretken-yapay-zeka-ve-kisisel-verilerin-korunmasi-rehberi-15-soruda" target="_blank">Kaynak: KVKK · Üretken AI Rehberi · EDPB Anonimleştirme Taslağı (8 Temmuz 2026)</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>Türkiye'de rüşvet, veri ve AI çoğu zaman üç ayrı ekip, üç ayrı çerçeve. Oysa küresel enforcement bunları tek bir kurumsal sorumluluk olarak görüyor. Uluslararası iş yapan bir Türk şirketi için asıl kör nokta, üçünü de birbirinden bağımsız yönetmek. Üçüncü taraf durum tespitini bir kere yapıp üç cepheyi birden beslemek, hem daha güçlü hem daha ucuz.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Uluslararası iş ortaklarınız için üçüncü taraf durum tespitini rüşvet, veri ve AI risklerini birlikte kapsayacak şekilde yapın</li>
+      <li>AI araçlarına aktarılan kişisel veriyi KVKK işleme ve yurt dışı aktarım hükümleri açısından değerlendirin</li>
+      <li>MASAK ve ABC yükümlülüklerinizi küresel koordineli enforcement senaryosuna göre gözden geçirin</li>
+    </ul>
+  </div>
+</div>
+
+<!-- FRAMEWORK -->
+<div class="section-rule">The Governance · Signature Framework</div>
+
+<div class="framework">
+  <span class="fw-label">The Governance Yakınsak Uyum Modeli : Üç Cepheyi Tek Kökten Yönetmek</span>
+  <div class="fw-title">Rüşvet, veri ve AI'yı ayrı ada gibi mi yönetiyorsunuz, tek kökten mi?</div>
+  <div class="fw-levels">
+    <div class="fw-level">
+      <div class="fw-num">1</div>
+      <div class="fw-content">
+        <h5>Silolu</h5>
+        <p>Rüşvet, veri koruma ve AI ayrı ekipler, ayrı çerçeveler. Üçüncü taraf üç kez, farklı biçimde değerlendiriliyor.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">2</div>
+      <div class="fw-content">
+        <h5>Haberdar</h5>
+        <p>Cephelerin bağlantısı görülüyor ama koordinasyon yok. Politikalar var, ama test edilmiyor; kanıt üretilmiyor.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">3</div>
+      <div class="fw-content">
+        <h5>Ortak Envanter</h5>
+        <p>Üçüncü taraf envanteri tek merkezde. Durum tespiti bir kez yapılıp üç cepheyi birden besliyor.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">4</div>
+      <div class="fw-content">
+        <h5>Test Eden</h5>
+        <p>Her politika düzenli test ediliyor, kanıtı saklanıyor. Politika-pratik makası ölçülüyor ve kapatılıyor.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">5</div>
+      <div class="fw-content">
+        <h5>Yakınsak</h5>
+        <p>Rüşvet, veri, AI tek bir yönetişim çatısında. Kurul seviyesinde raporlama. Enforcement değişince refleks hazır.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VERİ KARTLARI -->
+<div class="section-rule">Bu Sayıda Kullanılan Veriler</div>
+
+<div class="data-grid">
+  <div class="data-card">
+    <div class="data-num">68<span style="font-size:24px;">%</span></div>
+    <p class="data-desc">EY'ye göre önemli bütünlük olaylarının üçüncü taraf içerdiği oran. Rüşvet-yolsuzluk denetiminin en zayıf halkası kurumun doğrudan görmediği yer.</p>
+    <span class="data-src">Kaynak · EY Global Integrity Report</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">7<span style="font-size:24px;">%</span></div>
+    <p class="data-desc">AB Yapay Zeka Yasası'nın küresel ciro üzerinden kesebileceği azami ceza oranı (ya da 35 milyon avro). GDPR ile üst üste binebiliyor.</p>
+    <span class="data-src">Kaynak · AB Yapay Zeka Yasası, Madde 99</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">443<span style="font-size:20px;">/gün</span></div>
+    <p class="data-desc">Avrupa veri koruma otoritelerine yapılan günlük ihlal bildirimi. Yıllık yüzde 22 artış: enforcement manşetlerde değil, tabanda büyüyor.</p>
+    <span class="data-src">Kaynak · GDPR Yaptırım Verileri 2026</span>
+  </div>
+  <div class="data-card">
+    <div class="data-num">78<span style="font-size:24px;">%</span></div>
+    <p class="data-desc">GDPR cezalarının 1.000 ile 500.000 avro bandında kalan oranı. Asıl risk dev ceza değil, sürekli işleyen orta ölçekli yaptırım.</p>
+    <span class="data-src">Kaynak · GDPR Yaptırım Verileri 2026</span>
+  </div>
+</div>
+
+<!-- RISK RADAR -->
+<div class="section-rule">Risk Radarı</div>
+
+<div class="radar">
+  <div class="radar-head">
+    <span class="radar-label">⚠ Haftanın Kritik Riski</span>
+    <span class="risk-tag">Yüksek Öncelik</span>
+  </div>
+  <h3>Üçüncü Taraf Kör Noktası : Rüşvette de, Veride de, AI'da da Aynı Kapı</h3>
+  <p><strong>Nedir?</strong> Kurumun doğrudan kontrol etmediği üçüncü tarafların (aracılar, tedarikçiler, satıcılar, iş ortakları) üç ayrı cephede birden risk kaynağı olması. Rüşvet vakalarının çoğu aracı üzerinden geliyor, bütünlük olaylarının yüzde 68'i üçüncü tarafı içeriyor, veri ve AI risklerinin büyük kısmı tedarikçi zincirinde doğuyor.</p>
+  <p><strong>Kurumsal etki:</strong> Üç ayrı ekip üçüncü tarafı üç ayrı kez, farklı biçimde değerlendirdiğinde, hem maliyet üçe katlanıyor hem de aralarındaki boşluktan risk sızıyor. Küresel enforcement koordine olurken, dağınık üçüncü taraf yönetimi en hızlı büyüyen açık.</p>
+  <p><strong>Temel gerçek:</strong> Bir kurum, görmediği üçüncü tarafın davranışından sorumlu tutulabilir. "Bilmiyordum" bir savunma değil; "bilmesi gereken durumdaydı" bir sorumluluk ölçütü.</p>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Üçüncü taraf durum tespitini 30 gün içinde tek bir merkezi envanterde birleştirin: rüşvet, veri, AI birlikte</li>
+      <li>Yüksek riskli aracı ve tedarikçilerde derinleştirilmiş, belgeli inceleme uygulayın</li>
+      <li>Sözleşmelere üç cepheyi de kapsayan denetim, bilgilendirme ve uyum taahhütleri ekleyin</li>
+    </ul>
+  </div>
+</div>
+
+<!-- TOOL BOX -->
+<div class="section-rule">Araç & Yöntem</div>
+
+<div class="toolbox">
+  <span class="tool-tag">Bu Hafta Uygulayın</span>
+  <h3>Yakınsak Üçüncü Taraf Kontrolü : 5 Soru</h3>
+  <p>Üçüncü taraf riskini rüşvet, veri ve AI cephelerinde birlikte yönetip yönetmediğinizi beş soruda test edin: (1) Üçüncü taraf envanteriniz tek merkezde mi, yoksa her ekip kendi listesini mi tutuyor? (2) Bir aracı ya da tedarikçiyi değerlendirirken rüşvet, veri koruma ve AI risklerine aynı anda mı bakıyorsunuz? (3) Yüksek riskli bir üçüncü taraf için durum tespiti derinliğiniz risk seviyesine göre artıyor mu? (4) Sözleşmeleriniz üç cepheyi de kapsayan denetim ve bilgilendirme hakkı içeriyor mu? (5) Bir üçüncü taraf kaynaklı olay çıktığında (rüşvet, veri ihlali ya da AI sapması) devreye girecek tek bir müdahale akışınız var mı? Bu beş yanıt, üç ayrı siloyu tek bir yakınsak üçüncü taraf yönetişimine dönüştürür : hem daha güçlü hem daha ucuz.</p>
+</div>
+
+<!-- TÜRKİYE ODAĞI -->
+<div class="section-rule">Türkiye Odağı</div>
+
+<div class="focus">
+  <span class="focus-flag">Yerel Gündem</span>
+  <h3>Koordineli Küresel Enforcement Türkiye'ye Ne Söylüyor?</h3>
+  <p>Bu haftanın küresel mesajı : yaptırımın koordineli ve katmanlı hale gelmesi : uluslararası iş yapan Türk şirketleri için doğrudan sonuç doğuruyor. Rüşvet tarafında, ABD'nin geri çekilmesi bir rahatlama değil: İngiltere, Fransa ve İsviçre'nin ortak görev gücü, bir işlemin birden fazla yargı bölgesinde aynı anda soruşturulabileceği anlamına geliyor. ABD, İngiltere ya da AB pazarına dokunan bir Türk şirketi, üçüncü taraf aracısının davranışından sorumlu tutulabilir.</p>
+  <p>Veri tarafında ise EDPB'nin üretken AI ve web kazıma rehberi, KVKK'nın üretken AI yaklaşımıyla aynı çizgide ilerliyor. Bir AI aracına aktarılan kişisel veri, KVKK açısından bir işleme ve çoğu zaman bir yurt dışı aktarım; aydınlatma-rıza ayrımı kararıyla üst üste geldiğinde tek bir dikkatsiz kullanım birden fazla yükümlülüğü tetikliyor.</p>
+  <p><strong>İç denetçiler ve risk ekipleri için pratik not:</strong> Rüşvet (MASAK/ABC), veri koruma (KVKK) ve AI uyumunu ayrı silolar yerine tek bir üçüncü taraf yönetişimi altında birleştirin. Üçüncü taraf durum tespitini bir kez, üç cepheyi kapsayacak şekilde yapın. Küresel enforcement koordine olurken, dağınık uyum en pahalı seçenektir.</p>
+</div>
+
+<!-- READS -->
+<div class="section-rule">Okumanız Gereken</div>
+
+<div class="reads">
+  <div class="read-item">
+    <span class="rn">01</span>
+    <div class="rc">
+      <h4>EY · Global Integrity Report & "ABC Policy Is Not Enough"</h4>
+      <p>Bütünlük olaylarının %68'inin üçüncü taraf içermesi ve ABC programlarının AML kadar olgun olmaması : ey.com</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">02</span>
+    <div class="rc">
+      <h4>Uluslararası Yolsuzlukla Mücadele Görev Gücü · SFO, PNF, OAG</h4>
+      <p>ABD geri çekilirken İngiltere, Fransa ve İsviçre'nin ortak görev gücü ve "Yabancı Rüşvet Göstergeleri" kılavuzu.</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">03</span>
+    <div class="rc">
+      <h4>GDPR ve AB Yapay Zeka Yasası · Çifte Ceza</h4>
+      <p>Tek bir AI olayının hem GDPR hem AI Act kapsamında iki ayrı cezayı tetiklemesi; teknoloji-nötr korumanın sonu.</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">04</span>
+    <div class="rc">
+      <h4>GDPR Yaptırım Verileri 2026</h4>
+      <p>Günde 443 ihlal bildirimi; cezaların %78'i 1.000-500.000 avro bandında. Asıl risk sürekli orta ölçekli yaptırım.</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">05</span>
+    <div class="rc">
+      <h4>KVKK · Üretken AI Rehberi & EDPB Anonimleştirme Taslağı</h4>
+      <p>AI'a aktarılan kişisel verinin işleme ve yurt dışı aktarım boyutu; web kazıma için lawful basis gerekliliği : kvkk.gov.tr</p>
+    </div>
+  </div>
+</div>
+
+<!-- KAPANIŞ SORUSU -->
+<div class="closing-q">
+  <span class="cq-label">Yönetim Kurulu İçin Tek Soru</span>
+  <h3>Rüşvet, veri ve AI risklerini aynı üçüncü tarafta üç ayrı ekip üç ayrı kez mi değerlendiriyor : yoksa tek bir yönetişimle bir kez mi?</h3>
+</div>
+
+<!-- CTA BLOCK -->
+<div class="cta-block">
+  <h3>Governance gündemini kararlarınızı etkilemeden önce görün</h3>
+  <p>The Governance'ı haber olduktan sonra değil, karar anından önce okuyun. Türkiye'nin bağımsız GRC bültenine ücretsiz abone olun; her Pazartesi, yönetici masasında olması gereken gelişmeler.</p>
+  <div class="cta-actions">
+    <a href="https://www.thegovernance.com.tr" class="cta-btn primary">Bültene Ücretsiz Abone Ol</a>
+    <a href="https://www.linkedin.com/company/thegovernance" class="cta-btn secondary">LinkedIn'de Takip Et</a>
+  </div>
+</div>
+
+<!-- CLOSER -->
+<div class="closer">
+  <div class="ed-note">
+    <h4>Editörden</h4>
+    <p>Bu hafta üç ayrı cephe : rüşvet, veri, yapay zeka : aynı iki gerçeği gösterdi: enforcement bir yerde geri çekilirken başka yerde sıkılaşıyor, ve her cephenin kök nedeni aynı: görmediğiniz üçüncü taraf ile test etmediğiniz politika. ABD rüşvette geri adım attı, diğerleri görev gücü kurdu; GDPR ve AI Act çifte cezayı başlattı; ve hepsinin altında üçüncü taraf kör noktası var. Ortak ders: bu üç konuyu ayrı ada gibi yönetmek, aynı boşluğu üç kez üretmektir. The Governance, bu gelişmeleri haber olarak değil, kararlarınızı etkileyen birer gündem maddesi olarak ele alır. Sorular için her zaman açığım.</p>
+  </div>
+  <div class="sig">
+    <span class="sig-name">Ecem</span>
+    <span class="sig-role">Editör · The Governance</span>
+  </div>
+</div>
+
+</body>
+</html>
