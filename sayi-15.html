@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Governance : Sayı 15 · 12 Ekim 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Mono:wght@300;400&family=Instrument+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bordo:   #8C1F0D;
+    --bordo-m: #B5341A;
+    --ink:     #111009;
+    --paper:   #F5F2EC;
+    --cream:   #EAE5DB;
+    --rule:    #C8C2B6;
+    --mid:     #3D3A34;
+    --light:   #6E6A62;
+    --white:   #FFFFFF;
+    --gold:    #9A7B3A;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.75;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 28px 100px;
+  }
+
+  /* ── NAMEPLATE ── */
+  .nameplate {
+    border-top: 4px solid var(--ink);
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    animation: rise .5s ease both;
+  }
+
+  .brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: .95;
+    color: var(--ink);
+  }
+  .brand em { font-style: normal; color: var(--bordo); }
+
+  .meta { text-align: right; padding-bottom: 4px; }
+  .meta-row {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--light);
+    line-height: 1.9;
+  }
+
+  /* ── AUDIENCE BAR ── */
+  .audience-bar {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 7px 14px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 28px;
+    margin-bottom: 32px;
+  }
+
+  .kicker {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -.5px;
+    margin-bottom: 14px;
+    color: var(--ink);
+  }
+
+  .hero-lead {
+    font-size: 15px;
+    line-height: 1.82;
+    color: var(--mid);
+  }
+
+  /* ── SECTION RULE ── */
+  .section-rule {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+  .section-rule::before {
+    content: '';
+    width: 20px; height: 2px;
+    background: var(--bordo);
+    flex-shrink: 0;
+  }
+  .section-rule::after {
+    content: '';
+    flex: 1; height: 1px;
+    background: var(--rule);
+  }
+
+  /* ── STAT BLOCK ── */
+  .stat-block {
+    background: var(--ink);
+    padding: 28px 32px;
+    margin: 24px 0;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .stat-number em {
+    font-style: normal;
+    color: var(--bordo-m);
+    font-size: 48px;
+  }
+
+  .stat-text { display: flex; flex-direction: column; gap: 6px; }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.45);
+  }
+
+  .stat-desc {
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(255,255,255,.82);
+  }
+
+  .stat-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    color: rgba(255,255,255,.35);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  .stat-link {
+    color: rgba(181,52,26,.8);
+    text-decoration: none;
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    letter-spacing: .1em;
+    display: block;
+    margin-top: 2px;
+  }
+
+  /* ── ARTICLE ── */
+  .article { margin-bottom: 36px; }
+
+  .article h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.2px;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .article h2 .num {
+    color: var(--bordo);
+    font-style: italic;
+    margin-right: 4px;
+  }
+
+  .hr { width: 28px; height: 2px; background: var(--bordo); margin-bottom: 14px; }
+
+  .article p {
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--mid);
+    margin-bottom: 10px;
+  }
+  .article p:last-child { margin-bottom: 0; }
+
+  .pq {
+    border-left: 2px solid var(--bordo);
+    padding: 2px 16px;
+    margin: 18px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--ink);
+  }
+  .pq-cite {
+    display: block;
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-style: normal;
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+
+  /* ── KAYNAK ETIKETI ── */
+  .source-tag {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: .08em;
+    color: var(--light);
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    padding: 2px 8px;
+    margin-top: 6px;
+    text-decoration: none;
+  }
+
+  /* ── EXECUTIVE TAKEAWAY ── */
+  .takeaway {
+    background: var(--cream);
+    border-left: 3px solid var(--bordo);
+    padding: 16px 20px;
+    margin: 20px 0 0;
+  }
+
+  .takeaway-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .takeaway ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .takeaway ul li {
+    font-size: 13.5px;
+    color: var(--ink);
+    line-height: 1.55;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .takeaway ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--bordo);
+    font-size: 11px;
+  }
+
+  /* ── VERİ KARTLARI GRID ── */
+  .data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-bottom: 36px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .data-card {
+    background: var(--paper);
+    padding: 20px 18px;
+  }
+  .data-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--bordo);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .data-desc {
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--mid);
+    margin-bottom: 8px;
+  }
+  .data-src {
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+  @media (max-width: 560px) {
+    .data-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ── THE GOVERNANCE GÖRÜŞÜ ── */
+  .view {
+    background: var(--white);
+    border: 1px solid var(--bordo);
+    border-top: 3px solid var(--bordo);
+    padding: 18px 22px 16px;
+    margin: 22px 0 0;
+  }
+  .view-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 8px;
+    display: block;
+  }
+  .view p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  /* ── KAPANIŞ SORUSU ── */
+  .closing-q {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 36px 32px;
+    margin: 40px 0 36px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .closing-q::before {
+    content: '?';
+    position: absolute;
+    right: 8px; top: -28px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 180px;
+    font-weight: 700;
+    color: rgba(255,255,255,.04);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .closing-q .cq-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: #E07060;
+    margin-bottom: 14px;
+    display: block;
+  }
+  .closing-q h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--white);
+    max-width: 520px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* ── RADAR ── */
+  .radar {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 24px 26px 22px;
+    margin-bottom: 36px;
+  }
+
+  .radar-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+
+  .radar-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #E07060;
+  }
+
+  .risk-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #E07060;
+    border: 1px solid #E07060;
+    padding: 3px 8px;
+  }
+
+  .radar h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+
+  .radar p {
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: #D0CBC3;
+    margin-bottom: 10px;
+  }
+
+  .radar p:last-child { margin-bottom: 0; }
+  .radar strong { color: var(--white); font-weight: 500; }
+
+  .radar .takeaway {
+    background: rgba(255,255,255,.07);
+    border-left: 2px solid var(--bordo-m);
+    margin-top: 18px;
+  }
+  .radar .takeaway-label { color: #E07060; }
+  .radar .takeaway ul li { color: rgba(255,255,255,.82); font-size: 13px; }
+  .radar .takeaway ul li::before { color: #E07060; }
+
+  /* ── TOOL BOX ── */
+  .toolbox {
+    background: var(--cream);
+    border-left: 3px solid var(--gold);
+    padding: 20px 22px 18px;
+    margin-bottom: 36px;
+  }
+
+  .tool-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .toolbox h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+
+  .toolbox p {
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: var(--mid);
+  }
+  .toolbox ol {
+    margin: 10px 0 0;
+    padding-left: 0;
+    list-style: none;
+    counter-reset: tool;
+  }
+  .toolbox ol li {
+    counter-increment: tool;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--mid);
+    padding: 10px 0 10px 40px;
+    position: relative;
+    border-top: 1px solid var(--rule);
+  }
+  .toolbox ol li:first-child { border-top: none; }
+  .toolbox ol li::before {
+    content: counter(tool);
+    position: absolute;
+    left: 0;
+    top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--bordo);
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    border: 1px solid var(--bordo);
+    border-radius: 50%;
+  }
+  .toolbox ol li strong { color: var(--ink); font-weight: 600; }
+
+  /* ── FOCUS ── */
+  .focus {
+    border: 1px solid var(--rule);
+    padding: 22px 22px 20px;
+    margin-bottom: 36px;
+  }
+
+  .focus-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .focus h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    color: var(--ink);
+  }
+
+  .focus p {
+    font-size: 14px;
+    line-height: 1.82;
+    color: var(--mid);
+    margin-bottom: 10px;
+  }
+  .focus p:last-child { margin-bottom: 0; }
+
+  /* ── FRAMEWORK ── */
+  .framework {
+    background: var(--ink);
+    padding: 28px 28px 24px;
+    margin: 32px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .framework::before {
+    content: 'TG';
+    position: absolute;
+    right: -12px; top: -8px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 120px;
+    font-weight: 700;
+    color: rgba(255,255,255,.03);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .fw-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .fw-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 18px;
+    line-height: 1.2;
+  }
+
+  .fw-levels { display: flex; flex-direction: column; gap: 2px; }
+
+  .fw-note {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    line-height: 1.5;
+    letter-spacing: .02em;
+    color: rgba(255,255,255,.62);
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255,255,255,.14);
+  }
+
+  .fw-level {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 14px;
+    background: rgba(255,255,255,.04);
+  }
+
+  .fw-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--bordo-m);
+    min-width: 28px;
+    line-height: 1;
+  }
+
+  .fw-content h5 {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.6);
+    margin-bottom: 2px;
+  }
+
+  .fw-content p {
+    font-size: 12.5px;
+    color: rgba(255,255,255,.7);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* ── READS ── */
+  .reads { margin-bottom: 36px; }
+
+  .read-item {
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .read-item:last-child { border-bottom: none; }
+
+  .rn {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--light);
+    min-width: 20px;
+    padding-top: 2px;
+  }
+
+  .rc h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    color: var(--ink);
+  }
+  .rc h4 a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--bordo);
+    transition: color .15s;
+  }
+  .rc h4 a:hover { color: var(--bordo); }
+
+  .rc p {
+    font-size: 13px;
+    color: var(--mid);
+    line-height: 1.65;
+  }
+
+  /* ── CTA BLOCK ── */
+  .cta-block {
+    background: var(--bordo);
+    padding: 32px 28px;
+    margin: 36px 0;
+    text-align: center;
+  }
+
+  .cta-block h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  .cta-block p {
+    font-size: 13.5px;
+    color: rgba(255,255,255,.78);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    padding: 11px 20px;
+    text-decoration: none;
+    transition: all .2s;
+    display: inline-block;
+  }
+
+  .cta-btn.primary {
+    background: var(--white);
+    color: var(--bordo);
+  }
+
+  .cta-btn.secondary {
+    background: transparent;
+    color: rgba(255,255,255,.8);
+    border: 1px solid rgba(255,255,255,.35);
+  }
+  .cta-secondary {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: rgba(255,255,255,.6);
+    margin-top: 16px;
+  }
+  .cta-secondary a {
+    color: rgba(255,255,255,.85);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  /* ── CLOSER ── */
+  .closer {
+    border-top: 3px double var(--ink);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .ed-note h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--ink);
+  }
+
+  .ed-note p {
+    font-size: 12.5px;
+    color: var(--mid);
+    line-height: 1.7;
+    max-width: 400px;
+  }
+
+  .sig { text-align: right; flex-shrink: 0; }
+
+  .sig-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    display: block;
+    margin-bottom: 2px;
+    color: var(--ink);
+  }
+
+  .sig-role {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 560px) {
+    .brand { font-size: 34px; }
+    .hero h1 { font-size: 26px; }
+    .stat-block { flex-direction: column; gap: 16px; }
+    .stat-number { font-size: 56px; }
+    .closer { flex-direction: column; }
+    .sig { text-align: left; }
+    .cta-actions { flex-direction: column; align-items: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAMEPLATE -->
+<header class="nameplate">
+  <div class="brand">The<em>.</em><br>Governance</div>
+  <div class="meta">
+    <span class="meta-row">Sayı 15 · 12 Ekim 2026</span>
+    <span class="meta-row">Kurumsal Risk & Yönetişim</span>
+    <span class="meta-row">Haftalık · Türkçe</span>
+  </div>
+</header>
+
+<div class="audience-bar">
+  Yönetim Kurulu · CIO · CISO · İç Denetim · Risk & Compliance · Hukuk
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="kicker">Bu Sayının Odağı</span>
+  <h1>AI Karar Veriyor, Ama Hesabı Kim Veriyor?</h1>
+  <p class="hero-lead">
+    Son dönemin gündemini bir arada okuduğunuzda ortak tema net: hesap verebilirlik. Kurumlar, kendi başına karar verip aksiyon alan etken (agentic) yapay zeka sistemlerini hızla devreye alıyor; ama bu sistemlerin yarattığı riski izleyecek, durduracak ve sorumluluğunu üstlenecek yönetişim aynı hızda gelişmiyor. EY'nin yeni araştırması, etken AI kullanan kurumların dörtte birinin yetkisiz çalışan bir AI ajanını tespit bile edemediğini gösteriyor. Türkiye'de ise TÜİK verisi, hukuki sorumluluk belirsizliğinin de önemli bir benimseme engeli olduğunu gösteriyor: AI kullanmayı düşünen girişimlerin en büyük ikinci engeli, zarar halinde sorumluluğun kimde olacağına dair hukuki belirsizlik. Tek bir cümlede: AI envanteri size ne kullandığınızı söyler; AI yönetişimi ise bir şey ters gittiğinde kimin hesap vereceğini söyler.
+  </p>
+</section>
+
+<!-- STAT BLOCK 1 -->
+<div class="stat-block">
+  <div class="stat-number">26<em>%</em></div>
+  <div class="stat-text">
+    <span class="stat-label">EY · Yetkisiz AI Ajanını Tespit Edememe</span>
+    <p class="stat-desc">EY'nin yeni AI Risk ve Yönetişim Araştırması'na göre, etken (agentic) AI kullanan kurumların yüzde 26'sı içeride yetkisiz çalışan bir AI ajanını tespit edemediğini kabul ediyor. Göremediğiniz bir aktörü durduramaz, denetleyemez ve hesabını veremezsiniz.</p>
+    <a class="stat-link" href="https://www.ey.com/en_us/newsroom/2026/09/ey-survey-finds-that-autonomous-ai-implementation-outpaces-oversight-yielding-an-ai-governance-gap" target="_blank">→ EY · AI Risk ve Yönetişim Araştırması 2026</a>
+  </div>
+</div>
+
+<!-- SECTION -->
+<div class="section-rule">AI Hesap Verebilirliği : 5 Kritik Başlık</div>
+
+<!-- ARTICLE 1 -->
+<div class="article">
+  <h2><span class="num">01</span>Etken AI Yönetişimi Aşıyor : Ajanlar Yeni Bir "İçeriden Risk" Sınıfı</h2>
+  <div class="hr"></div>
+  <p>Kurumlar etken (agentic) yapay zekayı hızla devreye alıyor; ama kontrol kapasitesi geride kalıyor. EY'nin yeni AI Risk ve Yönetişim Araştırması'na göre, etken AI kullanan kurumların yüzde 26'sı içeride yetkisiz çalışan bir AI ajanını tespit edemiyor, yaklaşık yarısı (yüzde 49) ise yönetişim çerçevesini bu sistemlerin risklerini kapsayacak şekilde henüz güncellemedi. Kurumlar, dünün yönetişim kurallarını bugünün özerk sistemlerine uyguluyor.</p>
+  <div class="pq">"Sisteme yazma yetkisi olan bir AI ajanı, yeni bir içeriden risk sınıfıdır: ödül peşinde koşan, beklenmedik kısa yollar bulabilen bir aktör. Onu yönetecek mekanizmanın, ajanın kendisinden mimari olarak bağımsız olması gerekir."<span class="pq-cite">The Governance yorumu</span></div>
+  <p>Buradaki mesele bir teknoloji değil, bir hesap verebilirlik meselesi. Bir AI ajanı gerçek iş kararları verdiğinde (bir ödeme onaylamak, bir erişim açmak, bir veriyi dışarı taşımak) ve bir şey ters gittiğinde, sorumluluğun kime ait olduğu çoğu kurumda yazılı değil. Hız ile kontrol birbirinin alternatifi değil; etken AI gerçek kararlar verirken ikisi de aynı anda gerekiyor.</p>
+  <a class="source-tag" href="https://www.ey.com/en_us/newsroom/2026/09/ey-survey-finds-that-autonomous-ai-implementation-outpaces-oversight-yielding-an-ai-governance-gap" target="_blank">Kaynak: EY · AI Risk ve Yönetişim Araştırması, 15 Eylül 2026 (ABD'de en az 1 milyar dolar cirolu halka açık şirketlerde 202 üst düzey AI yöneticisi)</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>İç denetim yıllardır "insanların fazla yetkisi var mı" diye sorardı. 2026'nın sorusu daha zor: "AI ajanlarınızın fazla yetkisi var mı, ve içeride yetkisiz çalışan bir ajanı fark edebiliyor musunuz?" Tespit edemediğiniz bir aktör, kontrol edebildiğiniz bir aktör değildir. Ajanın yetkisini, kimliğini ve durdurulabilirliğini tasarım aşamasında kurmayan kurum, kriz anında bunu kuramaz.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Devrede olan her AI ajanı için benzersiz kimlik, en düşük yetki ve bir durdurma (kill-switch) mekanizması tanımlayın</li>
+      <li>Yönetişim çerçevenizi etken AI'yı açıkça kapsayacak şekilde güncelleyin: dünün kuralları bugünün ajanlarını kapsamıyor</li>
+      <li>Yetkisiz ya da beklenmedik ajan davranışını tespit eden bir izleme katmanı kurun: göremediğinizi yönetemezsiniz</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 2 -->
+<div class="article">
+  <h2><span class="num">02</span>Avrupa Komisyonu ChatGPT'yi VLOSE Olarak Belirledi : AI-Native Hizmetlerde Gözetim Derinleşiyor</h2>
+  <div class="hr"></div>
+  <p>Avrupa Komisyonu, 31 Ağustos 2026'da ChatGPT'yi Dijital Hizmetler Yasası (DSA) kapsamında "Çok Büyük Çevrimiçi Arama Motoru" (VLOSE) olarak belirledi: bir yapay zeka sohbet robotunun DSA'nın en yüksek uyum kademesine alındığı ilk vaka. Komisyon, ek DSA yükümlülüklerine uyum için bildirimden sonra dört aylık bir geçiş süresi tanıdı: tam uyum takvimi Ocak 2027'ye işaret ediyor. Ocak 2027 uyum takvimi, bu belirlemeyi kurumların bugünkü hazırlık gündemine taşıyor.</p>
+  <p>Kurumsal anlamı, düzenleyici katmanların üst üste binmeye devam ettiği. Bir yapay zeka hizmeti artık aynı anda AI Act (ürün güvenliği), GDPR (kişisel veri) ve DSA (sistemik platform riski) kapsamında değerlendirilebiliyor. Önemli bir sınır: bu belirleme, DSA kapsamındaki büyük hizmetlerde gözetimin AI temelli hizmetleri de kapsadığını gösteriyor; her AI hizmeti için otomatik olarak aynı yükümlülükler doğmuyor, kapsam her hizmet için ayrıca değerlendirilmeli. Yine de yön net: denetlenebilirlik giderek bir tercih değil, bir yükümlülük.</p>
+  <a class="source-tag" href="https://digital-strategy.ec.europa.eu/en/news/commission-designates-chatgpt-reddit-roblox-under-digital-services-act" target="_blank">Kaynak: Avrupa Komisyonu · Basın Açıklaması IP/26/1772, 31 Ağustos 2026</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>Bir AI sistemini tek bir yasayla düşünmek artık yanıltıcı. Aynı sistem, farklı amaçlarla üç ayrı düzenleyici rejime tabi olabiliyor: ürün güvenliği, veri koruma ve platform riski. Bu gözetimin AI hizmetlerine ulaşması, Türk teknoloji şirketleri için de erken bir sinyal: AB pazarına sunulan AI hizmetlerinde, uygulanabilir düzenlemeler ve bunların gerektirdiği kayıt, şeffaflık ve denetim yükümlülükleri hizmet bazında değerlendirilmelidir.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>AB pazarına dokunan AI hizmetlerinizi tek bir yasa değil, AI Act, GDPR ve DSA kesişimi açısından değerlendirin</li>
+      <li>Algoritmik şeffaflık ve bağımsız denetim için gereken izlenebilirlik kaydını bugünden tutun</li>
+      <li>AI sisteminizin "denetlenebilir" olup olmadığını sorun: kayıt yoksa, denetime hazır da değilsiniz</li>
+    </ul>
+  </div>
+</div>
+
+<!-- STAT BLOCK 2 -->
+<div class="stat-block">
+  <div class="stat-number">66,4<em>%</em></div>
+  <div class="stat-text">
+    <span class="stat-label">TÜİK · Türkiye'de AI'nın Önündeki Hesap Verebilirlik Engeli</span>
+    <p class="stat-desc">TÜİK'in 2026 Yapay Zeka İstatistikleri'ne göre, AI kullanmayı düşünen ancak henüz kullanmayan girişimlerin yüzde 66,4'ü, olası zararlarda sorumluluğun kimde olacağına ilişkin hukuki belirsizliği bir engel olarak gösteriyor. Türkiye'de AI benimsemesinin önündeki mesele yalnızca teknoloji değil: hesap verebilirlik.</p>
+    <a class="stat-link" href="https://data.tuik.gov.tr/Kategori/GetKategori?p=Bilim,-Teknoloji-ve-Bilgi-Toplumu-102" target="_blank">→ TÜİK · 2026 Yapay Zeka İstatistikleri</a>
+  </div>
+</div>
+
+<!-- ARTICLE 3 -->
+<div class="article">
+  <h2><span class="num">03</span>Hesap Verebilirliği Otomatikleştiremezsiniz : Sorumluluk Hâlâ İnsanda</h2>
+  <div class="hr"></div>
+  <p>Yapay zeka bir kararı otomatikleştirebilir; ama o kararın sorumluluğunu otomatikleştiremez. EY'nin kurullara yönelik analizi bu ilkeyi merkeze alıyor: AI tabanlı sonuçlar yanlış gittiğinde hesap verebilirliğin kime ait olacağı önceden tanımlanmalı. Dikkatsiz AI kullanımı nedeniyle kurumların hem para hem itibar kaybettiği örnekler çoğalıyor. Yönetim kurulu, AI çıktısının kalitesini güvenceye alan yönetim süreçlerini gözetmek ve bir sorun çıktığında sorumluluğun nasıl atanacağını açıkça belirlemek zorunda.</p>
+  <p>Düzenleyici tablo da bu yönde sıkışıyor. ABD'de federal bütüncül bir AI çerçevesi hâlâ yok; bu belirsizlik, eyalet başsavcılarından oluşan iki partili bir koalisyonun AI düzenlemesinde eyalet yetkisinin korunması için Kongre'ye yaptığı ortak çağrıda da görünür hale geldi. Federal boşluk sürerken eyalet yasaları (Colorado, Teksas, New York) çoğalıyor; ancak bu düzenlemeler kapsam, muhatap ve yükümlülük bakımından birbirinden farklılaşıyor. Parçalı tablo, hesap verebilirlik sorumluluğunu giderek kurumun kendi yönetişimine yüklüyor.</p>
+  <a class="source-tag" href="https://www.ey.com/en_us/board-matters/board-oversight-of-ai" target="_blank">Kaynak: EY · Kurul ve AI Gözetimi</a>
+  <a class="source-tag" href="https://www.naag.org/policy-letter/state-attorneys-general-urge-congress-to-preserve-local-authority-on-ai-regulation/" target="_blank">Kaynak: NAAG · Eyalet Başsavcıları, AI Düzenlemesinde Yerel Yetkinin Korunması İçin Kongre'ye Çağrı (bağlayıcı olmayan politika çağrısı)</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>"AI karar verdi" bir savunma değil. Bir kurum bir AI'a karar yetkisi verdiğinde, o kararın sonucunu da üstlenir. Hesap verebilirliği otomatikleştirmek imkansız: AI kullanımı kurumun ve ilgili aktörlerin hukuki sorumluluğunu ortadan kaldırmaz, kurum içinde açık bir hesap verebilirlik sahibi gerektirir. Kurulun görevi, "bir şey ters giderse kim, neye göre hesap verecek" sorusunu olay çıkmadan önce yanıtlamak.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>AI'ın karar verdiği her kritik süreç için açık bir hesap verebilirlik sahibi (birey ya da birim) tanımlayın</li>
+      <li>Bir AI çıktısı yanlış gittiğinde devreye girecek sorumluluk ve telafi akışını yazılı hale getirin</li>
+      <li>Kurul ya da denetim komitesi gündemine "AI hesap verebilirliği" başlığını düzenli madde olarak ekleyin</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 4 -->
+<div class="article">
+  <h2><span class="num">04</span>Etken AI'yı Yönetmenin On İlkesi : İç Denetim İçin Yeni Bir Test Alanı</h2>
+  <div class="hr"></div>
+  <p>Etken AI yönetişimi dağınık bir alandı. The Governance'ın önerdiği on kontrol alanı, bir AI ajanının "iyi yönetildiğini" söyleyebilmek için hangi kontrollerin var olması gerektiğini somutlaştırıyor: en düşük yetki, izlenebilir kimlik, denetlenebilirlik, doğrulanmış devreye alma, saldırıya dayanıklılık, çok-ajanlı istikrar, çalışma anında güvence, durdurulabilirlik, okunabilirlik ve insan gözetimi. Bu liste, soyut bir "AI politikası" tartışmasını test edilebilir kontrollere çeviriyor.</p>
+  <p>İç denetim için bunun anlamı, denetim evreninin genişlemesi. Bir AI ajanının kimliği, yetki kapsamı, karar izi, durdurulabilirliği ve insan gözetim noktası artık test edilmesi gereken kontroller. İnsan aktörler etrafında tasarlanmış klasik denetim programları, kendi başına karar veren bir ajanı kapsamıyor. Sorumluluğun geliştirici, sistemi kullanıma alan kuruluş (deployer), bulut sağlayıcı ve açık kaynak ekosistemi arasında dağıldığı bu tabloda, "bizim ajanımız kimin sorumluluğunda" sorusu denetimin ilk sorusu olmak zorunda.</p>
+  <a class="source-tag" href="https://www.thegovernance.com.tr" target="_blank">Kaynak: The Governance · önerilen on kontrol alanı (editoryal çerçeve)</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>Bu on ilke, iç denetim için risk bazlı bir denetim programına uyarlanabilecek bir başlangıç kontrol seti. Bir AI ajanını denetlerken sorulacak sorular artık belli: yetkisi en düşük mü, kimliği izlenebilir mi, durdurulabilir mi, kararları okunabilir mi, insan gözetimi var mı? "Sertifikam var" demek yetmiyor; bu ilkelerin her birinin kanıtını üretebilmek gerekiyor. Ve denetim, ajanın kendisinden bağımsız olmalı.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Etken AI denetimini bir sonraki iç denetim planına on ilke üzerinden yapılandırılmış bir test olarak ekleyin</li>
+      <li>Her kritik ajan için durdurulabilirlik ve insan gözetim noktasının kanıtını saklayın</li>
+      <li>Sorumluluğun geliştirici, kullanıcı ve sağlayıcı arasında nasıl dağıldığını sözleşmelerle netleştirin</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 5 -->
+<div class="article">
+  <h2><span class="num">05</span>Türkiye'de AI Kullanımı İkiye Katlandı : Önündeki İkinci Engel Hesap Verebilirlik</h2>
+  <div class="hr"></div>
+  <p>Küresel hesap verebilirlik tartışması Türkiye verisiyle birebir örtüşüyor. TÜİK'in 2026 Yapay Zeka İstatistikleri'ne göre bireylerde üretken AI kullanımı bir yılda yüzde 19,2'den yüzde 37,6'ya çıktı; girişimlerde kullanım yüzde 14'e ulaştı. Ama asıl çarpıcı veri engellerde: AI kullanmayı düşünen girişimlerin önündeki en büyük engel yüzde 72,3 ile uzmanlık eksikliği, hemen ardından yüzde 66,4 ile olası zararlarda sorumluluğun kimde olacağına ilişkin hukuki belirsizlik geliyor. Yani Türkiye'de AI benimsemesinin önündeki ikinci en büyük engel bir teknoloji sorunu değil, bir hesap verebilirlik sorunu.</p>
+  <p>Türkiye'nin düzenleyici çerçevesi bu açığı mevcut araçlarla karşılıyor. KVKK'nın 11. maddesi, ilgili kişiye münhasıran otomatik sistemlerle analiz edilmesi sonucu aleyhine bir sonucun ortaya çıkmasına itiraz etme hakkını açıkça tanıyor (m.11/1-g). Bu, kanuni bir haktır. The Governance'ın yönetişim önerisi ise bu hakkın bir adım ötesi: itiraz anında devreye giren değil, kararın öncesinde tasarlanan bir kontrol. Bireyleri önemli ölçüde etkileyen AI destekli kararlarda açıklanabilirlik ve etkili insan incelemesini (kararı gerçekten gözden geçirip değiştirebilecek yetkili bir insan) sürecin baştan içine koymak.</p>
+  <a class="source-tag" href="https://data.tuik.gov.tr/Kategori/GetKategori?p=Bilim,-Teknoloji-ve-Bilgi-Toplumu-102" target="_blank">Kaynak: TÜİK · 2026 Yapay Zeka İstatistikleri (2 Ekim 2026) · KVKK yükümlülükleri</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>Başkası bu TÜİK haberini "AI kullanımı yüzde 37,6 oldu" diye paylaşır. Oysa verinin içindeki gerçek sinyal engellerde: uzmanlık eksikliğinin hemen ardından hukuki sorumluluk belirsizliği geliyor. Yani AI benimsemesi Türkiye'de teknik kapasite kadar yönetişim tasarımı da gerektiriyor. "Anlamlı insan müdahalesi" bir kutucuk değil: bir kararı gerçekten gözden geçirip değiştirebilecek, yetkili ve bilgili bir insanın sürecin içinde olması demek.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>İşe alım, kredi, fiyatlama gibi bireyi etkileyen AI kararlarında insan gözetimini belgeli bir sürece bağlayın</li>
+      <li>Kullandığınız algoritmaların kararını açıklayabilir olmasını sağlayın: açıklanamayan karar bir uyum riskidir</li>
+      <li>AI ile kişisel veri işleyen süreçlerinizi KVKK aydınlatma ve ilgili kişi hakları açısından gözden geçirin</li>
+    </ul>
+  </div>
+</div>
+
+<!-- FRAMEWORK -->
+<div class="section-rule">The Governance · Signature Framework</div>
+
+<div class="framework">
+  <span class="fw-label">The Governance AI Hesap Verebilirlik Olgunluk Modeli</span>
+  <div class="fw-title">AI karar veriyor : peki bir şey ters giderse kim hesap verecek?</div>
+  <div class="fw-levels">
+    <div class="fw-level">
+      <div class="fw-num">1</div>
+      <div class="fw-content">
+        <h5>Görmeyen</h5>
+        <p>AI ajanları kontrolsüz devrede. Yetkisiz ajan tespit edilemiyor, sorumluluk sahibi tanımsız.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">2</div>
+      <div class="fw-content">
+        <h5>Fark Eden</h5>
+        <p>Ajan envanteri var ama yönetişim güncellenmedi. "AI karar verdi" hâlâ bir savunma gibi kullanılıyor.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">3</div>
+      <div class="fw-content">
+        <h5>Sahiplendiren</h5>
+        <p>Her kritik AI kararının bir hesap verebilirlik sahibi var. Yetki, kimlik ve durdurulabilirlik tanımlı.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">4</div>
+      <div class="fw-content">
+        <h5>İzlenebilir</h5>
+        <p>Karar izi, insan gözetim noktası ve durdurma mekanizması kanıtla gösteriliyor. On ilke test ediliyor.</p>
+      </div>
+    </div>
+    <div class="fw-level">
+      <div class="fw-num">5</div>
+      <div class="fw-content">
+        <h5>Hesap Veren</h5>
+        <p>Hesap verebilirlik kurul seviyesinde. Bir sorun çıktığında kim, neye göre hesap verecek, önceden yazılı.</p>
+      </div>
+    </div>
+  </div>
+  <p class="fw-note">The Governance tarafından geliştirilmiş editoryal bir öz değerlendirme çerçevesidir: doğrulanmış bir ölçüm standardı değildir.</p>
+</div>
+
+<!-- RISK RADAR -->
+<div class="section-rule">Risk Radarı</div>
+
+<div class="radar">
+  <div class="radar-head">
+    <span class="radar-label">⚠ Haftanın Kritik Riski</span>
+    <span class="risk-tag">Yüksek Öncelik</span>
+  </div>
+  <h3>Görünmez Ajan : İçeride Yetkisiz Çalışan ve Tespit Edilemeyen AI</h3>
+  <p><strong>Nedir?</strong> Kurum içinde yetkisiz ya da amacı dışında çalışan, ama kurumun tespit edemediği AI ajanları. Sisteme yazma yetkisi olan bir ajan ödeme onaylayabilir, erişim açabilir, veri taşıyabilir: tespit edilemediğinde yeni bir içeriden risk sınıfına dönüşüyor.</p>
+  <p><strong>Kurumsal etki:</strong> Göremediğiniz bir aktörün verdiği kararın sorumluluğu yine kuruma ait. Bir ajan hatalı ya da kötüye kullanılan bir aksiyon aldığında, "fark etmedik" bir savunma değil, bir yönetişim açığı.</p>
+  <p><strong>Temel gerçek:</strong> Tespit edemediğiniz bir ajanı durduramaz, denetleyemez, hesabını veremezsiniz. Görünürlük, hesap verebilirliğin ön şartı.</p>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Kurumunuzda çalışan tüm AI ajanlarını 30 gün içinde envanterleyin: kim başlattı, hangi yetkiyle, hangi sisteme erişiyor?</li>
+      <li>Yetkisiz ya da beklenmedik ajan davranışını tespit eden bir runtime izleme kurun</li>
+      <li>Her ajana benzersiz kimlik ve en düşük yetki atayın: anonim ya da geniş yetkili ajan en büyük risk</li>
+    </ul>
+  </div>
+</div>
+
+<!-- TOOL BOX -->
+<div class="section-rule">Araç & Yöntem</div>
+
+<div class="toolbox">
+  <span class="tool-tag">Bu Hafta Uygulayın</span>
+  <h3>AI Hesap Verebilirlik Kontrolü : Her Ajan İçin 5 Soru</h3>
+  <p>Devreye aldığınız her AI ajanı için hesap verebilirliği beş soruda test edin. Bu beş yanıt, bir ajanı "karar veren" durumdan "hesap verebilir" duruma taşır.</p>
+  <ol>
+    <li><strong>Karar sınırı:</strong> Bu ajan hangi kararları insan onayı olmadan verebiliyor, ve bu sınır yazılı mı?</li>
+    <li><strong>Görünürlük:</strong> İçeride yetkisiz çalışan bir ajanı tespit edebiliyor musunuz, yoksa göremiyor musunuz?</li>
+    <li><strong>Durdurulabilirlik:</strong> Ajan kontrolden çıkarsa kim, hangi mekanizmayla, ne kadar sürede durdurabilir?</li>
+    <li><strong>Sahiplik:</strong> Ajanın verdiği bir karar yanlış gittiğinde hesap verebilirlik kime ait, önceden tanımlı mı?</li>
+    <li><strong>İzlenebilirlik:</strong> Ajanın her kararı değiştirilemez bir iz bırakıyor mu, ve "neden bu karar" sorusuna cevap verebiliyor musunuz?</li>
+  </ol>
+</div>
+
+<!-- TÜRKİYE ODAĞI -->
+<div class="section-rule">Türkiye Odağı</div>
+
+<div class="focus">
+  <span class="focus-flag">Yerel Gündem</span>
+  <h3>Türkiye'de AI Benimsemesi : Uzmanlık ve Hukuki Belirsizlik</h3>
+  <p>Küresel hesap verebilirlik açığı, Türkiye'de somut bir benimseme engeline dönüşmüş durumda: TÜİK verisindeki yüzde 66,4'lük hukuki belirsizlik kaygısı bunun kanıtı. Buradan çıkan pratik görev net: Türk kurumları için öncelik AI'yı daha hızlı devreye almak değil, bir şey ters gittiğinde sorumluluğun kimde olduğunu önceden tanımlayan bir yönetişim tasarlamak. Hesap verebilirliği kuran kurum, teknolojiye de güvenle geçer.</p>
+  <p>Düzenleyici cevap mevcut KVKK çerçevesi üzerinden şekilleniyor. KVKK'nın şeffaflık, hukuka uygunluk ve ilgili kişi haklarına ilişkin yükümlülükleri, bireyi önemli ölçüde etkileyen AI destekli kararlarda insan gözetimi ve açıklanabilirlik tasarımını giderek daha kritik hale getiriyor. Bu, AI'ya özel yeni bir yasa beklemeden, mevcut araçlarla hesap verebilirliği gündeme taşıyor.</p>
+  <p><strong>İç denetçiler ve risk ekipleri için pratik not:</strong> İki şeyi bugün yapın: bireyi etkileyen AI kararlarında (işe alım, kredi, fiyatlama) insan gözetimini belgeli bir sürece bağlayın; ve kullandığınız algoritmaların kararını açıklayabilir olup olmadığını test edin. Hesap verebilirlik tasarımı, Türkiye'de AI benimsemesinin önündeki engeli kaldıran anahtar olabilir.</p>
+</div>
+
+<!-- READS -->
+<div class="section-rule">Okumanız Gereken</div>
+
+<div class="reads">
+  <div class="read-item">
+    <span class="rn">01</span>
+    <div class="rc">
+      <h4><a href="https://www.ey.com/en_us/newsroom/2026/09/ey-survey-finds-that-autonomous-ai-implementation-outpaces-oversight-yielding-an-ai-governance-gap" target="_blank">EY · AI Risk ve Yönetişim Araştırması 2026</a></h4>
+      <p>Etken AI kullanan kurumların %26'sı yetkisiz ajanı tespit edemiyor, %49'u yönetişimini güncellemedi : ey.com</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">02</span>
+    <div class="rc">
+      <h4><a href="https://www.ey.com/en_us/board-matters/board-oversight-of-ai" target="_blank">EY · Kurul ve AI Gözetimi: Hesap Verebilirliği Otomatikleştiremezsiniz</a></h4>
+      <p>AI kararı yanlış gittiğinde sorumluluğun kime ait olacağını kurulun önceden tanımlaması gerekiyor : ey.com</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">03</span>
+    <div class="rc">
+      <h4><a href="https://digital-strategy.ec.europa.eu/en/news/commission-designates-chatgpt-reddit-roblox-under-digital-services-act" target="_blank">Avrupa Komisyonu · ChatGPT'nin VLOSE Belirlemesi (31 Ağustos 2026)</a></h4>
+      <p>Bir AI sohbet robotunun ilk kez DSA'nın en yüksek uyum kademesine alınması; DSA kapsamında ChatGPT için ek gözetim ve denetim yükümlülükleri.</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">04</span>
+    <div class="rc">
+      <h4><a href="https://www.thegovernance.com.tr/sayi-15.html" target="_blank">The Governance · Etken AI'yı Yönetmenin On İlkesi</a></h4>
+      <p>En düşük yetki, izlenebilir kimlik, durdurulabilirlik, insan gözetimi: iç denetim için somut bir kontrol listesi.</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">05</span>
+    <div class="rc">
+      <h4><a href="https://data.tuik.gov.tr/Kategori/GetKategori?p=Bilim,-Teknoloji-ve-Bilgi-Toplumu-102" target="_blank">TÜİK · 2026 Yapay Zeka İstatistikleri</a></h4>
+      <p>Üretken AI kullanımı %37,6'ya çıktı; AI'yı düşünen girişimlerin %66,4'ü hukuki sorumluluk belirsizliğini engel gösteriyor.</p>
+    </div>
+  </div>
+</div>
+
+<!-- KAPANIŞ SORUSU -->
+<div class="closing-q">
+  <span class="cq-label">Yönetim Kurulu İçin Tek Soru</span>
+  <h3>Kurumunuzdaki bir AI ajanı yarın yanlış bir karar verse : bunu fark eder misiniz, ve hesabını kim, neye göre verir?</h3>
+</div>
+
+<!-- CTA BLOCK -->
+<div class="cta-block">
+  <h3>Governance gündemini kararlarınızı etkilemeden önce görün</h3>
+  <p>The Governance'ı haber olduktan sonra değil, karar anından önce okuyun. Türkiye'nin bağımsız GRC bültenine ücretsiz abone olun; her Pazartesi, yönetici masasında olması gereken gelişmeler.</p>
+  <div class="cta-actions">
+    <a href="https://www.thegovernance.com.tr" class="cta-btn primary">Bültene Ücretsiz Abone Ol</a>
+  </div>
+  <p class="cta-secondary">Ya da güncellemeleri <a href="https://www.linkedin.com/company/thegovernance" target="_blank">LinkedIn'de takip edin</a>.</p>
+</div>
+
+<!-- CLOSER -->
+<div class="closer">
+  <div class="ed-note">
+    <h4>Editörden</h4>
+    <p>Tek bir soru son dönemde üç ayrı cephede yankılandı: AI karar veriyor, ama hesabı kim veriyor? EY etken AI kullanan kurumların dörtte birinin yetkisiz bir ajanı bile fark edemediğini gösterdi; AB ChatGPT'yi en yüksek denetim kademesine aldı; Türkiye'de ise uzmanlık eksikliğinin hemen ardından hukuki sorumluluk belirsizliği geliyor; AI benimsemesi teknik kapasiteyle birlikte yönetişim tasarımı da gerektiriyor. Ortak ders tek bir cümlede: AI envanteri size ne kullandığınızı söyler, AI yönetişimi ise bir şey ters gittiğinde kimin hesap vereceğini söyler. The Governance, bu gelişmeleri haber olarak değil, kararlarınızı etkileyen birer gündem maddesi olarak ele alır. Sorular için her zaman açığım.</p>
+  </div>
+  <div class="sig">
+    <span class="sig-name">Ecem</span>
+    <span class="sig-role">Editör · The Governance</span>
+  </div>
+</div>
+
+</body>
+</html>
