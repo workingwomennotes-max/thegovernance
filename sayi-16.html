@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Governance : Sayı 16 · 27 Ekim 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Mono:wght@300;400&family=Instrument+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bordo:   #8C1F0D;
+    --bordo-m: #B5341A;
+    --ink:     #111009;
+    --paper:   #F5F2EC;
+    --cream:   #EAE5DB;
+    --rule:    #C8C2B6;
+    --mid:     #3D3A34;
+    --light:   #6E6A62;
+    --white:   #FFFFFF;
+    --gold:    #9A7B3A;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.75;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 28px 100px;
+  }
+
+  /* ── NAMEPLATE ── */
+  .nameplate {
+    border-top: 4px solid var(--ink);
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    animation: rise .5s ease both;
+  }
+
+  .brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: .95;
+    color: var(--ink);
+  }
+  .brand em { font-style: normal; color: var(--bordo); }
+
+  .meta { text-align: right; padding-bottom: 4px; }
+  .meta-row {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--light);
+    line-height: 1.9;
+  }
+
+  /* ── AUDIENCE BAR ── */
+  .audience-bar {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 7px 14px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 28px;
+    margin-bottom: 32px;
+  }
+
+  .kicker {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -.5px;
+    margin-bottom: 14px;
+    color: var(--ink);
+  }
+
+  .hero-lead {
+    font-size: 15px;
+    line-height: 1.82;
+    color: var(--mid);
+  }
+
+  /* ── SECTION RULE ── */
+  .section-rule {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+  .section-rule::before {
+    content: '';
+    width: 20px; height: 2px;
+    background: var(--bordo);
+    flex-shrink: 0;
+  }
+  .section-rule::after {
+    content: '';
+    flex: 1; height: 1px;
+    background: var(--rule);
+  }
+
+  /* ── STAT BLOCK ── */
+  .stat-block {
+    background: var(--ink);
+    padding: 28px 32px;
+    margin: 24px 0;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .stat-number em {
+    font-style: normal;
+    color: var(--bordo-m);
+    font-size: 48px;
+  }
+
+  .stat-text { display: flex; flex-direction: column; gap: 6px; }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.45);
+  }
+
+  .stat-desc {
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(255,255,255,.82);
+  }
+
+  .stat-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    color: rgba(255,255,255,.35);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  .stat-link {
+    color: rgba(181,52,26,.8);
+    text-decoration: none;
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    letter-spacing: .1em;
+    display: block;
+    margin-top: 2px;
+  }
+
+  /* ── ARTICLE ── */
+  .article { margin-bottom: 36px; }
+
+  .article h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.2px;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .article h2 .num {
+    color: var(--bordo);
+    font-style: italic;
+    margin-right: 4px;
+  }
+
+  .hr { width: 28px; height: 2px; background: var(--bordo); margin-bottom: 14px; }
+
+  .article p {
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--mid);
+    margin-bottom: 10px;
+  }
+  .article p:last-child { margin-bottom: 0; }
+
+  .pq {
+    border-left: 2px solid var(--bordo);
+    padding: 2px 16px;
+    margin: 18px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--ink);
+  }
+  .pq-cite {
+    display: block;
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-style: normal;
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+
+  /* ── KAYNAK ETIKETI ── */
+  .source-tag {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: .08em;
+    color: var(--light);
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    padding: 2px 8px;
+    margin-top: 6px;
+    text-decoration: none;
+  }
+
+  /* ── EXECUTIVE TAKEAWAY ── */
+  .takeaway {
+    background: var(--cream);
+    border-left: 3px solid var(--bordo);
+    padding: 16px 20px;
+    margin: 20px 0 0;
+  }
+
+  .takeaway-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .takeaway ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .takeaway ul li {
+    font-size: 13.5px;
+    color: var(--ink);
+    line-height: 1.55;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .takeaway ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--bordo);
+    font-size: 11px;
+  }
+
+  /* ── VERİ KARTLARI GRID ── */
+  .data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-bottom: 36px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .data-card {
+    background: var(--paper);
+    padding: 20px 18px;
+  }
+  .data-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--bordo);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .data-desc {
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--mid);
+    margin-bottom: 8px;
+  }
+  .data-src {
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+  @media (max-width: 560px) {
+    .data-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ── THE GOVERNANCE GÖRÜŞÜ ── */
+  .view {
+    background: var(--white);
+    border: 1px solid var(--bordo);
+    border-top: 3px solid var(--bordo);
+    padding: 18px 22px 16px;
+    margin: 22px 0 0;
+  }
+  .view-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    margin-bottom: 8px;
+    display: block;
+  }
+  .view p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  /* ── KAPANIŞ SORUSU ── */
+  .closing-q {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 36px 32px;
+    margin: 40px 0 36px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .closing-q::before {
+    content: '?';
+    position: absolute;
+    right: 8px; top: -28px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 180px;
+    font-weight: 700;
+    color: rgba(255,255,255,.04);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .closing-q .cq-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: #E07060;
+    margin-bottom: 14px;
+    display: block;
+  }
+  .closing-q h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--white);
+    max-width: 520px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* ── RADAR ── */
+  .radar {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 24px 26px 22px;
+    margin-bottom: 36px;
+  }
+
+  .radar-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+
+  .radar-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #E07060;
+  }
+
+  .risk-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #E07060;
+    border: 1px solid #E07060;
+    padding: 3px 8px;
+  }
+
+  .radar h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+
+  .radar p {
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: #D0CBC3;
+    margin-bottom: 10px;
+  }
+
+  .radar p:last-child { margin-bottom: 0; }
+  .radar strong { color: var(--white); font-weight: 500; }
+
+  .radar .takeaway {
+    background: rgba(255,255,255,.07);
+    border-left: 2px solid var(--bordo-m);
+    margin-top: 18px;
+  }
+  .radar .takeaway-label { color: #E07060; }
+  .radar .takeaway ul li { color: rgba(255,255,255,.82); font-size: 13px; }
+  .radar .takeaway ul li::before { color: #E07060; }
+
+  /* ── TOOL BOX ── */
+  .toolbox {
+    background: var(--cream);
+    border-left: 3px solid var(--gold);
+    padding: 20px 22px 18px;
+    margin-bottom: 36px;
+  }
+
+  .tool-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .toolbox h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+
+  .toolbox p {
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: var(--mid);
+  }
+  .toolbox ol {
+    margin: 10px 0 0;
+    padding-left: 0;
+    list-style: none;
+    counter-reset: tool;
+  }
+  .toolbox ol li {
+    counter-increment: tool;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--mid);
+    padding: 10px 0 10px 40px;
+    position: relative;
+    border-top: 1px solid var(--rule);
+  }
+  .toolbox ol li:first-child { border-top: none; }
+  .toolbox ol li::before {
+    content: counter(tool);
+    position: absolute;
+    left: 0;
+    top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--bordo);
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    border: 1px solid var(--bordo);
+    border-radius: 50%;
+  }
+  .toolbox ol li strong { color: var(--ink); font-weight: 600; }
+
+  /* ── FOCUS ── */
+  .focus {
+    border: 1px solid var(--rule);
+    padding: 22px 22px 20px;
+    margin-bottom: 36px;
+  }
+
+  .focus-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--bordo);
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .focus h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    color: var(--ink);
+  }
+
+  .focus p {
+    font-size: 14px;
+    line-height: 1.82;
+    color: var(--mid);
+    margin-bottom: 10px;
+  }
+  .focus p:last-child { margin-bottom: 0; }
+
+  /* ── FRAMEWORK ── */
+  .framework {
+    background: var(--ink);
+    padding: 28px 28px 24px;
+    margin: 32px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .framework::before {
+    content: 'TG';
+    position: absolute;
+    right: -12px; top: -8px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 120px;
+    font-weight: 700;
+    color: rgba(255,255,255,.03);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .fw-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .fw-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 18px;
+    line-height: 1.2;
+  }
+
+  .fw-levels { display: flex; flex-direction: column; gap: 2px; }
+
+  .fw-note {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    line-height: 1.5;
+    letter-spacing: .02em;
+    color: rgba(255,255,255,.62);
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255,255,255,.14);
+  }
+
+  .fw-level {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 14px;
+    background: rgba(255,255,255,.04);
+  }
+
+  .fw-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--bordo-m);
+    min-width: 28px;
+    line-height: 1;
+  }
+
+  .fw-content h5 {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.6);
+    margin-bottom: 2px;
+  }
+
+  .fw-content p {
+    font-size: 12.5px;
+    color: rgba(255,255,255,.7);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* ── READS ── */
+  .reads { margin-bottom: 36px; }
+
+  .read-item {
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .read-item:last-child { border-bottom: none; }
+
+  .rn {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--light);
+    min-width: 20px;
+    padding-top: 2px;
+  }
+
+  .rc h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    color: var(--ink);
+  }
+  .rc h4 a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--bordo);
+    transition: color .15s;
+  }
+  .rc h4 a:hover { color: var(--bordo); }
+
+  .rc p {
+    font-size: 13px;
+    color: var(--mid);
+    line-height: 1.65;
+  }
+
+  /* ── CTA BLOCK ── */
+  .cta-block {
+    background: var(--bordo);
+    padding: 32px 28px;
+    margin: 36px 0;
+    text-align: center;
+  }
+
+  .cta-block h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  .cta-block p {
+    font-size: 13.5px;
+    color: rgba(255,255,255,.78);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    padding: 11px 20px;
+    text-decoration: none;
+    transition: all .2s;
+    display: inline-block;
+  }
+
+  .cta-btn.primary {
+    background: var(--white);
+    color: var(--bordo);
+  }
+
+  .cta-btn.secondary {
+    background: transparent;
+    color: rgba(255,255,255,.8);
+    border: 1px solid rgba(255,255,255,.35);
+  }
+  .cta-secondary {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: rgba(255,255,255,.6);
+    margin-top: 16px;
+  }
+  .cta-secondary a {
+    color: rgba(255,255,255,.85);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  /* ── CLOSER ── */
+  .closer {
+    border-top: 3px double var(--ink);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .ed-note h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--ink);
+  }
+
+  .ed-note p {
+    font-size: 12.5px;
+    color: var(--mid);
+    line-height: 1.7;
+    max-width: 400px;
+  }
+
+  .sig { text-align: right; flex-shrink: 0; }
+
+  .sig-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    display: block;
+    margin-bottom: 2px;
+    color: var(--ink);
+  }
+
+  .sig-role {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 560px) {
+    .brand { font-size: 34px; }
+    .hero h1 { font-size: 26px; }
+    .stat-block { flex-direction: column; gap: 16px; }
+    .stat-number { font-size: 56px; }
+    .closer { flex-direction: column; }
+    .sig { text-align: left; }
+    .cta-actions { flex-direction: column; align-items: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAMEPLATE -->
+<header class="nameplate">
+  <div class="brand">The<em>.</em><br>Governance</div>
+  <div class="meta">
+    <span class="meta-row">Sayı 16 · 27 Ekim 2026</span>
+    <span class="meta-row">Kurumsal Risk & Yönetişim</span>
+    <span class="meta-row">Haftalık · Türkçe</span>
+  </div>
+</header>
+
+<div class="audience-bar">
+  Yönetim Kurulu · CIO · CISO · İç Denetim · Risk & Compliance · Hukuk
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="kicker">Bu Sayının Odağı</span>
+  <h1>Teknik Olarak Erişebilirsiniz. Peki Hukuken?</h1>
+  <p class="hero-lead">
+    KVKK, Türkiye'de milyonlarca çalışanı ilgilendiren bir sınır çizdi: işverenin çalışana tahsis ettiği kurumsal e-postayı ve iletişim kanallarını denetleme yetkisi sınırsız değil. Aracın işverene ait olması, içeriğine serbestçe erişme hakkı vermiyor. Karar, denetimi ölçülülük, önceden bilgilendirme ve kayıt şartına bağlıyor. Bu konuyu EY'nin AI yönetişim araştırması, COSO'nun üretken AI rehberi ve Avrupa'da DORA ile NIS2'nin uygulama dönemiyle birlikte değerlendirdiğimizde hepsi aynı yöne işaret ediyor: bir yetkiye ya da politikaya sahip olmak yetmiyor, onu hukuka uygun ve kanıtlanabilir biçimde kullanmak gerekiyor.
+  </p>
+</section>
+
+<!-- STAT BLOCK 1 -->
+<div class="stat-block">
+  <div class="stat-number">2026<em>/2035</em></div>
+  <div class="stat-text">
+    <span class="stat-label">KVKK · İşveren E-Posta Denetimi İlke Kararı</span>
+    <p class="stat-desc">Kişisel Verileri Koruma Kurulu'nun 16 Eylül 2026 tarihli, 8 Ekim'de yayımlanan 2026/2035 sayılı İlke Kararı, işverenin kurumsal e-posta ve iletişim kanallarını denetlemesini ölçülülük, somut bilgilendirme ve kademeli erişim şartlarına bağladı. Teknik erişim imkânı, hukuki erişim hakkı anlamına gelmiyor.</p>
+    <a class="stat-link" href="https://www.kvkk.gov.tr/Icerik/9044/isverenler-tarafindan-calisanlara-tahsis-edilen-kurumsal-e-posta-hesaplari-basta-olmak-uzere-isin-yurutulmesi-amaciyla-kullanilan-iletisim-kanallarinin-denetlenmesinde-uyulmasi-gereken-usul-ve-esaslar-hakkinda-kurulun-16-09-2026-tarihli-ve-2026-2035-sayili-ilke-karari-hk" target="_blank">→ KVKK · 2026/2035 sayılı İlke Kararı</a>
+  </div>
+</div>
+
+<!-- SECTION -->
+<div class="section-rule">Bu Sayının Gündemi : 4 Kritik Başlık</div>
+
+<!-- ARTICLE 1 : KVKK (ANA HABER) -->
+<div class="article">
+  <h2><span class="num">01</span>KVKK İşverenin E-Posta Denetimine Sınır Çizdi : Yetki Değil, Ölçülülük</h2>
+  <div class="hr"></div>
+  <p>Kişisel Verileri Koruma Kurulu'nun 16 Eylül 2026 tarihli ve 2026/2035 sayılı İlke Kararı (8 Ekim'de yayımlandı), Türkiye'de milyonlarca çalışanı ilgilendiren bir sınır çizdi: işverenin kurumsal e-posta ve iletişim kanallarını denetleme yetkisi sınırsız değil. Kararın özü, aracın işverene ait olmasının sınırsız denetim hakkı vermediği. Teknik erişim imkânı, özel iletişim içeriklerine serbestçe erişme hakkı sağlamıyor.</p>
+  <p>Karar, denetimi somut şartlara bağlıyor: çalışan denetimden önce ve somut biçimde bilgilendirilmeli; "kurumsal e-posta denetlenebilir" gibi genel bir ibare yeterli değil. Denetim amacıyla sınırlı, ölçülü ve kademeli olmalı; içeriğe, kural olarak somut bir şüphe ya da belirli bir olayla bağlantılı meşru bir amaç varsa, önce trafik ve log kayıtları gibi daha az müdahaleci yöntemler değerlendirildikten sonra erişilmeli. Kararda ayrıca, iş ilişkisindeki güç dengesizliği nedeniyle açık rızanın kural olarak öncelikli bir dayanak sayılamayacağı vurgulanıyor.</p>
+  <a class="source-tag" href="https://www.kvkk.gov.tr/Icerik/9044/isverenler-tarafindan-calisanlara-tahsis-edilen-kurumsal-e-posta-hesaplari-basta-olmak-uzere-isin-yurutulmesi-amaciyla-kullanilan-iletisim-kanallarinin-denetlenmesinde-uyulmasi-gereken-usul-ve-esaslar-hakkinda-kurulun-16-09-2026-tarihli-ve-2026-2035-sayili-ilke-karari-hk" target="_blank">Kaynak: KVKK · 2026/2035 sayılı İlke Kararı (16 Eylül 2026, 8 Ekim 2026'da yayımlandı)</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>Bu karar bir yasak değil, bir disiplin. Mevcut "kabul edilebilir kullanım politikası"nın bu şartları karşılayıp karşılamadığı gözden geçirilmeli: işe giriş sırasında alınan genel bir onay metni, sonraki her denetimi hukuka uygun kılmaya yetmiyor. İç denetim ve veri koruma ekiplerinin bugün yapması gereken, e-posta ve iletişim denetim süreçlerini amaç, hukuki dayanak, kapsam, en az müdahale ve erişim kaydı ekseninde yeniden tasarlamak.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Mevcut e-posta ve iletişim denetim politikanızı ölçülülük, şeffaflık ve kademeli erişim ilkelerine göre gözden geçirin</li>
+      <li>Aydınlatma metnine hukuki sebep, amaç, kapsam, yöntem ve içeriğe hangi hallerde erişileceğini ekleyin: genel ibare yeterli değil</li>
+      <li>İçerik incelemesini kural olarak somut şüphe ya da belirli bir olayla sınırlayın; erişimi görevli az sayıda kişiyle kayıt altında yürütün</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 2 : EY -->
+<div class="article">
+  <h2><span class="num">02</span>Politika Var, Güven Yok : AI Yönetişiminde "Kanıt" Makası</h2>
+  <div class="hr"></div>
+  <p>Çalışan denetimindeki ölçülülük tartışmasının bir benzeri, AI yönetişiminde yaşanıyor. EY'nin AI Risk ve Yönetişim Araştırması'nın (Sayı 15'te etken AI bulgularını paylaştığımız araştırmanın farklı bir kesiti) gösterdiği tablo şu: kurumların yüzde 98'inin resmi bir AI yönetişim politikası var, ancak yüzde 69'u bu kontrolleri güncel tutacak iç uzmanlığa sahip olmadığından endişeli. Daha çarpıcısı: yüzde 47'si, acil bir devreye alım için yönetişim sürecini en az bir kez atladığını kabul ediyor.</p>
+  <div class="pq">"Bir politikaya sahip olmakla, o politikanın baskı anında işlediğini kanıtlayabilmek farklı şeyler. Yönetişimin bugünkü sınavı, dokümanda değil, uygulamanın kaydında."<span class="pq-cite">The Governance yorumu</span></div>
+  <p>Araştırmanın bir diğer bulgusu da hesap verebilirlik tarafında: kurumların yüzde 36'sı geçtiğimiz yıl kurum üzerinde önemli olumsuz etki yaratan bir AI olayı yaşadı, yüzde 41'inde ise üst yönetimin kullanılan tüm AI araçlarına görünürlüğü yok. Politika dokümanı ile kanıtlanmış kontrol arasındaki makas, denetimin yeni çalışma alanı.</p>
+  <a class="source-tag" href="https://www.ey.com/en_us/insights/assurance/ai-governance-has-entered-its-next-phase-closing-the-confidence-gap" target="_blank">Kaynak: EY · AI Yönetişimi Güven Açığını Kapatma Aşamasında, 15 Eylül 2026 (ABD'de en az 1 milyar dolar cirolu halka açık şirketlerde 200+ üst düzey AI yöneticisi)</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>"Politikamız var" artık bir güvence değil, bir başlangıç noktası. Bir iç denetçinin soracağı soru şu: bu politikanın son çeyrekte uygulandığını hangi kanıtla gösterebilirsiniz? Atlanan devreye alımların kaydı tutuluyor mu, ve kim onayladı? Kanıt üretmeyen bir politika, denetimde yoklukla eşdeğer.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>AI yönetişim politikanızın uygulandığını gösteren kanıt setini tanımlayın: onay kayıtları, istisna logları, gözden geçirme tutanakları</li>
+      <li>Acil devreye alımlar için bir istisna onay yolu kurun ve her istisnayı kayıt altına alın: atlanan süreç, denetlenen süreçtir</li>
+      <li>Kullanılan tüm AI araçlarının güncel bir envanterini çıkarın: görünürlük, güvencenin ön şartı</li>
+    </ul>
+  </div>
+</div>
+
+<!-- STAT BLOCK 2 -->
+<div class="stat-block">
+  <div class="stat-number">47<em>%</em></div>
+  <div class="stat-text">
+    <span class="stat-label">EY · AI Yönetişim Sürecini Atlayan Kurumlar</span>
+    <p class="stat-desc">Kurumların yüzde 98'inin resmi bir AI yönetişim politikası var; ancak yüzde 47'si acil devreye alımlarda bu süreci en az bir kez atladığını kabul ediyor. Politikanın varlığı ile politikaya uyulması aynı şey değil.</p>
+    <a class="stat-link" href="https://www.ey.com/en_us/insights/assurance/ai-governance-has-entered-its-next-phase-closing-the-confidence-gap" target="_blank">→ EY · AI Yönetişiminde Güven Açığı</a>
+  </div>
+</div>
+
+<!-- ARTICLE 3 : COSO -->
+<div class="article">
+  <h2><span class="num">03</span>COSO'nun Üretken AI Rehberi : Kanıt, İşlemden Önceye Kayıyor</h2>
+  <div class="hr"></div>
+  <p>İç kontrolün küresel referans çerçevesi COSO, Şubat 2026'da "Üretken AI Üzerinde Etkili İç Kontrol" başlıklı bir rehber yayımladı. Bu yeni bir ana standart değil, mevcut iç kontrol çerçevesinin üretken AI'ya nasıl uygulanacağını gösteren bir rehber. EY'nin bu rehbere ilişkin analizi, temel kaymayı şöyle özetliyor: kontrol artık yalnızca kaydedilen sonuçlara değil, AI'ın bu sonuçları nasıl etkilediğine, yani işlem kaydedilmeden önceki karar yoluna da bakmalı.</p>
+  <p>EY'nin yorumuna göre bunun pratik anlamı, kanıtın sonradan toplanan bir dosya olmaktan çıkıp kontrol tasarımının bir parçası haline gelmesi: karar yolunun eş zamanlı kaydı (girdiler, model çıktısı, insan incelemesi, istisnalar) ve periyodik gözden geçirmeyi tamamlayan olay-tetiklemeli sürekli gözetim.</p>
+  <a class="source-tag" href="https://www.ey.com/en_us/cro-risk/coso-2026-and-the-shift-in-ai-governance" target="_blank">Kaynak: EY · COSO 2026 ve AI Yönetişimindeki Kayma (Şubat 2026 tarihli COSO üretken AI rehberine ilişkin EY analizi)</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>Rehberin işaret ettiği yön, KVKK ve EY ile aynı: kanıt. Bir kurumun AI destekli bir kredi, fiyatlama ya da işe alım kararı için kaydı sonradan üretmesi mümkün değil, çünkü karar anı geçti. İç denetim için bunun anlamı, finansal raporlamayı etkileyen AI sistemlerini denetim evrenine almak ve sonucun kalitesiyle birlikte kararın arkasındaki anlamlı insan gözetimini de test etmek.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>AI destekli karar süreçlerinde karar yolunun eş zamanlı kaydını (girdi, çıktı, insan incelemesi, istisna) tutun</li>
+      <li>Finansal raporlamayı etkileyen AI kullanımını denetim evreninize dahil edin ve denetçiyle kanıt standardını önceden netleştirin</li>
+      <li>Periyodik gözden geçirmeyi olay-tetiklemeli sürekli izlemeyle tamamlayın: AI riski denetim döngüleri arasında değişir</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARTICLE 4 : DORA / NIS2 -->
+<div class="article">
+  <h2><span class="num">04</span>DORA ve NIS2 : Avrupa'da Dayanıklılık Yazıdan Uygulamaya Geçti</h2>
+  <div class="hr"></div>
+  <p>Avrupa'da iki büyük dayanıklılık rejimi artık tam uygulama evresinde. DORA (Dijital Operasyonel Dayanıklılık Yasası) Ocak 2025'ten bu yana finansal kuruluşlara uygulanıyor; bu aşamada yalnızca yazılı uyum değil, uygulamanın ve kontrol etkinliğinin gösterilmesi önem taşıyor. NIS2'nin üye devletlere ulusal mevzuata aktarma son tarihi ise 17 Ekim 2024'tü; aktarım ülkeden ülkeye farklı hızlarda tamamlandığı için yükümlülüklerin fiili yürürlüğü 2025 ve 2026 boyunca ülke bazında devreye giriyor.</p>
+  <p>Yaptırımlar ciddi: NIS2, temel kuruluşlarda belirli ihlaller için ulusal azami ceza seviyesinin en az 10 milyon avro ya da önceki yılın dünya çapındaki toplam cirosunun yüzde 2'sinden yüksek olanını karşılamasını öngörüyor; kesin uygulama ülke bazında değişiyor. Her iki rejimde de yönetim organı siber ve BT riskinden doğrudan sorumlu; NIS2 kişisel sorumluluğa da kapı açıyor. AB pazarına kritik BT hizmeti veren Türk tedarikçiler için bunun anlamı, müşteri sözleşmeleri üzerinden belirli denetim, olay iş birliği ve alt yüklenici şeffaflığı yükümlülükleriyle karşılaşma ihtimalinin artması.</p>
+  <a class="source-tag" href="https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/implementing-and-delegated-acts/digital-operational-resilience-act_en" target="_blank">Kaynak: Avrupa Komisyonu · DORA (uygulama 2025) · NIS2 ulusal aktarma son tarihi 17 Ekim 2024, yürürlük ülke bazında</a>
+  <div class="view">
+    <span class="view-label">◆ The Governance Görüşü</span>
+    <p>DORA ve NIS2 de aynı ipliği çekiyor: yazılı bir dayanıklılık politikası değil, test edilmiş ve bildirilmiş dayanıklılık denetleniyor. Türkiye'deki ihracatçı teknoloji ve hizmet şirketleri için bu bir sözleşme riski: düzenleyici sorumluluğun tümü aktarılmıyor, ancak AB'li müşteriniz belirli sözleşmesel yükümlülükleri (denetim hakkı, olay bildirimi, alt yüklenici şeffaflığı) size getirebiliyor. "Biz AB'de değiliz" tek başına bir savunma değil.</p>
+  </div>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>AB pazarına hizmet veriyorsanız, müşteri sözleşmelerinizde DORA/NIS2 kaynaklı denetim hakkı ve olay bildirimi yükümlülüklerini gözden geçirin</li>
+      <li>Üçüncü taraf BT tedarikçi envanterinizi ve alt yüklenici zincirinizi kanıtlanabilir biçimde haritalandırın</li>
+      <li>Olay sınıflandırma ve bildirim sürenizi test edin: bildirim gecikmesi denetimde en görünür eksiklik</li>
+    </ul>
+  </div>
+</div>
+
+<!-- RISK RADAR -->
+<div class="section-rule">Risk Radarı</div>
+
+<div class="radar">
+  <div class="radar-head">
+    <span class="radar-label">⚠ Haftanın Kritik Riski</span>
+    <span class="risk-tag">Yüksek Öncelik</span>
+  </div>
+  <h3>Genel Onay Tuzağı : Geçmişte Alınmış Rızaya Dayanan Denetim</h3>
+  <p><strong>Nedir?</strong> Kurumların çalışanlardan işe giriş sırasında aldığı genel "kabul edilebilir kullanım" ya da "denetim onayı" metnine dayanarak e-posta ve iletişim denetimi yapması. KVKK'nın yeni kararı, iş ilişkisindeki güç dengesizliği nedeniyle açık rızayı kural olarak öncelikli dayanak saymıyor.</p>
+  <p><strong>Kurumsal etki:</strong> Geçmişte alınmış genel bir onay, sonraki her denetimi meşru kılmıyor. Hukuki dayanağı ölçülülük ve meşru amaç testini karşılamayan bir denetim, bir uyum ihlali ve idari para cezası riski taşıyor.</p>
+  <p><strong>Temel gerçek:</strong> Denetleme imkânına sahip olmak, o imkânın hukuka uygun kullanıldığının kanıtı olmadan bir risk kaynağına dönüşüyor. Yetki değil, uygulamanın kalitesi denetleniyor.</p>
+  <div class="takeaway">
+    <span class="takeaway-label">⚡ Executive Takeaway</span>
+    <ul>
+      <li>Genel onay metnine dayanan tüm denetim pratiklerini 30 gün içinde gözden geçirin ve ölçülülük temeline taşıyın</li>
+      <li>Her denetim türü için ayrı, somut aydınlatma ve bilgilendirme süreci kurun</li>
+      <li>İçerik erişimini olay ya da somut şüphe tetiklemesine bağlayın ve her erişimi kayıt altına alın</li>
+    </ul>
+  </div>
+</div>
+
+<!-- TOOL BOX -->
+<div class="section-rule">Araç & Yöntem</div>
+
+<div class="toolbox">
+  <span class="tool-tag">Bu Hafta Uygulayın</span>
+  <h3>Çalışan İletişimini İncelemeden Önce : 6 Kontrol</h3>
+  <p>KVKK'nın 2026/2035 kararını kurum içinde uygulanabilir bir kontrole çevirin. Bir çalışanın e-postasını ya da iletişim kaydını incelemeden önce bu altı başlığı yazılı olarak yanıtlayın. Yanıtlanamayan her başlık, bir uyum riskidir.</p>
+  <ol>
+    <li><strong>Amaç:</strong> Bu incelemenin somut ve meşru amacı nedir, yazılı mı?</li>
+    <li><strong>Hukuki dayanak:</strong> Hangi işleme şartına dayanıyorsunuz? (Genel açık rıza kural olarak yeterli değil.)</li>
+    <li><strong>Kapsam:</strong> İnceleme hangi verilerle, hangi zaman aralığıyla sınırlı?</li>
+    <li><strong>Daha az müdahaleci yöntem:</strong> Amaca trafik/log gibi daha hafif bir yöntemle ulaşılabilir mi? Önce o değerlendirildi mi?</li>
+    <li><strong>Yetki ve kayıt:</strong> İçeriğe kim erişecek, bu erişim kayıt altına alınıyor ve gizlilik güvence altında mı?</li>
+    <li><strong>Saklama ve bilgilendirme:</strong> Çalışan önceden somut biçimde bilgilendirildi mi, ve veri amaçla sınırlı süre saklanıyor mu?</li>
+  </ol>
+</div>
+
+<!-- READS -->
+<div class="section-rule">Okumanız Gereken</div>
+
+<div class="reads">
+  <div class="read-item">
+    <span class="rn">01</span>
+    <div class="rc">
+      <h4><a href="https://www.kvkk.gov.tr/Icerik/9044/isverenler-tarafindan-calisanlara-tahsis-edilen-kurumsal-e-posta-hesaplari-basta-olmak-uzere-isin-yurutulmesi-amaciyla-kullanilan-iletisim-kanallarinin-denetlenmesinde-uyulmasi-gereken-usul-ve-esaslar-hakkinda-kurulun-16-09-2026-tarihli-ve-2026-2035-sayili-ilke-karari-hk" target="_blank">KVKK · 2026/2035 sayılı İlke Kararı</a></h4>
+      <p>İşverenin kurumsal e-posta ve iletişim kanallarını denetlemesi ölçülülük, şeffaflık ve kayıt şartına bağlandı : kvkk.gov.tr</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">02</span>
+    <div class="rc">
+      <h4><a href="https://www.ey.com/en_us/insights/assurance/ai-governance-has-entered-its-next-phase-closing-the-confidence-gap" target="_blank">EY · AI Yönetişimi Güven Açığını Kapatma Aşamasında</a></h4>
+      <p>Kurumların %98'inin AI politikası var; %47'si acil deployment için süreci atlıyor, %69'u uzmanlık eksikliğinden endişeli : ey.com</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">03</span>
+    <div class="rc">
+      <h4><a href="https://www.ey.com/en_us/cro-risk/coso-2026-and-the-shift-in-ai-governance" target="_blank">EY · COSO 2026 ve AI Yönetişimindeki Kayma</a></h4>
+      <p>Şubat 2026 COSO üretken AI rehberi: AI destekli kararlarda kontrol kaydı işlemden önceye kayıyor.</p>
+    </div>
+  </div>
+  <div class="read-item">
+    <span class="rn">04</span>
+    <div class="rc">
+      <h4><a href="https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/implementing-and-delegated-acts/digital-operational-resilience-act_en" target="_blank">Avrupa Komisyonu · DORA</a></h4>
+      <p>DORA uygulama dönemi ve NIS2'nin ülke bazında yürürlüğü: dayanıklılık yazılı uyumdan denetlenen uygulamaya geçiyor.</p>
+    </div>
+  </div>
+</div>
+
+<!-- KAPANIŞ SORUSU -->
+<div class="closing-q">
+  <span class="cq-label">Yönetim Kurulu İçin Tek Soru</span>
+  <h3>Kurumunuz bir çalışanın e-postasını en son incelediğinde: amacı, hukuki dayanağı ve erişim kaydı yazılı mıydı?</h3>
+</div>
+
+<!-- CTA BLOCK -->
+<div class="cta-block">
+  <h3>Governance gündemini kararlarınızı etkilemeden önce görün</h3>
+  <p>The Governance'ı haber olduktan sonra değil, karar anından önce okuyun. Türkiye'nin bağımsız GRC bültenine ücretsiz abone olun; her Pazartesi, yönetici masasında olması gereken gelişmeler.</p>
+  <div class="cta-actions">
+    <a href="https://www.thegovernance.com.tr" class="cta-btn primary">Bültene Ücretsiz Abone Ol</a>
+  </div>
+  <p class="cta-secondary">Ya da güncellemeleri <a href="https://www.linkedin.com/company/thegovernance" target="_blank">LinkedIn'de takip edin</a>.</p>
+</div>
+
+<!-- CLOSER -->
+<div class="closer">
+  <div class="ed-note">
+    <h4>Editörden</h4>
+    <p>Bu hafta gündemin merkezinde KVKK'nın çalışan iletişimi kararı vardı: işveren denetleyebilir, ama ölçülü, şeffaf ve kayıtlı biçimde. Teknik erişim imkânı, hukuki erişim hakkı demek değil. Aynı mantık AI yönetişiminde EY'nin güven açığında, COSO'nun üretken AI rehberinde ve Avrupa'da DORA ile NIS2'nin uygulama döneminde de karşımıza çıkıyor: bir yetkiye ya da politikaya sahip olmak, onu doğru kullandığınızı kanıtlamaz. The Governance, bu gelişmeleri haber olarak değil, kararlarınızı etkileyen birer gündem maddesi olarak ele alır. Sorular için her zaman açığım.</p>
+  </div>
+  <div class="sig">
+    <span class="sig-name">Ecem</span>
+    <span class="sig-role">Editör · The Governance</span>
+  </div>
+</div>
+
+</body>
+</html>
