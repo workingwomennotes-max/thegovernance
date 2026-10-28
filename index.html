@@ -6,6 +6,10 @@
 <title>The Governance : Türkiye'nin Bağımsız GRC &amp; Kurumsal Risk Bülteni</title>
 <meta name="description" content="ISO 27001, KVKK, BCP/DR, AI yönetişimi ve tedarik zinciri riski; yönetici dilinde, Türkiye perspektifiyle. Bağımsız GRC bülteni. Her Pazartesi 10 dakika.">
 <link rel="canonical" href="https://www.thegovernance.com.tr/">
+<link rel="alternate" hreflang="tr" href="https://www.thegovernance.com.tr/">
+<link rel="alternate" hreflang="en" href="https://www.thegovernance.com.tr/en/">
+<link rel="alternate" hreflang="x-default" href="https://www.thegovernance.com.tr/">
+<meta property="og:locale:alternate" content="en_GB">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="tr_TR">
@@ -104,6 +108,9 @@
     transition: color .2s;
   }
   .nav-links a:hover { color: var(--bordo); }
+  .nav-lang { display: inline-flex; gap: 6px; align-items: center; }
+  .nav-lang .on { color: var(--bordo); font-weight: 400; }
+  .nav-lang .sep { color: var(--rule); }
 
   .nav-cta {
     background: var(--bordo) !important;
@@ -1071,6 +1078,7 @@
   /* ── RESPONSIVE ── */
   @media (max-width: 1024px) {
     nav { padding: 14px 28px; }
+    .nav-links { gap: 18px; }
     .hero { padding: 100px 28px 64px; }
     .hero-inner { grid-template-columns: 1fr; gap: 48px; }
     .hero-right { display: none; }
@@ -1089,6 +1097,10 @@
     .footer-links-group { gap: 32px; flex-wrap: wrap; }
     .footer-bottom { flex-direction: column; text-align: center; }
   }
+  @media (max-width: 640px) {
+    nav { padding: 14px 16px; }
+    .nav-links li:not(:last-child) { display: none; }
+  }
 </style>
 </head>
 <body>
@@ -1101,6 +1113,7 @@
     <li><a href="/iso-27001-nedir.html">Rehberler</a></li>
     <li><a href="/hakkimizda.html">Hakkımızda</a></li>
     <li><a href="/arac-kutuphanesi.html">Araçlar</a></li>
+    <li><span class="nav-lang"><a href="/" class="on" aria-current="page">TR</a><span class="sep">|</span><a href="/en/" hreflang="en" lang="en">EN</a></span></li>
   </ul>
 </nav>
 
@@ -1915,6 +1928,7 @@
           <li><a href="#hakkimda">Hakkımda</a></li>
           <li><a href="mailto:ecem@thegovernance.com.tr">E-posta</a></li>
           <li><a href="https://www.linkedin.com/company/thegovernance/" target="_blank">LinkedIn</a></li>
+          <li><a href="/en/" hreflang="en" lang="en">English</a></li>
         </ul>
       </div>
     </div>
